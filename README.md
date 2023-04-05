@@ -1,38 +1,36 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Website Ease Your Needs
 
-## Getting Started
+A user-friendly web application designed to simplify daily tasks and enhance productivity.
 
-First, run the development server:
+## Developed by
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+- Rizky Ananta
+- Mika Suryofakhri Rahwono
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Tech Stack
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+- Next.js
+- React.js
+- Firebase
+- Vercel
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+## Production Link
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+[https://easeyourneeds.vercel.app/](https://easeyourneeds.vercel.app/)
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Introduction
 
-## Learn More
+Website Ease Your Needs is a modern web application created to help users streamline their daily tasks, making life easier and more organized. The website is built using the latest web technologies and provides a seamless experience across various devices.
 
-To learn more about Next.js, take a look at the following resources:
+## Deployment
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+The website is deployed using Vercel, a platform that provides serverless deployment for web applications. To deploy the project to Vercel, follow these steps:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+1. Sign up for a Vercel account or log in if you already have one.
+2. Link your GitHub repository to Vercel.
+3. Configure your Vercel project settings.
+4. Deploy your project to Vercel.
 
-## Deploy on Vercel
+## License
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
