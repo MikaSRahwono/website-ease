@@ -1,6 +1,6 @@
 # Website Ease Your Needs
 
-A user-friendly web application designed to simplify daily tasks and enhance productivity.
+A user-friendly web application
 
 ## Developed by
 
@@ -20,7 +20,7 @@ A user-friendly web application designed to simplify daily tasks and enhance pro
 
 ## Introduction
 
-Website Ease Your Needs is a modern web application created to help users streamline their daily tasks, making life easier and more organized. The website is built using the latest web technologies and provides a seamless experience across various devices.
+EASE YOUR NEEDS is a creative agency based in Jakarta, Indonesia. Started in September 2020 when pandemic hits, our first service is providing zoom rental for everyone. During that time, we already have more than 40.000 loyal customers from several big companies. As the time goes, now we are expanding other digital services such as Live Streaming Services for your offline events and providing creative product photography & videography for brands. We are a group of creative and agile people and ready to maximize your events and brands’ potentials to the fullest.
 
 ## Deployment
 
