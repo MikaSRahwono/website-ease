@@ -1,5 +1,5 @@
 import { Container, Box, Divider } from "@chakra-ui/react"
-import { App as Services } from "@/components/Services/app"
+import { App as Services } from "@/components/services/app"
 import { App as Projects } from "@/components/Projects/app"
 import { App as Hero } from "@/components/Hero/app"
 import { App as WhoAre } from "@/components/WhoAre/app"

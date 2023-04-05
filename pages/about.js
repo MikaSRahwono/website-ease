@@ -2,7 +2,7 @@ import React from 'react';
 import { Box, Container } from "@chakra-ui/react"
 import { App as Hero } from "@/components/Hero/app"
 import { slides } from "@/components/Hero/slides/_dataAbout"
-import { App as VideoProfile} from "@/components/Video_profile/app"
+import { App as VideoProfile} from "@/components/video_profile/app"
 import { App as Abouts } from "@/components/Abouts/app"
 import { App as WhoAre } from "@/components/WhoAre/app"
 import { App as WhatWe } from "@/components/WhatWe/app"
