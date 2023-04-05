@@ -24,6 +24,8 @@ export const App = () => {
           textAlign={{
             sm: 'center',
           }}
+          color="#DAC17E"
+          
         >
           Our Services
         </Heading>
@@ -32,12 +34,13 @@ export const App = () => {
           maxW="xl"
           mx="auto"
           fontSize="xl"
-          color={mode('gray.600', 'gray.400')}
+          fontFamily={'Montserrat'}
+          color={'white'}
           textAlign={{
             sm: 'center',
           }}
         >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vehicula enim a nulla gravida, in vehicula lacus placerat. 
+          We help you to visualize your uniqueness and identity to the community by product photography and videography for any commercial needs. We also help you broadcast your event/campaign to the world by providing Zoom Pro renting along with Live Streaming services. 
         </Text>
         <SimpleGrid
           alignItems="flex-start"
@@ -55,34 +58,22 @@ export const App = () => {
           }}
         >
           <ServicesCard
+            img="img/iconservice/livelogo.png"
             name="Creative"
-            description="Deskripsi untuk Creative"
-            price={149}
-            features={[
-              'Service Foto Produk',
-              'Video Profile ',
-              'Itaque cupiditate adipisci',
-            ]}
+            description1 = "Helping you to stream your events using advanced equipment and our best crews."
+            Onlink={'/services/creative'}
           />
           <ServicesCard
+            img="img/iconservice/studiologo.png"
             name="Studio"
-            description="Deskripsi untuk Studio"
-            price={299}
-            features={[
-              'Operator OBS',
-              'Operator Sound System',
-              'Vel ipsa esse andae excepturi',
-            ]}
+            description1 = "Maximizing your visual and media to enhance your brand identity with us. We help you to create creative product photography, videography, and campaigns."
+            Onlink={'/services/studio'}
           />
           <ServicesCard
+            img="img/iconservice/zoomlogo.png"
             name="Zoom"
-            description="Deskripsi untuk Zoom"
-            price={499}
-            features={[
-              'Garansi Zoom',
-              'Excepteur sint occaecat',
-              'Vel ipsa esse repudiandae',
-            ]}
+            description1 = "Renting Zoom Pro and Zoom Webinar for everyone. Now, scheduling your zoom meeting is easier with us."
+            Onlink={'/services/zoom'}
           />
         </SimpleGrid>
       </Box>

@@ -15,6 +15,7 @@ export const App = (props) => {
     const slides = props.slides
     const [currentSlide, setCurrentSlide] = useState(0);
     const slidesCount = slides.length;
+    const Onlink = slides.Onlink;
   
     const prevSlide = () => {
       setCurrentSlide((s) => (s === 0 ? slidesCount - 1 : s - 1));
@@ -53,9 +54,6 @@ export const App = (props) => {
         w="full"
         h="100vh"
         bg="#edf3f8"
-        _dark={{
-          bg: "#3e3e3e",
-        }}
         alignItems="center"
         justifyContent="center"
       >
@@ -77,6 +75,7 @@ export const App = (props) => {
                   alt="carousel image"
                   boxSize="full"
                   backgroundSize="cover"
+                  objectFit="cover"
                 />
                 <Stack
                   pos="absolute"
@@ -88,13 +87,15 @@ export const App = (props) => {
                   color="white"
                   spacing={0}
                 >
-                  <Text fontSize="6vw" fontWeight="extrabold" as='u'>{slide.label}</Text>
-                  <HStack spacing='2vw'>
+                  <Text fontFamily="Glacial Indifference" fontSize="6vw" fontWeight="bold" as='u'>{slide.label}</Text>
+                  <HStack spacing='3vw'>
                     <VStack align='left' spacing={0}>
-                      <Text fontSize="xl" >{slide.subheading1}</Text>
-                      <Text fontSize="xl" >{slide.subheading2}</Text>
+                      <Text fontFamily="Montserrat" fontSize="xl" >{slide.subheading1}</Text>
+                      <Text fontFamily="Montserrat" fontSize="xl" >{slide.subheading2}</Text>
                     </VStack>
-                    <Button>Learn More...</Button>
+                    <Button
+                    onClick={() => window.open(Onlink)}
+                    >Learn More...</Button>
                   </HStack>
                 </Stack>
               </Box>

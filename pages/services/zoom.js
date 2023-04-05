@@ -9,7 +9,7 @@ import { app as FAQ } from "@/components/FAQ/app"
 
 export default function Home() {
   return (
-    <Box>
+    <Box background="#000000">
       <Hero slides={slides}></Hero>
       <Container maxW='70vw' >
         <Box mt={50} width='70vw'>

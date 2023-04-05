@@ -7,7 +7,7 @@ import * as React from 'react'
 import { Card } from './card'
 import { LoginForm } from './loginForm'
 
-export const app = () => (
+export const App = () => (
   <Box
     bg={useColorModeValue('gray.50', 'inherit')}
     minH="100vh"

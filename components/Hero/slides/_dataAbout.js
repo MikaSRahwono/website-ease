@@ -1,8 +1,6 @@
 export const slides = [
     {
-        img: "img/aboutus.png",
+        img: "img/jakarta.png",
         label: "About Us",
-        subheading1: "Go Stream,",
-        subheading2: "Go Worldwide Now!",
     },
 ];

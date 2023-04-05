@@ -1,5 +1,5 @@
 import { Box } from "@chakra-ui/react";
-import { app as Auth } from "@/components/Authentication/app";
+import { App as Auth } from "@/components/Authentication/app";
 
 export default function Admin() {
     return (

@@ -5,7 +5,7 @@ import { members } from './_data'
 
 export const App = () => {
   return (
-    <Box as="section">
+    <Box bg='#000' as="section">
       <Box
         maxW="7xl"
         mx="auto"

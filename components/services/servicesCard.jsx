@@ -5,7 +5,9 @@ import {
   Flex,
   List,
   ListItem,
+  Image,
   Text,
+  Center,
   useColorModeValue as mode,
 } from '@chakra-ui/react'
 import * as React from 'react'
@@ -78,34 +80,45 @@ const ServicesWrapper = (props) => {
 }
 
 export const ServicesCard = (props) => {
-  const { onClick, features, name, description, price, popular, ...rest } = props
+  const { img, Onlink, features, name, description1, description2, price, popular, ...rest } = props;
+
   return (
-    <ServicesWrapper highlight={popular} {...rest}>
+    <ServicesWrapper backgroundColor="#f2f2f2" 
+        highlight={popular} {...rest}>
+        
       {popular && <PopularBadge>Most Popular</PopularBadge>}
 
+      <Center>
+        <Image src={img} alt={name} w="30%" h="30%" objectFit="cover" />
+      </Center>
+
       <Flex direction="column" justify="center">
-        <Text align="center" fontSize="2xl" fontWeight="bold">
+        <Text align="center" fontSize="2xl" color="#000" fontWeight="bold">
           {name}
         </Text>
-        <Text align="center" mt="2" color={mode('gray.600', 'gray.400')} maxW="16rem" mx="auto">
-          {description}
+        <Text fontFamily={'Montserrat'} textAlign="center" mt="2" color={'#000'} maxW="16rem" mx="auto">
+          {description1}
+        </Text>
+        <Text fontFamily={'Montserrat'} textAlign="justify" mt="2" color={'#000'} maxW="16rem" mx="auto">
+          {description2}
         </Text>
       </Flex>
 
-      <List stylePosition="outside" mt="8" spacing={4}>
+      {/* <List stylePosition="outside" mt="8" spacing={4}>
         {features.map((feature, idx) => (
           <ServicesDetail key={idx}>{feature}</ServicesDetail>
         ))}
-      </List>
+      </List> */}
 
       <Button
+        backgroundColor={'#000'}
         minH="3.5rem"
         rounded="lg"
         fontWeight="bold"
         colorScheme={popular ? 'blue' : 'gray'}
         mt="8"
         w="100%"
-        onClick={onClick}
+        onClick={() => window.open(Onlink)}
       >
         Pelajari
       </Button>
