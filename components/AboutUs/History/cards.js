@@ -5,15 +5,10 @@ const HistoryWrapper = (props) => {
 
   return (
     <Box 
-      w="full"
-      maxW="370"
+      w="100%"
       minH={['250px', '250px', '300px']}
-      minW='370'
       mx="auto"
-      bg={'white'}
       pb="8"
-      rounded="lg"
-      shadow="base"
       position="relative"
       {...rest}
     />
@@ -23,18 +18,19 @@ const HistoryWrapper = (props) => {
 export const HistoryCards = (props) => {
   const { img, desc, title,  ...rest } = props
   return (
-    <Box w="100%" maxW="xl">
-      <HistoryWrapper backgroundColor={'white'}>
+    <Box w="70%" maxW="xl" m='2.5vw'>
+      <HistoryWrapper>
 
         <Center>
-          <Image rounded="lg" src={img} alt={title} w="100%" h="250px" objectFit="cover" />
+          <Image src={img} alt={title} w="100%" h="35vh" objectFit="cover" />
         </Center>
+        <Text fontSize='sm' mt='0.5vh'>Keterangan</Text>
 
         <Flex direction="column" justify="left" mt={4} textAlign="justify">
-          <Text pl={['4', '4', '6']} color={'#000'} fontFamily='Aileron' fontSize="2xl" fontWeight="bold">
+          <Text  color={'#000'} fontFamily='Montserrat' fontSize="xl" fontWeight="bold">
             {title}
           </Text>
-          <Text fontFamily='Aileron' mt={2} color={'#000'} maxW="20rem" mx={['2', '2', 'auto']}>
+          <Text fontSize='sm' mt={2} color={'#000'} maxW="20rem" mx={['2', '2', 'auto']}>
             {desc}
           </Text>
         </Flex>

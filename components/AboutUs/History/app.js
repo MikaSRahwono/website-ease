@@ -1,4 +1,4 @@
-import { Box, Heading, SimpleGrid } from '@chakra-ui/react'
+import { Box, Container, HStack, Heading, SimpleGrid } from '@chakra-ui/react'
 import React from 'react'
 import { useState } from 'react'
 import Slider from 'react-slick'
@@ -39,22 +39,23 @@ export const App = () => {
   };
 
   const settings = {
-    dots: false,
-    infinite: true,
+    dots: true,
+    infinite: false,
     speed: 1000,
-    slidesToShow: 3,
+    slidesToShow: 4,
     slidesToScroll: 1,
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 3000,
     pauseOnHover: true,
     arrows: true,
     prevArrow: <CustomArrow direction="left" />,
     nextArrow: <CustomArrow direction="right" />,
+  
     responsive: [
       {
         breakpoint: 1446,
         settings: {
-          slidesToShow: 3,
+          slidesToShow: 4,
           slidesToScroll: 1,
           dots: false,
         },
@@ -62,7 +63,7 @@ export const App = () => {
       {
         breakpoint: 1148,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 3,
           slidesToScroll: 1,
           dots: false,
         },
@@ -70,7 +71,7 @@ export const App = () => {
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 2,
           slidesToScroll: 1,
           dots: false,
         },
@@ -88,8 +89,8 @@ export const App = () => {
 
 
   return (
-    <Box mx={['10px', '10px', '280px']} pb='9vh'>
-      <Heading textAlign={['left']} pl='15' as='h1' size='2xl' pb='5vh' variant='page-title' position="relative">
+    <Container pb='9vh' minW='80vw' pt='10vh'>
+      <Heading textAlign={['left']} fontSize='5xl' pb='5vh' variant='page-title' position="relative">
         Our History
         <Box
           position="absolute"
@@ -97,7 +98,7 @@ export const App = () => {
           left="300px"
           transform="translateY(-50%)"
           w="300px"
-          h="3px"
+          h="3px"    
           bg="black"
           fontWeight="bold"
           
@@ -105,11 +106,11 @@ export const App = () => {
       </Heading>
         <Box>
           <Slider {...settings} ref={setSlider}>
-          {historyCardsData.map((data, index) => (
-              <HistoryCards key={index} {...data} />
-            ))}
+            {historyCardsData.map((data, index) => (
+                <HistoryCards key={index} {...data} />
+              ))}
           </Slider>
         </Box>
-    </Box>
+    </Container>
   );
 };
