@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@ant-design/icons": "^5.0.1",
     "@chakra-ui/icons": "^2.0.17",
     "@chakra-ui/react": "^2.5.5",
     "@emotion/react": "^11.10.5",
@@ -19,6 +20,18 @@
     "eslint-config-next": "13.1.5",
     "next": "^13.1.5",
     "next-images": "^1.8.4",
+    "@next/font": "13.1.5",
+    "antd": "^5.3.3",
+    "chakra-dayzed-datepicker": "^0.2.7",
+    "date-fns": "^2.29.3",
+    "dayzed": "^3.2.3",
+    "eslint": "8.32.0",
+    "eslint-config-next": "13.1.5",
+    "firebase": "^9.18.0",
+    "framer-motion": "^8.5.4",
+    "next": "^13.1.5",
+    "next-auth": "^4.20.1",
+    "next-session": "^4.0.5",
     "react": "18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.8.0",
@@ -34,6 +47,8 @@
     "@babel/preset-env": "^7.20.2",
     "babel-loader": "^9.1.2",
     "webpack": "^5.76.2",
-    "webpack-cli": "^5.0.1"
+    "webpack-cli": "^5.0.1",
+    "slick-carousel": "^1.8.1",
+    "uuid": "^9.0.0"
   }
 }

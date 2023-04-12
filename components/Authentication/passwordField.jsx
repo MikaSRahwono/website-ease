@@ -60,6 +60,7 @@ export const PasswordField = React.forwardRef((props, ref) => {
           autoComplete="current-password"
           required
           {...props}
+          onChange={event => props.setPassword(event.currentTarget.value)}
         />
       </InputGroup>
     </FormControl>
