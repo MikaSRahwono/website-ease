@@ -3,8 +3,8 @@ import { App as Projects } from "@/components/Projects/app"
 import { App as Hero } from "@/components/Hero/app"
 import { slides } from "@/components/Hero/slides/_dataCreative"
 import { slides_pro } from "@/components/Projects/_data"
-import { App as Pricing } from "@/components/Pricing/app"
-import { App as Terms } from "@/components/Terms/App"
+import { App as Pricing } from "@/components/pricing/app"
+import { App as Terms } from "@/components/Terms/app"
 import { app as FAQ } from "@/components/FAQ/app"
 
 export default function Home() {

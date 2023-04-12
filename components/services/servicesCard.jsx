@@ -83,7 +83,7 @@ export const ServicesCard = (props) => {
   const { img, Onlink, features, name, description1, description2, price, popular, ...rest } = props;
 
   return (
-    <ServicesWrapper backgroundColor="#f2f2f2" 
+    <ServicesWrapper backgroundColor="rgba(218, 193, 126, 0.5)" 
         highlight={popular} {...rest}>
         
       {popular && <PopularBadge>Most Popular</PopularBadge>}
@@ -120,7 +120,7 @@ export const ServicesCard = (props) => {
         w="100%"
         onClick={() => window.open(Onlink)}
       >
-        Pelajari
+        Learn More
       </Button>
     </ServicesWrapper>
   )

@@ -13,7 +13,7 @@ export const App = (props) => {
   const slides = props.slides
 
   return (
-    <Box>
+    <Box color='#000'>
       <HStack>
         <Box maxW="20vw">
           <Text fontSize='4xl' fontWeight='extrabold' noOfLines={2}>Recent</Text>

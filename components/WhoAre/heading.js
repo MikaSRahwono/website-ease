@@ -1,6 +1,6 @@
 import { Box, Heading, Center, Text, Container } from "@chakra-ui/react"
 
-export const HeadingVidprof = (params) => {
+export const HeadingAbout = (params) => {
     const type = params.type
     if(type == 'about'){
         return (
