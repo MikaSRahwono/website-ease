@@ -18,56 +18,57 @@ import {
             bgColor='white'
             w="full"
             color='#000'
-            height={'70vh'}
+            height={'50vh'}
             alignItems="center"
             justifyContent="center"
             fontFamily={'Montserrat'}>
         
         <Container maxW='70vw' maxH='70vh' color='black' pt={70} pb={70}>
  
-        <Stack>
-            <Text align={'center'} fontWeight={'bold'} fontSize={'3vw'}>Terima kasih telah mempercayai kami</Text>
-            <SimpleGrid pt='20px' columns={{base: '4', md: '4', sm:'2'}} spacing={10}>
-                <Box height='80px'>
-                <VStack marginTop={{ base: '2', sm: '5' }}>
-                    <Image boxSize={{ base: '40px', sm: '80px', md: '100px' }} src='img/testhanks.svg' />
-                    <Text fontSize={{ base: '2vw', md: '2.5vw' }}>2 Juta</Text>
-                    <Text align='center' color='#828d8b' fontSize={{ base: '1.2vw', md: '1.2vw' }}>
-                    Konten edukatif dengan berbagai topik di sosial media
-                    </Text>
-                </VStack>
-                </Box>
-                <Box height='80px'>
-                <VStack marginTop={{ base: '2', sm: '5' }}>
-                    <Image boxSize={{ base: '40px', sm: '80px', md: '100px' }} src='img/testhanks.svg' />
-                    <Text fontSize={{ base: '2vw', md: '2.5vw' }}>2 Juta</Text>
-                    <Text align='center' color='#828d8b' fontSize={{ base: '1.2vw', md: '1.2vw' }}>
-                    Konten edukatif dengan berbagai topik di sosial media
-                    </Text>
-                </VStack>
-                </Box>
-                <Box height='80px'>
-                <VStack marginTop={{ base: '2', sm: '5' }}>
-                    <Image boxSize={{ base: '40px', sm: '80px', md: '100px' }} src='img/testhanks.svg' />
-                    <Text fontSize={{ base: '2vw', md: '2.5vw' }}>2 Juta</Text>
-                    <Text align='center' color='#828d8b' fontSize={{ base: '1.2vw', md: '1.2vw' }}>
-                    Konten edukatif dengan berbagai topik di sosial media
-                    </Text>
-                </VStack>
-                </Box>
-                <Box height='80px'>
-                <VStack marginTop={{ base: '2', sm: '5' }}>
-                    <Image boxSize={{ base: '40px', sm: '80px', md: '100px' }} src='img/testhanks.svg' />
-                    <Text fontSize={{ base: '2vw', md: '2.5vw' }}>2 Juta</Text>
-                    <Text align='center' color='#828d8b' fontSize={{ base: '1.2vw', md: '1.2vw' }}>
-                    Konten edukatif dengan berbagai topik di sosial media
-                    </Text>
-                </VStack>
-                </Box>
-                
-   
-            </SimpleGrid>
-        </Stack>
+        <Text align={'center'} fontWeight={'bold'} fontSize={'3vh'}>Terima kasih telah mempercayai kami</Text>
+        <Grid templateColumns={{ base: 'repeat(2, 1fr)', md: 'repeat(4, 1fr)' }} gap={5}>
+
+        <Box height='1vh'>
+        <VStack>
+            <Image boxSize={{ base: '40px', sm: '80px', md: '100px' }} src='img/testhanks.svg' />
+            <Text fontWeight={'bold'} fontSize={{ base: '1.5vw', md: '2vw', sm:'4vw' }}>2 Juta</Text>
+            <Text align='center' color='#828d8b' fontSize={{ base: '1vw', lg:'1vw', sm: '2vw' }}>
+            Konten edukatif dengan berbagai topik di sosial media
+            </Text>
+        </VStack>
+        </Box>
+
+        <Box margin={'auto'} height='1vh'>
+        <VStack>
+            <Image  boxSize={{ base: '40px', sm: '80px', md: '100px' }} src='img/testhanks.svg' />
+            <Text fontWeight={'bold'} fontSize={{ base: '1.5vw', md: '2vw', sm:'4vw' }}>2 Juta</Text>
+            <Text align='center' color='#828d8b' fontSize={{ base: '1vw', lg:'1vw', sm: '2vw' }}>
+            Konten edukatif dengan berbagai topik di sosial media
+            </Text>
+        </VStack>
+        </Box>
+
+        <Box height='1vh'>
+        <VStack>
+            <Image  boxSize={{ base: '40px', sm: '80px', md: '100px' }} src='img/testhanks.svg' />
+            <Text fontWeight={'bold'} fontSize={{ base: '1.5vw', md: '2vw', sm:'4vw' }}>2 Juta</Text>
+            <Text align='center' color='#828d8b' fontSize={{ base: '1vw', lg:'1vw', sm: '2vw' }}>
+            Konten edukatif dengan berbagai topik di sosial media
+            </Text>
+        </VStack>
+        </Box>
+
+        <Box margin={'auto'} height='1vh'>
+        <VStack>
+            <Image  boxSize={{ base: '40px', sm: '80px', md: '100px' }} src='img/testhanks.svg' />
+            <Text fontWeight={'bold'} fontSize={{ base: '1.5vw', md: '2vw', sm:'4vw' }}>2 Juta</Text>
+            <Text align='center' color='#828d8b' fontSize={{ base: '1vw', lg:'1vw', sm: '2vw' }}>
+            Konten edukatif dengan berbagai topik di sosial media
+            </Text>
+        </VStack>
+        </Box>
+
+    </Grid>
 
         </Container>
   

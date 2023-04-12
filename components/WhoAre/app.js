@@ -36,7 +36,7 @@ export const App = (params) => {
             alignItems={{ base: 'center', md: 'flex-start' }}
             >
             <Image src='img/testingabout.svg' maxW={{ base: '100%', md: '50%' }} mb={{ base: '10px', md: '0' }} />
-            <Box fontSize={{ base: '14px', md: '14px' }} fontFamily="Montserrat" textAlign={{ base: 'justify', md: 'justify' }}>
+            <Box fontSize={{ base: '20px', md: '20px' }} fontFamily="Montserrat" textAlign={{ base: 'justify', md: 'justify' }}>
                 <Text as="span" fontWeight="bold">
                 EASE YOUR NEEDS
                 </Text>{' '}

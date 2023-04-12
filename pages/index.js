@@ -8,6 +8,7 @@ import { slides } from "@/components/Hero/slides/_dataHome"
 import { slides_pro } from "@/components/Projects/_data"
 import { App as ThanksFor } from "@/components/ThanksFor/app"
 import { App as Highlight } from "@/components/Highlight/app"
+import { App as OurServices } from "@/components/OurServices/app"
 
 export default function Home() {
 
@@ -17,7 +18,9 @@ export default function Home() {
       <HeroSlides ></HeroSlides>
       {/* Video Profile */}
       <WhoAre></WhoAre>
+      
       <ThanksFor></ThanksFor>
+      <OurServices></OurServices>
       <Highlight > </Highlight>
       <Container maxW='70vw' >
         <Box mt={30} width='70vw'>

@@ -1,11 +1,15 @@
-import React, { useState } from "react";
+// Navbar.js
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import styles from './navbar.module.css';
+import styles from "./navbar.module.css";
+import { useRouter } from "next/router";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const router = useRouter(); 
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -15,13 +19,33 @@ const Navbar = () => {
     setIsDropdownOpen(!isDropdownOpen);
   };
 
+  const closeMenu = (path) => {
+    setIsOpen(false);
+    router.push(path);
+  };
+
+  const handleScroll = () => {
+    if (window.scrollY > 0) {
+      setIsScrolled(true);
+    } else {
+      setIsScrolled(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <header className={styles.navbar}>
+    <header className={`${styles.navbar} ${isScrolled ? styles.scrolled : ""}`}>
       <div className={styles.container}>
         <div className={styles.logo}>
           <Link href="/">
           <Image
-              src="/img/easelogo/whitetrans.png" // Replace with your logo image path
+              src="/img/easelogo/blacktrans.png" // Replace with your logo image path
               alt="Logo"
               width={80}
               height={40}
@@ -33,12 +57,12 @@ const Navbar = () => {
           <ul className={styles.navList}>
           <li>
               <Link href="/">
-                <span>Home</span>
+              <span onClick={() => closeMenu("/")}>Home</span>
               </Link>
             </li>
             <li>
               <Link href="/about">
-                <span>About</span>
+              <span onClick={() => closeMenu("/about")}>About</span>
               </Link>
             </li>
             <li className={styles.dropdown}
@@ -51,24 +75,24 @@ const Navbar = () => {
                 }`}
               >
                 <Link href="/services/creative">
-                  <span>Creative</span>
+                  <span onClick={() => closeMenu("/services/creative")}>Creative</span>
                 </Link>
                 <Link href="/services/studio">
-                  <span>Studio</span>
+                  <span onClick={() => closeMenu("/services/studio")}>Studio</span>
                 </Link>
                 <Link href="/services/zoom">
-                  <span>Zoom</span>
+                  <span onClick={() => closeMenu("/services/zoom")}>Zoom</span>
                 </Link>
               </div>
             </li>
             <li>
               <Link href="/project">
-                <span>Projects</span>
+                <span onClick={() => closeMenu("/project")}>Project</span>
               </Link>
             </li>
             <li>
               <Link href="/contact">
-                <span>Contact</span>
+                <span onClick={() => closeMenu("/contact")}>Contact</span>
               </Link>
             </li>
           </ul>
