@@ -65,15 +65,16 @@ const Navbar = () => {
               <span onClick={() => closeMenu("/about")}>About</span>
               </Link>
             </li>
-            <li className={styles.dropdown}
-              onMouseEnter={toggleDropdown}
-              onMouseLeave={toggleDropdown}>
-              <span>Services</span>
-              <div
-                className={`${styles.dropdownContent} ${
-                  isDropdownOpen ? styles.show : ""
-                }`}
-              >
+              <li className={`${styles.dropdown} ${isDropdownOpen ? styles.show : ""}`}
+                  onMouseEnter={toggleDropdown}
+                  onMouseLeave={toggleDropdown}>
+                <span className={styles.dropdownIcon}>▼</span>
+                <span>Services</span>
+                <div
+                  className={`${styles.dropdownContent} ${
+                    isDropdownOpen ? styles.show : ""
+                  }`}
+                >
                 <Link href="/services/creative">
                   <span onClick={() => closeMenu("/services/creative")}>Creative</span>
                 </Link>
