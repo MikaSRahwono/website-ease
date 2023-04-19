@@ -8,9 +8,11 @@ import {
     Stack,
     Container,
     VStack,
-    HStack
+    HStack,
+    Button
  
  } from "@chakra-ui/react";
+import { FaWhatsapp } from "react-icons/fa";
 
 export const App = (params) => {
 
@@ -27,13 +29,23 @@ export const App = (params) => {
                     pos="absolute"
                     alignItems={'center'}
                     top='10vh'
-                    left={'40vw'}
+                    left='40vw'
                     w="40vw"
                     h="40vh"
                     bgColor="white"
                     zIndex="1"
                     rounded={5}
-                > </Box>
+                    opacity='90%'
+                    p='5vw'
+                > 
+                    <Text fontSize='2xl' fontWeight='bold'>
+                        Zoom rental never been easier. Lets booking your meeting now!
+                    </Text>
+                    <Button bg='#7FCAD7' _hover={{background:"#96DDE9"}} h='5vh' mt='5vh'>
+                        <FaWhatsapp/>
+                        <Text pl='1vw'>Hubungi Kami!</Text>
+                    </Button>
+                </Box>
             <Stack
                 direction={{ base: 'column', md: 'row' }}
                 w="full"
@@ -52,7 +64,7 @@ export const App = (params) => {
             >
                 <Box w={{ base: 'full', md: '50%' }}>
                     <Image 
-                        src='img/highlight/sosmed-left.jpg' 
+                        src='/img/highlight/sosmed-left.jpg' 
                         w="full"
                         h="full"
                         objectFit="cover"/>
@@ -60,7 +72,7 @@ export const App = (params) => {
 
                 <Box w={{ base: 'full', md: '53.4%' }} h='100%'>
                     <Image
-                        src='img/highlight/sosmed-right.svg'
+                        src='/img/highlight/sosmed-right.svg'
                         w='full'
                         h={{ base: '100%', md: '100%' }}
                         objectFit='cover'

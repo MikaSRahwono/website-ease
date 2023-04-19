@@ -6,6 +6,7 @@ import {
   List,
   ListItem,
   Text,
+  Image,
   useColorModeValue as mode,
 } from '@chakra-ui/react'
 import * as React from 'react'
@@ -14,13 +15,12 @@ const CheckIcon = createIcon({
   d: 'M0 5.82857L1.64571 4.11429L5.48571 7.2L14.8114 0L16.4571 1.71429L5.48571 12L0 5.82857Z',
 })
 
-const PricingDetail = (props) => {
-  const { children, ...rest } = props
+const PricingDetail = ({icon, name}) => {
   return (
-    <ListItem display="flex" alignItems="flex-start" fontWeight="medium" maxW="260px" {...rest}>
-      <CheckIcon mr="4" mt="1" color={mode('blue.500', 'blue.300')} />
+    <ListItem display="flex" alignItems="flex-start" fontWeight="medium" maxW="260px" >
+      <Image mr="4" mt="1" src={icon}/>
       <Text as="span" display="inline-block">
-        {children}
+        {name}
       </Text>
     </ListItem>
   )
@@ -90,7 +90,8 @@ const PricingWrapper = (props) => {
       w="full"
       maxW="md"
       mx="auto"
-      bg={mode('white', 'gray.700')}
+      bg='white'
+      color='black'
       px="10"
       pt="8"
       pb="8"
@@ -120,8 +121,8 @@ export const PricingCard = (props) => {
       </Flex>
 
       <List stylePosition="outside" mt="8" spacing={4}>
-        {features.map((feature, idx) => (
-          <PricingDetail key={idx}>{feature}</PricingDetail>
+        {features.map(feature => (
+          <PricingDetail icon={feature.icon} name={feature.name}></PricingDetail>
         ))}
       </List>
 
