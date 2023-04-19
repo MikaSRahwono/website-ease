@@ -78,32 +78,34 @@ export const App = () => {
         </HStack>
       </Center>
       <Center>
-      <Box bgColor="#DAC17E" maxW="full" py={10} px={{lg:'20vw', sm:'10'}}>
-        <Slider {...settings} ref={sliderRef}>
-          {sliderContent.map((slide, index) => (
-            <VStack key={index} alignItems="stretch" spacing={4}>
-              <HStack spacing={4}>
-                <Image
-                  boxSize='sm'
-                  src={slide.image}
-                  alt={slide.title}
-                  borderRadius="md"
-                  w={{lg:'30%', sm:'40%'}}
-                  h='auto'
-                  objectFit="cover"
-                />
-                <VStack alignItems="start" spacing={2}>
-                  <Heading as="h3" size="lg">
-                    {slide.title}
-                  </Heading>
-                  <Text fontSize={{lg:'1vw'}} fontWeight={'semibold'}>{slide.description}</Text>
-                  <Button colorScheme="teal">Lihat Selengkapnya</Button>
+        <Container maxW={{lg:'60vw', sm:'100vw'}}>
+          <Box rounded={10} bgColor="#DAC17E" maxW="full" py={10} px={{lg:'2vw', sm:'10'}}>
+            <Slider {...settings} ref={sliderRef}>
+              {sliderContent.map((slide, index) => (
+                <VStack key={index} alignItems="stretch" spacing={4}>
+                  <HStack spacing={4}>
+                    <Image
+                      boxSize='sm'
+                      src={slide.image}
+                      alt={slide.title}
+                      borderRadius="md"
+                      w={{lg:'30%', sm:'40%'}}
+                      h='auto'
+                      objectFit="cover"
+                    />
+                    <VStack alignItems="start" spacing={2}>
+                      <Heading as="h3" size="lg">
+                        {slide.title}
+                      </Heading>
+                      <Text fontSize={{lg:'1vw'}} fontWeight={'semibold'}>{slide.description}</Text>
+                      <Button colorScheme="teal">Lihat Selengkapnya</Button>
+                    </VStack>
+                  </HStack>
                 </VStack>
-              </HStack>
-            </VStack>
-          ))}
-        </Slider>
-      </Box>
+              ))}
+            </Slider>
+          </Box>
+        </Container>
       </Center>
     </Box>
   );

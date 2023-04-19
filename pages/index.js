@@ -23,9 +23,12 @@ export default function Home() {
       
       <ThanksFor></ThanksFor>
       <OurServices></OurServices>
+        <Divider mb={65}></Divider>
       <Highlight > </Highlight>
       <MeetOurClient></MeetOurClient>
-      <ApaKataMereka></ApaKataMereka>
+      <Box pt={'8vh'} bgColor="#f2f2f2">
+        <ApaKataMereka></ApaKataMereka>
+      </Box>
     </Box>
   )
 }

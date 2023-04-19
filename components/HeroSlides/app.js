@@ -28,12 +28,12 @@ export const App = (props) => {
         <Flex
           key={`slide-${index}`}
           w="full"
-          h="70vh"
+          h={{lg:"75vh", sm:"80vh"}}
           alignItems="center"
           justifyContent="center"
           bgColor={slide.color || "#5EA698"}
         >
-          <Box fontFamily="Montserrat" ml={{ lg:'150px' }} padding={{ base: "50px", md: "150px" }}>
+          <Box fontFamily="Montserrat" ml={{ lg:'100px' }} padding={{ base: "50px", md: "120px" }}>
             <Stack
               spacing={{ base: 1, sm: "0" }}
               direction={{ base: "column", md: "row" }}
@@ -46,12 +46,12 @@ export const App = (props) => {
                 <VStack align={{ base: "left", md: "left" }} spacing={0}>
                   <Text
                     pt={{ lg: "0px", sm: "0px" }}
-                    fontSize={{ base: "10vw", md: "6vw", lg: "6vw" }}
+                    fontSize={{ base: "10vw", sm: "4vh", lg: "3vw" }}
                     fontWeight="bold"
                   >
                     {slide.heading}
                   </Text>
-                  <Text fontSize={{ base: "3vw", md: "1.5vw", lg: "1.5vw" }}>
+                  <Text fontSize={{ base: "3vw", sm: "3vw", lg: "1.2vw" }}>
                     {slide.subheading1}
                   </Text>
                   <VStack
@@ -62,7 +62,7 @@ export const App = (props) => {
                     <Button
                       size={{ base: "sm", md: "md", lg: "lg" }}
                       height={{ base: "3vh", md: "5vh", lg: "7vh" }}
-                      width="auto"
+                      width={{md:"9vw", sm:"30vw"}}
                       fontSize="2vw"
                       color="#000"
                       bgColor={"white"}
@@ -70,7 +70,7 @@ export const App = (props) => {
                       onClick={() => window.open()}
                       mt="2vh"
                     >
-                      Learn More...
+                      {slide.button}
                     </Button>
                   </VStack>
                 </VStack>

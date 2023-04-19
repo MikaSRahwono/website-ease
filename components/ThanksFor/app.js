@@ -19,17 +19,18 @@ import {
       <Box alignItems={'center'} bg="white" p={5}>
         <Center>
         <Text textAlign={'center'} fontSize={{lg: "2vw", sm:'3vh'}} fontWeight="bold" mb={5}>
-          Terima kasih telah mempercayai kami
+        THANK YOU FOR TRUSTING US
         </Text>
         </Center>
+        <Container maxW={{lg:'60vw', sm:'100vw'}}>
         <Grid
-          templateColumns={{ base: "repeat(2, 1fr)", md: "repeat(4, 1fr)" }}
-          gap={10}
+          templateColumns={{ base: "repeat(2, 1fr)", md: "repeat(3, 1fr)" }}
+          gap={1}
           justifyItems="center"
         >
           <Box>
             <VStack>
-              <Image boxSize={{ base: "40px", sm: "80px", md: "100px" }} src="img/testhanks.svg" />
+              <Image boxSize={{ base: "40px", sm: "80px", md: "100px" }} src="img/thanksfor/customer.png" />
               <Text fontWeight={"bold"} fontSize={{ base: "1.5vw", md: "2vw", sm: "4vw" }}>
               40.000+
               </Text>
@@ -40,7 +41,7 @@ import {
           </Box>
           <Box>
             <VStack>
-              <Image boxSize={{ base: "40px", sm: "80px", md: "100px" }} src="img/testhanks.svg" />
+              <Image boxSize={{ base: "40px", sm: "80px", md: "100px" }} src="img/thanksfor/reputable.png" />
               <Text fontWeight={"bold"} fontSize={{ base: "1.5vw", md: "2vw", sm: "4vw" }}>
                 1000+
               </Text>
@@ -51,7 +52,7 @@ import {
           </Box>
           <Box>
             <VStack>
-              <Image boxSize={{ base: "40px", sm: "80px", md: "100px" }} src="img/testhanks.svg" />
+              <Image boxSize={{ base: "40px", sm: "80px", md: "100px" }} src="img/thanksfor/schedule.png" />
               <Text fontWeight={"bold"} fontSize={{ base: "1.5vw", md: "2vw", sm: "4vw" }}>
               10.000+
               </Text>
@@ -60,18 +61,8 @@ import {
               </Text>
             </VStack>
           </Box>
-          <Box>
-            <VStack>
-              <Image boxSize={{ base: "40px", sm: "80px", md: "100px" }} src="img/testhanks.svg" />
-              <Text fontWeight={"bold"} fontSize={{ base: "1.5vw", md: "2vw", sm: "4vw" }}>
-                2 Juta
-              </Text>
-              <Text align="center" color="#828d8b" fontSize={{ base: "1vw", lg: "1vw", sm: "2vh" }}>
-                Konten edukatif dengan berbagai topik di sosial media
-              </Text>
-            </VStack>
-          </Box>
         </Grid>
+        </Container>
         </Box>
         </Box>
     )

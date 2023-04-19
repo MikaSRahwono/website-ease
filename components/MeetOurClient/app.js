@@ -7,7 +7,7 @@ export function App () {
     <Flex
       w="full"
       h="120vh"
-      padding={'30px'}
+      padding={{ lg:'100px', sm:'40px' }}
       objectFit={'cover'}
     >
       <Box
