@@ -96,7 +96,7 @@ export default function Lists() {
         list => {setItems(list)}
       )
     }
-  }, [router])
+  }, [database, router])
 
 
   return (

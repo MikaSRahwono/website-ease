@@ -15,7 +15,7 @@ export default function Dashboard() {
       if (!loading && !authUser) {
         router.push('/admin')
       }
-    }, [authUser, loading])
+    }, [authUser, loading, router])
 
     return (
         <Box pt={35}>

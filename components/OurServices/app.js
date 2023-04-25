@@ -71,7 +71,7 @@ export const App = () => {
     <Box fontFamily={'Montserrat'} alignContent={'center'} alignItems={'center'} color="#000" bgColor="white">
       <Heading as="h2" size="2xl" textAlign="center" mt={10} mb={5} fontWeight={'bold'}>Our Services</Heading>
       <Center>
-        <HStack mb='10px' spacing={10} mt={2}>
+        <HStack mb='30px' spacing={10} mt={2}>
           <Button bgColor={sliderIndex === 0 ? '#DAC17E' : '#f2f2f2'} borderRadius={50} onClick={() => handleClick(0)}>Zoom</Button>
           <Button bgColor={sliderIndex === 1 ? '#DAC17E' : '#f2f2f2'} borderRadius={50} onClick={() => handleClick(1)}>Studio</Button>
           <Button bgColor={sliderIndex === 2 ? '#DAC17E' : '#f2f2f2'} borderRadius={50} onClick={() => handleClick(2)}>Creative</Button>
@@ -79,7 +79,7 @@ export const App = () => {
       </Center>
       <Center>
         <Container maxW={{lg:'60vw', sm:'100vw'}}>
-          <Box rounded={10} bgColor="#DAC17E" maxW="full" py={10} px={{lg:'2vw', sm:'10'}}>
+          <Box rounded={50} bgImage="img/Background 1.png" maxW="full" py={10} px={{lg:'2vw', sm:'10'}}>
             <Slider {...settings} ref={sliderRef}>
               {sliderContent.map((slide, index) => (
                 <VStack key={index} alignItems="stretch" spacing={4}>
@@ -94,11 +94,18 @@ export const App = () => {
                       objectFit="cover"
                     />
                     <VStack alignItems="start" spacing={2}>
-                      <Heading as="h3" size="lg">
-                        {slide.title}
-                      </Heading>
-                      <Text fontSize={{lg:'1vw'}} fontWeight={'semibold'}>{slide.description}</Text>
-                      <Button colorScheme="teal">Lihat Selengkapnya</Button>
+                      <Box height={{ base: '5em', lg: '3em' }}>
+                        <Heading
+                          as="h3"
+                          size="lg"
+                        >
+                          {slide.title}
+                        </Heading>
+                      </Box>
+                      <Box pb={'10vh'} height={{ base: '6em', lg: '4em' }}>
+                        <Text fontSize={{lg:'1vw'}} fontWeight={'regular'}>{slide.description}</Text>
+                      </Box>
+                      <Button bgColor='white'>Learn More</Button>
                     </VStack>
                   </HStack>
                 </VStack>

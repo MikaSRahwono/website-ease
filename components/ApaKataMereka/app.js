@@ -7,7 +7,7 @@ import 'slick-carousel/slick/slick-theme.css'
 import { HistoryCards } from './cards'
 import { apakatamerekaCardsData } from './_data'
 import { ChevronRightIcon, ChevronLeftIcon } from '@chakra-ui/icons'
-import { PrevArrow, NextArrow } from 'react-slick'
+import { Testimonial } from '../ServicesPage/Testimoni/testimonial'
 
 export const App = () => {
 
@@ -50,6 +50,8 @@ export const App = () => {
     arrows: true,
     prevArrow: <CustomArrow direction="left" />,
     nextArrow: <CustomArrow direction="right" />,
+    centerMode: true, // tambahkan properti centerMode
+    centerPadding: "0 10px", // tambahkan properti centerPadding
     responsive: [
       {
         breakpoint: 1446,
@@ -88,14 +90,14 @@ export const App = () => {
 
 
   return (
-    <Box mx={['10px', '10px', '280px']} pb='9vh'>
+    <Box mx={['10px', '10px', '280px']} pb='20vh'>
       <Heading color='#000' textAlign={['left']} pl='15' as='h1' size='2xl' pb='5vh' variant='page-title' position="relative">
         Apa Kata Mereka?
       </Heading>
         <Box>
           <Slider {...settings} ref={setSlider}>
           {apakatamerekaCardsData.map((data, index) => (
-              <HistoryCards key={index} {...data} />
+              <Testimonial key={index} {...data} />
             ))}
           </Slider>
         </Box>

@@ -29,7 +29,7 @@ export const HistoryCards = (props) => {
       <Center>
         <HStack justifyContent="center" alignItems="center">
           <Image src={img} alt={name} w="30%" h="30%" objectFit="cover" />
-          {img2 && <Image src={img2} w="30%" h="30%" objectFit="cover" />}
+          {img2 && <Image alt={name} src={img2} w="30%" h="30%" objectFit="cover" />}
         </HStack>
       </Center>
 

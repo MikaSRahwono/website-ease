@@ -2,7 +2,8 @@ import {
   Box,
   HStack,
   Image,
-  Text
+  Text,
+  Center
 } from '@chakra-ui/react'
 import { useState } from 'react';
 import Slider from "react-slick"
@@ -13,9 +14,9 @@ export const App = (props) => {
   const slides = props.slides
 
   return (
-    <Box color='#000'>
+    <Center color='#000' w='90vw'>
       <HStack>
-        <Box maxW="20vw">
+        <Box  maxW="30vw">
           <Text fontSize='4xl' fontWeight='extrabold' noOfLines={2}>Recent</Text>
           <Text fontSize='4xl' fontWeight='extrabold'>Projects</Text>
           <Box h={10}></Box>
@@ -24,7 +25,7 @@ export const App = (props) => {
           </Text>
         </Box>
         <Box w='5vw'></Box>
-        <Box w="40vw">
+        <Box w="50vw">
           <Box mt='5vh'>
             <Slider>
               {slides.map((slide, index) => (
@@ -39,7 +40,7 @@ export const App = (props) => {
           </Box>
         </Box>
       </HStack>
-    </Box>
+    </Center>
   )
 }
 

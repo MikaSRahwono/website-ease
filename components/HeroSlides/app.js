@@ -20,6 +20,7 @@ export const App = (props) => {
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 5000,
+    dots:true, 
   };
 
   return (
@@ -31,7 +32,8 @@ export const App = (props) => {
           h={{lg:"75vh", sm:"80vh"}}
           alignItems="center"
           justifyContent="center"
-          bgColor={slide.color || "#5EA698"}
+          color={slide.clor}
+          bgImage = {slide.bground}
         >
           <Box fontFamily="Montserrat" ml={{ lg:'100px' }} padding={{ base: "50px", md: "120px" }}>
             <Stack
@@ -48,10 +50,13 @@ export const App = (props) => {
                     pt={{ lg: "0px", sm: "0px" }}
                     fontSize={{ base: "10vw", sm: "4vh", lg: "3vw" }}
                     fontWeight="bold"
+                    minH={{ sm: "20vh", lg: "30vh" }}
                   >
                     {slide.heading}
                   </Text>
-                  <Text fontSize={{ base: "3vw", sm: "3vw", lg: "1.2vw" }}>
+                  <Text 
+                    fontSize={{ base: "3vw", sm: "3vw", lg: "1.2vw" }}
+                    minH={{ sm: "12vh", lg: "10vh" }}>
                     {slide.subheading1}
                   </Text>
                   <VStack
@@ -76,7 +81,15 @@ export const App = (props) => {
                 </VStack>
               </VStack>
               <Box w={{ base: "full", md: "50%" }}>
-                <Image size={{ sm: "1" }} src={slide.img} alt="easeyourneeds" />
+              <Image
+                  boxSize={{ base: "full", sm: "auto" }}
+                  width={{ base: "100%", sm: "auto", lg: "100%" }}
+                  height={{ base: "auto", sm: "auto", lg: "100%" }}
+                  objectFit="contain"
+                  objectPosition="center"
+                  src={slide.img}
+                  alt="easeyourneeds"
+                />
               </Box>
             </Stack>
           </Box>

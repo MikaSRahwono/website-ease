@@ -1,12 +1,13 @@
-import { 
+import {
     Box,
     Text,
     Image,
     Stack,
     Button,
-    VStack
- 
+    VStack,
+    HStack,
  } from "@chakra-ui/react";
+import { FaWhatsapp } from "react-icons/fa";
 
 export const App = (params) => {
 
@@ -19,40 +20,29 @@ export const App = (params) => {
             fontFamily={'Montserrat'}>
             
             <Box pos="relative">
-            <Box
-                pos="absolute"
-                top="10vh"
-                left={{ lg: "40vw", sm: "10vw" }}
-                w={{ lg: "40vw", sm: "80%" }}
-                h={{ lg: "40vh", sm: "80%" }}
-                bgColor="white"
-                zIndex="1"
-                rounded={5}
-                textAlign="center"
-                display="flex"
-                justifyContent="center"
-                alignItems="center"
-                px={5}
-                >
-                <VStack>
-                    <Text fontSize={'3vh'} fontWeight={'semibold'}>
-                    Build your audience online and expand your reach with our live streaming services, lets go bigger now!
-                    </Text>
-
-                    <Button
-                    size={{ base: "sm", md: "md", lg: "lg" }}
-                    height={{ base: "3vh", md: "5vh", lg: "7vh" }}
-                    width="auto"
-                    fontSize="2vw"
-                    color="white"
-                    bgColor={"red"}
+                <Box
+                    pos="absolute"
+                    alignItems={'center'}
+                    top='10vh'
+                    left={{lg:'40vw', sm:'10vw'}}
+                    w={{lg:"40vw", sm:"80vw"}}
+                    h={{lg:"40vh", sm:"45vh"}}
+                    bgColor="white"
+                    zIndex="1"
                     rounded={5}
-                    onClick={() => window.open()}
-                    mt="2vh">
-                        Join Now
+                    opacity='95%'
+                    shadow={'2xl'}
+                    p='5vw'
+                    justifyContent={'center'}
+                > 
+                    <Text fontSize='2xl' fontWeight='bold'>
+                        Zoom rental never been easier. Lets booking your meeting now!
+                    </Text>
+                    <Button bg='#7FCAD7' _hover={{background:"#96DDE9"}} h='5vh' mt='5vh'>
+                        <FaWhatsapp/>
+                        <Text pl='1vw'>Hubungi Kami!</Text>
                     </Button>
-                </VStack>
-                </Box>      
+                </Box>
             <Stack
                 direction={{ base: 'column', md: 'row' }}
                 w="full"
@@ -71,7 +61,8 @@ export const App = (params) => {
             >
                 <Box w={{ base: 'full', md: '50%' }}>
                     <Image 
-                        src='img/highlight/sosmed-left.jpg' 
+                        alt='sosmed easeyourneeds'
+                        src='/img/highlight/sosmed-left.jpg' 
                         w="full"
                         h="full"
                         objectFit="cover"/>
@@ -79,7 +70,8 @@ export const App = (params) => {
 
                 <Box w={{ base: 'full', md: '53.4%' }} h='100%'>
                     <Image
-                        src='img/highlight/sosmed-right.svg'
+                        alt='sosmed easeyourneeds'
+                        src='/img/highlight/sosmed-right.svg'
                         w='full'
                         h={{ base: '100%', md: '100%' }}
                         objectFit='cover'

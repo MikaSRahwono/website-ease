@@ -25,21 +25,18 @@ import { SingleDatepicker } from 'chakra-dayzed-datepicker';
 import { useState } from 'react'
 import DragAndDrop from './dragDrop';
 import { useDB } from '@/lib/databaseContext';
-import { redirects } from '@/next.config';
 import { Router, useRouter } from 'next/router';
-import { redirect } from 'next/dist/server/api-utils';
 
+function useAddProject() {
+  const database = useDB()
+  const router = useRouter();
 
-export const app = () => {
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
   const [date, setDate] = useState(new Date());
   const [place, setPlace] = useState('');
   const [category, setCategory] = useState('');
   const [fileList, setFileList] = useState([[]]);
-
-  const database = useDB()
-  const router = useRouter();
 
   const onSubmit = () => {
     console.log(title)
@@ -58,38 +55,60 @@ export const app = () => {
     router.push('/dashboard?sort=all')
   }
 
+  return { 
+    title, setTitle, 
+    description, setDescription, 
+    date, setDate,
+    place, setPlace, 
+    category, setCategory, 
+    fileList, setFileList,
+    onSubmit
+  };
+}
+
+export const App = () => {
+  const {
+    title, setTitle, 
+    description, setDescription, 
+    date, setDate,
+    place, setPlace, 
+    category, setCategory, 
+    fileList, setFileList,
+    onSubmit
+  } = useAddProject();
+
   return (
-  <Box
-    px={{
-      base: '4',
-      md: '10',
-    }}
-    py="16"
-    maxWidth="3xl"
-    mx="auto"
-  >
-    <Stack spacing="4" divider={<StackDivider />}>
-      <Heading size="lg" as="h1" paddingBottom="4">
-        Add Project
-      </Heading>
-      <FieldGroup title="Info Project">
-        <VStack width="full" spacing="6">
-          <FormControl id="title">
-            <FormLabel>Title</FormLabel>
-            <Input type="text" maxLength={255} onChange={event => setTitle(event.currentTarget.value)}/>
-          </FormControl>
+    <Box
+      px={{
+        base: '4',
+        md: '10',
+      }}
+      py="16"
+      maxWidth="3xl"
+      mx="auto"
+    >
+      <Stack spacing="4" divider={<StackDivider />}>
+        <Heading size="lg" as="h1" paddingBottom="4">
+          Add Project
+        </Heading>
+        <FieldGroup title="Info Project">
+          <VStack width="full" spacing="6">
+            <FormControl id="title">
+              <FormLabel>Title</FormLabel>
+              <Input type="text" maxLength={255} value={title} onChange={event => setTitle(event.currentTarget.value)}/>
+            </FormControl>
 
-          <FormControl id="desc">
-            <FormLabel>Description</FormLabel>
-            <Textarea rows={5} onChange={event => setDescription(event.currentTarget.value)}/>
-            <FormHelperText>
-              Brief description about the project
-            </FormHelperText>
-          </FormControl>
+            <FormControl id="desc">
+              <FormLabel>Description</FormLabel>
+              <Textarea rows={5} value={description} onChange={event => setDescription(event.currentTarget.value)}/>
+              <FormHelperText>
+                Brief description about the project
+              </FormHelperText>
+            </FormControl>
 
-          <FormControl id="date">
-            <FormLabel>Date</FormLabel>
-            <SingleDatepicker
+            <FormControl id="date">
+              <FormLabel>Date</FormLabel>
+              <SingleDatepicker
             name="date-input"
             date={date}
             onDateChange={setDate}
