@@ -1,17 +1,13 @@
-import { 
-    Flex,
+import {
     Box,
     Text,
     Image,
-    Grid,
-    SimpleGrid,
     Stack,
-    Container,
+    Button,
     VStack,
     HStack,
     Button,
     useMediaQuery
- 
  } from "@chakra-ui/react";
 import { FaWhatsapp } from "react-icons/fa";
 
@@ -31,14 +27,16 @@ export const App = (params) => {
                     pos="absolute"
                     alignItems={'center'}
                     top='10vh'
-                    left='40vw'
-                    w="40vw"
-                    h="40vh"
+                    left={{lg:'40vw', sm:'10vw'}}
+                    w={{lg:"40vw", sm:"80vw"}}
+                    h={{lg:"40vh", sm:"45vh"}}
                     bgColor="white"
                     zIndex="1"
                     rounded={5}
-                    opacity='90%'
+                    opacity='95%'
+                    shadow={'2xl'}
                     p='5vw'
+                    justifyContent={'center'}
                 > 
                     <Text fontSize='2xl' fontWeight='bold'>
                         Zoom rental never been easier. Lets booking your meeting now!
@@ -66,6 +64,7 @@ export const App = (params) => {
             >
                 <Box w={{ base: 'full', md: '50%' }}>
                     <Image 
+                        alt='sosmed easeyourneeds'
                         src='/img/highlight/sosmed-left.jpg' 
                         w="full"
                         h="full"
@@ -74,6 +73,7 @@ export const App = (params) => {
 
                 <Box w={{ base: 'full', md: '53.4%' }} h='100%'>
                     <Image
+                        alt='sosmed easeyourneeds'
                         src='/img/highlight/sosmed-right.svg'
                         w='full'
                         h={{ base: '100%', md: '100%' }}

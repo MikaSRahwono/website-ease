@@ -1,5 +1,5 @@
 import { Box, Container } from "@chakra-ui/react";
-import { app as AddProjectPage } from "@/components/AddProjects/App";
+import { App as AddProjectPage } from "@/components/AddProjects/App";
 
 export default function addProject() {
     return (

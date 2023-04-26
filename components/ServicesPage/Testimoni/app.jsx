@@ -1,7 +1,6 @@
 import { Box, Flex, Img, Center, SimpleGrid, Heading, Text, useColorModeValue as mode, HStack } from '@chakra-ui/react'
 import * as React from 'react'
 import { ImQuotesLeft, ImQuotesRight } from 'react-icons/im'
-import { Plumtic, ChatMonkey } from './logo'
 import { zoom } from './_data'
 
 const Testimonial = (props) => {
@@ -121,15 +120,16 @@ export const App = () => {
           }}
           spacing="10"
         >
-          {zoom.map(item => (
-             <Testimonial
-             logo={item.logo}
-             author={item.author}
-             role={item.role}
-             image={item.image}
-           >
-            {item.testimony}
-           </Testimonial>
+          {zoom.map((item, index) => (
+            <Testimonial
+              key={index}
+              logo={item.logo}
+              author={item.author}
+              role={item.role}
+              image={item.image}
+            >
+              {item.testimony}
+            </Testimonial>
           ))}
         </SimpleGrid>
       </Box>

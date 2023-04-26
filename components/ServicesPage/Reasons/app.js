@@ -20,7 +20,6 @@ import { List } from "antd";
 
 export const App = ({image, imagemob, heading, lists}) => {
   const [isLargerThan400] = useMediaQuery('(min-width: 480px)')
-
   return (
     <Box
       w="full"
