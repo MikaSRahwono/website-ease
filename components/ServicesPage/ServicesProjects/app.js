@@ -26,13 +26,15 @@ export const App = (props) => {
         </Box>
         <Box w='5vw'></Box>
         <Box w="50vw">
-          <Box mt='5vh'>
+          <Box mt='5vh' h='50vh'>
             <Slider>
               {slides.map((slide, index) => (
                 <Image
+                h='50v
+                  '
                   key={index} // Add key prop
                   src={slide.img}
-                  objectFit='cover'
+                  objectFit='contain'
                   alt={slide.description || 'Project slide'} // Add alt attribute
                 />
               ))}

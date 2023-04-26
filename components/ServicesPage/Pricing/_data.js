@@ -102,34 +102,34 @@ export const creative = [
     {
       name: 'Basic Package',
       desc: 'Live streaming services with one camera',
-      price: 2999000,
+      price: 2999,
       features: [
         {
           icon: '',
           name: 'Live Service: 6 Hours'
         },
         {
-          icon: '',
+          icon: '/img/pricelist/creative/fullhd.png',
           name: 'Full HD Resolution'
         },
         {
-          icon: '',
+          icon: '/img/pricelist/creative/camera.png',
           name: '1 Camera Sony Full HD'
         },
         {
-          icon: '',
+          icon: '/img/pricelist/creative/channel.png',
           name: 'Live 1 Channel'
         },
         {
-          icon: '',
+          icon: '/img/pricelist/creative/tools.png',
           name: '1 Package Streaming Tools'
         },
         {
-          icon: '',
+          icon: '/img/pricelist/creative/zoom.png',
           name: 'Zoom Pro 300 Participants'
         },
         {
-          icon: '',
+          icon: '/img/pricelist/creative/crew.png',
           name: '2 Proffesional Crews'
         }
       ]
@@ -137,34 +137,34 @@ export const creative = [
     {
       name: 'Standard Package',
       desc: 'Live streaming services with one camera',
-      price: 3999000,
+      price: 3999,
       features: [
         {
           icon: '',
           name: 'Live Service: 6 Hours'
         },
         {
-          icon: '',
+          icon: '/img/pricelist/creative/fullhd.png',
           name: 'Full HD Resolution'
         },
         {
-          icon: '',
+          icon: '/img/pricelist/creative/camera.png',
           name: '2 Camera Sony Full HD'
         },
         {
-          icon: '',
+          icon: '/img/pricelist/creative/channel.png',
           name: 'Live 2 Channel'
         },
         {
-          icon: '',
+          icon: '/img/pricelist/creative/tools.png',
           name: '1 Package Streaming Tools'
         },
         {
-          icon: '',
+          icon: '/img/pricelist/creative/zoom.png',
           name: 'Zoom Pro 500 Participants'
         },
         {
-          icon: '',
+          icon: '/img/pricelist/creative/crew.png',
           name: '3 Proffesional Crews'
         },
       ]
@@ -172,34 +172,34 @@ export const creative = [
     {
       name: 'Pro Package',
       desc: 'Live streaming services with one camera',
-      price: 4999000,
+      price: 4999,
       features: [
         {
           icon: '',
           name: 'Live Service: 6 Hours'
         },
         {
-          icon: '',
+          icon: '/img/pricelist/creative/fullhd.png',
           name: 'Full HD Resolution'
         },
         {
-          icon: '',
+          icon: '/img/pricelist/creative/camera.png',
           name: '3 Camera Sony Full HD'
         },
         {
-          icon: '',
+          icon: '/img/pricelist/creative/channel.png',
           name: 'Live 3 Channel'
         },
         {
-          icon: '',
+          icon: '/img/pricelist/creative/tools.png',
           name: 'Package Streaming Tools'
         },
         {
-          icon: '',
+          icon: '/img/pricelist/creative/zoom.png',
           name: 'Zoom Pro 1000 Participants'
         },
         {
-          icon: '',
+          icon: '/img/pricelist/creative/crew.png',
           name: '3 Proffesional Crews'
         },
       ]

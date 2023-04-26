@@ -9,12 +9,14 @@ import {
     Container,
     VStack,
     HStack,
-    Button
+    Button,
+    useMediaQuery
  
  } from "@chakra-ui/react";
 import { FaWhatsapp } from "react-icons/fa";
 
 export const App = (params) => {
+    const [isLargerThan400] = useMediaQuery('(min-width: 400px)')
 
     return (
         <Box 
