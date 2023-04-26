@@ -11,7 +11,7 @@ export const App = ({description, datas, column}) => {
       <Box
         maxH={{
           base: '100vh',
-          md: '85vh'
+          md: '120vh'
         }}
         mx="auto"
         px={{
@@ -30,7 +30,7 @@ export const App = ({description, datas, column}) => {
         </Heading>
         <Box h={{base: '12vh', md: '8vh',}} pl={5} pr={5} bg='white' mt='4vh' boxShadow='md' borderRadius={15}>
           <Center h={{base: '12vh', md: '8vh',}}>
-            <Text fontSize={{base: 'sm'}} textAlign='center' color='#2f2f2f'>{description}</Text>
+            <Text fontSize={{base: 'sm'}} textAlign='center' color='black'>{description}</Text>
           </Center>
         </Box>
         <SimpleGrid

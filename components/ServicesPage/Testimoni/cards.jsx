@@ -97,12 +97,9 @@ const Testimonial = (props) => {
   )
 }
 
-export const App = () => {
+export const Cards = () => {
   return (
     <Box as="section" py="12">
-      <Center color='#2f2f2f' mb='5vh'>
-        <Heading>Testimoni</Heading>
-      </Center>
       <Box
         maxW={{
           base: 'xl',

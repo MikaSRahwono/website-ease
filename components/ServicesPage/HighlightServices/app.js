@@ -6,7 +6,6 @@ import {
     Button,
     VStack,
     HStack,
-    Button,
     useMediaQuery
  } from "@chakra-ui/react";
 import { FaWhatsapp } from "react-icons/fa";

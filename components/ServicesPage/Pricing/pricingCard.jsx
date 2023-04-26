@@ -9,6 +9,9 @@ import {
   HStack,
   Image,
   useColorModeValue as mode,
+  Divider,
+  Center,
+  VStack,
 } from '@chakra-ui/react'
 import * as React from 'react'
 const CheckIcon = createIcon({
@@ -63,7 +66,9 @@ const PopularBadge = (props) => (
 const PriceDisplay = (props) => {
   const { currency, price } = props
   return (
-    <Flex w="100%" align="center" justify="center" my="3" fontWeight="extrabold">
+    <VStack mb='2vh' mt='0.5vh'>
+      <Text textAlign='start' fontWeight='bold'>Start from</Text>
+      <Flex w="100%" align="center" justify="center" my="3" fontWeight="extrabold">
       <Text fontSize="2xl" mr="2">
       {price != 0 ? currency : ''}
       </Text>
@@ -71,6 +76,7 @@ const PriceDisplay = (props) => {
         {price != 0 ? addSeperator(price) : 'Custom'}
       </Text>
     </Flex>
+    </VStack>
   )
 }
 
@@ -117,9 +123,12 @@ export const PricingCard = (props) => {
         <Text align="center" fontSize={{base: "lg", md: "xl"}} fontWeight="bold">
           {name}
         </Text>
-        <Text fontSize={{base: "sm", md: "md"}}  align="center" mt="2" mb='0.5vh' color={mode('gray.600', 'gray.400')} maxW="16rem" mx="auto">
+        <Text fontSize={{base: "sm", md: "md"}}  align="center" mt="2" mb='0.5vh' color='black' maxW="16rem" mx="auto">
           {description}
         </Text>
+        <Center mt='2' mb='2'>
+          <Divider w='70%' alignItems='center' size='10' borderColor='gray' variant='solid' orientation='horizontal'></Divider>
+        </Center>
         <PriceDisplay currency="Rp" price={price} />
       </Flex>
 
@@ -137,6 +146,8 @@ export const PricingCard = (props) => {
         mt="8"
         w="100%"
         onClick={onClick}
+        bg='#DAC17F'
+        _hover={{bg: '#CBAD5C'}}
       >
         BOOKING NOW!
       </Button>
