@@ -17,7 +17,8 @@ const Testing = () => {
     )
   }), [database]
   return (
-  <Image src={url}>
+  <Image alt='easeyourneeds' src={url}>
   </Image>
 );}
+
 export default Testing;

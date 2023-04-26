@@ -75,19 +75,19 @@ export const App = () => {
 
   const sliderContent = [
     {
-      image: "img/iconservice/zoomlogo1.png",
+      image: "https://firebasestorage.googleapis.com/v0/b/website-ease.appspot.com/o/img%2Ficonservice%2Fzoomlogo1.png?alt=media&token=5b74959e-949a-49c7-b748-deec8f0f2a9c",
       title: "Zoom",
       description: "Renting Zoom Pro and Zoom Webinar for everyone. Now, scheduling your zoom meeting is easier with us. ",
       link: '/services/zoom'
     },
     {
-      image: "img/iconservice/studiologo1.png",
+      image: "https://firebasestorage.googleapis.com/v0/b/website-ease.appspot.com/o/img%2Ficonservice%2Fstudiologo1.png?alt=media&token=430875f5-c835-471e-b9a2-9c3d93897c97",
       title: "Studio",
       description: "Maximizing your visual and media to enhance your brand identity with us. We help you to create creative product photography, videography, and campaigns.",
       link: '/services/studio'
     },
     {
-      image: "img/iconservice/livelogo1.png",
+      image: "https://firebasestorage.googleapis.com/v0/b/website-ease.appspot.com/o/img%2Ficonservice%2Flivelogo1.png?alt=media&token=b8b0d463-5392-4b7d-9e55-883d48e38e22",
       title: "Creative",
       description: "Helping you stream your events using advanced equipment and our best crews.",
       link: '/services/creative'
@@ -114,7 +114,10 @@ export const App = () => {
       </Center>
       <Center>
         <Container maxW={{lg:'60vw', sm:'100vw'}}>
-          <Box rounded={50} bgImage="img/Background 1.png" maxW="full" py={10} px={{lg:'2vw', sm:'10'}}>
+            <Box rounded={50} 
+            bgImage="https://firebasestorage.googleapis.com/v0/b/website-ease.appspot.com/o/img%2FBackground%201.png?alt=media&token=7b347cc5-f193-468f-81d1-f92e77e07d70" 
+            maxW="full" py={10} 
+            px={{lg:'2vw', sm:'10'}}>
             <Slider {...settings} ref={sliderRef}>
               {sliderContent.map((slide, index) => (
                 <VStack key={index} alignItems="stretch" spacing={4}>

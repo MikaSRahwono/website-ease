@@ -30,25 +30,25 @@ export const App = ({datas}) => {
         {datas.length > 4 ? 
         <VStack spacing='2vh'>
           <HStack spacing='sp'>
-            {data1.map(data => (
-            <VStack w='28vw'>
-              <Image w='10vw' src={data.icon} mb='1vh'></Image>
-              <Text w='20vw' textAlign='center' fontSize={{base: 'md', md: 'xl'}} fontWeight='bold' >{data.title}</Text>
+            {data1.map((data, index) => (
+            <VStack key={index} w='28vw'>
+              <Image w='10vw' src={data.icon} alt="easeyourneeds" mb='1vh'></Image>
+              <Text w='20vw' textAlign='center' fontSize={{base: 'md', md: 'xl'}} fontWeight='bold'>{data.title}</Text>
             </VStack>
           ))}
           </HStack>
           <HStack>
-            {data2.map(data => (
-            <VStack w='28vw'>
-              <Image w='10vw' src={data.icon} mb='1vh'></Image>
-              <Text w='20vw'  textAlign='center' fontSize={{base: 'md', md: 'xl'}} fontWeight='bold' >{data.title}</Text>
+            {data2.map((data, index) => (
+            <VStack key={index} w='28vw'>
+              <Image w='10vw' src={data.icon} alt="easeyourneeds" mb='1vh'></Image>
+              <Text w='20vw'  textAlign='center' fontSize={{base: 'md', md: 'xl'}} fontWeight='bold'>{data.title}</Text>
             </VStack>
           ))}
           </HStack>
         </VStack> :<HStack spacing={7} p='2vw'>
-            {datas.map(data => (
-              <VStack w='20vw'>
-                <Image w='10vw' src={data.icon} mb='3vh'></Image>
+            {datas.map((data, index) => (
+              <VStack key={index} w='20vw'>
+                <Image w='10vw' src={data.icon} alt="easeyourneeds" mb='3vh'></Image>
                 <Text w='20vw' textAlign='center' fontSize={{base: 'md', md: 'xl'}} fontWeight='bold' >{data.title}</Text>
               </VStack>
             ))}
@@ -58,9 +58,9 @@ export const App = ({datas}) => {
       </VStack> : <VStack>
       <Heading mb='1vh'>Alur Pemesanan</Heading>
         <VStack spacing={7} p='2vw'>
-            {datas.map(data => (
-              <VStack>
-                <Image w='28vw' src={data.icon} mb='1vh'></Image>
+            {datas.map((data, index) => (
+              <VStack key={index}>
+                <Image w='28vw' src={data.icon} alt="easeyourneeds" mb='1vh'></Image>
                 <Text w='60vw' textAlign='center' fontSize={{base: 'md', md: 'lg'}} fontWeight='bold' >{data.title}</Text>
               </VStack>
             ))}

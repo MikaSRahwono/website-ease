@@ -128,8 +128,8 @@ export const App = ({description, datas, column}) => {
             md: '1vw',
           }}
         >
-          {datas.map(data => (
-          <PricingCard
+          {datas.map((data, index) => (
+          <PricingCard key={index}
             name={data.name}
             description={data.desc}
             price={data.price}
@@ -137,19 +137,19 @@ export const App = ({description, datas, column}) => {
           />
           ))}
           
-        </SimpleGrid> : <Box w='full' mt='5vh'>
-          <Slider {...settings} ref={setSlider}>
-          {datas.map(data => (
-            <Box>
+          </SimpleGrid> : <Box w='full' mt='5vh'>
+            <Slider {...settings} ref={setSlider}>
+            {datas.map((data, index) => (
+            <Box key={index}>
               <PricingCard
-              name={data.name}
-              description={data.desc}
-              price={data.price}
-              features={data.features}
-            />
+                name={data.name}
+                description={data.desc}
+                price={data.price}
+                features={data.features}
+              />
             </Box>
-            
           ))}
+          
           </Slider>
         </Box>}
       </Box>

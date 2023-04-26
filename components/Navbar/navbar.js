@@ -1,7 +1,7 @@
 // Navbar.js
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
+import { Image } from "@chakra-ui/react";
 import styles from "./navbar.module.css";
 import { useRouter } from "next/router";
 
@@ -47,10 +47,10 @@ const Navbar = () => {
         <div className={styles.logo}>
           <Link href="/">
           <Image
-              src="/img/easelogo/blacktrans.png" // Replace with your logo image path
+              src="https://firebasestorage.googleapis.com/v0/b/website-ease.appspot.com/o/img%2Feaselogo%2Fblacktrans.png?alt=media&token=63f4aeed-6774-4b75-9504-f984ecd93ef9" // Replace with your logo image path
               alt="Logo"
-              width={80}
-              height={40}
+              width={28}
+              height={28}
               className={styles.logoImage}
             />
           </Link>

@@ -33,7 +33,6 @@ export const HistoryCards = (props) => {
         </HStack>
       </Center>
 
-        /* garis tipis */
         <Flex fontFamily={'Montserrat'} direction="column" justify="left" mt={4} textAlign="justify">
           <Text textAlign={'center'}  color={'#000'} fontSize="1xl" fontWeight="bold">
             {name}

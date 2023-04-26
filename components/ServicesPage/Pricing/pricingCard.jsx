@@ -23,7 +23,7 @@ const PricingDetail = ({icon, name}) => {
   return (
     <ListItem ml={3} display="flex" alignItems="flex-start" fontWeight="medium" maxW="260px" >
       <HStack>
-      <Image w={10} mr="2" mt="1" src={icon}/>
+      <Image w={10} mr="2" mt="1" alt="easeyourneeds" src={icon}/>
       <Text fontSize={{base: '3vw', md: '1vw',}} as="span" display="inline-block">
         {name}
       </Text>
@@ -133,8 +133,8 @@ export const PricingCard = (props) => {
       </Flex>
 
       <List stylePosition="outside" mt="2" spacing={4}>
-        {features.map(feature => (
-          <PricingDetail icon={feature.icon} name={feature.name}></PricingDetail>
+        {features.map((feature, index) => (
+          <PricingDetail key={index} icon={feature.icon} name={feature.name}></PricingDetail>
         ))}
       </List>
 

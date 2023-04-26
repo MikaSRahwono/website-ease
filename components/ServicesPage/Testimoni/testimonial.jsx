@@ -1,9 +1,9 @@
-import { Box, Flex, Center, Img, Stack, Text, useColorModeValue as mode } from '@chakra-ui/react'
+import { Box, Flex, Center, Img, Divider, Text, useColorModeValue as mode } from '@chakra-ui/react'
 import * as React from 'react'
 import { ImQuotesLeft, ImQuotesRight } from 'react-icons/im'
 
 export const Testimonial = (props) => {
-  const { logo, children, image, author, role, testimony } = props
+  const { logo, image, author, role, testimony } = props
   return (
     <Center>
       <Flex
@@ -14,9 +14,10 @@ export const Testimonial = (props) => {
       shadow="lg"
       h={{lg:'80vh'}}
       w={{lg:"25vw", base:'87vw'}}
-      px="3"
+      px="4"
       py="10"
-      ml={{lg:'8', sm:'2'}}
+      ml={{lg:'6', sm:'2'}}
+      mr={{lg:'6', sm:'2'}}
     >
       <Flex
         direction="column"
@@ -52,6 +53,9 @@ export const Testimonial = (props) => {
             {author}
           </Text>
           <Text>{role}</Text>
+          <Center pt='50'>
+            <Divider w={{lg:'10vw', sm:'30vw'}} alignItems='center' size='10' borderColor='gray' variant='solid' orientation='horizontal'></Divider>
+          </Center>
         </Box>
       </Flex>
       <Box as="blockquote" maxW="340px" mx="auto" my="4">

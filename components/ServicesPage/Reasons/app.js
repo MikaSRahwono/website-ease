@@ -39,9 +39,9 @@ export const App = ({image, imagemob, heading, lists}) => {
           </VStack>
           <VStack>
             <UnorderedList mt='4'fontSize={{base: '3vw', md: '4vw', lg: '2vw'}} fontWeight='normal'>
-              {lists.map(item => (
-                  <ListItem mt={5}>{item}</ListItem>
-              ))}
+            {lists.map((item, index) => (
+              <ListItem key={index} mt={5}>{item}</ListItem>
+            ))}
             </UnorderedList>
           </VStack>
         </HStack> : <VStack>
@@ -49,8 +49,8 @@ export const App = ({image, imagemob, heading, lists}) => {
               {heading}
             </Text>
             <UnorderedList fontSize={{base: '6vw', md: '1.5vw', lg: '1.5vw'}} fontWeight='normal'>
-              {lists.map(item => (
-                  <ListItem>{item}</ListItem>
+              {lists.map((item, index) => (
+              <ListItem key={index}>{item}</ListItem>
               ))}
             </UnorderedList>
           </VStack>}
