@@ -55,7 +55,7 @@ export default function Home() {
 
           {/* Frequently Asked Questions */}
           <Box>
-            <FAQ data='studio'></FAQ>
+            {FAQ && FAQ.data && <FAQ data='studio'></FAQ>}
           </Box>
 
           <Box>

@@ -13,7 +13,7 @@ import {
 
 export const App = (params) => {
   return (
-    <Box fontFamily={'Montserrat'} w="full" p={10} color="#000">
+    <Box fontFamily={'Montserrat'} w="full" p={10} pb='15vh' color="#000">
       <Box alignItems={"center"} bg="white" p={5}>
         <Center>
           <Text
@@ -64,7 +64,7 @@ export const App = (params) => {
                   src="img/thanksfor/reputable.png"
                 />
                 <Text fontWeight={"bold"} fontSize={{ base: "1.5vw", md: "2vw", sm: "4vw" }}>
-                  1000+
+                  1.000+
                 </Text>
                 <Text align="center" color="#828d8b" fontSize={{ base: "1vw", lg: "1vw", sm: "2vh" }}>
                   Reputable Brands

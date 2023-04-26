@@ -72,7 +72,7 @@ export const App = (props) => {
                       color="#000"
                       bgColor={"white"}
                       rounded={5}
-                      onClick={() => window.open()}
+                      onClick={() => window.open(slide.link)}
                       mt="2vh"
                     >
                       {slide.button}

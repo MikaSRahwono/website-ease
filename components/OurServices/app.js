@@ -3,11 +3,38 @@ import { Box, VStack, HStack, Image, Heading, Text, Button, Container, Center } 
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import "./arrow.module.css";
+import { ChevronRightIcon, ChevronLeftIcon } from '@chakra-ui/icons'
 
 export const App = () => {
   const [sliderIndex, setSliderIndex] = useState(0);
   const sliderRef = useRef(null);
+
+  const CustomArrow = ({ direction, onClick }) => {
+    return (
+      <Box
+        as="button"
+        onClick={onClick}
+        position="absolute"
+        top="50%"
+        transform="translateY(-50%)"
+        zIndex="1"
+        bg="transparent"
+        border="none"
+        outline="none"
+        cursor="pointer"
+        left={direction === "left" ? "-6" : ""}
+        right={direction === "right" ? "-6" : ""}
+      >
+        {direction === "left" ? (
+          <ChevronLeftIcon w={6} h={6} color="black" />
+        ) : (
+          <ChevronRightIcon w={6} h={6} color="black" />
+        )}
+      </Box>
+    );
+  };
+
+  /* gambar taro di atas mobile view */
 
   const settings = {
     initialSlide: sliderIndex,
@@ -15,6 +42,9 @@ export const App = () => {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
+    arrows: true,
+    prevArrow: <CustomArrow direction="left" />,
+    nextArrow: <CustomArrow direction="right" />,
     beforeChange: (current, next) => setSliderIndex(next),
     responsive: [
       {
@@ -48,16 +78,19 @@ export const App = () => {
       image: "img/iconservice/zoomlogo1.png",
       title: "Zoom",
       description: "Renting Zoom Pro and Zoom Webinar for everyone. Now, scheduling your zoom meeting is easier with us. ",
+      link: '/services/zoom'
     },
     {
       image: "img/iconservice/studiologo1.png",
       title: "Studio",
       description: "Maximizing your visual and media to enhance your brand identity with us. We help you to create creative product photography, videography, and campaigns.",
+      link: '/services/studio'
     },
     {
       image: "img/iconservice/livelogo1.png",
       title: "Creative",
       description: "Helping you stream your events using advanced equipment and our best crews.",
+      link: '/services/creative'
     },
   ];
 
@@ -66,6 +99,8 @@ export const App = () => {
       sliderRef.current.slickGoTo(index);
     }
   };
+
+  /* atas bawahnya di kecilin lagi */
 
   return (
     <Box fontFamily={'Montserrat'} alignContent={'center'} alignItems={'center'} color="#000" bgColor="white">
@@ -89,7 +124,7 @@ export const App = () => {
                       src={slide.image}
                       alt={slide.title}
                       borderRadius="md"
-                      w={{lg:'30%', sm:'40%'}}
+                      w={{lg:'40%', sm:'40%'}}
                       h='auto'
                       objectFit="cover"
                     />
@@ -105,7 +140,11 @@ export const App = () => {
                       <Box pb={{ base: '5vh', lg: '10vh', sm: '30vh' }}  height={{ base: '6em', lg: '4em' }}>
                         <Text fontSize={{lg:'1vw'}} fontWeight={'regular'}>{slide.description}</Text>
                       </Box>
-                      <Button bgColor='white'>Learn More</Button>
+                      <Button 
+                        onClick={() => window.open(slide.link)}
+                        bgColor='white'
+                        >Learn More
+                      </Button>
                     </VStack>
                   </HStack>
                 </VStack>

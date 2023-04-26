@@ -39,6 +39,8 @@ const Navbar = () => {
     };
   }, []);
 
+  /* icon gedein lagi, navbar geser kanan lagi */
+
   return (
     <header className={`${styles.navbar} ${isScrolled ? styles.scrolled : ""}`}>
       <div className={styles.container}>
