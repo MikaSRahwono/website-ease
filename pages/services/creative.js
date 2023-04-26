@@ -12,6 +12,7 @@ import { App as AlurBooking } from "@/components/ServicesPage/AlurBooking/app"
 import { App as Testimoni } from "@/components/ServicesPage/Testimoni/app"
 import { creative_desc, creative, } from "@/components/ServicesPage/Pricing/_data"
 import { creative_book } from "@/components/ServicesPage/AlurBooking/_data"
+import { creative_pro } from "@/components/ServicesPage/ServicesProjects/_data"
 
 export default function Home() {
   const reason_list = [
@@ -38,11 +39,11 @@ export default function Home() {
       ></Reasons>
       <Box h='10vh' bg='white'></Box>
       <Highlight></Highlight>
-      <Container maxW='90vw' >
+      <Center w='100vw' >
         <Box mt={30} width='90vw'>
           {/* Recent Projects */}
           <Box mt='10'>
-            <Projects slides={slides_pro}></Projects>
+            <Projects slides={creative_pro}></Projects>
           </Box>
 
           {/* Pricing */}
@@ -66,7 +67,7 @@ export default function Home() {
 
           <Box height='50vh'></Box>
         </Box>
-      </Container>
+      </Center>
     </Box>
   )
 }

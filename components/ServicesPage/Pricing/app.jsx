@@ -1,15 +1,17 @@
-import { Box, Center, Container, Heading, SimpleGrid, Text, useColorModeValue as mode } from '@chakra-ui/react'
+import { Box, Center, Container, Heading, SimpleGrid, Text, useColorModeValue as mode, useMediaQuery } from '@chakra-ui/react'
 import * as React from 'react'
 import { DurationSwitcher } from './durationSwitcher'
 import { PricingCard } from './pricingCard'
+import Slider from 'react-slick'
 
 export const App = ({description, datas, column}) => {
+  const [isLargerThan400] = useMediaQuery('(min-width: 480px)')
   return (
     <Box as="section" py="20">
       <Box
-        maxW={{
-          base: 'xl',
-          md: '7xl',
+        maxH={{
+          base: '100vh',
+          md: '85vh'
         }}
         mx="auto"
         px={{
@@ -21,42 +23,40 @@ export const App = ({description, datas, column}) => {
           as="h1"
           size="2xl"
           fontWeight="extrabold"
-          textAlign={{
-            sm: 'center',
-          }}
+          textAlign="center"
           color='#2f2f2f'
         >
           Harga dan Paket
         </Heading>
-        <Box h='10vh' bg='white' mt='8vh' boxShadow='md' borderRadius={15}>
-          <Center h='10vh'>
-            <Text textAlign='center' color='#2f2f2f' size='lg'>{description}</Text>
+        <Box h={{base: '12vh', md: '8vh',}} pl={5} pr={5} bg='white' mt='4vh' boxShadow='md' borderRadius={15}>
+          <Center h={{base: '12vh', md: '8vh',}}>
+            <Text fontSize={{base: 'sm'}} textAlign='center' color='#2f2f2f'>{description}</Text>
           </Center>
         </Box>
         <SimpleGrid
           alignItems="flex-start"
           mt={{
-            base: '10',
+            base: '5',
             lg: '3vh',
           }}
           columns={{
             base: 1,
-            lg: column,
+            md: column,
           }}
           spacing={{
             base: '12',
-            lg: '8',
+            md: '1vw',
           }}
         >
           {datas.map(data => (
-            <PricingCard
-              key={data.id}
-              name={data.name}
-              description={data.desc}
-              price={data.price}
-              features={data.features}
-            />
+          <PricingCard
+            name={data.name}
+            description={data.desc}
+            price={data.price}
+            features={data.features}
+          />
           ))}
+          
         </SimpleGrid>
       </Box>
     </Box>
