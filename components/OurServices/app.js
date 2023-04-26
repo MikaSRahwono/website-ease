@@ -94,7 +94,7 @@ export const App = () => {
                       objectFit="cover"
                     />
                     <VStack alignItems="start" spacing={2}>
-                      <Box height={{ base: '5em', lg: '3em' }}>
+                      <Box height={{ base: '5em', lg: '3em' , sm:'2em'}}>
                         <Heading
                           as="h3"
                           size="lg"
@@ -102,7 +102,7 @@ export const App = () => {
                           {slide.title}
                         </Heading>
                       </Box>
-                      <Box pb={'10vh'} height={{ base: '6em', lg: '4em' }}>
+                      <Box pb={{ base: '5vh', lg: '10vh', sm: '30vh' }}  height={{ base: '6em', lg: '4em' }}>
                         <Text fontSize={{lg:'1vw'}} fontWeight={'regular'}>{slide.description}</Text>
                       </Box>
                       <Button bgColor='white'>Learn More</Button>

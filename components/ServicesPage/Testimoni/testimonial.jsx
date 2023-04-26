@@ -53,15 +53,12 @@ export const Testimonial = (props) => {
           <Text>{role}</Text>
         </Box>
       </Flex>
-        <Box as="blockquote" maxW="340px" mx="auto" my="4">
+      <Box as="blockquote" maxW="340px" mx="auto" my="4">
           <Box
             position="absolute"
             top="6"
             left="5"
-            display={{
-              base: 'none',
-              md: 'inline',
-            }}
+            display="inline"
             fontSize="3xl"
             opacity={0.2}
           >
@@ -72,10 +69,7 @@ export const Testimonial = (props) => {
             position="absolute"
             bottom="-2"
             right="5"
-            display={{
-              base: 'none',
-              md: 'inline',
-            }}
+            display="inline"
             fontSize="3xl"
             opacity={0.2}
           >
@@ -85,12 +79,9 @@ export const Testimonial = (props) => {
             position="absolute"
             top="5"
             right="5"
-            display={{
-              base: 'none',
-              md: 'inline',
-            }}
+            display="inline"
           >
-            <Img alignItems='end' src={logo} mb="2" w={{md:'4vw'}}></Img>
+            <Img alignItems='end' src={logo} mb="2" w={{md:'4vw', sm: '14vw'}}></Img>
           </Box>
         </Box>
       </Flex>
