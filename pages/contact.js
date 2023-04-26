@@ -1,13 +1,11 @@
 import { Container, Box, Text, Icon, HStack, Stack, FormControl, FormLabel, Input, Button } from "@chakra-ui/react"
 import { FaInstagram, FaWhatsapp } from 'react-icons/fa'
-import { useState, useRef, useEffect } from "react";
 
 const Contact = () => {
-  const imageRef = useRef();
-
+  
   return (
     <Box>
-      <Box h='100vh' bg='white' color='#000'>
+      <Box type='contact' h={{lg:'100vh', sm:'140vh'}} bg='white' color='#000'>
       <Container>
         <Text pt='15vh' color='black' fontSize='3xl' fontWeight='extrabold'>We Want to Hear From You</Text>
         <Stack spacing="3" mt='5vh'>
@@ -28,7 +26,7 @@ const Contact = () => {
             <Input color='black' name="message" type="text" autoComplete="email" borderColor='black' required />
           </FormControl>
         </Stack>
-        <Button color='black' mt='5vh' bg='#F7E0A6' w='8vw'>Submit</Button>
+        <Button color='black' mt='5vh' bg='#F7E0A6' w={{lg:'8vw', sm:'10vw'}}>Submit</Button>
         <Box mt='5vh'>
           <Text fontSize='2xl' fontWeight='extrabold'>Open Hour</Text>
           <Text fontSize='lg'>Senin - Minggu, 07.00 - 23.00 WIB</Text>
@@ -46,8 +44,10 @@ const Contact = () => {
         </Box>
       </Container>
     </Box>
+
     <Box
       h='100vh'
+      type='image'
       bgImage='/img/jakarta.png'
       bgSize='cover'
       bgPosition='center'
@@ -60,6 +60,7 @@ const Contact = () => {
         Welcome to Our Website
       </Text>
     </Box>
+
   </Box>
     )
 

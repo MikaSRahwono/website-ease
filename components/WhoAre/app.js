@@ -28,17 +28,20 @@ export const App = (params) => {
     } else {
     return(
         
-        <Box backgroundSize={"cover"} bgColor='white'>
-        <Container padding={{base: '30px', md:'90px'}} maxW='85vw' color='black'>
+        <Box pt='10' backgroundSize={"cover"} bgColor='white'>
+          <Container padding={{base: '30px', md:'90px'}} maxW='70vw' color='black'>
             <Stack
-            direction={{ base: 'column', md: 'row' }}
-            spacing={{ base: '10px', md: '10' }}
-            alignItems={{ base: 'center', md: 'flex-start' }}
+              direction={{ base: 'column-reverse', md: 'row' }}
+              spacing={{ base: '10px', md: '10' }}
+              alignItems={{ base: 'center', md: 'flex-start' }}
             >
-            <Image src='img/testingabout.svg' maxW={{ base: '100%', md: '50%' }} mb={{ base: '10px', md: '0' }} />
-            <Box fontSize={{ base: '20px', md: '20px' }} fontFamily="Montserrat" textAlign={{ base: 'justify', md: 'justify' }}>
+              <Box
+                fontSize={{ base: '20px', md: '20px', sm: '14px' }}
+                fontFamily="Montserrat"
+                textAlign={{ base: 'justify', md: 'justify' }}
+              >
                 <Text as="span" fontWeight="bold">
-                EASE YOUR NEEDS
+                  EASE YOUR NEEDS
                 </Text>{' '}
                 is a creative agency based in Jakarta, Indonesia. Started in September 2020
                 when pandemic hits, our first service is providing zoom rental for everyone.
@@ -48,9 +51,16 @@ export const App = (params) => {
                 creative product photography & videography for brands. We are a group of
                 creative and agile people and ready to maximize your events and brands’
                 potentials to the fullest.
-            </Box>
+              </Box>
+              <Image
+                alt='easeyourneeds.co'
+                boxSize={{ base: '100%', md: '50%', lg: '30%' }}
+                src='img/summary.png'
+                mb={{ base: '10px', md: '0' }}
+                order={{ base: 0, md: 2 }}
+              />
             </Stack>
-        </Container>
+          </Container>
         </Box>
 
         )
