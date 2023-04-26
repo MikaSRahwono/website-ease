@@ -102,7 +102,7 @@ export const creative = [
     {
       name: 'Basic Package',
       desc: 'Live streaming services with one camera',
-      price: 2999,
+      price: 2999000,
       features: [
         {
           icon: '',
@@ -137,7 +137,7 @@ export const creative = [
     {
       name: 'Standard Package',
       desc: 'Live streaming services with one camera',
-      price: 3999,
+      price: 3999000,
       features: [
         {
           icon: '',
@@ -172,7 +172,7 @@ export const creative = [
     {
       name: 'Pro Package',
       desc: 'Live streaming services with one camera',
-      price: 4999,
+      price: 4999000,
       features: [
         {
           icon: '',
