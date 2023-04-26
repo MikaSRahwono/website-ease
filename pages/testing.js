@@ -1,36 +1,23 @@
 import { addDoc, collection } from "@firebase/firestore"
 import { firestore } from "@/lib/firebase/init_firebase";
-import { useRef } from 'react';
-import { Box } from "@chakra-ui/react";
-function Testing() {
-  const dataRef = useRef()
-  const submithandler = (e) => {
-    e.preventDefault()
-    handleSubmit(dataRef.current.value)
-    dataRef.current.value = ""
-}
-return (
-<Box className="App" pt={40}>
-<form onSubmit={submithandler}>
-<input type= "text" ref={dataRef} />
-<button type = "submit">Save</button>
-</form>
-</Box>
-);
-}
+import { useEffect, useRef, useState } from 'react';
+import { Box, Image } from "@chakra-ui/react";
+import { useDB } from "@/lib/databaseContext";
 
-const handleSubmit = (testdata) => {
-  const ref = collection(firestore, "test_data") // Firebase creates this automatically
-  console.log(testdata)
-  let data = {
-    testData: testdata
-  }
-  try {
-    addDoc(ref, data)
-    console.log('aman')
-  } catch(err) {
-    console.log(err)
-  }
-  }
- 
+const Testing = () => {
+  const [url, setUrl] = useState("");
+
+  const database = useDB()
+  useEffect(() => {
+    database.getPhoto("1b71575b-aa4e-45db-996e-5cd31f793440").then(
+      res => {
+        setUrl(res)
+        console.log(res)
+      }
+    )
+  }), [database]
+  return (
+  <Image src={url}>
+  </Image>
+);}
 export default Testing;

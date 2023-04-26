@@ -9,7 +9,7 @@ export const app = ({data}) => {
     return (
         <Box color='#2f2f2f'>
             <Center>
-                <Heading>
+                <Heading textAlign='center' fontSize={{base: '3xl', md: '4xl'}}>
                     Frequently Asked Questions
                 </Heading>
             </Center>
@@ -19,7 +19,7 @@ export const app = ({data}) => {
                 mx="auto"
                 my={4}
                 padding="4"
-                width='70vw'
+                width={{base: '90vw', md: '70vw'}}
             >
                 <Accordion allowToggle>
                 {faqs.map(faq => (
@@ -32,13 +32,13 @@ export const app = ({data}) => {
                         bg='#DAC17F'
                         >
                         <Box flex="1" textAlign="left" p={2}>
-                            <Text fontSize='xl' fontWeight='bold'>
+                            <Text fontSize={{base: 'md', md: 'xl'}} fontWeight='bold'>
                             {faq.question}
                             </Text>
                         </Box>
                         <AccordionIcon />
                         </AccordionButton>
-                    <AccordionPanel pb={4}>
+                    <AccordionPanel pb={4} fontSize={{base: 'sm', md: 'md'}} >
                         {faq.answer}
                     </AccordionPanel>
                     </AccordionItem>

@@ -6,8 +6,12 @@ import {
   List,
   ListItem,
   Text,
+  HStack,
   Image,
   useColorModeValue as mode,
+  Divider,
+  Center,
+  VStack,
 } from '@chakra-ui/react'
 import * as React from 'react'
 const CheckIcon = createIcon({
@@ -17,11 +21,13 @@ const CheckIcon = createIcon({
 
 const PricingDetail = ({icon, name}) => {
   return (
-    <ListItem display="flex" alignItems="flex-start" fontWeight="medium" maxW="260px" key={name}>
-      <Image mr="4" mt="1" src={icon} alt=""/>
-      <Text as="span" display="inline-block">
+    <ListItem ml={3} display="flex" alignItems="flex-start" fontWeight="medium" maxW="260px" >
+      <HStack>
+      <Image w={10} mr="2" mt="1" src={icon}/>
+      <Text fontSize={{base: '3vw', md: '1vw',}} as="span" display="inline-block">
         {name}
       </Text>
+      </HStack>
     </ListItem>
   )
 }
@@ -60,14 +66,17 @@ const PopularBadge = (props) => (
 const PriceDisplay = (props) => {
   const { currency, price } = props
   return (
-    <Flex w="100%" align="center" justify="center" my="5" fontWeight="extrabold">
+    <VStack mb='2vh' mt='0.5vh'>
+      <Text textAlign='start' fontWeight='bold'>Start from</Text>
+      <Flex w="100%" align="center" justify="center" my="3" fontWeight="extrabold">
       <Text fontSize="2xl" mr="2">
-        {currency}
+      {price != 0 ? currency : ''}
       </Text>
-      <Text fontSize="40px" lineHeight="1" letterSpacing="tight">
-        {addSeperator(price)}
+      <Text fontSize={{base:"8vw",md: "2.8vw"}} lineHeight="1" letterSpacing="tight">
+        {price != 0 ? addSeperator(price) : 'Custom'}
       </Text>
     </Flex>
+    </VStack>
   )
 }
 
@@ -77,7 +86,7 @@ const PricingWrapper = (props) => {
     borderWidth: '2px',
     borderColor: 'blue.500',
     zIndex: 1,
-    px: '8',
+    px: '1',
     pt: '12',
     pb: '10',
     top: {
@@ -87,12 +96,12 @@ const PricingWrapper = (props) => {
   const styles = highlight ? popularStyles : null
   return (
     <Box
-      w="full"
+      w={{base: '90%',md: "full"}}
       maxW="md"
       mx="auto"
       bg='white'
       color='black'
-      px="10"
+      px="3"
       pt="8"
       pb="8"
       rounded="lg"
@@ -111,31 +120,36 @@ export const PricingCard = (props) => {
       {popular && <PopularBadge>Most Popular</PopularBadge>}
 
       <Flex direction="column" justify="center">
-        <Text align="center" fontSize="2xl" fontWeight="bold">
+        <Text align="center" fontSize={{base: "lg", md: "xl"}} fontWeight="bold">
           {name}
         </Text>
-        <Text align="center" mt="2" color={mode('gray.600', 'gray.400')} maxW="16rem" mx="auto">
+        <Text fontSize={{base: "sm", md: "md"}}  align="center" mt="2" mb='0.5vh' color='black' maxW="16rem" mx="auto">
           {description}
         </Text>
+        <Center mt='2' mb='2'>
+          <Divider w='70%' alignItems='center' size='10' borderColor='gray' variant='solid' orientation='horizontal'></Divider>
+        </Center>
         <PriceDisplay currency="Rp" price={price} />
       </Flex>
 
-      <List stylePosition="outside" mt="8" spacing={4}>
-      {features.map((feature) => (
-        <PricingDetail key={feature.name} icon={feature.icon} name={feature.name} />
-      ))}
+      <List stylePosition="outside" mt="2" spacing={4}>
+        {features.map(feature => (
+          <PricingDetail icon={feature.icon} name={feature.name}></PricingDetail>
+        ))}
       </List>
 
       <Button
-        minH="3.5rem"
+        minH={{base: '5vh', md: "3.5rem"}}
         rounded="lg"
         fontWeight="bold"
         colorScheme={popular ? 'blue' : 'gray'}
         mt="8"
         w="100%"
         onClick={onClick}
+        bg='#DAC17F'
+        _hover={{bg: '#CBAD5C'}}
       >
-        Get Started
+        BOOKING NOW!
       </Button>
     </PricingWrapper>
   )

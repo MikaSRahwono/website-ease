@@ -28,7 +28,7 @@ export const creative_book = [
     },
     {
         icon: '/img/alur/icon3.png',
-        title: 'Lakukan Down Payment (DP) / Full Payment'
+        title: 'Lakukan Down Payment (DP) / \n Full Payment'
     },
     {
         icon: '/img/alur/icon5.png',
@@ -47,7 +47,7 @@ export const studio_book = [
     },
     {
         icon: '/img/alur/icon3.png',
-        title: 'Lakukan Down Payment (DP) / Full Payment'
+        title: 'Lakukan Down Payment (DP) / \nFull Payment'
     },
     {
         icon: '/img/alur/icon6.png',

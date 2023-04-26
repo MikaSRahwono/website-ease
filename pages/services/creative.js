@@ -1,4 +1,4 @@
-import { Container, Box, Heading, Show, Text, Center, Divider } from "@chakra-ui/react"
+import { Container, Box, Heading, Show, Text, HStack, Center, Divider, useMediaQuery } from "@chakra-ui/react"
 import { App as Projects } from "@/components/ServicesPage/ServicesProjects/app"
 import { slides } from "@/components/Hero/slides/_dataCreative"
 import { slides_pro } from "@/components/ServicesPage/ServicesProjects/_data"
@@ -12,8 +12,11 @@ import { App as AlurBooking } from "@/components/ServicesPage/AlurBooking/app"
 import { App as Testimoni } from "@/components/ServicesPage/Testimoni/app"
 import { creative_desc, creative, } from "@/components/ServicesPage/Pricing/_data"
 import { creative_book } from "@/components/ServicesPage/AlurBooking/_data"
+import { creative_pro } from "@/components/ServicesPage/ServicesProjects/_data"
 
 export default function Home() {
+  const [isLargerThan400] = useMediaQuery('(min-width: 480px)')
+
   const reason_list = [
     'Reach wider audience',
     'Low budget operational',
@@ -30,7 +33,20 @@ export default function Home() {
         description1='With highly efficient features in event broadcasting, We help you digitalize your event with Our Live Streaming Services.'
         image='/img/services/live-services.png'
         ></Hero>
+        {isLargerThan400 ? <Box h='10vh' bg='#FFFFFF' w='100vw' mt={0} color='black'>
+        <Center h='10vh'>
+          <HStack spacing='5vw'>
+            <Text>Why Us?</Text>
+            <Text>Recent Projects</Text>
+            <Text>Pricing dan Paket</Text>
+            <Text>Alur Booking</Text>
+            <Text>FAQ</Text>
+            <Text>Testimoni</Text>
+          </HStack>
+        </Center>
+      </Box> : <Box h='10vh' bg='#FFFFFF' w='100vw' mt={0} color='black'></Box>}
       <Reasons
+    
         image='/img/reasons-bg/creative.jpg'
         imagemob='/img/reasons-bg/creative-potrait.jpg'
         heading='Why do you need Live Streaming services?'
@@ -38,11 +54,11 @@ export default function Home() {
       ></Reasons>
       <Box h='10vh' bg='white'></Box>
       <Highlight></Highlight>
-      <Container maxW='90vw' >
+      <Center w='100vw' >
         <Box mt={30} width='90vw'>
           {/* Recent Projects */}
           <Box mt='10'>
-            <Projects slides={slides_pro}></Projects>
+            <Projects slides={creative_pro}></Projects>
           </Box>
 
           {/* Pricing */}
@@ -66,7 +82,7 @@ export default function Home() {
 
           <Box height='50vh'></Box>
         </Box>
-      </Container>
+      </Center>
     </Box>
   )
 }

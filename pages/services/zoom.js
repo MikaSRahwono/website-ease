@@ -1,4 +1,4 @@
-import { Container, Box, Heading, Show, Text, Center, Divider } from "@chakra-ui/react"
+import { Container, Box, Heading, useMediaQuery, HStack, Show, Text, Center, Divider } from "@chakra-ui/react"
 import { App as Projects } from "@/components/ServicesPage/ServicesProjects/app"
 import { slides } from "@/components/Hero/slides/_dataCreative"
 import { slides_pro } from "@/components/ServicesPage/ServicesProjects/_data"
@@ -10,8 +10,13 @@ import { App as Highlight } from "@/components/ServicesPage/HighlightServices/ap
 import { App as Hero } from "@/components/ServicesPage/HeroServices/app"
 import { App as AlurBooking } from "@/components/ServicesPage/AlurBooking/app"
 import { App as Testimoni } from "@/components/ServicesPage/Testimoni/app"
+import { zoom_desc, zoom, } from "@/components/ServicesPage/Pricing/_data"
+import { zoom_book } from "@/components/ServicesPage/AlurBooking/_data"
+import { zoom_pro } from "@/components/ServicesPage/ServicesProjects/_data"
 
 export default function Home() {
+  const [isLargerThan400] = useMediaQuery('(min-width: 480px)')
+
   const reason_list = [
     'Reach wider audience',
     'Low budget operational',
@@ -24,33 +29,45 @@ export default function Home() {
     <Box style={{ backgroundColor:'#ECECEC'}}
     >
       <Hero 
-        heading='CREATIVE' 
-        description1='With highly efficient features in event broadcasting, We help you digitalize your event with Our Live Streaming Services.'
-        image='/img/services/live-services.png'
+        heading='ZOOM'
+        description1='As a result of the pandemic, things that used to be held offline now shifted to online-based. Now, we are here to ease your needs. Zoom rental never been easier.'
+        image='/img/services/zoom-service.png'
         ></Hero>
+        {isLargerThan400 ? <Box h='10vh' bg='#FFFFFF' w='100vw' mt={0} color='black'>
+        <Center h='10vh'>
+          <HStack spacing='5vw'>
+            <Text>Why Us?</Text>
+            <Text>Recent Projects</Text>
+            <Text>Pricing dan Paket</Text>
+            <Text>Alur Booking</Text>
+            <Text>FAQ</Text>
+            <Text>Testimoni</Text>
+          </HStack>
+        </Center>
+      </Box> : <Box h='10vh' bg='#FFFFFF' w='100vw' mt={0} color='black'></Box>}
       <Reasons
-        image='/img/reasons-bg/creative.jpg'
-        imagemob='/img/reasons-bg/creative-potrait.jpg'
-        heading='Why do you need Live Streaming services?'
+        image='/img/reasons-bg/zoom.jpg'
+        imagemob='/img/reasons-bg/zoom-potrait.jpg'
+        heading='Why you have to book Zoom Rental with EaseYourNeeds?'
         lists={reason_list}
       ></Reasons>
       <Box h='10vh' bg='white'></Box>
       <Highlight></Highlight>
-      <Container maxW='70vw' >
-        <Box mt={30} width='70vw'>
+      <Center w='100vw' >
+        <Box mt={30} width='90vw'>
           {/* Recent Projects */}
           <Box mt='10'>
-            <Projects slides={slides_pro}></Projects>
+            <Projects slides={zoom_pro}></Projects>
           </Box>
 
           {/* Pricing */}
           <Box>
-            <Pricing section='creative'></Pricing>
+            <Pricing datas={zoom} description={zoom_desc} column={3}></Pricing>
           </Box>
 
           {/* Terms of Service */}
           <Box>
-            <AlurBooking></AlurBooking>
+            <AlurBooking datas={zoom_book}></AlurBooking>
           </Box>
 
           {/* Frequently Asked Questions */}
@@ -61,9 +78,10 @@ export default function Home() {
           <Box>
             <Testimoni></Testimoni>
           </Box>
+
           <Box height='50vh'></Box>
         </Box>
-      </Container>
+      </Center>
     </Box>
   )
 }
