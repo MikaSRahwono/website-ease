@@ -48,18 +48,6 @@ export const App = ({heading, description1, description2, image}) => {
           </Box>
         </Box>}
       </Flex>
-      {isLargerThan400 ? <Box h='10vh' bg='#FFFFFF' w='100vw' mt={0} color='black'>
-        <Center h='10vh'>
-          <HStack spacing='5vw'>
-            <Text>Why Us?</Text>
-            <Text>Recent Projects</Text>
-            <Text>Pricing dan Paket</Text>
-            <Text>Alur Booking</Text>
-            <Text>FAQ</Text>
-            <Text>Testimoni</Text>
-          </HStack>
-        </Center>
-      </Box> : <Box h='10vh' bg='#FFFFFF' w='100vw' mt={0} color='black'></Box>}
     </VStack>
   )
 }

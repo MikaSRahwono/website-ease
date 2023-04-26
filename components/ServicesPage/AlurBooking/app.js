@@ -24,7 +24,7 @@ export const App = ({datas}) => {
   }
 
   return (
-    <Center h={{base: '90vh', md: datas.length > 4 ? '85vh' : '70vh'}} bg='white' w='full' borderRadius={30} color='#2f2f2f' mb='10vh'>
+    <Center h={{base: 'auto', md: datas.length > 4 ? '85vh' : '70vh'}} py={{base: '5vh', md: '0'}} bg='white' w='full' borderRadius={30} color='#2f2f2f' mb='10vh'>
       {isLargerThan400 ? <VStack spacing={15}>
         <Heading mb='5vh'>Alur Pemesanan</Heading>
         {datas.length > 4 ? 
@@ -60,8 +60,8 @@ export const App = ({datas}) => {
         <VStack spacing={7} p='2vw'>
             {datas.map(data => (
               <VStack>
-                <Image w='15vw' src={data.icon} mb='1vh'></Image>
-                <Text textAlign='center' fontSize={{base: 'md', md: 'lg'}} fontWeight='bold' >{data.title}</Text>
+                <Image w='28vw' src={data.icon} mb='1vh'></Image>
+                <Text w='60vw' textAlign='center' fontSize={{base: 'md', md: 'lg'}} fontWeight='bold' >{data.title}</Text>
               </VStack>
             ))}
         </VStack>

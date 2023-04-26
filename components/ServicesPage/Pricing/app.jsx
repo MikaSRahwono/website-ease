@@ -3,14 +3,94 @@ import * as React from 'react'
 import { DurationSwitcher } from './durationSwitcher'
 import { PricingCard } from './pricingCard'
 import Slider from 'react-slick'
+import { ChevronRightIcon, ChevronLeftIcon } from '@chakra-ui/icons'
+
 
 export const App = ({description, datas, column}) => {
   const [isLargerThan400] = useMediaQuery('(min-width: 480px)')
+  const [slider, setSlider] = React.useState(null)
+
+  const CustomArrow = ({ direction, onClick }) => {
+    return (
+      <Box
+        as="button"
+        onClick={onClick}
+        position="absolute"
+        top="50%"
+        transform="translateY(-50%)"
+        zIndex="1"
+        bg="transparent"
+        border="none"
+        outline="none"
+        cursor="pointer"
+        left={direction === "left" ? "1px" : ""}
+        right={direction === "right" ? "1px" : ""}
+      >
+        {direction === "left" ? (
+          <ChevronLeftIcon w={6} h={6} color="black" />
+        ) : (
+          <ChevronRightIcon w={6} h={6} color="black" />
+        )}
+      </Box>
+    );
+  };
+
+  const settings = {
+    dots: false,
+    infinite: true,
+    speed: 1000,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    pauseOnHover: true,
+    arrows: true,
+    prevArrow: <CustomArrow direction="left" />,
+    nextArrow: <CustomArrow direction="right" />,
+    centerMode: true, // tambahkan properti centerMode
+    centerPadding: "0 10px", // tambahkan properti centerPadding
+    responsive: [
+      {
+        breakpoint: 1446,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          dots: false,
+        },
+      },
+      {
+        breakpoint: 1148,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          dots: false,
+        },
+      },
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          dots: false,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          initialSlide: 0,
+        },
+      },
+    ],
+  };
+
+
   return (
     <Box as="section" py="20">
       <Box
         maxH={{
-          base: '100vh',
+          base: '200vh',
           md: '120vh'
         }}
         mx="auto"
@@ -33,7 +113,7 @@ export const App = ({description, datas, column}) => {
             <Text fontSize={{base: 'sm'}} textAlign='center' color='black'>{description}</Text>
           </Center>
         </Box>
-        <SimpleGrid
+        {isLargerThan400 ? <SimpleGrid
           alignItems="flex-start"
           mt={{
             base: '5',
@@ -57,7 +137,21 @@ export const App = ({description, datas, column}) => {
           />
           ))}
           
-        </SimpleGrid>
+        </SimpleGrid> : <Box w='full' mt='5vh'>
+          <Slider {...settings} ref={setSlider}>
+          {datas.map(data => (
+            <Box>
+              <PricingCard
+              name={data.name}
+              description={data.desc}
+              price={data.price}
+              features={data.features}
+            />
+            </Box>
+            
+          ))}
+          </Slider>
+        </Box>}
       </Box>
     </Box>
   )

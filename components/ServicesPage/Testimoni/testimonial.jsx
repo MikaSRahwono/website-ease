@@ -5,14 +5,15 @@ import { ImQuotesLeft, ImQuotesRight } from 'react-icons/im'
 export const Testimonial = (props) => {
   const { logo, children, image, author, role, testimony } = props
   return (
-    <Flex
+    <Center>
+      <Flex
       direction="column"
       rounded="lg"
       bg='white'
       color='#2f2f2f'
       shadow="lg"
-      h={{lg:'80vh', sm:'100vh'}}
-      w={{lg:"20vw", sm:'90vw'}}
+      h={{lg:'80vh'}}
+      w={{lg:"25vw", base:'87vw'}}
       px="3"
       py="10"
       ml={{lg:'8', sm:'2'}}
@@ -81,10 +82,11 @@ export const Testimonial = (props) => {
             right="5"
             display="inline"
           >
-            <Img alignItems='end' src={logo} mb="2" w={{md:'4vw', sm: '14vw'}}></Img>
+            <Img alignItems='end' src={logo} mb="2" w={{md:'4vw', base: '14vw'}}></Img>
           </Box>
         </Box>
       </Flex>
     </Flex>
+    </Center>
   )
 }

@@ -1,138 +1,107 @@
-import { Box, Flex, Img, Center, SimpleGrid, Heading, Text, useColorModeValue as mode, HStack } from '@chakra-ui/react'
-import * as React from 'react'
-import { ImQuotesLeft, ImQuotesRight } from 'react-icons/im'
+import { Box, Center, Heading, SimpleGrid } from '@chakra-ui/react'
+import React from 'react'
+import { useState } from 'react'
+import Slider from 'react-slick'
+import 'slick-carousel/slick/slick.css'
+import 'slick-carousel/slick/slick-theme.css'
 import { zoom } from './_data'
-
-const Testimonial = (props) => {
-  const { logo, children, image, author, role } = props
-  return (
-    <Flex
-      direction="column"
-      rounded={{
-        md: 'lg',
-      }}
-      bg='white'
-      color='#2f2f2f'
-      shadow="lg"
-    >
-      <Flex
-        direction="column"
-        position="relative"
-        mb="4"
-        textAlign="center"
-        justify="center"
-        align="center"
-        pt="10"
-        pb="6"
-        px="10"
-      >
-        <Flex
-        direction="column"
-        position="relative"
-        align="center"
-        justify="center"
-        color="#2f2f2f"
-        px="6"
-        pb="8"
-      >
-        <Img
-          src={image}
-          alt={author}
-          rounded="full"
-          position="relative"
-          mt="-5"
-          w="7vw"
-          h="7vw"
-          objectFit="cover"
-        />
-        <Box position="relative" fontSize="sm" mt="3" textAlign="center">
-          <Text as="h3" fontWeight="bold" fontSize="md">
-            {author}
-          </Text>
-          <Text>{role}</Text>
-        </Box>
-      </Flex>
-        <Box as="blockquote" maxW="340px" mx="auto" my="4">
-          <Box
-            position="absolute"
-            top="6"
-            left="5"
-            display={{
-              base: 'none',
-              md: 'inline',
-            }}
-            fontSize="3xl"
-            opacity={0.2}
-          >
-            <ImQuotesLeft />
-          </Box>
-          <Text fontSize="lg">{children}</Text>
-          <Box
-            position="absolute"
-            bottom="-2"
-            right="5"
-            display={{
-              base: 'none',
-              md: 'inline',
-            }}
-            fontSize="3xl"
-            opacity={0.2}
-          >
-            <ImQuotesRight />
-          </Box>
-          <Box
-            position="absolute"
-            top="5"
-            right="5"
-            display={{
-              base: 'none',
-              md: 'inline',
-            }}
-          >
-            <Img alignItems='end' src={logo} mb="2" w='4vw'></Img>
-          </Box>
-        </Box>
-      </Flex>
-    </Flex>
-  )
-}
+import { ChevronRightIcon, ChevronLeftIcon } from '@chakra-ui/icons'
+import { Testimonial } from './testimonial'
 
 export const App = () => {
-  return (
-    <Box as="section" py="12">
-      <Center color='#2f2f2f' mb='5vh'>
-        <Heading>Testimoni</Heading>
-      </Center>
+
+  const [slider, setSlider] = useState(null)
+
+  const CustomArrow = ({ direction, onClick }) => {
+    return (
       <Box
-        maxW={{
-          base: 'xl',
-          md: '6xl',
-        }}
-        mx="auto"
-        px={{
-          md: '8',
-        }}
+        as="button"
+        onClick={onClick}
+        position="absolute"
+        top="50%"
+        transform="translateY(-50%)"
+        zIndex="1"
+        bg="transparent"
+        border="none"
+        outline="none"
+        cursor="pointer"
+        left={direction === "left" ? "1px" : ""}
+        right={direction === "right" ? "1px" : ""}
       >
-        <SimpleGrid
-          columns={{
-            base: 1,
-            md: 2,
-          }}
-          spacing="10"
-        >
-          {zoom.map((item, index) => (
-            <Testimonial
-              key={index}
-              logo={item.logo}
-              author={item.author}
-              role={item.role}
-              image={item.image}
-            >
-              {item.testimony}
-            </Testimonial>
-          ))}
-        </SimpleGrid>
+        {direction === "left" ? (
+          <ChevronLeftIcon w={6} h={6} color="black" />
+        ) : (
+          <ChevronRightIcon w={6} h={6} color="black" />
+        )}
       </Box>
+    );
+  };
+
+  const settings = {
+    dots: false,
+    infinite: true,
+    speed: 1000,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    pauseOnHover: true,
+    arrows: true,
+    prevArrow: <CustomArrow direction="left" />,
+    nextArrow: <CustomArrow direction="right" />,
+    centerMode: true, // tambahkan properti centerMode
+    centerPadding: "0 10px", // tambahkan properti centerPadding
+    responsive: [
+      {
+        breakpoint: 1446,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          dots: false,
+        },
+      },
+      {
+        breakpoint: 1148,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          dots: false,
+        },
+      },
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          dots: false,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          initialSlide: 0,
+        },
+      },
+    ],
+  };
+
+
+  return (
+    <Box w='full' mt='10vh'>
+      <Center mb='6vh'>
+          <Heading color='black'>
+              Apa Kata Mereka?
+          </Heading>
+      </Center>
+        <Box w='full'>
+          <Slider {...settings} ref={setSlider}>
+          {zoom.map((data, index) => (
+              <Testimonial key={index} {...data} />
+            ))}
+          </Slider>
+        </Box>
     </Box>
-  )
-}
+  );
+};

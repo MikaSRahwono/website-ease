@@ -96,7 +96,7 @@ const PricingWrapper = (props) => {
   const styles = highlight ? popularStyles : null
   return (
     <Box
-      w="full"
+      w={{base: '90%',md: "full"}}
       maxW="md"
       mx="auto"
       bg='white'

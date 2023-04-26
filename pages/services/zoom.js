@@ -1,4 +1,4 @@
-import { Container, Box, Heading, Show, Text, Center, Divider } from "@chakra-ui/react"
+import { Container, Box, Heading, useMediaQuery, HStack, Show, Text, Center, Divider } from "@chakra-ui/react"
 import { App as Projects } from "@/components/ServicesPage/ServicesProjects/app"
 import { slides } from "@/components/Hero/slides/_dataCreative"
 import { slides_pro } from "@/components/ServicesPage/ServicesProjects/_data"
@@ -15,6 +15,8 @@ import { zoom_book } from "@/components/ServicesPage/AlurBooking/_data"
 import { zoom_pro } from "@/components/ServicesPage/ServicesProjects/_data"
 
 export default function Home() {
+  const [isLargerThan400] = useMediaQuery('(min-width: 480px)')
+
   const reason_list = [
     'Reach wider audience',
     'Low budget operational',
@@ -31,6 +33,18 @@ export default function Home() {
         description1='As a result of the pandemic, things that used to be held offline now shifted to online-based. Now, we are here to ease your needs. Zoom rental never been easier.'
         image='/img/services/zoom-service.png'
         ></Hero>
+        {isLargerThan400 ? <Box h='10vh' bg='#FFFFFF' w='100vw' mt={0} color='black'>
+        <Center h='10vh'>
+          <HStack spacing='5vw'>
+            <Text>Why Us?</Text>
+            <Text>Recent Projects</Text>
+            <Text>Pricing dan Paket</Text>
+            <Text>Alur Booking</Text>
+            <Text>FAQ</Text>
+            <Text>Testimoni</Text>
+          </HStack>
+        </Center>
+      </Box> : <Box h='10vh' bg='#FFFFFF' w='100vw' mt={0} color='black'></Box>}
       <Reasons
         image='/img/reasons-bg/zoom.jpg'
         imagemob='/img/reasons-bg/zoom-potrait.jpg'
