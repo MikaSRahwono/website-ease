@@ -29,13 +29,13 @@ export const App = (props) => {
         <Flex
           key={`slide-${index}`}
           w="full"
-          h={{lg:"75vh", sm:"85vh"}}
+          h={{lg:"75vh", sm:"90vh"}}
           alignItems="center"
           justifyContent="center"
           color={slide.clor}
           bgImage = {slide.bground}
         >
-          <Box fontFamily="Montserrat" ml={{ lg:'100px' }} padding={{ base: "50px", md: "120px" }}>
+          <Box pt={{sm:"12vh"}} fontFamily="Montserrat" ml={{ lg:'100px' }} padding={{ base: "50px", md: "120px" }}>
             <Stack
               spacing={{ base: 1, sm: "0" }}
               direction={{ base: "column", md: "row" }}
@@ -50,7 +50,7 @@ export const App = (props) => {
                     pt={{ lg: "0px", sm: "0px" }}
                     fontSize={{ base: "10vw", sm: "4vh", lg: "3vw" }}
                     fontWeight="bold"
-                    minH={{ sm: "20vh", lg: "30vh" }}
+                    minH={{ sm: "20vh", lg: "30vh", base: "20vh" }}
                   >
                     {slide.heading}
                   </Text>

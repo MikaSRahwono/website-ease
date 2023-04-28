@@ -1,6 +1,6 @@
 export const slides = [
     {
-      img: 'https://firebasestorage.googleapis.com/v0/b/website-ease.appspot.com/o/img%2Ficonservice%2Fcreativelogo3.png?alt=media&token=f8cb9eec-ca79-4d78-ad0f-c60beef60891',
+      img: 'https://firebasestorage.googleapis.com/v0/b/website-ease.appspot.com/o/img%2Ficonservice%2Fveactorduduk%204.png?alt=media&token=2a25c5b4-eed0-40be-8c5d-0769e8a48c3b',
       heading: 'BEST LIVE STREAMING SERVICES',
       subheading1: 'With highly efficient features in event broadcasting, We help you digitalize your event with Our Live Streaming Services.',
       button: 'Book Now!',

@@ -1,5 +1,5 @@
 import React, { useState, useRef } from "react";
-import { Box, VStack, HStack, Image, Heading, Text, Button, Container, Center } from "@chakra-ui/react";
+import { Box, VStack, HStack, Image, Heading, Text, Button, Container, Center, Flex } from "@chakra-ui/react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -113,26 +113,27 @@ export const App = () => {
         </HStack>
       </Center>
       <Center>
-        <Container maxW={{lg:'60vw', sm:'100vw'}}>
-            <Box rounded={50} 
-            bgImage="https://firebasestorage.googleapis.com/v0/b/website-ease.appspot.com/o/img%2FBackground%201.png?alt=media&token=7b347cc5-f193-468f-81d1-f92e77e07d70" 
-            maxW="full" py={10} 
-            px={{lg:'2vw', sm:'10'}}>
+        <Container maxW={{ lg: '60vw', sm: '100vw' }}>
+          <Box rounded={50}
+            bgImage="https://firebasestorage.googleapis.com/v0/b/website-ease.appspot.com/o/img%2FBackground%201.png?alt=media&token=7b347cc5-f193-468f-81d1-f92e77e07d70"
+            maxW="full" py={2}
+            px={{ lg: '2vw', sm: '10' }}>
             <Slider {...settings} ref={sliderRef}>
               {sliderContent.map((slide, index) => (
                 <VStack key={index} alignItems="stretch" spacing={4}>
-                  <HStack spacing={4}>
+                  <Flex direction={{ lg: "row", sm: "column" }} spacing={4}>
                     <Image
                       boxSize='sm'
                       src={slide.image}
                       alt={slide.title}
                       borderRadius="md"
-                      w={{lg:'40%', sm:'40%'}}
+                      w={{ lg: '40%', sm: '100%' }}
                       h='auto'
                       objectFit="cover"
+                      order={{ lg: 0, sm: -1 }}
                     />
-                    <VStack alignItems="start" spacing={2}>
-                      <Box height={{ base: '5em', lg: '3em' , sm:'2em'}}>
+                    <VStack pt={{ base: '5vh', lg: '10vh', sm: '1vh' }} alignItems="start" spacing={2}>
+                      <Box  height={{ base: '5em', lg: '3em', sm: '2em' }}>
                         <Heading
                           as="h3"
                           size="lg"
@@ -140,16 +141,18 @@ export const App = () => {
                           {slide.title}
                         </Heading>
                       </Box>
-                      <Box pb={{ base: '5vh', lg: '10vh', sm: '30vh' }}  height={{ base: '6em', lg: '4em' }}>
-                        <Text fontSize={{lg:'1vw'}} fontWeight={'regular'}>{slide.description}</Text>
+                      <Box pb={{ base: '5vh', lg: '10vh', sm: '10vh' }} height={{ base: '6em', lg: '4em' }}>
+                        <Text fontSize={{ lg: '1vw' }} fontWeight={'regular'}>{slide.description}</Text>
                       </Box>
-                      <Button 
-                        onClick={() => window.open(slide.link)}
-                        bgColor='white'
-                        >Learn More
-                      </Button>
+                        <Box pb={{ base: '5vh', lg: '10vh', sm: '10vh' }}>
+                          <Button
+                            onClick={() => window.open(slide.link)}
+                            bgColor='white'
+                          >Learn More
+                          </Button>
+                        </Box>
                     </VStack>
-                  </HStack>
+                  </Flex>
                 </VStack>
               ))}
             </Slider>
