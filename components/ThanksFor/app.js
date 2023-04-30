@@ -1,11 +1,9 @@
 import {
-  Flex,
+  Heading,
   Box,
   Text,
   Image,
   Grid,
-  SimpleGrid,
-  Stack,
   Container,
   VStack,
   Center,
@@ -13,20 +11,20 @@ import {
 
 export const App = (params) => {
   return (
-    <Box fontFamily={'Montserrat'} w="full" p={10} pb='15vh' color="#000">
+    <Box w="full" p={10} pb='5vh' color="#000">
       <Box alignItems={"center"} bg="white" p={5}>
         <Center>
-          <Text
-            pb="10"
+          <Heading
+            pb={{base:"10", sm:"10"}}
             textAlign={"center"}
-            fontSize={{ lg: "2vw", sm: "3vh" }}
-            fontWeight="bold"
+            fontSize={{ base: "2vh" ,lg: "2vw", sm: "3vh" }}
+            fontWeight="extrabold"
             mb={5}
           >
             THANK YOU FOR TRUSTING US
-          </Text>
+          </Heading>
         </Center>
-        <Container maxW={{ lg: "60vw", sm: "100vw" }}>
+        <Container maxW={{ base: "100vw", lg: "60vw", sm: "100vw" }}>
           <Grid
             templateColumns={{ base: "repeat(2, 1fr)", md: "repeat(3, 1fr)" }}
             templateAreas={{
@@ -38,20 +36,20 @@ export const App = (params) => {
                       "first second third"
                     `,
             }}
-            gap={1}
+            gap={10}
             justifyItems="center"
           >
             <Box gridArea="first">
               <VStack>
                 <Image
-                  boxSize={{ base: "40px", sm: "80px", md: "100px" }}
+                  boxSize={{ base: "100px", sm: "80px", md: "100px" }}
                   alt="customer easeyourneeds"
                   src="img/thanksfor/customer.png"
                 />
-                <Text fontWeight={"bold"} fontSize={{ base: "1.5vw", md: "2vw", sm: "4vw" }}>
+                <Text fontWeight={"bold"} fontSize={{ base: "4vw", md: "2vw", sm: "4vw" }}>
                   40.000+
                 </Text>
-                <Text align="center" color="#828d8b" fontSize={{ base: "1vw", lg: "1vw", sm: "2vh" }}>
+                <Text align="center" color="#828d8b" fontSize={{ base: "1.5vh", lg: "1vw", sm: "2vh" }}>
                   Loyal Customers
                 </Text>
               </VStack>
@@ -59,29 +57,29 @@ export const App = (params) => {
             <Box gridArea="second">
               <VStack>
                 <Image
-                  boxSize={{ base: "40px", sm: "80px", md: "100px" }}
+                  boxSize={{ base: "100px", sm: "80px", md: "100px" }}
                   alt="reputable easeyourneeds"
                   src="img/thanksfor/reputable.png"
                 />
-                <Text fontWeight={"bold"} fontSize={{ base: "1.5vw", md: "2vw", sm: "4vw" }}>
+                <Text fontWeight={"bold"} fontSize={{ base: "4vw", md: "2vw", sm: "4vw" }}>
                   1.000+
                 </Text>
-                <Text align="center" color="#828d8b" fontSize={{ base: "1vw", lg: "1vw", sm: "2vh" }}>
+                <Text align="center" color="#828d8b" fontSize={{ base: "1.5vh", lg: "1vw", sm: "2vh" }}>
                   Reputable Brands
                 </Text>
               </VStack>
             </Box>
             <Box gridArea="third">
-              <VStack pt={{ lg:'0', sm:'6vh' }}>
+              <VStack>
                 <Image
-                  boxSize={{ base: "40px", sm: "80px", md: "100px" }}
+                  boxSize={{ base: "100px", sm: "80px", md: "100px" }}
                   alt="schedule easeyourneeds"
                   src="img/thanksfor/schedule.png"
                 />
-                <Text fontWeight={"bold"} fontSize={{ base: "1.5vw", md: "2vw", sm: "4vw" }}>
-                  10.000+
+                <Text fontWeight={"bold"} fontSize={{ base: "4vw", md: "2vw", sm: "4vw" }}>
+                  100.000+
                 </Text>
-                <Text align="center" color="#828d8b" fontSize={{ base: "1vw", lg: "1vw", sm: "2vh" }}>
+                <Text align="center" color="#828d8b" fontSize={{ base: "1.5vh", lg: "1vw", sm: "2vh" }}>
                   Booked Meeting Schedule
                 </Text>
               </VStack>

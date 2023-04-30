@@ -26,8 +26,8 @@ export const App = (params) => {
                     pos="absolute"
                     alignItems={'center'}
                     top='10vh'
-                    left={{lg:'40vw', sm:'10vw'}}
-                    w={{lg:"40vw", sm:"80vw"}}
+                    left={{base:"10vw" ,lg:'40vw', sm:'10vw'}}
+                    w={{base:"70vw", lg:"40vw", sm:"80vw"}}
                     h={{lg:"40vh", sm:"45vh"}}
                     bgColor="white"
                     zIndex="1"

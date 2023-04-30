@@ -54,7 +54,7 @@ export const Testimonial = (props) => {
           </Text>
           <Text>{role}</Text>
           <Center pt='50'>
-            <Divider w={{lg:'10vw', sm:'30vw'}} alignItems='center' size='10' borderColor='gray' variant='solid' orientation='horizontal'></Divider>
+            <Divider w={{base:'30vw', lg:'10vw', sm:'30vw'}} alignItems='center' size='10' borderColor='gray' variant='solid' orientation='horizontal'></Divider>
           </Center>
         </Box>
       </Flex>

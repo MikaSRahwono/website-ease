@@ -1,4 +1,4 @@
-import { 
+import {
   Flex,
   Box,
   Text,
@@ -6,13 +6,13 @@ import {
   Button,
   VStack,
   Stack,
+  Heading
 } from "@chakra-ui/react";
-import { useState } from "react";
-import { arrowStyles } from "./arrowStyles";
 import { slides } from "./_data";
 import Slider from "react-slick";
 
 export const App = (props) => {
+
   const settings = {
     infinite: true,
     speed: 500,
@@ -20,7 +20,7 @@ export const App = (props) => {
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 5000,
-    dots:true, 
+    dots: true,
   };
 
   return (
@@ -29,34 +29,40 @@ export const App = (props) => {
         <Flex
           key={`slide-${index}`}
           w="full"
-          h={{lg:"75vh", sm:"90vh"}}
+          h={{ base: "75vh", sm: "90vh", lg: "75vh" }}
           alignItems="center"
           justifyContent="center"
+          fontFamily="Montserrat"
           color={slide.clor}
-          bgImage = {slide.bground}
+          bgImage={slide.bground}
         >
-          <Box pt={{sm:"12vh"}} fontFamily="Montserrat" ml={{ lg:'100px' }} padding={{ base: "50px", md: "120px" }}>
+          <Box
+            pt={{ base: '10vh !important', sm: "20vh !important" }}
+            ml={{ base: '20px', sm: '0', lg: '100px' }}
+            padding={{ base: "20px", md: "50px", lg: "120px" }}
+          >
             <Stack
               spacing={{ base: 1, sm: "0" }}
               direction={{ base: "column", md: "row" }}
             >
               <VStack
-                align={{ base: "left", md: "left" }}
+                align="left"
                 spacing={10}
                 w={{ base: "full", md: "50%" }}
               >
-                <VStack align={{ base: "left", md: "left" }} spacing={0}>
-                  <Text
-                    pt={{ lg: "0px", sm: "0px" }}
-                    fontSize={{ base: "10vw", sm: "4vh", lg: "3vw" }}
-                    fontWeight="bold"
-                    minH={{ sm: "20vh", lg: "30vh", base: "20vh" }}
+                
+                <VStack align="left" spacing={0}>
+                  <Heading 
+                    fontSize={{ base: "8vw", sm: "4vh", lg: "3vw" }}
+                    fontWeight="extrabold"
+                    minH={{ base: "20vh", sm: "20vh", lg: "30vh" }}
                   >
                     {slide.heading}
-                  </Text>
-                  <Text 
-                    fontSize={{ base: "3vw", sm: "3vw", lg: "1.2vw" }}
-                    minH={{ sm: "12vh", lg: "10vh" }}>
+                  </Heading >
+                  <Text
+                    fontSize={{ base: "4vw", sm: "3vw", lg: "1.2vw" }}
+                    minH={{ base: "12vh", sm: "12vh", lg: "10vh" }}
+                  >
                     {slide.subheading1}
                   </Text>
                   <VStack
@@ -67,8 +73,8 @@ export const App = (props) => {
                     <Button
                       size={{ base: "sm", md: "md", lg: "lg" }}
                       height={{ base: "3vh", md: "5vh", lg: "7vh" }}
-                      width={{md:"9vw", sm:"30vw"}}
-                      fontSize="2vw"
+                      width={{ base: "22vw", sm: "30vw", md: "9vw" }}
+                      fontSize={{ base: "1px", sm: "20px", lg: "1px" }}
                       color="#000"
                       bgColor={"white"}
                       rounded={5}
@@ -81,20 +87,20 @@ export const App = (props) => {
                 </VStack>
               </VStack>
               <Box w={{ base: "full", md: "50%" }}>
-              <Image
+                <Image
                   boxSize={{ base: "full", sm: "auto" }}
-                  width={{ base: "100%", sm: "auto", lg: "100%" }}
+                  width={{ base: "100%", sm:"auto", lg: "100%" }}
                   height={{ base: "auto", sm: "auto", lg: "100%" }}
                   objectFit="contain"
                   objectPosition="center"
                   src={slide.img}
                   alt="easeyourneeds"
-                />
-              </Box>
-            </Stack>
-          </Box>
-        </Flex>
-      ))}
-    </Slider>
-  );
-};
+                  />
+                </Box>
+              </Stack>
+            </Box>
+          </Flex>
+        ))}
+      </Slider>
+      );
+    };

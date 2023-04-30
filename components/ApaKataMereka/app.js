@@ -26,8 +26,8 @@ export const App = () => {
         border="none"
         outline="none"
         cursor="pointer"
-        left={direction === "left" ? "1px" : ""}
-        right={direction === "right" ? "1px" : ""}
+        left={direction === "left" ? { base: "-3px", md: "-3px", sm:"-3px" } : ""}
+        right={direction === "right" ? { base: "-3px", md: "-3px", sm:"-3px" } : ""}
       >
         {direction === "left" ? (
           <ChevronLeftIcon w={6} h={6} color="black" />

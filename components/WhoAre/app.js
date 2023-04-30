@@ -29,14 +29,14 @@ export const App = (params) => {
     return(
         
         <Box pt='10' backgroundSize={"cover"} bgColor='white'>
-          <Container padding={{base: '30px', md:'90px'}} maxW='70vw' color='black'>
+          <Container padding={{base: '10px', md:'90px'}} maxW='70vw' color='black'>
             <Stack
               direction={{ base: 'column-reverse', md: 'row' }}
               spacing={{ base: '10px', md: '10' }}
               alignItems={{ base: 'center', md: 'flex-start' }}
             >
               <Box
-                fontSize={{ base: '20px', md: '20px', sm: '14px' }}
+                fontSize={{ base: '10pxpx', md: '20px', sm: '14px' }}
                 fontFamily="Montserrat"
                 textAlign={{ base: 'justify', md: 'justify' }}
               >

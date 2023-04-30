@@ -1,12 +1,9 @@
 import Head from 'next/head'
 import NavBar from '../Navbar/navbar'
-import { Box } from '@chakra-ui/react'
+import { Box, extendTheme } from '@chakra-ui/react'
 import { App as Footer}  from '../Footer/App'
 import styles from "@/styles/whatsapp.module.css"
 import { FaWhatsapp } from "react-icons/fa"
-import { App as Hero } from '../Hero/app'
-import { useRouter } from 'next/router'
-
 
 const Main = ({children, router}) => {
     let footer
@@ -16,12 +13,17 @@ const Main = ({children, router}) => {
     else {
         footer = <Footer></Footer>
     }
+    
     return (
         <Box as="main">
-            <Head>
-                <meta name='viewport' content='width=device-width, inital-scale=1' />
-                <title>Ease Your Needs</title>
-            </Head>
+        <Head>
+          <meta name="viewport" content="width=device-width, inital-scale=1" />
+          <title>Ease Your Needs</title>
+          <link
+            href="https://fonts.googleapis.com/css?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap"
+            rel="stylesheet"
+          />
+        </Head>
 
             <NavBar path={router.asPath}></NavBar>
             <Box>

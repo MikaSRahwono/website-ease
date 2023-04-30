@@ -22,8 +22,8 @@ export const App = () => {
         border="none"
         outline="none"
         cursor="pointer"
-        left={direction === "left" ? "-6" : ""}
-        right={direction === "right" ? "-6" : ""}
+        left={direction === "left" ? { base: "-20", md: "-10" } : ""}
+        right={direction === "right" ? { base: "-20", md: "-10" } : ""}
       >
         {direction === "left" ? (
           <ChevronLeftIcon w={6} h={6} color="black" />
@@ -104,36 +104,36 @@ export const App = () => {
 
   return (
     <Box fontFamily={'Montserrat'} alignContent={'center'} alignItems={'center'} color="#000" bgColor="white">
-      <Heading as="h2" size="2xl" textAlign="center" mt={10} mb={5} fontWeight={'bold'}>Our Services</Heading>
+      <Heading as="h2" size="2xl" textAlign="center" mt={{ base: 5, sm: 10 }} mb={5} fontWeight={'bold'}>Our Services</Heading>
       <Center>
-        <HStack mb='30px' spacing={10} mt={2}>
-          <Button bgColor={sliderIndex === 0 ? '#DAC17E' : '#f2f2f2'} borderRadius={50} onClick={() => handleClick(0)}>Zoom</Button>
-          <Button bgColor={sliderIndex === 1 ? '#DAC17E' : '#f2f2f2'} borderRadius={50} onClick={() => handleClick(1)}>Studio</Button>
-          <Button bgColor={sliderIndex === 2 ? '#DAC17E' : '#f2f2f2'} borderRadius={50} onClick={() => handleClick(2)}>Creative</Button>
+        <HStack mb={{ base: '20px', sm: '30px' }} spacing={{ base: 6, sm: 10 }} mt={2}>
+          <Button fontSize={{ base: 'sm', sm: 'md' }} bgColor={sliderIndex === 0 ? '#DAC17E' : '#f2f2f2'} borderRadius={50} onClick={() => handleClick(0)}>Zoom</Button>
+          <Button fontSize={{ base: 'sm', sm: 'md' }} bgColor={sliderIndex === 1 ? '#DAC17E' : '#f2f2f2'} borderRadius={50} onClick={() => handleClick(1)}>Studio</Button>
+          <Button fontSize={{ base: 'sm', sm: 'md' }} bgColor={sliderIndex === 2 ? '#DAC17E' : '#f2f2f2'} borderRadius={50} onClick={() => handleClick(2)}>Creative</Button>
         </HStack>
       </Center>
       <Center>
-        <Container maxW={{ lg: '60vw', sm: '100vw' }}>
+        <Container maxW={{ base:"sm", lg: '60vw', sm: '100vw' }}>
           <Box rounded={50}
             bgImage="https://firebasestorage.googleapis.com/v0/b/website-ease.appspot.com/o/img%2FBackground%201.png?alt=media&token=7b347cc5-f193-468f-81d1-f92e77e07d70"
             maxW="full" py={2}
-            px={{ lg: '2vw', sm: '10' }}>
+            px={{ base:"10", lg: '2vw', sm: '10' }}>
             <Slider {...settings} ref={sliderRef}>
               {sliderContent.map((slide, index) => (
                 <VStack key={index} alignItems="stretch" spacing={4}>
-                  <Flex direction={{ lg: "row", sm: "column" }} spacing={4}>
-                    <Image
-                      boxSize='sm'
-                      src={slide.image}
-                      alt={slide.title}
-                      borderRadius="md"
-                      w={{ lg: '40%', sm: '100%' }}
-                      h='auto'
-                      objectFit="cover"
-                      order={{ lg: 0, sm: -1 }}
-                    />
-                    <VStack pt={{ base: '5vh', lg: '10vh', sm: '1vh' }} alignItems="start" spacing={2}>
-                      <Box  height={{ base: '5em', lg: '3em', sm: '2em' }}>
+                  <Flex direction={{ base: "column", lg: "row", sm: "column" }} spacing={4}>
+                      <Image
+                        boxSize='sm'
+                        src={slide.image}
+                        alt={slide.title}
+                        borderRadius="md"
+                        w={{ base: "100%", lg: '40%', sm: '100%' }}
+                        h='auto'
+                        objectFit="cover"
+                        order={{ base: -1, lg: 0, sm: -1 }}
+                      />
+                    <VStack pt={{ base: '1vh', lg: '10vh', sm: '1vh' }} alignItems="start" spacing={2}>
+                      <Box height={{ base: '2em', lg: '3em', sm: '2em' }}>
                         <Heading
                           as="h3"
                           size="lg"
@@ -141,10 +141,10 @@ export const App = () => {
                           {slide.title}
                         </Heading>
                       </Box>
-                      <Box pb={{ base: '5vh', lg: '10vh', sm: '10vh' }} height={{ base: '6em', lg: '4em' }}>
+                      <Box pb={{ base: '15vh', lg: '10vh', sm: '10vh' }} height={{ base: '6em', lg: '4em' }}>
                         <Text fontSize={{ lg: '1vw' }} fontWeight={'regular'}>{slide.description}</Text>
                       </Box>
-                        <Box pb={{ base: '5vh', lg: '10vh', sm: '10vh' }}>
+                        <Box pb={{ base: '2vh', lg: '10vh', sm: '10vh' }}>
                           <Button
                             onClick={() => window.open(slide.link)}
                             bgColor='white'
