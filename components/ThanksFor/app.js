@@ -17,7 +17,7 @@ export const App = (params) => {
           <Heading
             pb={{base:"10", sm:"10"}}
             textAlign={"center"}
-            fontSize={{ base: "2vh" ,lg: "2vw", sm: "3vh" }}
+            fontSize={{ base: "3vh" ,lg: "2vw", sm: "3vh" }}
             fontWeight="extrabold"
             mb={5}
           >
