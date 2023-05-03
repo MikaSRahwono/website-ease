@@ -4,6 +4,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { ChevronRightIcon, ChevronLeftIcon } from '@chakra-ui/icons'
+import {BsFillArrowRightCircleFill, BsFillArrowLeftCircleFill} from 'react-icons/bs'
 
 export const App = () => {
   const [sliderIndex, setSliderIndex] = useState(0);
@@ -22,15 +23,15 @@ export const App = () => {
         border="none"
         outline="none"
         cursor="pointer"
-        left={direction === "left" ? { base: "-20", md: "-10" } : ""}
-        right={direction === "right" ? { base: "-20", md: "-10" } : ""}
+        left={direction === "left" ? { base: "-12", md: "-20" } : ""}
+        right={direction === "right" ? { base: "-12", md: "-20" } : ""}
       >
         {direction === "left" ? (
-          <ChevronLeftIcon w={6} h={6} color="black" />
-        ) : (
-          <ChevronRightIcon w={6} h={6} color="black" />
-        )}
-      </Box>
+          <BsFillArrowLeftCircleFill color="black" size={32} />
+          ) : (
+            <BsFillArrowRightCircleFill color="black" size={32} />
+          )}
+        </Box>
     );
   };
 
