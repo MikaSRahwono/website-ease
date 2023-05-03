@@ -13,6 +13,7 @@ import { App as Testimoni } from "@/components/ServicesPage/Testimoni/app"
 import { creative_desc, creative, } from "@/components/ServicesPage/Pricing/_data"
 import { creative_book } from "@/components/ServicesPage/AlurBooking/_data"
 import { creative_pro } from "@/components/ServicesPage/ServicesProjects/_data"
+import Link from "next/link"
 
 export default function Home() {
   const [isLargerThan400] = useMediaQuery('(min-width: 480px)')
@@ -28,55 +29,56 @@ export default function Home() {
   return (
     <Box style={{ backgroundColor:'#ECECEC'}}
     >
-      <Hero 
-        heading='CREATIVE' 
-        description1='With highly efficient features in event broadcasting, We help you digitalize your event with Our Live Streaming Services.'
-        image='/img/services/live-services.png'
-        ></Hero>
+      <Hero hero={0}></Hero>
         {isLargerThan400 ? <Box h='10vh' bg='#FFFFFF' w='100vw' mt={0} color='black'>
         <Center h='10vh'>
           <HStack spacing='5vw'>
-            <Text>Why Us?</Text>
-            <Text>Recent Projects</Text>
-            <Text>Pricing dan Paket</Text>
-            <Text>Alur Booking</Text>
-            <Text>FAQ</Text>
-            <Text>Testimoni</Text>
+            <Link href='#reasons'>Why Us?</Link>
+            <Link href='#projects'>Recent Projects</Link>
+            <Link href='#pricing'>Pricing dan Paket</Link>
+            <Link href='#alur'>Alur Booking</Link>
+            <Link href='#faq'>FAQ</Link>
+            <Link href='#testimoni'>Testimoni</Link>
           </HStack>
         </Center>
       </Box> : <Box h='10vh' bg='#FFFFFF' w='100vw' mt={0} color='black'></Box>}
-      <Reasons
-    
-        image='/img/reasons-bg/creative.jpg'
-        imagemob='/img/reasons-bg/creative-potrait.jpg'
-        heading='Why do you need Live Streaming services?'
-        lists={reason_list}
-      ></Reasons>
-      <Box h='10vh' bg='white'></Box>
+      <div id="reasons">
+        <Reasons
+          service='creative'
+          heading='Why do you need Live Streaming services?'
+          lists={reason_list}
+        ></Reasons>
+      </div>
+      <Box h='10vh' bg='white' mb='5vh'></Box>
       <Highlight></Highlight>
+      <div id="projects"></div>
       <Center w='100vw' >
-        <Box mt={30} width='90vw'>
+        <Box mt='10vh' width='90vw'>
           {/* Recent Projects */}
-          <Box mt='10'>
-            <Projects slides={creative_pro}></Projects>
-          </Box>
+            <Box>
+              <Projects slides={creative_pro}></Projects>
+            </Box>
 
           {/* Pricing */}
+          <div id="pricing"></div>
           <Box>
             <Pricing datas={creative} description={creative_desc} column={4}></Pricing>
           </Box>
 
           {/* Terms of Service */}
-          <Box>
+          <div id="alur"></div>
+          <Box mt='15vh'>
             <AlurBooking datas={creative_book}></AlurBooking>
           </Box>
 
           {/* Frequently Asked Questions */}
-          <Box>
-            <FAQ data='studio'></FAQ>
+          <div id="faq"></div>
+          <Box mt='20vh'>
+            <FAQ data='creative'></FAQ>
           </Box>
 
-          <Box>
+          <div id="testimoni"></div>
+          <Box mt='15vh'>
             <Testimoni></Testimoni>
           </Box>
 

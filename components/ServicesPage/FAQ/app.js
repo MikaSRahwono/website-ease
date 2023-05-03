@@ -4,8 +4,8 @@ import { studio, creative, zoom } from './_data'
 export const app = ({data}) => {
     var faqs
     if (data == "studio") {faqs = studio}
-    else if (data == creative) {faqs = creative}
-    else if (data == zoom) (faqs = zoom)
+    else if (data == "creative") {faqs = creative}
+    else if (data == "zoom") (faqs = zoom)
     return (
         <Box color='#2f2f2f'>
             <Center>

@@ -28,53 +28,56 @@ export default function Home() {
   return (
     <Box style={{ backgroundColor:'#ECECEC'}}
     >
-      <Hero 
-        heading='ZOOM'
-        description1='As a result of the pandemic, things that used to be held offline now shifted to online-based. Now, we are here to ease your needs. Zoom rental never been easier.'
-        image='/img/services/zoom-service.png'
-        ></Hero>
+      <Hero hero={1}></Hero>
         {isLargerThan400 ? <Box h='10vh' bg='#FFFFFF' w='100vw' mt={0} color='black'>
         <Center h='10vh'>
           <HStack spacing='5vw'>
-            <Text>Why Us?</Text>
-            <Text>Recent Projects</Text>
-            <Text>Pricing dan Paket</Text>
-            <Text>Alur Booking</Text>
-            <Text>FAQ</Text>
-            <Text>Testimoni</Text>
+            <Link href='#reasons'>Why Us?</Link>
+            <Link href='#projects'>Recent Projects</Link>
+            <Link href='#pricing'>Pricing dan Paket</Link>
+            <Link href='#alur'>Alur Booking</Link>
+            <Link href='#faq'>FAQ</Link>
+            <Link href='#testimoni'>Testimoni</Link>
           </HStack>
         </Center>
       </Box> : <Box h='10vh' bg='#FFFFFF' w='100vw' mt={0} color='black'></Box>}
+      <div id="reasons">
       <Reasons
         image='/img/reasons-bg/zoom.jpg'
         imagemob='/img/reasons-bg/zoom-potrait.jpg'
         heading='Why you have to book Zoom Rental with EaseYourNeeds?'
         lists={reason_list}
       ></Reasons>
+      </div>
       <Box h='10vh' bg='white'></Box>
       <Highlight></Highlight>
+      <div id="projects"></div>
       <Center w='100vw' >
-        <Box mt={30} width='90vw'>
+        <Box mt='10vh' width='90vw'>
           {/* Recent Projects */}
           <Box mt='10'>
             <Projects slides={zoom_pro}></Projects>
           </Box>
 
           {/* Pricing */}
+          <div id="pricing"></div>
           <Box>
             <Pricing datas={zoom} description={zoom_desc} column={3}></Pricing>
           </Box>
 
           {/* Terms of Service */}
+          <div id="alur"></div>
           <Box>
             <AlurBooking datas={zoom_book}></AlurBooking>
           </Box>
 
           {/* Frequently Asked Questions */}
+          <div id="faq"></div>
           <Box>
-            <FAQ data='studio'></FAQ>
+            <FAQ data='zoom'></FAQ>
           </Box>
 
+          <div id="testimoni"></div>
           <Box>
             <Testimoni></Testimoni>
           </Box>
