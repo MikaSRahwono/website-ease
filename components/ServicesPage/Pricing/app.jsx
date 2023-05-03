@@ -137,10 +137,10 @@ export const App = ({description, datas, column}) => {
           />
           ))}
           
-        </SimpleGrid> : <Box w='full' mt='5vh'>
+        </SimpleGrid> : <Box w='full' h='full' mt='5vh'>
           <Slider {...settings} ref={setSlider}>
           {datas.map(data => (
-            <Box>
+            <Box h='full'>
               <PricingCard
               name={data.name}
               description={data.desc}

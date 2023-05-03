@@ -95,8 +95,10 @@ const PricingWrapper = (props) => {
   }
   const styles = highlight ? popularStyles : null
   return (
-    <Box
+    <Flex
+      direction='column'
       w={{base: '90%',md: "full"}}
+      h={{base: 'full'}}
       maxW="md"
       mx="auto"
       bg='white'
@@ -132,25 +134,27 @@ export const PricingCard = (props) => {
         <PriceDisplay currency="Rp" price={price} />
       </Flex>
 
-      <List stylePosition="outside" mt="2" spacing={4}>
+      <List flex='1' stylePosition="outside" mt="2" spacing={4}>
         {features.map(feature => (
           <PricingDetail icon={feature.icon} name={feature.name}></PricingDetail>
         ))}
       </List>
 
-      <Button
-        minH={{base: '5vh', md: "3.5rem"}}
-        rounded="lg"
-        fontWeight="bold"
-        colorScheme={popular ? 'blue' : 'gray'}
-        mt="8"
-        w="100%"
-        onClick={onClick}
-        bg='#DAC17F'
-        _hover={{bg: '#CBAD5C'}}
-      >
-        BOOKING NOW!
-      </Button>
+      <Box alignItems='end'>
+        <Button
+          minH={{base: '5vh', md: "3.5rem"}}
+          rounded="lg"
+          fontWeight="bold"
+          colorScheme={popular ? 'blue' : 'gray'}
+          mt="8"
+          w="100%"
+          onClick={onClick}
+          bg='#DAC17F'
+          _hover={{bg: '#CBAD5C'}}
+        >
+          BOOKING NOW!
+        </Button>
+      </Box>
     </PricingWrapper>
   )
 }

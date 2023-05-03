@@ -13,6 +13,7 @@ import { App as Testimoni } from "@/components/ServicesPage/Testimoni/app"
 import { studio_desc, studio, } from "@/components/ServicesPage/Pricing/_data"
 import { studio_book } from "@/components/ServicesPage/AlurBooking/_data"
 import { studio_pro } from "@/components/ServicesPage/ServicesProjects/_data"
+import Link from "next/link"
 
 export default function Home() {
   const [isLargerThan400] = useMediaQuery('(min-width: 480px)')
@@ -28,54 +29,56 @@ export default function Home() {
   return (
     <Box style={{ backgroundColor:'#ECECEC'}}
     >
-      <Hero 
-        heading='STUDIO' 
-        description1='From 7 of 10 people, they prefer to choose brands that have high quality advertisements before deciding to purchase something. Improve your brand image with Ease Your Needs!'
-        image='/img/services/prod-services.png'
-        ></Hero>
+      <Hero hero={2}></Hero>
         {isLargerThan400 ? <Box h='10vh' bg='#FFFFFF' w='100vw' mt={0} color='black'>
         <Center h='10vh'>
           <HStack spacing='5vw'>
-            <Text>Why Us?</Text>
-            <Text>Recent Projects</Text>
-            <Text>Pricing dan Paket</Text>
-            <Text>Alur Booking</Text>
-            <Text>FAQ</Text>
-            <Text>Testimoni</Text>
+            <Link href='#reasons'>Why Us?</Link>
+            <Link href='#projects'>Recent Projects</Link>
+            <Link href='#pricing'>Pricing dan Paket</Link>
+            <Link href='#alur'>Alur Booking</Link>
+            <Link href='#faq'>FAQ</Link>
+            <Link href='#testimoni'>Testimoni</Link>
           </HStack>
         </Center>
       </Box> : <Box h='10vh' bg='#FFFFFF' w='100vw' mt={0} color='black'></Box>}
+      <div id="reasons">
       <Reasons
-        image='/img/reasons-bg/studio.jpg'
-        imagemob='/img/reasons-bg/studio-potrait.jpg'
+        service='studio'
         heading='Why does your brand need professional product photos?'
         lists={reason_list}
       ></Reasons>
+      </div>
       <Box h='10vh' bg='white'></Box>
       <Highlight></Highlight>
+      <div id="projects"></div>
       <Center w='100vw' >
-        <Box mt={30} width='90vw'>
+        <Box mt='10vh' width='90vw'>
           {/* Recent Projects */}
-          <Box mt='10'>
+          <Box>
             <Projects slides={studio_pro}></Projects>
           </Box>
 
           {/* Pricing */}
+          <div id="pricing"></div>
           <Box>
             <Pricing datas={studio} description={studio_desc} column={3}></Pricing>
           </Box>
 
           {/* Terms of Service */}
-          <Box>
+          <div id="alur"></div>
+          <Box mt='15vh'>
             <AlurBooking datas={studio_book}></AlurBooking>
           </Box>
 
           {/* Frequently Asked Questions */}
-          <Box>
+          <div id="faq"></div>
+          <Box mt='20vh'>
             <FAQ data='studio'></FAQ>
           </Box>
 
-          <Box>
+          <div id="testimoni"></div>
+          <Box mt='15vh'>
             <Testimoni></Testimoni>
           </Box>
 
