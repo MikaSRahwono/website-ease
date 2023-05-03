@@ -50,7 +50,7 @@ export default function Home() {
         ></Reasons>
       </div>
       <Box h='10vh' bg='white' mb='5vh'></Box>
-      <Highlight></Highlight>
+      <Highlight service='creative'></Highlight>
       <div id="projects"></div>
       <Center w='100vw' >
         <Box mt='10vh' width='90vw'>

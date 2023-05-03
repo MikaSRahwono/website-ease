@@ -9,8 +9,18 @@ import {
     useMediaQuery
  } from "@chakra-ui/react";
 import { FaWhatsapp } from "react-icons/fa";
+import { creative, zoom, studio } from "./_data";
+import Link from "next/link";
 
-export const App = (params) => {
+export const App = ({service}) => {
+    var data = {}
+    if (service == "creative") {
+        data = creative
+    } else if (service == "studio") {
+        data = studio
+    } else {
+        data = zoom
+    }
     const [isLargerThan400] = useMediaQuery('(min-width: 400px)')
 
     return (
@@ -18,8 +28,7 @@ export const App = (params) => {
             bgColor='white'
             w="full"
             color='#000'
-            height='auto'
-            fontFamily={'Montserrat'}>
+            height='auto'>
             
             <Box pos="relative">
                 <Box
@@ -38,11 +47,11 @@ export const App = (params) => {
                     justifyContent={'center'}
                 > 
                     <Text fontSize='2xl' fontWeight='bold'>
-                        Zoom rental never been easier. Lets booking your meeting now!
+                        {data.title}
                     </Text>
                     <Button bg='#7FCAD7' _hover={{background:"#96DDE9"}} h='5vh' mt='5vh'>
                         <FaWhatsapp/>
-                        <Text pl='1vw'>Hubungi Kami!</Text>
+                        <Link href={data.whatsapp} pl='1vw'>Hubungi Kami!</Link>
                     </Button>
                 </Box>
             <Stack
@@ -64,7 +73,7 @@ export const App = (params) => {
                 <Box w={{ base: 'full', md: '50%' }}>
                     <Image 
                         alt='sosmed easeyourneeds'
-                        src='/img/highlight/sosmed-left.jpg' 
+                        src={data.photo1}
                         w="full"
                         h="full"
                         objectFit="cover"/>
@@ -73,7 +82,7 @@ export const App = (params) => {
                 <Box w={{ base: 'full', md: '53.4%' }} h='100%'>
                     <Image
                         alt='sosmed easeyourneeds'
-                        src='/img/highlight/sosmed-right.svg'
+                        src={data.photo2}
                         w='full'
                         h={{ base: '100%', md: '100%' }}
                         objectFit='cover'
