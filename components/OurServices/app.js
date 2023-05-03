@@ -141,7 +141,7 @@ export const App = () => {
                           {slide.title}
                         </Heading>
                       </Box>
-                      <Box pb={{ base: '15vh', lg: '10vh', sm: '10vh' }} height={{ base: '6em', lg: '4em' }}>
+                      <Box pb={{ base: '18vh', lg: '10vh', sm: '10vh' }} height={{ base: '6em', lg: '4em' }}>
                         <Text fontSize={{ lg: '1vw' }} fontWeight={'regular'}>{slide.description}</Text>
                       </Box>
                         <Box pb={{ base: '2vh', lg: '10vh', sm: '10vh' }}>

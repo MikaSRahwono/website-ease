@@ -12,8 +12,8 @@ export const Testimonial = (props) => {
       bg='white'
       color='#2f2f2f'
       shadow="lg"
-      h={{lg:'80vh'}}
-      w={{lg:"25vw", base:'87vw'}}
+      h={{base:"100vh", md:"100vh", lg:'100vh'}}
+      w={{lg:"25vw", md:"40vw", base:'87vw'}}
       px="4"
       py="10"
       ml={{lg:'6', sm:'2'}}
@@ -54,7 +54,7 @@ export const Testimonial = (props) => {
           </Text>
           <Text>{role}</Text>
           <Center pt='50'>
-            <Divider w={{base:'30vw', lg:'10vw', sm:'30vw'}} alignItems='center' size='10' borderColor='gray' variant='solid' orientation='horizontal'></Divider>
+            <Divider w={{base:'30vw', lg:'10vw', md:"20vw", sm:'30vw'}} alignItems='center' size='10' borderColor='gray' variant='solid' orientation='horizontal'></Divider>
           </Center>
         </Box>
       </Flex>

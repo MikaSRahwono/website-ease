@@ -26,8 +26,8 @@ export const App = () => {
         border="none"
         outline="none"
         cursor="pointer"
-        left={direction === "left" ? { base: "-3px", md: "-3px", sm:"-3px" } : ""}
-        right={direction === "right" ? { base: "-3px", md: "-3px", sm:"-3px" } : ""}
+        left={direction === "left" ? { base: "-3px", md: "-28px", sm:"-3px" } : ""}
+        right={direction === "right" ? { base: "-3px", md: "-28px", sm:"-3px" } : ""}
       >
         {direction === "left" ? (
           <ChevronLeftIcon w={6} h={6} color="black" />
@@ -72,7 +72,7 @@ export const App = () => {
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 2,
           slidesToScroll: 1,
           dots: false,
         },
@@ -90,7 +90,7 @@ export const App = () => {
 
 
   return (
-    <Box mx={['10px', '10px', '280px']} pb='20vh'>
+    <Box mx={['10px', '10px', '90px']} pb='20vh'>
       <Heading color='#000' textAlign={['left']} pl='15' as='h1' size='2xl' pb='5vh' variant='page-title' position="relative">
         Apa Kata Mereka?
       </Heading>
