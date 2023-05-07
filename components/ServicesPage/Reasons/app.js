@@ -41,15 +41,17 @@ function Selector(service, isLargerThan400, heading, lists) {
       </HStack>);
     } else {
       return (
-      <VStack>
-        <Text mb='20vh' textAlign='center' fontFamily="Montserrat" fontSize={{base: '7.5vw', md: '3vw', lg: '5xl'}} fontWeight="bold">
+      <VStack pb='10vh'>
+        <Text mt='5vh' mb='1vw' textAlign='center' fontSize={{base: '7.5vw', md: '3vw', lg: '5xl'}} fontWeight="bold">
           {heading}
         </Text>
+        <Box px='8vw' pt='25vw' pb='25vw' bgImage='/img/reasons-bg/circle.png' bgPos='center' bgSize='135vw' bgRepeat='no-repeat'>
         <UnorderedList fontSize={{base: '6vw', md: '1.5vw', lg: '1.5vw'}} fontWeight='normal'>
           {lists.map(item => (
-              <ListItem>{item}</ListItem>
+            <ListItem borderRadius='10' p='0.3vw' bg='#E3D6AC' mt={5}>{item}</ListItem>
           ))}
         </UnorderedList>
+        </Box>
       </VStack>);
     }
   } else if (service == "studio"){
@@ -78,13 +80,74 @@ function Selector(service, isLargerThan400, heading, lists) {
           </VStack>
         </HStack>);
     } else {
-      return <Box></Box>
+      return (
+        <VStack pb='10vh'>
+          <Text mb='6vh' pt='3.5vh' pb='13vh' textAlign='center' bgImage='/img/reasons-bg/circle.png' bgPos='bottom' bgSize='110vw' bgRepeat='no-repeat' fontSize={{base: '7.5vw', md: '3vw', lg: '5xl'}} fontWeight="bold">
+            {heading}
+          </Text>
+          <Box px='8vw' pt='10vw' pb='25vw' bgImage='/img/reasons-bg/pen_portrait.png' bgPos='left' bgSize='120vw' bgRepeat='no-repeat'>
+          <UnorderedList w='80%' fontSize={{base: '5vw', md: '1.5vw', lg: '1.5vw'}} fontWeight='normal'>
+            {lists.map(item => (
+              <ListItem mt={1}>{item}</ListItem>
+            ))}
+          </UnorderedList>
+          </Box>
+        </VStack>);
     }
   } else {
     if(isLargerThan400) {
-      return <Box></Box>
+      return (
+        <VStack w='full' align='start' pt='5vh'>
+          <Box align={{base: 'left', md: 'left'}} w='85vw'>
+            <Text p='1vw' pl='4vw' fontSize={{base: '5vw', md: '3vw', lg: '2.5vw'}}  borderRightRadius={20} bg='white' fontWeight="bold">
+              {heading}
+            </Text>
+          </Box>
+          <VStack>
+            <Center h='60vh' w='100vw'>
+                {lists.map(item => (
+                  <Center bg='#5FA698' m='1vw' h='30vh' w={{md: '18vw', lg: '15vw'}} borderRadius={10}>
+                    <Text textAlign='center' fontWeight='bold' m='0.7vw' fontSize='xl' color='white'>{item}</Text>
+                  </Center>
+                ))}
+            </Center>
+          </VStack>
+        </VStack>);
     } else {
-      return <Box></Box>
+      const list1 = lists.slice(0,2)
+      const list2 = lists.slice(2,4)
+      const list3 = lists.slice(4,5)
+      return (
+      <VStack h='100vh' w='80vw' align='start' pt='5vh' spacing='5vh'>
+        <Text p='1vw' pl='4vw' fontSize={{base: '5vw', md: '3vw', lg: '2.5vw'}}  borderRightRadius={20} bg='white' fontWeight="bold">
+          {heading}
+        </Text>
+        <Center w='100vw'>
+          <VStack>
+            <HStack >
+              {list1.map(item => (
+                <Center bg='#5FA698' m='1vw' h='20vh' w={{base:'40vw', md: '18vw', lg: '15vw'}} borderRadius={10}>
+                  <Text textAlign='center' fontWeight='bold' m='0.7vw' fontSize='xl' color='white'>{item}</Text>
+                </Center>
+              ))}
+            </HStack>
+            <HStack>
+              {list2.map(item => (
+                <Center bg='#5FA698' m='1vw' h='20vh' w={{base:'40vw', md: '18vw', lg: '15vw'}} borderRadius={10}>
+                  <Text textAlign='center' fontWeight='bold' m='0.7vw' fontSize='xl' color='white'>{item}</Text>
+                </Center>
+              ))}
+            </HStack>
+            <HStack>
+              {list3.map(item => (
+                <Center bg='#5FA698' m='1vw' h='20vh' w={{base:'40vw', md: '18vw', lg: '15vw'}} borderRadius={10}>
+                  <Text textAlign='center' fontWeight='bold' m='0.7vw' fontSize='xl' color='white'>{item}</Text>
+                </Center>
+              ))}
+            </HStack>
+          </VStack>
+        </Center>
+      </VStack>);
     }
   }
 }
@@ -97,6 +160,8 @@ export const App = ({heading, lists, service}) => {
       w="full"
       h='full'
       bg='#5FA698'
+      bgImage={service == 'zoom' ? isLargerThan400 ? '/img/reasons-bg/zoom_bg.png' : '/img/reasons-bg/zoom_bg_pot.png' : ''}
+      bgSize={service == 'zoom' ? 'cover': ''}
       color='#303030'
       alignItems="center"
       justifyContent="center"

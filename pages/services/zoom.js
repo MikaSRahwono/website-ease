@@ -13,6 +13,7 @@ import { App as Testimoni } from "@/components/ServicesPage/Testimoni/app"
 import { zoom_desc, zoom, } from "@/components/ServicesPage/Pricing/_data"
 import { zoom_book } from "@/components/ServicesPage/AlurBooking/_data"
 import { zoom_pro } from "@/components/ServicesPage/ServicesProjects/_data"
+import Link from "next/link"
 
 export default function Home() {
   const [isLargerThan400] = useMediaQuery('(min-width: 480px)')
@@ -43,19 +44,18 @@ export default function Home() {
       </Box> : <Box h='10vh' bg='#FFFFFF' w='100vw' mt={0} color='black'></Box>}
       <div id="reasons">
       <Reasons
-        image='/img/reasons-bg/zoom.jpg'
-        imagemob='/img/reasons-bg/zoom-potrait.jpg'
+        service='zoom'
         heading='Why you have to book Zoom Rental with EaseYourNeeds?'
         lists={reason_list}
       ></Reasons>
       </div>
       <Box h='10vh' bg='white'></Box>
-      <Highlight></Highlight>
+      <Highlight service='zoom'></Highlight>
       <div id="projects"></div>
       <Center w='100vw' >
         <Box mt='10vh' width='90vw'>
           {/* Recent Projects */}
-          <Box mt='10'>
+          <Box>
             <Projects slides={zoom_pro}></Projects>
           </Box>
 
@@ -67,18 +67,18 @@ export default function Home() {
 
           {/* Terms of Service */}
           <div id="alur"></div>
-          <Box>
+          <Box mt='15vh'>
             <AlurBooking datas={zoom_book}></AlurBooking>
           </Box>
 
           {/* Frequently Asked Questions */}
           <div id="faq"></div>
-          <Box>
+          <Box mt='20vh'>
             <FAQ data='zoom'></FAQ>
           </Box>
 
           <div id="testimoni"></div>
-          <Box>
+          <Box mt='15vh'>
             <Testimoni></Testimoni>
           </Box>
 
