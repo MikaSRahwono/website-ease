@@ -4,14 +4,17 @@ import { useState } from 'react'
 import Slider from 'react-slick'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
-import { HistoryCards } from './cards'
 import { apakatamerekaCardsData } from './_data'
-import { ChevronRightIcon, ChevronLeftIcon } from '@chakra-ui/icons'
 import { Testimonial } from '../ServicesPage/Testimoni/testimonial'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { faChevronCircleRight, faChevronCircleLeft } from "@fortawesome/free-solid-svg-icons";
 
 export const App = () => {
 
   const [slider, setSlider] = useState(null)
+
+  library.add(faChevronCircleRight, faChevronCircleLeft);
 
   const CustomArrow = ({ direction, onClick }) => {
     return (
@@ -22,19 +25,18 @@ export const App = () => {
         top="50%"
         transform="translateY(-50%)"
         zIndex="1"
-        bg="transparent"
         border="none"
         outline="none"
         cursor="pointer"
-        left={direction === "left" ? { base: "-3px", md: "-28px", sm:"-3px" } : ""}
-        right={direction === "right" ? { base: "-3px", md: "-28px", sm:"-3px" } : ""}
+        left={direction === "left" ? { base: "1", md: "1" } : ""}
+        right={direction === "right" ? { base: "1", md: "1" } : ""}
       >
         {direction === "left" ? (
-          <ChevronLeftIcon w={6} h={6} color="black" />
-        ) : (
-          <ChevronRightIcon w={6} h={6} color="black" />
-        )}
-      </Box>
+        <FontAwesomeIcon icon={["fas", "chevron-circle-left"]} style={{fontSize: "24px", color:"#000"}} />
+      ) : (
+        <FontAwesomeIcon icon={["fas", "chevron-circle-right"]} style={{fontSize: "24px", color:"#000"}} />
+      )}
+        </Box>
     );
   };
 

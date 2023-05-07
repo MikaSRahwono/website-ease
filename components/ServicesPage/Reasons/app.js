@@ -1,19 +1,10 @@
 import { 
-    Flex,
     Box,
     Text,
-    Image,
-    Button,
     VStack,
     HStack,
-    Stack,
-    Container,
-    Card,
-    Heading,
-    Divider,
     UnorderedList,
     ListItem,
-    AspectRatio,
     useMediaQuery,
     Center
  } from "@chakra-ui/react";
@@ -33,7 +24,9 @@ function Selector(service, isLargerThan400, heading, lists) {
           <Box px='8vw' pt='5vw' pb='5vw' bgImage='/img/reasons-bg/circle.png' bgPos='center' bgSize='50vw' bgRepeat='no-repeat'>
           <UnorderedList mt='4'fontSize={{base: '3vw', md: '4vw', lg: '1.7vw'}} fontWeight='normal'>
             {lists.map(item => (
-                <ListItem borderRadius='10' p='0.5vw' bg='#E3D6AC' mt={5}>{item}</ListItem>
+                <ListItem key={`item-${item}`} borderRadius='10' p='0.5vw' bg='#E3D6AC' mt={5}>
+                {item}
+              </ListItem>
             ))}
           </UnorderedList>
           </Box>          
@@ -48,7 +41,7 @@ function Selector(service, isLargerThan400, heading, lists) {
         <Box px='8vw' pt='25vw' pb='25vw' bgImage='/img/reasons-bg/circle.png' bgPos='center' bgSize='135vw' bgRepeat='no-repeat'>
         <UnorderedList fontSize={{base: '6vw', md: '1.5vw', lg: '1.5vw'}} fontWeight='normal'>
           {lists.map(item => (
-            <ListItem borderRadius='10' p='0.3vw' bg='#E3D6AC' mt={5}>{item}</ListItem>
+            <ListItem key={`item-${item}`} borderRadius='10' p='0.3vw' bg='#E3D6AC' mt={5}>{item}</ListItem>
           ))}
         </UnorderedList>
         </Box>
@@ -72,7 +65,7 @@ function Selector(service, isLargerThan400, heading, lists) {
             <Center h='50vh'>
               <UnorderedList mt='4'fontSize={{base: '3vw', md: '4vw', lg: '1.5vw'}} font fontWeight='normal'>
                 {lists.map(item => (
-                    <ListItem  mt={5}>{item}</ListItem>
+                    <ListItem key={`item-${item}`} mt={5}>{item}</ListItem>
                 ))}
               </UnorderedList>
             </Center>
@@ -88,7 +81,7 @@ function Selector(service, isLargerThan400, heading, lists) {
           <Box px='8vw' pt='10vw' pb='25vw' bgImage='/img/reasons-bg/pen_portrait.png' bgPos='left' bgSize='120vw' bgRepeat='no-repeat'>
           <UnorderedList w='80%' fontSize={{base: '5vw', md: '1.5vw', lg: '1.5vw'}} fontWeight='normal'>
             {lists.map(item => (
-              <ListItem mt={1}>{item}</ListItem>
+              <ListItem key={`item-${item}`} mt={1}>{item}</ListItem>
             ))}
           </UnorderedList>
           </Box>
@@ -106,7 +99,7 @@ function Selector(service, isLargerThan400, heading, lists) {
           <VStack>
             <Center h='60vh' w='100vw'>
                 {lists.map(item => (
-                  <Center bg='#5FA698' m='1vw' h='30vh' w={{md: '18vw', lg: '15vw'}} borderRadius={10}>
+                  <Center key={`item-${item}`} bg='#5FA698' m='1vw' h='30vh' w={{md: '18vw', lg: '15vw'}} borderRadius={10}>
                     <Text textAlign='center' fontWeight='bold' m='0.7vw' fontSize='xl' color='white'>{item}</Text>
                   </Center>
                 ))}
@@ -126,21 +119,21 @@ function Selector(service, isLargerThan400, heading, lists) {
           <VStack>
             <HStack >
               {list1.map(item => (
-                <Center bg='#5FA698' m='1vw' h='20vh' w={{base:'40vw', md: '18vw', lg: '15vw'}} borderRadius={10}>
+                <Center key={`item-${item}`} bg='#5FA698' m='1vw' h='20vh' w={{base:'40vw', md: '18vw', lg: '15vw'}} borderRadius={10}>
                   <Text textAlign='center' fontWeight='bold' m='0.7vw' fontSize='xl' color='white'>{item}</Text>
                 </Center>
               ))}
             </HStack>
             <HStack>
               {list2.map(item => (
-                <Center bg='#5FA698' m='1vw' h='20vh' w={{base:'40vw', md: '18vw', lg: '15vw'}} borderRadius={10}>
+                <Center key={`item-${item}`} bg='#5FA698' m='1vw' h='20vh' w={{base:'40vw', md: '18vw', lg: '15vw'}} borderRadius={10}>
                   <Text textAlign='center' fontWeight='bold' m='0.7vw' fontSize='xl' color='white'>{item}</Text>
                 </Center>
               ))}
             </HStack>
             <HStack>
               {list3.map(item => (
-                <Center bg='#5FA698' m='1vw' h='20vh' w={{base:'40vw', md: '18vw', lg: '15vw'}} borderRadius={10}>
+                <Center key={`item-${item}`} bg='#5FA698' m='1vw' h='20vh' w={{base:'40vw', md: '18vw', lg: '15vw'}} borderRadius={10}>
                   <Text textAlign='center' fontWeight='bold' m='0.7vw' fontSize='xl' color='white'>{item}</Text>
                 </Center>
               ))}

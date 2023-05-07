@@ -3,12 +3,17 @@ import { Box, VStack, HStack, Image, Heading, Text, Button, Container, Center, F
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { ChevronRightIcon, ChevronLeftIcon } from '@chakra-ui/icons'
-import {BsFillArrowRightCircleFill, BsFillArrowLeftCircleFill} from 'react-icons/bs'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { faChevronCircleRight, faChevronCircleLeft } from "@fortawesome/free-solid-svg-icons";
+
+
 
 export const App = () => {
   const [sliderIndex, setSliderIndex] = useState(0);
   const sliderRef = useRef(null);
+
+  library.add(faChevronCircleRight, faChevronCircleLeft);
 
   const CustomArrow = ({ direction, onClick }) => {
     return (
@@ -23,14 +28,14 @@ export const App = () => {
         border="none"
         outline="none"
         cursor="pointer"
-        left={direction === "left" ? { base: "-12", md: "-20" } : ""}
-        right={direction === "right" ? { base: "-12", md: "-20" } : ""}
+        left={direction === "left" ? { base: "-70", md: "-20", sm:"-12" } : ""}
+        right={direction === "right" ? { base: "-70", md: "-20", sm:"-12" } : ""}
       >
         {direction === "left" ? (
-          <BsFillArrowLeftCircleFill color="black" size={32} />
-          ) : (
-            <BsFillArrowRightCircleFill color="black" size={32} />
-          )}
+        <FontAwesomeIcon icon={["fas", "chevron-circle-left"]} style={{fontSize: "24px"}} />
+      ) : (
+        <FontAwesomeIcon icon={["fas", "chevron-circle-right"]} style={{fontSize: "24px"}} />
+      )}
         </Box>
     );
   };
@@ -105,7 +110,18 @@ export const App = () => {
 
   return (
     <Box fontFamily={'Montserrat'} alignContent={'center'} alignItems={'center'} color="#000" bgColor="white">
-      <Heading as="h2" size="2xl" textAlign="center" mt={{ base: 5, sm: 10 }} mb={5} fontWeight={'bold'}>Our Services</Heading>
+      <Center>
+          <Heading
+            pb={{base:"10", sm:"10"}}
+            textAlign={"center"}
+            fontSize={{ base: "3vh" ,lg: "2vw", sm: "3vh" }}
+            fontWeight="extrabold"
+            mt={{ base: 5, sm: 10, lg: 16 }} 
+            mb={5}
+          >
+            OUR SERVICES
+          </Heading>
+        </Center>
       <Center>
         <HStack mb={{ base: '20px', sm: '30px' }} spacing={{ base: 6, sm: 10 }} mt={2}>
           <Button fontSize={{ base: 'sm', sm: 'md' }} bgColor={sliderIndex === 0 ? '#DAC17E' : '#f2f2f2'} borderRadius={50} onClick={() => handleClick(0)}>Zoom</Button>

@@ -72,14 +72,9 @@ export default function Home() {
           </Box>
 
           {/* Frequently Asked Questions */}
-<<<<<<< HEAD
-          <Box>
-            {FAQ && FAQ.data && <FAQ data='studio'></FAQ>}
-=======
           <div id="faq"></div>
           <Box mt='20vh'>
             <FAQ data='studio'></FAQ>
->>>>>>> 7b8eb5f7f18ab0a4883aafb562d15ec817caf96b
           </Box>
 
           <div id="testimoni"></div>

@@ -12,7 +12,7 @@ export const Testimonial = (props) => {
       bg='white'
       color='#2f2f2f'
       shadow="lg"
-      h={{base:"100vh", md:"100vh", lg:'100vh'}}
+      h={{base:"70vh", md:"100vh", lg:'100vh'}}
       w={{lg:"25vw", md:"40vw", base:'87vw'}}
       px="4"
       py="10"

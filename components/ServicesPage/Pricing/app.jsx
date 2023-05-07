@@ -129,26 +129,26 @@ export const App = ({description, datas, column}) => {
           }}
         >
           {datas.map((data, index) => (
-          <PricingCard key={index}
+        <PricingCard
+          key={index}
+          name={data.name}
+          description={data.desc}
+          price={data.price}
+          features={data.features}
+        />
+      ))}
+          
+        </SimpleGrid> : <Box w='full' h='full' mt='5vh'>
+          <Slider {...settings} ref={setSlider}>
+          {datas.map((data, index) => (
+          <PricingCard
+            key={index}
             name={data.name}
             description={data.desc}
             price={data.price}
             features={data.features}
           />
-          ))}
-          
-        </SimpleGrid> : <Box w='full' h='full' mt='5vh'>
-          <Slider {...settings} ref={setSlider}>
-          {datas.map(data => (
-            <Box h='full'>
-              <PricingCard
-                name={data.name}
-                description={data.desc}
-                price={data.price}
-                features={data.features}
-              />
-            </Box>
-          ))}
+        ))}
           
           </Slider>
         </Box>}

@@ -6,6 +6,7 @@ import {
   Button,
   VStack,
   Stack,
+  Heading
 } from "@chakra-ui/react";
 import { useState } from "react";
 import { slides } from "./_data";
@@ -34,9 +35,10 @@ export const App = ({hero}) => {
     <Slider {...settings}>
       <Flex
         w="full"
-        h={{lg:"75vh", sm:"85vh"}}
+        h={{ base: "85vh", sm: "90vh", lg: "75vh" }}
         alignItems="center"
         justifyContent="center"
+        fontFamily="Montserrat"
         color={slide.clor}
         bgImage = {slide.bground}
       >
@@ -51,14 +53,13 @@ export const App = ({hero}) => {
               w={{ base: "full", md: "50%" }}
             >
               <VStack align={{ base: "left", md: "left" }} spacing={0}>
-                <Text
-                  pt={{ lg: "0px", sm: "0px" }}
-                  fontSize={{ base: "10vw", sm: "4vh", lg: "3vw" }}
-                  fontWeight="bold"
-                  minH={{ sm: "20vh", lg: "30vh" }}
-                >
-                  {slide.heading}
-                </Text>
+              <Heading 
+                    fontSize={{ base: "8vw", sm: "4vh", lg: "3vw" }}
+                    fontWeight="extrabold"
+                    minH={{ base: "20vh", sm: "20vh", lg: "30vh" }}
+                  >
+                    {slide.heading}
+                  </Heading >
                 <Text 
                   fontSize={{ base: "3vw", sm: "3vw", lg: "1.2vw" }}
                   minH={{ sm: "12vh", lg: "10vh" }}>

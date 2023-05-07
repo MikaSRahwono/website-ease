@@ -1,4 +1,4 @@
-import { Box, Heading, Text, Image, Flex, useBreakpointValue } from "@chakra-ui/react"
+import { Box, Image, Flex, useBreakpointValue } from "@chakra-ui/react"
 
 export function App () {
   const isMobileView = useBreakpointValue({ base: true, sm: true, lg: false });
@@ -26,6 +26,7 @@ export function App () {
           bottom="0"
           w="full"
           h="full"
+          alt={"easeyourneeds"}
         />
       </Box>
     </Flex>

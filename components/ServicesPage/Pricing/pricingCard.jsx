@@ -135,9 +135,9 @@ export const PricingCard = (props) => {
       </Flex>
 
       <List flex='1' stylePosition="outside" mt="2" spacing={4}>
-        {features.map(feature => (
-          <PricingDetail icon={feature.icon} name={feature.name}></PricingDetail>
-        ))}
+        {features.map((feature, index) => (
+        <PricingDetail key={index} icon={feature.icon} name={feature.name}></PricingDetail>
+      ))}
       </List>
 
       <Box alignItems='end'>
