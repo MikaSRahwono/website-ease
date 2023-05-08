@@ -105,7 +105,7 @@ export const creative = [
       price: 2999000,
       features: [
         {
-          icon: '',
+          icon: '/img/pricelist/creative/streaming.png',
           name: 'Live Service: 6 Hours'
         },
         {
@@ -140,7 +140,7 @@ export const creative = [
       price: 3999000,
       features: [
         {
-          icon: '',
+          icon: '/img/pricelist/creative/streaming.png',
           name: 'Live Service: 6 Hours'
         },
         {
@@ -175,7 +175,7 @@ export const creative = [
       price: 4999000,
       features: [
         {
-          icon: '',
+          icon: '/img/pricelist/creative/streaming.png',
           name: 'Live Service: 6 Hours'
         },
         {
