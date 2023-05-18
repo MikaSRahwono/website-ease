@@ -36,7 +36,7 @@ const Main = ({children, router}) => {
                 className={styles.Box}
                 >
                 <a
-                    href="https://api.whatsapp.com/send?phone=YOUR_PHONE_NUMBER"
+                    href="https://wa.me/message/U7HG5VRQIVVDJ1"
                     target="_blank"
                     rel="noopener noreferrer"
                 >
