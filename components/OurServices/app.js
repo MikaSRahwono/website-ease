@@ -124,14 +124,15 @@ export const App = () => {
         </Center>
       <Center>
         <HStack mb={{ base: '20px', sm: '30px' }} spacing={{ base: 6, sm: 10 }} mt={2}>
-          <Button fontSize={{ base: 'sm', sm: 'md' }} bgColor={sliderIndex === 0 ? '#DAC17E' : '#f2f2f2'} borderRadius={50} onClick={() => handleClick(0)}>Zoom</Button>
-          <Button fontSize={{ base: 'sm', sm: 'md' }} bgColor={sliderIndex === 1 ? '#DAC17E' : '#f2f2f2'} borderRadius={50} onClick={() => handleClick(1)}>Studio</Button>
-          <Button fontSize={{ base: 'sm', sm: 'md' }} bgColor={sliderIndex === 2 ? '#DAC17E' : '#f2f2f2'} borderRadius={50} onClick={() => handleClick(2)}>Creative</Button>
+          <Button boxShadow={sliderIndex === 0 ? 'md' : 'xs'} fontSize={{ base: 'sm', sm: 'md' }} bgColor={sliderIndex === 0 ? '#DAC17E' : '#f2f2f2'} borderRadius={50} onClick={() => handleClick(0)}>Zoom</Button>
+          <Button boxShadow={sliderIndex === 1 ? 'md' : 'xs'} fontSize={{ base: 'sm', sm: 'md' }} bgColor={sliderIndex === 1 ? '#DAC17E' : '#f2f2f2'} borderRadius={50} onClick={() => handleClick(1)}>Studio</Button>
+          <Button boxShadow={sliderIndex === 2 ? 'md' : 'xs'} fontSize={{ base: 'sm', sm: 'md' }} bgColor={sliderIndex === 2 ? '#DAC17E' : '#f2f2f2'} borderRadius={50} onClick={() => handleClick(2)}>Creative</Button>
         </HStack>
       </Center>
       <Center>
         <Container maxW={{ base:"sm", lg: '60vw', sm: '100vw' }}>
           <Box rounded={50}
+            boxShadow='lg'
             bgImage="https://firebasestorage.googleapis.com/v0/b/website-ease.appspot.com/o/img%2FBackground%201.png?alt=media&token=7b347cc5-f193-468f-81d1-f92e77e07d70"
             maxW="full" py={2}
             px={{ base:"10", lg: '2vw', sm: '10' }}>

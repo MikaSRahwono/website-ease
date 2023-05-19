@@ -29,7 +29,7 @@ export const App = (props) => {
         <Flex
           key={`slide-${index}`}
           w="full"
-          h={{ base: "85vh", sm: "90vh", lg: "75vh" }}
+          h={{ base: "85vh", sm: "90vh", lg: "90vh" }}
           alignItems="center"
           justifyContent="center"
           fontFamily="Montserrat"
