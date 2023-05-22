@@ -19,11 +19,10 @@ export default function Home() {
   const [isLargerThan400] = useMediaQuery('(min-width: 480px)')
 
   const reason_list = [
-    'Reach wider audience',
-    'Low budget operational',
-    'To evaluate and control the event more easily',
-    'More sponsorships opportunities',
-    'Digitalization to adapt with Industry 4.0'
+    'Improve brand values',
+    'Make your product looks reliable',
+    'Ready to compete with other similar brands',
+    'Increase sales and branding',
   ]
 
   return (
