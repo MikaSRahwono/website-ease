@@ -89,7 +89,7 @@ const Navbar = () => {
               </div>
             </li>
             <li>
-              <Link href="/project">
+              <Link href="/project?sort=all">
                 <span onClick={() => closeMenu("/project")}>Project</span>
               </Link>
             </li>

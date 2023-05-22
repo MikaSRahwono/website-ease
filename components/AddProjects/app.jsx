@@ -36,7 +36,7 @@ function useAddProject() {
   const [date, setDate] = useState(new Date());
   const [place, setPlace] = useState('');
   const [category, setCategory] = useState('');
-  const [fileList, setFileList] = useState([[]]);
+  const [fileList, setFileList] = useState([]);
 
   const onSubmit = () => {
     console.log(title)
@@ -44,6 +44,7 @@ function useAddProject() {
     console.log(date)
     console.log(place)
     console.log(category)
+    console.log(fileList)
     const listId =  database.uploadPhotos(fileList);
     database.setProject({
       title: title,

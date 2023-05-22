@@ -57,7 +57,6 @@ const DragAndDrop = ({fileList, setFileList}) => {
           banned files.
         </p>
       </Dragger>
-      <button onClick={handleUpload}>Kirim Data</button>
     </ConfigProvider>
 )};
 export default DragAndDrop;
