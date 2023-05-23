@@ -4,7 +4,7 @@ import { ServicesCard } from './servicesCard';
 
 export const App = () => {
   return (
-    <Box fontFamily="Montserrat" as="section" py="20">
+    <Box fontFamily="Aileron" as="section" py="20">
       <Box
         maxW={{
           base: 'xl',

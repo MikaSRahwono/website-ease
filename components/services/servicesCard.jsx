@@ -96,10 +96,10 @@ export const ServicesCard = (props) => {
         <Text align="center" fontSize="2xl" color="#000" fontWeight="bold">
           {name}
         </Text>
-        <Text fontFamily={'Montserrat'} textAlign="center" mt="2" color={'#000'} maxW="16rem" mx="auto">
+        <Text fontFamily={'Aileron'} textAlign="center" mt="2" color={'#000'} maxW="16rem" mx="auto">
           {description1}
         </Text>
-        <Text fontFamily={'Montserrat'} textAlign="justify" mt="2" color={'#000'} maxW="16rem" mx="auto">
+        <Text fontFamily={'Aileron'} textAlign="justify" mt="2" color={'#000'} maxW="16rem" mx="auto">
           {description2}
         </Text>
       </Flex>

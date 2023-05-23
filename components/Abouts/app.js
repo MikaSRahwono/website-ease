@@ -6,7 +6,7 @@ export const App = (params) => {
         <Box backgroundSize={"cover"} backgroundColor={'#f2f2f2f2'}>
             <Container maxW='70vw' color='black' pt={200} pb={70}>
                 <HeadingAbout type={params.type}></HeadingAbout>
-                <Box fontSize={'20px'} fontFamily="Montserrat" textAlign="center" mt={10}>
+                <Box fontSize={'20px'} fontFamily="Aileron" textAlign="center" mt={10}>
                     <Text as="span" fontWeight="bold">
                         EASE YOUR NEEDS
                     </Text>{' '}
@@ -17,13 +17,13 @@ export const App = (params) => {
                     After being affected by COVID-19, Zoom Pro keeps becoming more popular, and people use online meeting platforms to keep connected with 
                     their relatives, colleagues, and families. Since then, Ease Your Needs were present to answer all the urgent needs for communication.
                 </Box>
-                <Box fontSize={'20px'} fontFamily="Montserrat" textAlign="center" mt={10}>
+                <Box fontSize={'20px'} fontFamily="Aileron" textAlign="center" mt={10}>
                     Not only Zoom Pro renting services, but we provide services to our customers, 
                     where they can ask anything related to operating Zoom, so they don’t need to worry about the meeting because 
                     our team is ready 24/7 and shall assist with all the customers’ questions. Moreover, we also facilitate customers 
                     with our operator services to assist inside the meeting room and make your video conference obstacle-free. 
                 </Box>
-                <Box fontSize={'20px'} fontFamily="Montserrat" textAlign="center" mt={10}>
+                <Box fontSize={'20px'} fontFamily="Aileron" textAlign="center" mt={10}>
                     Through our excellent services which result in mouth-to-mouth marketing and loyal customers, our customers grew 
                     from zero to 40.000 customers in almost 3 years. In response to the increasing demand, now we also provide other 
                     services that are Live Streaming and Product Photography & Videography services.

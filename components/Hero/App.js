@@ -87,11 +87,11 @@ export const App = (props) => {
                   color="white"
                   spacing={0}
                 >
-                  <Text fontFamily="Glacial Indifference" fontSize="6vw" fontWeight="bold" as='u'>{slide.label}</Text>
+                  <Text fontFamily="Aileron" fontSize="6vw" fontWeight="bold" as='u'>{slide.label}</Text>
                   <HStack spacing='3vw'>
                     <VStack align='left' spacing={0}>
-                      <Text fontFamily="Montserrat" fontSize="xl" >{slide.subheading1}</Text>
-                      <Text fontFamily="Montserrat" fontSize="xl" >{slide.subheading2}</Text>
+                      <Text fontFamily="Aileron" fontSize="xl" >{slide.subheading1}</Text>
+                      <Text fontFamily="Aileron" fontSize="xl" >{slide.subheading2}</Text>
                     </VStack>
                     <Button
                     onClick={() => window.open(Onlink)}

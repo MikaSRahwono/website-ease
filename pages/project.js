@@ -41,7 +41,7 @@ const Navbar = () => {
 
 const PageTitle = () => {
   return (
-    <Heading fontWeight={"extrabold"} fontFamily={'Montserrat'} color="#000">
+    <Heading fontWeight={"extrabold"} fontFamily={'Aileron'} color="#000">
         RECENT PROJECTS
     </Heading>
   );

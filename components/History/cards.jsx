@@ -31,10 +31,10 @@ export const HistoryCards = (props) => {
         </Center>
 
         <Flex direction="column" justify="left" mt={4} textAlign="justify">
-          <Text pl={['4', '4', '6']} color={'#000'} fontFamily='Montserrat' fontSize="2xl" fontWeight="bold">
+          <Text pl={['4', '4', '6']} color={'#000'} fontFamily='Aileron' fontSize="2xl" fontWeight="bold">
             {title}
           </Text>
-          <Text fontFamily='Montserrat' mt={2} color={'#000'} maxW="20rem" mx={['2', '2', 'auto']}>
+          <Text fontFamily='Aileron' mt={2} color={'#000'} maxW="20rem" mx={['2', '2', 'auto']}>
             {desc}
           </Text>
         </Flex>

@@ -33,7 +33,7 @@ export const HistoryCards = (props) => {
         </HStack>
       </Center>
 
-        <Flex fontFamily={'Montserrat'} direction="column" justify="left" mt={4} textAlign="justify">
+        <Flex fontFamily={'Aileron'} direction="column" justify="left" mt={4} textAlign="justify">
           <Text textAlign={'center'}  color={'#000'} fontSize="1xl" fontWeight="bold">
             {name}
           </Text>

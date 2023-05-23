@@ -9,7 +9,7 @@ export const App = (params) => {
         <Box backgroundSize={"cover"} backgroundColor={'#f2f2f2'}>
             <Container maxW='70vw' color='black' pt={70} pb={1}>
                 <HeadingAbout type={params.type}></HeadingAbout>
-                <Box fontSize={'20px'} fontFamily="Montserrat" textAlign="left" mt={10}>
+                <Box fontSize={'20px'} fontFamily="Aileron" textAlign="left" mt={10}>
                     <Text as="span" fontWeight="bold">
                         EASE YOUR NEEDS
                     </Text>{' '}
@@ -37,7 +37,7 @@ export const App = (params) => {
             >
               <Box
                 fontSize={{ base: '10pxpx', md: '20px', sm: '14px' }}
-                fontFamily="Montserrat"
+                fontFamily="Aileron"
                 textAlign={{ base: 'justify', md: 'justify' }}
               >
                 <Text as="span" fontWeight="bold">

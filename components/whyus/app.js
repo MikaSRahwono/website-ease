@@ -45,7 +45,7 @@ export const App = () => {
         <Heading
           as='h1'
           size='2xl'
-          fontFamily={'Montserrat'}
+          fontFamily={'Aileron'}
           fontWeight='extrabold'
           textAlign={{
             sm: 'center',

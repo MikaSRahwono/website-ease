@@ -90,10 +90,10 @@ export const ServicesCard = (props) => {
       </Center>
 
       <Flex direction="column" justify="center" mt={4} textAlign="center">
-        <Text color={'#000'} fontFamily='Montserrat' fontSize="2xl" fontWeight="bold">
+        <Text color={'#000'} fontFamily='Aileron' fontSize="2xl" fontWeight="bold">
           {name}
         </Text>
-        <Text fontFamily='Montserrat' mt={2} color={'#000'} maxW="20rem" mx="auto">
+        <Text fontFamily='Aileron' mt={2} color={'#000'} maxW="20rem" mx="auto">
           {description}
         </Text>
       </Flex>

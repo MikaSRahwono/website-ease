@@ -109,7 +109,7 @@ export const App = () => {
   /* atas bawahnya di kecilin lagi */
 
   return (
-    <Box fontFamily={'Montserrat'} alignContent={'center'} alignItems={'center'} color="#000" bgColor="white">
+    <Box fontFamily={'Aileron'} alignContent={'center'} alignItems={'center'} color="#000" bgColor="white">
       <Center>
           <Heading
             pb={{base:"10", sm:"10"}}

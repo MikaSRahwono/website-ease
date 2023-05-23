@@ -32,7 +32,7 @@ export const App = (props) => {
           h={{ base: "85vh", sm: "90vh", lg: "90vh" }}
           alignItems="center"
           justifyContent="center"
-          fontFamily="Montserrat"
+          fontFamily="Aileron"
           color={slide.clor}
           bgImage={slide.bground}
         >
@@ -53,6 +53,7 @@ export const App = (props) => {
                 
                 <VStack align="left" spacing={0}>
                   <Heading 
+                    fontFamily="Aileron"
                     fontSize={{ base: "8vw", sm: "4vh", lg: "3vw" }}
                     fontWeight="extrabold"
                     minH={{ base: "20vh", sm: "20vh", lg: "30vh" }}
