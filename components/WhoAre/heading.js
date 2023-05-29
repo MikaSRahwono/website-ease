@@ -1,10 +1,10 @@
 import { Box, Heading, Center, Text, Container } from "@chakra-ui/react"
 
-export const HeadingVidprof = (params) => {
+export const HeadingAbout = (params) => {
     const type = params.type
     if(type == 'about'){
         return (
-            <Heading alignItems={'left'} fontFamily={'Montserrat'} fontWeight={'extrabold'} size='2xl'>Who are we?</Heading>
+            <Heading alignItems={'left'} fontFamily={'Aileron'} fontWeight={'extrabold'} size='2xl'>Who are we?</Heading>
         )
     }
     else {

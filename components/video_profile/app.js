@@ -23,7 +23,7 @@ export const App = (params) => {
                     boxShadow='10px 10px 10px 2px rgba(0, 0, 0, 0.2)'
                 />
                 </Center>
-                <Box fontSize={'20px'} fontFamily="Montserrat" textAlign="center" mt={10}>
+                <Box fontSize={'20px'} fontFamily="Aileron" textAlign="center" mt={10}>
                     <Text as="span" fontWeight="bold">
                         EASE YOUR NEEDS
                     </Text>{' '}

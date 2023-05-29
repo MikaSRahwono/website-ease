@@ -83,7 +83,7 @@ export const ServicesCard = (props) => {
   const { img, Onlink, features, name, description1, description2, price, popular, ...rest } = props;
 
   return (
-    <ServicesWrapper backgroundColor="#f2f2f2" 
+    <ServicesWrapper backgroundColor="rgba(218, 193, 126, 0.5)" 
         highlight={popular} {...rest}>
         
       {popular && <PopularBadge>Most Popular</PopularBadge>}
@@ -96,10 +96,10 @@ export const ServicesCard = (props) => {
         <Text align="center" fontSize="2xl" color="#000" fontWeight="bold">
           {name}
         </Text>
-        <Text fontFamily={'Montserrat'} textAlign="center" mt="2" color={'#000'} maxW="16rem" mx="auto">
+        <Text fontFamily={'Aileron'} textAlign="center" mt="2" color={'#000'} maxW="16rem" mx="auto">
           {description1}
         </Text>
-        <Text fontFamily={'Montserrat'} textAlign="justify" mt="2" color={'#000'} maxW="16rem" mx="auto">
+        <Text fontFamily={'Aileron'} textAlign="justify" mt="2" color={'#000'} maxW="16rem" mx="auto">
           {description2}
         </Text>
       </Flex>
@@ -120,7 +120,7 @@ export const ServicesCard = (props) => {
         w="100%"
         onClick={() => window.open(Onlink)}
       >
-        Pelajari
+        Learn More
       </Button>
     </ServicesWrapper>
   )
