@@ -51,7 +51,8 @@ function useAddProject() {
       description: description,
       place: place,
       category: category,
-      listPhotos: listId
+      listPhotos: listId,
+      date: date
     })
     router.push('/dashboard?sort=all')
   }
