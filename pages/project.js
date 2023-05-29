@@ -84,7 +84,8 @@ const Card = ({ id, img, title, desc }) => {
   return (
     <LinkBox color='black'>
         <Box
-        height='40vh'
+        height='50vh'
+        width='20vw'
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
         style={{
@@ -137,7 +138,8 @@ const CardGrid = ({cardData}) => {
             md: 1,
             lg: 3,
           }}
-        spacing={10}
+        spacing='2vw'
+        spacingY='12vh'
           >
       {cardData.map((card, index) => {
         console.log(card[1])

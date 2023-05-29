@@ -1,10 +1,10 @@
-import { Box, Container, HStack, Heading, SimpleGrid } from '@chakra-ui/react'
+import { Box, Container, Divider, HStack, Heading, SimpleGrid } from '@chakra-ui/react'
 import React from 'react'
 import { useState } from 'react'
 import Slider from 'react-slick'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
-import { HistoryCards } from './cards'
+import { DetailModal, HistoryCards } from './cards'
 import { historyCardsData } from './_data'
 import { ChevronRightIcon, ChevronLeftIcon } from '@chakra-ui/icons'
 import { PrevArrow, NextArrow } from 'react-slick'
@@ -22,15 +22,16 @@ export const App = () => {
         top="50%"
         transform="translateY(-50%)"
         zIndex="1"
-        bg="transparent"
+        bg='blackAlpha.300'
         border="none"
         outline="none"
         cursor="pointer"
         left={direction === "left" ? "1px" : ""}
         right={direction === "right" ? "1px" : ""}
+        borderRadius='full'
       >
         {direction === "left" ? (
-          <ChevronLeftIcon w={6} h={6} color="black" />
+          <ChevronLeftIcon w={6} h={6}  color="black" />
         ) : (
           <ChevronRightIcon w={6} h={6} color="black" />
         )}
@@ -87,29 +88,35 @@ export const App = () => {
     ],
   };
 
+  const [selectedItem, setSelectedItem] = useState(null);
+
+  const handleItemClick = (item) => {
+    setSelectedItem(item);
+  };
+
+  const handleCloseModal = () => {
+    setSelectedItem(null);
+  };
+  
+
 
   return (
-    <Container pb='9vh' minW='80vw' pt='10vh'>
-      <Heading textAlign={['left']} fontSize='5xl' pb='5vh' variant='page-title' position="relative">
-        Our History
-        <Box
-          position="absolute"
-          top="35%"
-          left="300px"
-          transform="translateY(-50%)"
-          w="300px"
-          h="3px"    
-          bg="black"
-          fontWeight="bold"
-          
-        />
-      </Heading>
+    <Container pb='9vh' minW='80vw' pt='25vh'>
+      <Box pb='5vh'>
+        <Heading  textAlign={['left']} fontSize='6xl' pb='1vh' variant='page-title' position="relative">
+          Our History
+        </Heading>
+        <Divider borderColor='grey' w='100%'></Divider>
+      </Box>
         <Box>
           <Slider {...settings} ref={setSlider}>
             {historyCardsData.map((data, index) => (
-                <HistoryCards key={index} {...data} />
+                <HistoryCards key={index} data={data} onClick={handleItemClick} />
               ))}
           </Slider>
+          {selectedItem && (
+              <DetailModal item={selectedItem} onClose={handleCloseModal}></DetailModal>
+            )}
         </Box>
     </Container>
   );
