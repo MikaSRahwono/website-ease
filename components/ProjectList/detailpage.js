@@ -1,3 +1,4 @@
+import { useDB } from '@/lib/databaseContext';
 import {
     Box,
     Container,
@@ -11,8 +12,32 @@ import {
     StackDivider,
     useColorModeValue,
   } from '@chakra-ui/react';
+import { useEffect, useState } from 'react';
   
-  export default function DetailPage() {
+  export default function DetailPage({id}) {
+    const database = useDB()
+    const [data, setData] = useState({});
+    const [photosUrl, setPhotosUrl] = useState([]);
+
+
+    useEffect(() => {
+      if (id != null){
+        database.getProject(id).then(res => {
+          setData(res)
+          console.log("DATAAA = " + res.listPhotos)
+          const photos = res.listPhotos
+          if (photos != null) {
+            photos.map(photo => {
+              database.getPhoto(photo).then(res => {
+                setPhotosUrl([...photosUrl, res])
+              })
+            })
+          }
+        })
+      }
+  
+    }, [id])
+
     return (
       <Container maxW={'7xl'}>
         <SimpleGrid
@@ -23,9 +48,7 @@ import {
             <Image
               rounded={'md'}
               alt={'product image'}
-              src={
-                'https://images.unsplash.com/photo-1596516109370-29001ec8ec36?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwyODE1MDl8MHwxfGFsbHx8fHx8fHx8fDE2Mzg5MzY2MzE&ixlib=rb-1.2.1&q=80&w=1080'
-              }
+              src={photosUrl[0]}
               fit={'cover'}
               align={'center'}
               w={'100%'}
@@ -38,7 +61,7 @@ import {
                 lineHeight={1.1}
                 fontWeight={600}
                 fontSize={{ base: '2xl', sm: '4xl', lg: '5xl' }}>
-                Project Ibu Suka 
+                {data.title}
               </Heading>
             </Box>
   
@@ -55,14 +78,10 @@ import {
                   color={useColorModeValue('gray.500', 'gray.400')}
                   fontSize={'2xl'}
                   fontWeight={'300'}>
-                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                  diam nonumy eirmod tempor invidunt ut labore
+                  {data.place} | {data.category}
                 </Text>
                 <Text fontSize={'lg'}>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad
-                  aliquid amet at delectus doloribus dolorum expedita hic, ipsum
-                  maxime modi nam officiis porro, quae, quisquam quos
-                  reprehenderit velit? Natus, totam.
+                  {data.description}
                 </Text>
               </VStack>
               {/* <Box>

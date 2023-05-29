@@ -19,11 +19,11 @@ export default function Home() {
   const [isLargerThan400] = useMediaQuery('(min-width: 480px)')
 
   const reason_list = [
-    'Reach wider audience',
-    'Low budget operational',
-    'To evaluate and control the event more easily',
-    'More sponsorships opportunities',
-    'Digitalization to adapt with Industry 4.0'
+    'Links are already prepared, hassle free',
+    '24/7 standby Admin to answer all your questions',
+    'Affordable; Low cost zoom rental',
+    'Always ready; we accept urgent orders',
+    'You get points every time you rent zoom with us'
   ]
 
   return (

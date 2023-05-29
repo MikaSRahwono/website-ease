@@ -24,7 +24,7 @@ function ListItem({ item, onDelete, onEdit }) {
       onMouseLeave={() => setIsHovering(false)}
     >
       <Stack direction="row" alignItems="center" justifyContent="space-between">
-        <Link href={{ pathname: '/detail', query: { id: item[0] } }}><Text>{item[1]}</Text></Link>
+        <Link href={{ pathname: '/detail', query: { id: item[0] } }}><Text>{item}</Text></Link>
         {isHovering && (
           <Stack direction="row" spacing={2}>
             <IconButton
@@ -62,7 +62,7 @@ function List({ items }) {
           {items.map((item, index) => (
             <ListItem
               key={index}
-              item={item}
+              item={item[1].title}
               onDelete={() => handleDelete(index)}
               onEdit={() => handleEdit(index)}
             />
