@@ -6,7 +6,10 @@ export const slides = [
       button: 'Book Now!',
       bground: 'https://firebasestorage.googleapis.com/v0/b/website-ease.appspot.com/o/img%2FBackground%201.png?alt=media&token=7b347cc5-f193-468f-81d1-f92e77e07d70',
       clor:'#000',
-      link:'/services/creative'
+      link:'/services/creative',
+      fontbase:'8vw',
+      fontsm:'4vh',
+      fontlg:'4.2vw',
     },
     {
       img: 'https://firebasestorage.googleapis.com/v0/b/website-ease.appspot.com/o/img%2Ficonservice%2Fzoomlogo3.png?alt=media&token=b58c7847-ecd6-439d-aac1-f8974b9569d5',
@@ -15,7 +18,10 @@ export const slides = [
       button: 'Book Now!',
       bground: 'https://firebasestorage.googleapis.com/v0/b/website-ease.appspot.com/o/img%2FBackground%202.png?alt=media&token=5f29dbc8-6459-404a-92dc-e2c30f45f70e',
       clor:'white',
-      link:'/services/zoom'
+      link:'/services/zoom',
+      fontbase:'8vw',
+      fontsm:'4vh',
+      fontlg:'5vw',
     },
     {
       img: 'https://firebasestorage.googleapis.com/v0/b/website-ease.appspot.com/o/img%2Ficonservice%2Fstudiologo3.png?alt=media&token=8bb12c16-897d-4c1e-ad58-ffa2d48a3358',
@@ -24,6 +30,9 @@ export const slides = [
       button: 'Book Now!',
       bground: 'https://firebasestorage.googleapis.com/v0/b/website-ease.appspot.com/o/img%2FBackground%203.png?alt=media&token=06ad7cc6-3e3e-4b0b-a36c-64f6f45306a4',
       clor:'white',
-      link:'/services/studio'
+      link:'/services/studio',
+      fontbase:'8vw',
+      fontsm:'4vh',
+      fontlg:'3.3vw',
     },
 ]

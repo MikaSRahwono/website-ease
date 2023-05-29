@@ -6,15 +6,11 @@ import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import { apakatamerekaCardsData } from './_data'
 import { Testimonial } from '../ServicesPage/Testimoni/testimonial'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { library } from "@fortawesome/fontawesome-svg-core";
-import { faChevronCircleRight, faChevronCircleLeft } from "@fortawesome/free-solid-svg-icons";
+import { ChevronLeftIcon, ChevronRightIcon } from '@chakra-ui/icons'
 
 export const App = () => {
 
   const [slider, setSlider] = useState(null)
-
-  library.add(faChevronCircleRight, faChevronCircleLeft);
 
   const CustomArrow = ({ direction, onClick }) => {
     return (
@@ -31,12 +27,12 @@ export const App = () => {
         left={direction === "left" ? { base: "1", md: "1" } : ""}
         right={direction === "right" ? { base: "1", md: "1" } : ""}
       >
-        {direction === "left" ? (
-        <FontAwesomeIcon icon={["fas", "chevron-circle-left"]} style={{fontSize: "24px", color:"#000"}} />
-      ) : (
-        <FontAwesomeIcon icon={["fas", "chevron-circle-right"]} style={{fontSize: "24px", color:"#000"}} />
-      )}
-        </Box>
+        {direction === 'left' ? (
+          <ChevronLeftIcon boxSize={6} color={'white'} bgColor={'#000'} borderRadius={'full'} /> // Increase the boxSize value for a larger icon
+        ) : (
+          <ChevronRightIcon boxSize={6} color={'white'} bgColor={'#000'} borderRadius={'full'} /> // Increase the boxSize value for a larger icon
+        )}
+      </Box>
     );
   };
 

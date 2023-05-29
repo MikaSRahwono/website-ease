@@ -39,7 +39,7 @@ export const App = (props) => {
           <Box
             pt={{ base: '10vh !important', sm: "20vh !important" }}
             ml={{ base: '20px', sm: '0', lg: '100px' }}
-            padding={{ base: "20px", md: "50px", lg: "120px" }}
+            padding={{ base: "20px", md: "50px", lg: "20px" }}
           >
             <Stack
               spacing={{ base: 1, sm: "0" }}
@@ -54,14 +54,14 @@ export const App = (props) => {
                 <VStack align="left" spacing={0}>
                   <Heading 
                     fontFamily="Aileron"
-                    fontSize={{ base: "8vw", sm: "4vh", lg: "3vw" }}
+                    fontSize={{ base: slide.fontbase, sm: slide.fontsm, lg: slide.fontlg }}
                     fontWeight="extrabold"
                     minH={{ base: "20vh", sm: "20vh", lg: "30vh" }}
                   >
                     {slide.heading}
                   </Heading >
                   <Text
-                    fontSize={{ base: "4vw", sm: "3vw", lg: "1.2vw" }}
+                    fontSize={{ base: "4vw", sm: "3vw", md:'', lg: "1.2vw" }}
                     minH={{ base: "15vh", sm: "12vh", lg: "10vh" }}
                   >
                     {slide.subheading1}

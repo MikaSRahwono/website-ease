@@ -3,17 +3,11 @@ import { Box, VStack, HStack, Image, Heading, Text, Button, Container, Center, F
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { library } from "@fortawesome/fontawesome-svg-core";
-import { faChevronCircleRight, faChevronCircleLeft } from "@fortawesome/free-solid-svg-icons";
-
-
+import { ChevronLeftIcon, ChevronRightIcon } from '@chakra-ui/icons'
 
 export const App = () => {
   const [sliderIndex, setSliderIndex] = useState(0);
   const sliderRef = useRef(null);
-
-  library.add(faChevronCircleRight, faChevronCircleLeft);
 
   const CustomArrow = ({ direction, onClick }) => {
     return (
@@ -28,17 +22,17 @@ export const App = () => {
         border="none"
         outline="none"
         cursor="pointer"
-        left={direction === "left" ? { base: "-70", md: "-20", sm:"-12" } : ""}
-        right={direction === "right" ? { base: "-70", md: "-20", sm:"-12" } : ""}
+        left={direction === "left" ? { base: "-70px", md: "-20px", sm: "-12px" } : ""}
+        right={direction === "right" ? { base: "-70px", md: "-20px", sm: "-12px" } : ""}
       >
-        {direction === "left" ? (
-        <FontAwesomeIcon icon={["fas", "chevron-circle-left"]} style={{fontSize: "24px"}} />
-      ) : (
-        <FontAwesomeIcon icon={["fas", "chevron-circle-right"]} style={{fontSize: "24px"}} />
-      )}
-        </Box>
+        {direction === 'left' ? (
+          <ChevronLeftIcon boxSize={6} color={'white'} bgColor={'#000'} borderRadius={'full'} /> // Increase the boxSize value for a larger icon
+        ) : (
+          <ChevronRightIcon boxSize={6} color={'white'} bgColor={'#000'} borderRadius={'full'} /> // Increase the boxSize value for a larger icon
+        )}
+      </Box>
     );
-  };
+  };  
 
   /* gambar taro di atas mobile view */
 
@@ -133,7 +127,7 @@ export const App = () => {
         <Container maxW={{ base:"sm", lg: '60vw', sm: '100vw' }}>
           <Box rounded={50}
             boxShadow='lg'
-            bgImage="https://firebasestorage.googleapis.com/v0/b/website-ease.appspot.com/o/img%2FBackground%201.png?alt=media&token=7b347cc5-f193-468f-81d1-f92e77e07d70"
+            backgroundImage="url(https://firebasestorage.googleapis.com/v0/b/website-ease.appspot.com/o/img%2FBackground%201.png?alt=media&token=7b347cc5-f193-468f-81d1-f92e77e07d70)"
             maxW="full" py={2}
             px={{ base:"10", lg: '2vw', sm: '10' }}>
             <Slider {...settings} ref={sliderRef}>

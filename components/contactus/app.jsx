@@ -1,144 +1,92 @@
-import { useForm } from 'react-hook-form';
-import emailjs from 'emailjs-com';
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.min.css';
+import { Box, Container, Text, HStack, Divider, Heading, Grid, GridItem, Icon } from "@chakra-ui/react";
+import { FaInstagram, FaWhatsapp } from 'react-icons/fa'
 
-export const ContactForm = () => {
-  const {
-    register,
-    handleSubmit,
-    reset,
-    formState: { errors }
-  } = useForm();
-  
-  // Function that displays a success toast on bottom right of the page when form submission is successful
-  const toastifySuccess = () => {
-    toast('Form sent!', {
-      position: 'bottom-right',
-      autoClose: 5000,
-      hideProgressBar: true,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: false,
-      className: 'submit-feedback success',
-      toastId: 'notifyToast'
-    });
-  };
-  
-  // Function called on submit that uses emailjs to send email of valid contact form
-  const onSubmit = async (data) => {
-    // Destrcture data object
-    const { name, email, subject, message } = data;
-    try {
-      const templateParams = {
-        name,
-        email,
-        subject,
-        message
-      };
-
-      await emailjs.send(
-        process.env.REACT_APP_SERVICE_ID,
-        process.env.REACT_APP_TEMPLATE_ID,
-        templateParams,
-        process.env.REACT_APP_USER_ID
-      );
-
-      reset();
-      toastifySuccess();
-    } catch (e) {
-      console.log(e);
-    }
-  };
+export default function ContactUs() {
 
   return (
-    <div className='ContactForm'>
-      <div className='container'>
-        <div className='row'>
-          <div className='col-12 text-center'>
-            <div className='contactForm'>
-              <form id='contact-form' onSubmit={handleSubmit(onSubmit)} noValidate>
-                {/* Row 1 of form */}
-                <div className='row formRow'>
-                  <div className='col-6'>
-                    <input
-                      type='text'
-                      name='name'
-                      {...register('name', {
-                        required: { value: true, message: 'Please enter your name' },
-                        maxLength: {
-                          value: 30,
-                          message: 'Please use 30 characters or less'
-                        }
-                      })}
-                      className='form-control formInput'
-                      placeholder='Name'
-                    ></input>
-                    {errors.name && <span className='errorMessage'>{errors.name.message}</span>}
-                  </div>
-                  <div className='col-6'>
-                    <input
-                      type='email'
-                      name='email'
-                      {...register('email', {
-                        required: true,
-                        pattern: /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
-                      })}
-                      className='form-control formInput'
-                      placeholder='Email address'
-                    ></input>
-                    {errors.email && (
-                      <span className='errorMessage'>Please enter a valid email address</span>
-                    )}
-                  </div>
-                </div>
-                {/* Row 2 of form */}
-                <div className='row formRow'>
-                  <div className='col'>
-                    <input
-                      type='text'
-                      name='subject'
-                      {...register('subject', {
-                        required: { value: true, message: 'Please enter a subject' },
-                        maxLength: {
-                          value: 75,
-                          message: 'Subject cannot exceed 75 characters'
-                        }
-                      })}
-                      className='form-control formInput'
-                      placeholder='Subject'
-                    ></input>
-                    {errors.subject && (
-                      <span className='errorMessage'>{errors.subject.message}</span>
-                    )}
-                  </div>
-                </div>
-                {/* Row 3 of form */}
-                <div className='row formRow'>
-                  <div className='col'>
-                    <textarea
-                      rows={3}
-                      name='message'
-                      {...register('message', {
-                        required: true
-                      })}
-                      className='form-control formInput'
-                      placeholder='Message'
-                    ></textarea>
-                    {errors.message && <span className='errorMessage'>Please enter a message</span>}
-                  </div>
-                </div>
-                <button className='submit-btn' type='submit'>
-                  Submit
-                </button>
-              </form>
-            </div>
-            <ToastContainer />
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-};
+    <Box>
+      <Box>
+        <Box
+          h="60vh"
+          bgImage="url(https://firebasestorage.googleapis.com/v0/b/website-ease.appspot.com/o/img%2Fcontact%2Ffingers-note-report-journalist-filling-min.jpg?alt=media&token=a5b97d02-99d1-4d5b-aeb8-58548b5843a7)"
+          bgSize="cover"
+          position="relative"
+        >
+          <Box
+            position="absolute"
+            top="0"
+            left="0"
+            right="0"
+            bottom="0"
+            bgGradient="linear(to top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.8) 100%)"
+          />
 
-export default ContactForm
+          <Heading
+            fontFamily="Aileron"
+            fontSize={{ base: "3xl", md: "5xl", lg: "7xl" }}
+            p="2rem"
+            position="absolute"
+            top="50%"
+            left="50%"
+            transform="translate(-50%, -50%)"
+            zIndex="1"
+          >
+            Contact Us
+          </Heading>
+
+          <Text
+            fontFamily="Aileron"
+            p="2rem"
+            position="absolute"
+            top="60%"
+            left="50%"
+            transform="translate(-50%, -50%)"
+            zIndex="1"
+          >
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+          </Text>
+        </Box>
+      </Box>
+
+      <Container maxW="80vw" minW="80vw" pt={{ base: '15vh', md: '10vh' }}>
+        <HStack
+          alignItems="initial"
+          flexWrap={{ base: 'wrap', md: 'nowrap' }}
+          justifyContent={{ base: 'center', md: 'space-between' }}
+          spacing={{ base: '2rem', md: '0' }}
+        >
+          <Box pr={{ base: '0', md: '10vw' }} w={{ base: '100%', md: '50vw' }}>
+            <Divider mb="2vh" w="40%" alignItems="center" size="1vh" borderColor="black" variant="solid" orientation="horizontal" />
+            <Heading fontSize="4xl">Don't hesitate to contact us If you need more help</Heading>
+            <Text mt="2vh" fontSize="2xl">Lorem Ipsum</Text>
+          </Box>
+
+          <Box w={{ base: '100%', md: '50vw' }} fontSize="md" textAlign="justify">
+            <Grid templateColumns={{ base: '1fr', md: 'repeat(2, 1fr)' }} gap={10}>
+              <GridItem w="100%" h="40">
+                <Text fontWeight="bold" fontSize="25">
+                  Open Hour
+                </Text>
+                <Text fontSize="20">Senin - Minggu,</Text>
+                <Text fontSize="20">07.00 - 23.00 WIB</Text>
+              </GridItem>
+              <GridItem w="100%" h="40">
+                <Text fontWeight="bold" fontSize="25">
+                  Social Media
+                </Text>
+                <HStack>
+                  <Icon as={FaInstagram} boxSize={6}></Icon>
+                  <Text fontSize="lg"> @easeyourneeds.group</Text>
+                </HStack>
+                <HStack>
+                  <Icon as={FaWhatsapp} boxSize={6}></Icon>
+                  <Text fontSize="lg"> +62821-2439-4680</Text>
+                </HStack>
+              </GridItem>
+            </Grid>
+          </Box>
+        </HStack>
+      </Container>
+    </Box>
+  )
+}
