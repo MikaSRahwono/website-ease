@@ -1,8 +1,7 @@
 import { Box, Container, Text, HStack, Divider, Heading, Grid, GridItem, Icon } from "@chakra-ui/react";
-import { FaInstagram, FaWhatsapp } from 'react-icons/fa'
+import { FaInstagram, FaWhatsapp } from 'react-icons/fa';
 
 export default function ContactUs() {
-
   return (
     <Box>
       <Box>
@@ -57,7 +56,7 @@ export default function ContactUs() {
         >
           <Box pr={{ base: '0', md: '10vw' }} w={{ base: '100%', md: '50vw' }}>
             <Divider mb="2vh" w="40%" alignItems="center" size="1vh" borderColor="black" variant="solid" orientation="horizontal" />
-            <Heading fontSize="4xl">Don't hesitate to contact us If you need more help</Heading>
+            <Heading fontSize="4xl">Don&apos;t hesitate to contact us If you need more help</Heading>
             <Text mt="2vh" fontSize="2xl">Lorem Ipsum</Text>
           </Box>
 
@@ -88,5 +87,5 @@ export default function ContactUs() {
         </HStack>
       </Container>
     </Box>
-  )
+  );
 }
