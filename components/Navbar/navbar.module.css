@@ -153,7 +153,23 @@
   color: black;
   padding: 10px 10px;
   text-decoration: none;
-  display: block;
+  display: inline-block;
+  position: relative;
+}
+
+.dropdownContent a:after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #000;
+  transition: width 0.3s;
+}
+
+.dropdownContent a:hover:after {
+  width: 100%;
 }
 
 .logoImage {

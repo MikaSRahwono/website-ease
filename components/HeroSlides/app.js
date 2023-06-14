@@ -79,8 +79,9 @@ export const App = (props) => {
                       fontSize={{ base: "1px", sm: "20px", lg: "1px" }}
                       color="#000"
                       bgColor={"white"}
-                      rounded={5}
+                      rounded={'full'}
                       onClick={() => window.open(slide.link)}
+                      _hover={{ bgColor: '#DAC17E' }}
                       mt="2vh"
                     >
                       {slide.button}

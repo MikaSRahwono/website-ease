@@ -68,7 +68,9 @@ const Navbar = () => {
               <li className={`${styles.dropdown} ${isDropdownOpen ? styles.show : ""}`}
                   onMouseEnter={toggleDropdown}
                   onMouseLeave={toggleDropdown}>
+                <Link href="">   
                 <span>Services</span>
+                </Link>
                 <span className={styles.dropdownIcon}></span>
                 <div
                   className={`${styles.dropdownContent} ${
