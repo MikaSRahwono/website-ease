@@ -23,6 +23,8 @@ export default function ContactUs() {
           <Heading
             fontFamily="Aileron"
             fontSize={{ base: "3xl", md: "5xl", lg: "7xl" }}
+            w={{ base: 'auto', lg: 'auto'}}
+            h={{ base: '20vh'}}
             p="2rem"
             position="absolute"
             top="50%"
@@ -39,6 +41,8 @@ export default function ContactUs() {
             position="absolute"
             top="60%"
             left="50%"
+            alignContent={'center'}
+            textAlign={'center'}
             transform="translate(-50%, -50%)"
             zIndex="1"
           >
@@ -54,15 +58,14 @@ export default function ContactUs() {
           justifyContent={{ base: 'center', md: 'space-between' }}
           spacing={{ base: '2rem', md: '0' }}
         >
-          <Box pr={{ base: '0', md: '10vw' }} w={{ base: '100%', md: '50vw' }}>
+          <Box pr={{ base: '0', md: '10vw' }} w={{ base: '100%', md: '50vw' }} h={{ base: '30vh', md: 'auto' }}>
             <Divider mb="2vh" w="40%" alignItems="center" size="1vh" borderColor="black" variant="solid" orientation="horizontal" />
             <Heading fontSize="4xl">Don&apos;t hesitate to contact us If you need more help</Heading>
-            <Text mt="2vh" fontSize="2xl">Lorem Ipsum</Text>
           </Box>
 
           <Box w={{ base: '100%', md: '50vw' }} fontSize="md" textAlign="justify">
             <Grid templateColumns={{ base: '1fr', md: 'repeat(2, 1fr)' }} gap={10}>
-              <GridItem w="100%" h="40">
+              <GridItem w="100%" h="20">
                 <Text fontWeight="bold" fontSize="25">
                   Open Hour
                 </Text>
