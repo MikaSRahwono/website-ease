@@ -33,6 +33,7 @@ const HistoryWrapper = (props) => {
 export const HistoryCards = ({data, onClick}) => {
   
   return (
+    <Center>
     <Box w="70%" maxW="xl" m='2.5vw'>
       <HistoryWrapper>
 
@@ -52,6 +53,7 @@ export const HistoryCards = ({data, onClick}) => {
 
       </HistoryWrapper>
     </Box>
+    </Center>
   )
 }
 

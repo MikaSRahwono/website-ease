@@ -6,7 +6,7 @@ const OurValuesWrapper = (props) => {
   return (
     <Box 
       w="full"
-      minW='370'
+      minW='300'
       minH='30vh'
       mx="auto"
       bg={'white'}

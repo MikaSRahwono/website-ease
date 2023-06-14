@@ -1,10 +1,11 @@
 import React from 'react';
-import { SimpleGrid, Box, Heading, Text, useColorModeValue as mode } from '@chakra-ui/react';
+import { SimpleGrid, Box, Heading, Text, useColorModeValue as mode, useMediaQuery } from '@chakra-ui/react';
 import { OurValuesCards } from './cards';
 import 'react-multi-carousel/lib/styles.css';
 import { ourValuesCardsData } from './_data';
 
 export const App = () => {
+  const [isLargerThan400] = useMediaQuery('(min-width: 480px)')
 
   return (
     <Box     
@@ -19,23 +20,38 @@ export const App = () => {
         }}
         mx="auto"
         px={{
-          base: '6',
+          base: '4',
           md: '8',
         }}
       >
-        <Heading
-          as='h1'
-          size='2xl'
-          fontFamily={'Aileron'}
-          fontWeight='extrabold'
-          textAlign={{
-            sm: 'center',
-          }}
-          color='#DAC17E'
-          pt='9vh'
-        >
-          Our Values
-        </Heading>
+        {isLargerThan400 ?
+         <Heading
+         as='h1'
+         size='2xl'
+         fontFamily={'Aileron'}
+         fontWeight='extrabold'
+         textAlign={{
+           sm: 'center',
+         }}
+         color='#DAC17E'
+         pt='9vh'
+       >
+         Our Values
+       </Heading>
+        : <Heading
+        as='h1'
+        size='2xl'
+        fontFamily={'Aileron'}
+        fontWeight='extrabold'
+        textAlign={{
+          base: 'center',
+        }}
+        color='#DAC17E'
+        pt='9vh'
+      >
+        Our Values
+      </Heading>}
+       
 
         <Box position="relative">
           <SimpleGrid

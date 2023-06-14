@@ -1,4 +1,4 @@
-import { Box, Container, Divider, HStack, Heading, SimpleGrid } from '@chakra-ui/react'
+import { Box, Center, Container, Divider, HStack, Heading, SimpleGrid, useMediaQuery } from '@chakra-ui/react'
 import React from 'react'
 import { useState } from 'react'
 import Slider from 'react-slick'
@@ -97,17 +97,28 @@ export const App = () => {
   const handleCloseModal = () => {
     setSelectedItem(null);
   };
-  
+
+  const [isLargerThan400] = useMediaQuery('(min-width: 480px)')
 
 
   return (
-    <Container pb='9vh' minW='80vw' pt='25vh'>
+    <Container pb='9vh' minW='80vw' pt={isLargerThan400 ? "25vh" : "10vh"}>
+      {isLargerThan400 ? 
       <Box pb='5vh'>
         <Heading  textAlign={['left']} fontSize='6xl' pb='1vh' variant='page-title' position="relative">
           Our History
         </Heading>
         <Divider borderColor='grey' w='100%'></Divider>
+      </Box> : 
+      <Box>
+        <Center>
+          <Heading  textAlign={['left']} fontSize='6xl' pb='1vh' variant='page-title' position="relative">
+            Our History
+          </Heading>
+        </Center>
       </Box>
+    }
+      
         <Box>
           <Slider {...settings} ref={setSlider}>
             {historyCardsData.map((data, index) => (
