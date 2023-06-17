@@ -59,7 +59,7 @@ const PageTitle = () => {
   );
 };
 
-const Card = ({ id, img, title, desc }) => {
+const Card = ({ id, img, title, desc, tanggal }) => {
   const [hovered, setHovered] = useState(false);
   const [url, setUrl] = useState("");
 
@@ -80,8 +80,8 @@ const Card = ({ id, img, title, desc }) => {
   }, [database, img]);
 
   return (
-    <LinkBox color='black'>
-      <Box
+    <LinkBox color='black' width='20vw'>
+        <Box
         height='50vh'
         width='20vw'
         onMouseEnter={handleMouseEnter}
@@ -119,27 +119,26 @@ const CardGrid = ({ cardData }) => {
             md: 1,
             lg: 3,
           }}
-          spacing='2vw'
-          spacingY='12vh'
-        >
-          {cardData.map((card, index) => (
-            <Card
-              key={card[0]}
-              id={card[0]}
-              img={card[1].listPhotos == null ? "" : card[1].listPhotos[0]}
-              desc={card[1].description}
-              title={card[1].title}
-            />
-          ))}
-        </SimpleGrid>
-      </Container>
-    </Box>
+        spacing='2vw'
+        spacingY='12vh'
+          >
+      {cardData.map((card, index) => {
+        
+        console.log(card[1])
+        return (
+          <Card id={card[0]} img={card[1].listPhotos == null ? "" : card[1].listPhotos[0]} desc={card[1].description} title={card[1].title} tanggal={card[1].date} />
+        )
+      })}
+      </SimpleGrid>
+    </Container>
+    </Box> 
   );
 };
 
 function App() {
-  const database = useDB();
-  const router = useRouter();
+
+  const database = useDB()
+  const router = useRouter()
   const [items, setItems] = useState([]);
 
   useEffect(() => {

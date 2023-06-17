@@ -7,7 +7,7 @@ import { App as Teams } from '@/components/AboutUs/Teams/app';
 
 export default function About() {
   return (
-    <Box position="relative" color="black" background="#f2f2f2" minHeight="100vh">
+    <Box color="black" background="#f2f2f2" minHeight="100vh">
       <Hero></Hero>
       <History></History>
       <OurValues></OurValues>
