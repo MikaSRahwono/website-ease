@@ -123,12 +123,18 @@ const CardGrid = ({ cardData }) => {
         spacingY='12vh'
           >
       {cardData.map((card, index) => {
-        
-        console.log(card[1])
-        return (
-          <Card id={card[0]} img={card[1].listPhotos == null ? "" : card[1].listPhotos[0]} desc={card[1].description} title={card[1].title} tanggal={card[1].date} />
-        )
-      })}
+  console.log(card[1]);
+  return (
+    <Card
+      key={card[0]} // Add the key prop with a unique value
+      id={card[0]}
+      img={card[1].listPhotos == null ? "" : card[1].listPhotos[0]}
+      desc={card[1].description}
+      title={card[1].title}
+      tanggal={card[1].date}
+    />
+  );
+})}
       </SimpleGrid>
     </Container>
     </Box> 
