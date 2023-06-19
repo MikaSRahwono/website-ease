@@ -196,7 +196,6 @@
     background-color: #ffffff; 
     transform: translateX(-100%);
     transition: transform 0.3s ease;
-    z-index: 999;
   }
   
 
@@ -210,8 +209,43 @@
 
   .navList li {
     margin-left: 0;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
   }
+  
+  .navList li a:hover {
+    color: #000;
+    position: relative;
+  }
+  
+  .navList li a:hover:before {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% + 50px);
+    height: 40px;
+    background-color: #DAC17E;
+    color: #000;
+    border-radius: 50px;
+    transition: transform 0.3s;
+    z-index: -1;
+  }
+  
+  .navList li a:hover:after {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+    transition: width 0.3s;
+  }
+  
+
+
 
   .menuButton {
     display: flex;

@@ -75,13 +75,14 @@ export const App = (props) => {
                     <Button
                       size={{ base: "sm", md: "md", lg: "lg" }}
                       height={{ base: "3vh", md: "5vh", lg: "7vh" }}
-                      width={{ base: "22vw", sm: "30vw", md: "9vw" }}
+                      width={{ base: "25vw", sm: "30vw", md: "9vw" }}
                       fontSize={{ base: "1px", sm: "20px", lg: "1px" }}
                       color="#000"
                       bgColor={"white"}
                       rounded={'full'}
                       onClick={() => window.open(slide.link)}
                       _hover={{ bgColor: '#DAC17E' }}
+                      boxShadow="0px 2px 4px rgba(0, 0, 0, 0.2)"
                       mt="2vh"
                     >
                       {slide.button}
