@@ -1,13 +1,13 @@
 import { Box, Container, Text, Heading, Center, Stack } from "@chakra-ui/react";
 import { FaInstagram, FaWhatsapp } from 'react-icons/fa';
 
-export default function Hero() {
+export default function PageTwo() {
   return (
     <Box>
 
         <Center>
         <Box
-            h="65vh"
+            h="45vh"
             position="relative"
           >
             <Box
@@ -26,7 +26,7 @@ export default function Hero() {
               h={{ base: '20vh'}}
               p="2rem"
               position="absolute"
-              top="50%"
+              top="30%"
               left="50%"
               transform="translate(-50%, -50%)"
               zIndex="1"

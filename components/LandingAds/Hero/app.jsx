@@ -3,12 +3,12 @@ import { FaInstagram, FaWhatsapp } from 'react-icons/fa';
 
 export default function Hero() {
   return (
-    <Box>
+    <Box
+      bgImage="url(https://firebasestorage.googleapis.com/v0/b/website-ease.appspot.com/o/img%2FLandingAds%2Fcoverrr.png?alt=media&token=6d66efdc-cd0f-4ce5-bfaa-0e651aa2f4ee)">
 
         <Center>
           <Box
             h="60vh"
-            bgImage="url(https://firebasestorage.googleapis.com/v0/b/website-ease.appspot.com/o/img%2Fcontact%2Ffingers-note-report-journalist-filling-min.jpg?alt=media&token=a5b97d02-99d1-4d5b-aeb8-58548b5843a7)"
             bgSize="cover"
             position="relative"
           >
@@ -18,7 +18,6 @@ export default function Hero() {
               left="0"
               right="0"
               bottom="0"
-              bgGradient="linear(to top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.8) 100%)"
             />
 
             <Stack

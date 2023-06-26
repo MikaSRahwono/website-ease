@@ -8,6 +8,7 @@ export function App () {
       w="full"
       h={{base:"80vh", sm:"120vh"}}
       padding={{ lg:'100px', sm:'40px', base:'20px' }}
+      bgColor={"white"}
       objectFit={'cover'}
     >
       <Box
