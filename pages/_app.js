@@ -59,6 +59,7 @@ export default function App({ Component, pageProps, router }) {
                 borderRadius="50%"
                 padding={4}
                 className={styles.Box}
+                style={{ zIndex: "9999" }}
                 >
                 <a
                     href="https://wa.me/message/U7HG5VRQIVVDJ1"

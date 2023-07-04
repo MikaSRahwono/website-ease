@@ -4,17 +4,17 @@ import { berbedas } from "./_data";
 export default function Keuntungan() {
   return (
     <Box>
-      <Box h="80vh" position="relative">
+      <Box h={{ base: '100vh', sm: '100vh', md: '55vh', lg: '85vh' }} position="relative">
         <Box position="absolute" top="0" left="0" right="0" bottom="0" />
 
         <VStack
           spacing={4}
-          align="left"
-          w={{ base: '60vw', lg: '60vw'}}
-          h={{ base: '20vh'}}
+          align="center"
+          w={{ base: '90vw', sm: '80vw', md: '70vw', lg: '60vw' }}
+          h={{ base: '80vh', sm: '60vh', md: '55vh', lg: '55vh' }}
           p="2rem"
           position="absolute"
-          top="20%"
+          top={{ base: '80%', sm: '70%', md: '40%', lg: '40%' }}
           left="50%"
           transform="translate(-50%, -50%)"
           zIndex="1"
@@ -22,7 +22,7 @@ export default function Keuntungan() {
         >
           <Heading
             fontFamily="Aileron"
-            fontSize={{ base: "3xl", md: "5xl", lg: "3xl" }}
+            fontSize={{ base: "2xl", sm: "3xl", md: "4xl", lg: "3xl" }}
             paddingBottom="2rem"
           >
             Apa yang berbeda dari Jasa Foto Produk di Ease Your Needs?
@@ -30,10 +30,21 @@ export default function Keuntungan() {
 
           <List>
             {berbedas.map((berbeda, index) => (
-              <ListItem key={`berbeda-${index}`} display="flex" alignItems="flex-start" fontWeight="medium">
+              <ListItem
+                key={`berbeda-${index}`}
+                display="flex"
+                alignItems="flex-start"
+                fontWeight="medium"
+                mb="1rem" // Added margin-bottom of 1rem
+              >
                 <HStack>
-                  <Image w={20} mr="2" mt="1" alt="easeyourneeds" src={berbeda.icon} />
-                  <Text fontSize={{ base: '3vw', md: '1vw', lg:'xl' }} fontWeight={"black"} as="span" display="inline-block">
+                  <Image w={{ base: 8, sm: 10, md: 12, lg: 20 }} mr="2" mt="1" alt="easeyourneeds" src={berbeda.icon} />
+                  <Text
+                    fontSize={{ base: 'md', sm: 'md', md: 'xl', lg: 'xl' }}
+                    fontWeight="black"
+                    as="span"
+                    display="inline-block"
+                  >
                     {berbeda.name}
                   </Text>
                 </HStack>
