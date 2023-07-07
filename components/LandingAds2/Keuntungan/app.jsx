@@ -120,61 +120,16 @@ export default function Keuntungan() {
                 </Card>
               </HStack>
               : 
-              <VStack spacing="24px">
+              <HStack>
+                <VStack spacing="24px">
                 <Card
                     color='black'
                     bgColor='white'
                     borderRadius="2xl"
                     overflow="hidden"
                     boxShadow="lg"
-                    w="70vw"
-                    h='30vh'                
-                    alignItems={'center'}
-                    >
-                    <Center h='30vh'>
-                        <VStack>
-                        <Image alt="easeyourneeds" src="/img/ads2/audiens.png" maxW="50vw" />
-
-                        <Heading
-                          p='1vw'
-                            fontFamily="Aileron"
-                            fontSize={{ base: "2xl", md: "2xl", lg: "lg" }}
-                        > Menjangkau audiens yang lebih luas</Heading>    
-                        </VStack>   
-                    </Center>
-                </Card>
-
-                <Card
-                    color='black'
-                    bgColor='white'
-                    borderRadius="2xl"
-                    overflow="hidden"
-                    boxShadow="lg"
-                    w="70vw"
-                    h='30vh'                
-                    alignItems={'center'}
-                    >
-                    <Center h='30vh'>
-                        <VStack>
-                        <Image alt="easeyourneeds" src="/img/ads2/fleksibel.png" maxW="50vw" />
-
-                        <Heading
-                          p='1vw'
-                            fontFamily="Aileron"
-                            fontSize={{ base: "2xl", md: "2xl", lg: "lg" }}
-                        > Fleksibel, dapat dihadiri secara offline maupun online </Heading>    
-                        </VStack>   
-                    </Center>
-                </Card>
-
-                <Card
-                    color='black'
-                    bgColor='white'
-                    borderRadius="2xl"
-                    overflow="hidden"
-                    boxShadow="lg"
-                    w="70vw"
-                    h='30vh'                
+                    w="40vw"
+                    h='25vh'                
                     alignItems={'center'}
                     >
                     <Center h='30vh'>
@@ -184,7 +139,7 @@ export default function Keuntungan() {
                         <Heading
                             p='1vw'
                             fontFamily="Aileron"
-                            fontSize={{ base: "2xl", md: "2xl", lg: "lg" }}
+                            fontSize={{ base: "xl", md: "2xl", lg: "lg" }}
                         > Acara terlihat lebih professional</Heading>    
                         </VStack>   
                     </Center>
@@ -196,8 +151,8 @@ export default function Keuntungan() {
                     borderRadius="2xl"
                     overflow="hidden"
                     boxShadow="lg"
-                    w="70vw"
-                    h='30vh'  
+                    w="40vw"
+                    h='25vh'  
                     alignItems={'center'}
                     >
                     <Center h='30vh'>
@@ -207,12 +162,61 @@ export default function Keuntungan() {
                         <Heading
                           p='1vw'
                             fontFamily="Aileron"
-                            fontSize={{ base: "2xl", md: "2xl", lg: "lg" }}
+                            fontSize={{ base: "xl", md: "2xl", lg: "lg" }}
                         > Meningkatkan peluang sponsor </Heading>    
                         </VStack>   
                     </Center>
                 </Card>
-              </VStack> }
+              </VStack> 
+              <VStack spacing="24px">
+                <Card
+                    color='black'
+                    bgColor='white'
+                    borderRadius="2xl"
+                    overflow="hidden"
+                    boxShadow="lg"
+                    w="40vw"
+                    h='25vh'                
+                    alignItems={'center'}
+                    >
+                    <Center h='30vh'>
+                        <VStack>
+                        <Image alt="easeyourneeds" src="/img/ads2/professional.png" maxW="50vw" />
+
+                        <Heading
+                            p='1vw'
+                            fontFamily="Aileron"
+                            fontSize={{ base: "xl", md: "2xl", lg: "lg" }}
+                        > Acara terlihat lebih professional</Heading>    
+                        </VStack>   
+                    </Center>
+                </Card>
+
+                <Card
+                    color='black'
+                    bgColor='white'
+                    borderRadius="2xl"
+                    overflow="hidden"
+                    boxShadow="lg"
+                    w="40vw"
+                    h='25vh'  
+                    alignItems={'center'}
+                    >
+                    <Center h='30vh'>
+                        <VStack>
+                        <Image alt="easeyourneeds" src="/img/ads2/sponsor.png" maxW="50vw" />
+
+                        <Heading
+                          p='1vw'
+                            fontFamily="Aileron"
+                            fontSize={{ base: "xl", md: "2xl", lg: "lg" }}
+                        > Meningkatkan peluang sponsor </Heading>    
+                        </VStack>   
+                    </Center>
+                </Card>
+              </VStack> 
+              </HStack>
+              }
             </VStack>
             </Box>
         </Center>
