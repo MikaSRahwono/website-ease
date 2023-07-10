@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import { Spacer, Box, Flex, Heading, Center, Text, Container, SimpleGrid, HStack, LinkBox, LinkOverlay } from "@chakra-ui/react";
+import { Spacer, Box, Image, Flex, Heading, Center, Text, Container, SimpleGrid, HStack, LinkBox, LinkOverlay } from "@chakra-ui/react";
 import { useDB } from '@/lib/databaseContext';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
+
+import Masonry, {ResponsiveMasonry} from "react-responsive-masonry"
+
 
 const Navbar = () => {
   return (
@@ -168,10 +171,10 @@ function App() {
   }, [database, router.query.sort]);
 
   return (
-    <Box fontFamily='Montserrat'>
-      <CardGrid cardData={items} />
+    <Box pt='10vh'>
+      <Box opacity='80%' h='30vh' w='100%' alt="easeyourneeds" src="https://firebasestorage.googleapis.com/v0/b/website-ease.appspot.com/o/images%2F1b12e432-3575-4372-b677-fea0a44fa30d?alt=media&token=2dfa9e8b-6334-416c-95d4-77e161cca1f9" />
     </Box>
-  );
+);
 }
 
 export default App;

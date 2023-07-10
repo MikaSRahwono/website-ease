@@ -1,29 +1,15 @@
-import { Box, Center, Heading, Image, ListItem, List, Text, VStack, Button } from "@chakra-ui/react";
+import { Box, Center, Heading, Image, ListItem, List, Text, VStack, Button, Container } from "@chakra-ui/react";
 
 export default function Harga() {
   return (
-    <Box bgImage={"/img/ads/bgprice.png"} bgSize={"cover"}>
+    <Box bgImage={"/img/ads/bgprice.png"} bgSize={"cover"} py='10vh' >
 
-        <Box h="96vh" position="relative">
-          <Box
-            position="absolute"
-            top="0"
-            left="0"
-            right="0"
-            bottom="0"
-          />
-
+        <Container minW={{md: '90vw', lg: '80vw'}}>
           <VStack
             spacing={4}
             align="left"
-            w={{ base: '60vw', lg: '60vw'}}
-            h={{ base: '20vh'}}
+            w={{ base: '90vw', lg: '60vw'}}
             p="2rem"
-            position="absolute"
-            top="20%"
-            left="50%"
-            transform="translate(-50%, -50%)"
-            zIndex="1"
             textAlign="left"
           >
 
@@ -31,7 +17,7 @@ export default function Harga() {
             Pesan Jasa Live Streaming Sekarang
               </Heading>
 
-            <Heading pt="3rem" as="h2" fontSize='2vw' fontWeight="bold" color="white" textAlign="left">
+            <Heading pt="3rem" as="h2" fontSize={{base: '2xl',lg: '2vw'}} fontWeight="bold" color="white" textAlign="left">
                 Harga Normal: 
             </Heading>
 
@@ -63,10 +49,9 @@ export default function Harga() {
             <Button
                 colorScheme="white"
                 color="black"
-                w="15vw"
                 minH="6vh"
+                borderRadius='5vw'
                 bg="white"
-                borderRadius="full"
                 boxShadow="lg"
                 _hover={{ boxShadow: "lg", bg: "#DAC17E" }}
                 fontSize={"xl"}
@@ -78,7 +63,7 @@ export default function Harga() {
 
 
           </VStack>
-        </Box>
+        </Container>
     </Box>
   );
 }

@@ -6,7 +6,7 @@ export default function Hero() {
     <Box
       bgImage="url(https://firebasestorage.googleapis.com/v0/b/website-ease.appspot.com/o/img%2FLandingAds%2Fcover2.PNG?alt=media&token=9bbae241-ad01-4e8b-b7d3-421f50d10dde)"
       bgPos='center'
-      bgSize='contain'
+      bgSize={{sm: 'cover', lg: 'contain'}}
       >
         <Center>
           <Box
@@ -26,11 +26,11 @@ export default function Hero() {
               spacing={4}
               align="center"
               justify="center"
-              w={{ base: '60vw', lg: '60vw'}}
+              w={{ base: '90vw', lg: '60vw'}}
               h={{ base: '20vh'}}
               p="2rem"
               position="absolute"
-              top="50%"
+              top={{base: "60%", md: "50%"}}
               left="50%"
               transform="translate(-50%, -50%)"
               zIndex="1"
@@ -38,7 +38,7 @@ export default function Hero() {
             >
               <Heading
                 fontFamily="Aileron"
-                fontSize={{ base: "3xl", md: "5xl", lg: "3xl" }}
+                fontSize={{ base: "xl", md: "3xl", lg: "3xl" }}
               >
                 JASA LIVE STREAMING EVENTS
               </Heading>
