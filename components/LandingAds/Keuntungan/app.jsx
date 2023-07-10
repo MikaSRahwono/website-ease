@@ -57,7 +57,7 @@ export default function Keuntungan() {
                       fontFamily="Aileron"
                       fontSize={{ base: "xl", sm: "xl", md: "2xl", lg: "2xl" }}
                     >
-                      Meningkatkan kepercayaan customer (brand trust)
+                      Meningkatkan kepercayaan customer <br></br> (brand trust)
                     </Heading>
                   </VStack>
                 </Center>
@@ -81,7 +81,7 @@ export default function Keuntungan() {
                       fontFamily="Aileron"
                       fontSize={{ base: "xl", sm: "xl", md: "2xl", lg: "2xl" }}
                     >
-                      Meningkatkan kepercayaan customer (brand trust)
+                      Meningkatkan nilai jual produk (product value)
                     </Heading>
                   </VStack>
                 </Center>
@@ -105,7 +105,7 @@ export default function Keuntungan() {
                       fontFamily="Aileron"
                       fontSize={{ base: "xl", sm: "xl", md: "2xl", lg: "2xl" }}
                     >
-                      Meningkatkan kepercayaan customer (brand trust)
+                      Menjadi identitas dari brand (brand identity)
                     </Heading>
                   </VStack>
                 </Center>
@@ -129,7 +129,7 @@ export default function Keuntungan() {
                       fontFamily="Aileron"
                       fontSize={{ base: "xl", sm: "xl", md: "2xl", lg: "2xl" }}
                     >
-                      Meningkatkan kepercayaan customer (brand trust)
+                      Meningkatkan omset penjualan dalam jangka panjang (increase revenue)
                     </Heading>
                   </VStack>
                 </Center>

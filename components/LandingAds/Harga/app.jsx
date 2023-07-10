@@ -2,7 +2,7 @@ import { Box, Center, Heading, Image, ListItem, List, Text, VStack, Button } fro
 
 export default function Harga() {
   return (
-    <Box bgImage={"/img/ads/bgprice.png"} bgSize={"cover"}>
+    <Box bgImage={"https://firebasestorage.googleapis.com/v0/b/website-ease.appspot.com/o/img%2Fads1%2Fbgprice.png?alt=media&token=ff568f02-dccf-4d39-882c-780cdc137c9d"} bgSize={"cover"}>
 
       <Box h={{ base: '96vh', sm: '80vh', md: '60vh', lg: '100vh' }} position="relative">
         <Box position="absolute" top="0" left="0" right="0" bottom="0" />
