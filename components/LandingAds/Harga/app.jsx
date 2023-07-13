@@ -4,7 +4,7 @@ export default function Harga() {
   return (
     <Box bgImage={"https://firebasestorage.googleapis.com/v0/b/website-ease.appspot.com/o/img%2Fads1%2Fbgprice.png?alt=media&token=ff568f02-dccf-4d39-882c-780cdc137c9d"} bgSize={"cover"}>
 
-      <Box h={{ base: '96vh', sm: '80vh', md: '60vh', lg: '100vh' }} position="relative">
+      <Box h={{ base: '96vh', sm: '100vh', md: '100vh', lg: '100vh' }} position="relative">
         <Box position="absolute" top="0" left="0" right="0" bottom="0" />
 
         <VStack
@@ -57,13 +57,14 @@ export default function Harga() {
             <Button
               colorScheme="white"
               color="black"
-              w={{ base: '50%', sm: '40%', md: '30%', lg: '20%' }}
+              w={{ base: '80%', sm: '40%', md: '30%', lg: '20%' }}
+              h={{ base: '30%', sm: '40%', md: '30%', lg: '20%' }}
               minH="6vh"
               bg="white"
               borderRadius="full"
               boxShadow="lg"
               _hover={{ boxShadow: "lg", bg: "#DAC17E" }}
-              fontSize={{ base: 'lg', sm: 'xl', md: 'xl', lg: '2xl' }}
+              fontSize={{ base: 'md', sm: 'xl', md: 'xl', lg: '2xl' }}
             >
               Pesan Sekarang!
             </Button>
