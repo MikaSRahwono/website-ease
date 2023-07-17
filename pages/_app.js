@@ -15,6 +15,7 @@ import styles from "@/styles/whatsapp.module.css"
 // Extend the theme with the font face
 const customTheme = extendTheme({
   fonts: {
+    heading: 'Aileron, sans-serif',
     body: 'Aileron, sans-serif',
   },
 });

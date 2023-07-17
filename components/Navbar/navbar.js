@@ -89,8 +89,8 @@ const Navbar = () => {
               </div>
             </li>
             <li>
-              <Link href="/project?sort=all">
-                <span onClick={() => closeMenu("/project?sort=all")}>Project</span>
+              <Link href="/project">
+                <span onClick={() => closeMenu("/project")}>Project</span>
               </Link>
             </li>
             <li>

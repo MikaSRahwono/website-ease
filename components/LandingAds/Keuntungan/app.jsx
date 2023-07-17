@@ -54,7 +54,7 @@ export default function Keuntungan() {
                     >
                     <Center>
                         <VStack>
-                        <Image src="/img/ads/image 18.png" maxW="5vw" />
+                        <Image alt="easeyourneeds" src="/img/ads/image 18.png" maxW="5vw" />
 
                         <Heading
                             fontFamily="Aileron"
@@ -76,7 +76,7 @@ export default function Keuntungan() {
                     >
                     <Center>
                         <VStack>
-                        <Image src="/img/ads/image 18.png" maxW="5vw" />
+                        <Image alt="easeyourneeds" src="/img/ads/image 18.png" maxW="5vw" />
 
                         <Heading
                             fontFamily="Aileron"
@@ -98,7 +98,7 @@ export default function Keuntungan() {
                     >
                     <Center>
                         <VStack>
-                        <Image src="/img/ads/image 18.png" maxW="5vw" />
+                        <Image alt="easeyourneeds" src="/img/ads/image 18.png" maxW="5vw" />
 
                         <Heading
                             fontFamily="Aileron"
@@ -120,7 +120,7 @@ export default function Keuntungan() {
                     >
                     <Center>
                         <VStack>
-                        <Image src="/img/ads/image 18.png" maxW="5vw" />
+                        <Image alt="easeyourneeds" src="/img/ads/image 18.png" maxW="5vw" />
 
                         <Heading
                             fontFamily="Aileron"

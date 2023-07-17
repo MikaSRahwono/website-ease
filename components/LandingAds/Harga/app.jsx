@@ -44,7 +44,7 @@ export default function Harga() {
             </Heading>
 
             <Heading pt="3rem" as="h2" fontSize={'32'} fontWeight="semibold" fontStyle={"italic"} color="white" textAlign="left">
-                What's Include?
+                What&apos;s Include?
             </Heading>
 
             <List pl="4rem" color="white" listStyleType="disc" fontWeight={"semibold"} fontSize={'3xl'}>
