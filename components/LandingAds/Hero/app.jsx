@@ -5,6 +5,7 @@ export default function Hero() {
   return (
     <Box
       bgImage="url(https://firebasestorage.googleapis.com/v0/b/website-ease.appspot.com/o/img%2FLandingAds%2Fcoverrr.png?alt=media&token=6d66efdc-cd0f-4ce5-bfaa-0e651aa2f4ee)"
+      bgSize={"cover"}
     >
       <Center>
         <Box
@@ -24,11 +25,11 @@ export default function Hero() {
             spacing={4}
             align="center"
             justify="center"
-            w={{ base: '90vw', sm: '80vw', md: '70vw', lg: '60vw' }}
-            h={{ base: '40vh', sm: '50vh', md: '60vh', lg: '60vh' }}
+            w={{ base: '100vw', sm: '80vw', md: '90vw', lg: '60vw' }}
+            h={{ base: '40vh', sm: '50vh', md: '30vh', lg: '60vh' }}
             p="2rem"
             position="absolute"
-            top="50%"
+            top={{base: "55%", md: "50%", lg:"50%"}}
             left="50%"
             transform="translate(-50%, -50%)"
             zIndex="1"
@@ -36,21 +37,21 @@ export default function Hero() {
           >
             <Heading
               fontFamily="Aileron"
-              fontSize={{ base: "2xl", sm: "3xl", md: "4xl", lg: "5xl" }}
+              fontSize={{ base: "xl", md: "3xl", lg: "3xl" }}
             >
               JASA FOTO & VIDEO PRODUK
             </Heading>
 
             <Heading
               fontFamily="Aileron"
-              fontSize={{ base: "2xl", sm: "3xl", md: "4xl", lg: "6xl" }}
+              fontSize={{ base: "xl", md: "3xl", lg: "5xl" }}
             >
               HASILKAN OMSET BISNIS MU DARI FOTO PRODUK YANG PROFESSIONAL!
             </Heading>
 
             <Text
               fontFamily="Aileron"
-              fontSize={{ base: "xl", sm: "2xl", md: "3xl", lg: "4xl" }}
+              fontSize={{ base: "l", md: "2xl", lg: "xl" }}
               align="center"
             >
               Foto produk yang estetik dan professional dapat meningkatkan brand trust, brand loyalty, dan product value

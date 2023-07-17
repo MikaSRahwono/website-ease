@@ -24,7 +24,7 @@ export default function PageTwo() {
             h={{ base: "auto", md: "20vh", lg: "30vh" }}
             p={{ base: "1rem", lg: "2rem" }}
             position="absolute"
-            top="50%"
+            top={{base: "50%", sm:"50%", md:"30%", lg:"50%"}}
             left="50%"
             transform="translate(-50%, -50%)"
             zIndex="1"
@@ -41,30 +41,30 @@ export default function PageTwo() {
             <Text
               pt="1rem"
               fontFamily="Aileron"
-              fontSize={{ base: "xl", md: "3xl", lg: "xl" }}
-              align={{ base: "center", md: "left" }}
+              fontSize={{ base: "xl", md: "2xl", lg: "xl" }}
+              align={{ base: "left", md: "left" }}
             >
               Apakah kamu bingung konsep untuk foto produk harus kaya gimana?
             </Text>
             <Text
               fontFamily="Aileron"
-              fontSize={{ base: "xl", md: "3xl", lg: "xl" }}
-              align={{ base: "center", md: "left" }}
+              fontSize={{ base: "xl", md: "2xl", lg: "xl" }}
+              align={{ base: "left", md: "left" }}
             >
               Apakah kamu gak punya waktu untuk foto produk?
             </Text>
             <Text
               fontFamily="Aileron"
-              fontSize={{ base: "xl", md: "3xl", lg: "xl" }}
-              align={{ base: "center", md: "left" }}
+              fontSize={{ base: "xl", md: "2xl", lg: "xl" }}
+              align={{ base: "left", md: "left" }}
             >
               Apakah kamu gak punya peralatan yang memadai untuk foto produk?
             </Text>
             <Text
               pt="1rem"
               fontFamily="Aileron"
-              fontSize={{ base: "xl", md: "3xl", lg: "xl" }}
-              align={{ base: "center", md: "left" }}
+              fontSize={{ base: "xl", md: "2xl", lg: "xl" }}
+              align={{ base: "left", md: "left" }}
             >
               Jika iya, kami siap bantu untuk menghasilkan foto produk dengan hasil yang professional dan estetik!
             </Text>

@@ -20,7 +20,7 @@ export default function Keuntungan() {
               <Heading
                 fontFamily="Aileron"
                 fontWeight={"bold"}
-                fontSize={{ base: "2xl", md: "4xl", lg: "3xl" }}
+                fontSize={{ base: "2xl", md: "2xl", lg: "3xl" }}
                 pb={{base: '1rem', md: '2rem'}}
               >
                 Keuntungan apa aja sih kalo foto produk kamu meyakinkan?
@@ -113,13 +113,14 @@ export default function Keuntungan() {
                         <Heading
                           p='1vw'
                             fontFamily="Aileron"
-                            fontSize={{ base: "2xl", md: "xl", lg: "2xl" }}
+                            fontSize={{ base: "2xl", md: "md", lg: "2xl" }}
                         > Meningkatkan omset penjualan dalam jangka panjang (increase revenue) </Heading>    
                         </VStack>   
                     </Center>
                 </Card>
               </HStack>
               : 
+              
               <HStack>
                 <VStack spacing="24px">
                 <Card
@@ -129,7 +130,7 @@ export default function Keuntungan() {
                     overflow="hidden"
                     boxShadow="lg"
                     w="40vw"
-                    h='25vh'                
+                    h='30vh'                
                     alignItems={'center'}
                     >
                     <Center h='30vh'>
@@ -152,7 +153,7 @@ export default function Keuntungan() {
                     overflow="hidden"
                     boxShadow="lg"
                     w="40vw"
-                    h='25vh'  
+                    h='30vh'  
                     alignItems={'center'}
                     >
                     <Center h='30vh'>
@@ -176,7 +177,7 @@ export default function Keuntungan() {
                     overflow="hidden"
                     boxShadow="lg"
                     w="40vw"
-                    h='25vh'                
+                    h='30vh'                
                     alignItems={'center'}
                     >
                     <Center h='30vh'>
@@ -199,7 +200,7 @@ export default function Keuntungan() {
                     overflow="hidden"
                     boxShadow="lg"
                     w="40vw"
-                    h='25vh'  
+                    h='30vh'  
                     alignItems={'center'}
                     >
                     <Center h='30vh'>
