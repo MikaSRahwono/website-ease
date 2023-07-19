@@ -1,11 +1,12 @@
 import React from 'react';
-import { SimpleGrid, Box, Heading, Text, useColorModeValue as mode, useMediaQuery } from '@chakra-ui/react';
+import { SimpleGrid, Box, Heading, Text, useColorModeValue as mode, useMediaQuery, Center, Container } from '@chakra-ui/react';
 import { OurValuesCards } from './cards';
 import 'react-multi-carousel/lib/styles.css';
-import { ourValuesCardsData } from './_data';
+import { ourValuesCardsData, ourValuesCardsDatamd1, ourValuesCardsDatamd2 } from './_data';
 
 export const App = () => {
   const [isLargerThan400] = useMediaQuery('(min-width: 480px)')
+  const [isLargerThan992] = useMediaQuery('(min-width: 990px)')
 
   return (
     <Box     
@@ -54,27 +55,82 @@ export const App = () => {
        
 
         <Box position="relative">
+          {isLargerThan400 ? 
+          isLargerThan992 ?
           <SimpleGrid
-            alignItems="center"
-            mt={{
-              base: '10',
-              lg: '24',
-            }}
-            columns={{
-              base: 1,
-              md: 2,
-              lg: 3,
-            }}
-            spacing={{
-              base: '8',
-              md: '10',
-              lg: '8',
-            }}
-          >
-            {ourValuesCardsData.map((data, index) => (
-              <OurValuesCards key={index} {...data} />
-            ))}
-          </SimpleGrid>
+          alignItems="center"
+          mt={{
+            base: '10',
+            lg: '24',
+          }}
+          columns={{
+            lg: 3,
+          }}
+          spacing={{
+            base: '8',
+            md: '10',
+            lg: '8',
+          }}
+        >
+          {ourValuesCardsData.map((data, index) => (
+            <OurValuesCards key={index} {...data} />
+          ))}
+        </SimpleGrid>
+             :
+             <Box>
+              <SimpleGrid
+              alignItems="center"
+              mt={{
+                base: '10',
+                lg: '24',
+              }}
+              columns={{
+                base: 2,
+              }}
+              spacing={{
+                base: '8',
+                md: '10',
+                lg: '8',
+              }}
+            >
+              {ourValuesCardsDatamd1.map((data, index) => (
+                <OurValuesCards key={index} {...data} />
+              ))}
+            </SimpleGrid>
+              <Container w='50vw'>
+                <Center
+                  alignItems="center"
+                  mt='3vh'
+
+                >
+                  {ourValuesCardsDatamd2.map((data, index) => (
+                    <OurValuesCards key={index} {...data} />
+                  ))}
+                </Center>
+              </Container>
+            </Box>
+           : 
+        <SimpleGrid
+        alignItems="center"
+        mt={{
+          base: '10',
+          lg: '24',
+        }}
+        columns={{
+          base: 1,
+          lg: 3,
+        }}
+        spacing={{
+          base: '8',
+          md: '10',
+          lg: '8',
+        }}
+      >
+        {ourValuesCardsData.map((data, index) => (
+          <OurValuesCards key={index} {...data} />
+        ))}
+      </SimpleGrid>}
+          
         </Box>
       </Box>
     </Box>

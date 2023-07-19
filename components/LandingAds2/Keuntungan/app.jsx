@@ -5,7 +5,8 @@ export default function Keuntungan() {
   const [isLargerThan400] = useMediaQuery('(min-width: 480px)')
 
   return (
-    <Box>
+    <Box
+    >
         <Center>
         <Box
           >
@@ -39,7 +40,7 @@ export default function Keuntungan() {
                     >
                     <Center h='30vh'>
                         <VStack>
-                        <Image alt="easeyourneeds" src="/img/ads2/audiens.png" maxW="5vw" />
+                        <Image alt="easeyourneeds" src="https://firebasestorage.googleapis.com/v0/b/website-ease.appspot.com/o/img%2FLandingAds%2FAudiens.png?alt=media&token=68c83b75-35cb-410d-a1db-96edf17985d7" maxW="5vw" />
 
                         <Heading
                           p='1vw'
@@ -62,7 +63,7 @@ export default function Keuntungan() {
                     >
                     <Center h={{md: "20vh",lg: '30vh'}}>
                         <VStack>
-                        <Image alt="easeyourneeds" src="/img/ads2/fleksibel.png" maxW="5vw" />
+                        <Image alt="easeyourneeds" src="https://firebasestorage.googleapis.com/v0/b/website-ease.appspot.com/o/img%2FLandingAds%2FFleksibel.png?alt=media&token=f09d4444-58a8-4275-905a-51e7d0f36427" maxW="5vw" />
 
                         <Heading
                           p='1vw'
@@ -85,7 +86,7 @@ export default function Keuntungan() {
                     >
                     <Center h={{md: "20vh",lg: '30vh'}}>
                         <VStack>
-                        <Image alt="easeyourneeds" src="/img/ads2/professional.png" maxW="5vw" />
+                        <Image alt="easeyourneeds" src="https://firebasestorage.googleapis.com/v0/b/website-ease.appspot.com/o/img%2FLandingAds%2FProfesional.png?alt=media&token=9316a765-052b-4ee8-8845-b23c79474931" maxW="5vw" />
 
                         <Heading
                             p='1vw'
@@ -108,7 +109,7 @@ export default function Keuntungan() {
                     >
                     <Center h={{md: "20vh",lg: '30vh'}}>
                         <VStack>
-                        <Image alt="easeyourneeds" src="/img/ads2/sponsor.png" maxW="5vw" />
+                        <Image alt="easeyourneeds" src="https://firebasestorage.googleapis.com/v0/b/website-ease.appspot.com/o/img%2FLandingAds%2FSponsor.png?alt=media&token=24e2af6d-27cd-449e-b81f-732f4de02334" maxW="5vw" />
 
                         <Heading
                           p='1vw'
@@ -134,13 +135,13 @@ export default function Keuntungan() {
                     >
                     <Center h='30vh'>
                         <VStack>
-                        <Image alt="easeyourneeds" src="/img/ads2/professional.png" maxW="50vw" />
+                        <Image alt="easeyourneeds" src="https://firebasestorage.googleapis.com/v0/b/website-ease.appspot.com/o/img%2FLandingAds%2FAudiens.png?alt=media&token=68c83b75-35cb-410d-a1db-96edf17985d7" maxW="50vw" />
 
                         <Heading
                             p='1vw'
                             fontFamily="Aileron"
                             fontSize={{ base: "xl", md: "2xl", lg: "lg" }}
-                        > Acara terlihat lebih professional</Heading>    
+                        > Menjangkau audiens yang lebih luas</Heading>    
                         </VStack>   
                     </Center>
                 </Card>
@@ -157,13 +158,13 @@ export default function Keuntungan() {
                     >
                     <Center h='30vh'>
                         <VStack>
-                        <Image alt="easeyourneeds" src="/img/ads2/sponsor.png" maxW="50vw" />
+                        <Image alt="easeyourneeds" src="https://firebasestorage.googleapis.com/v0/b/website-ease.appspot.com/o/img%2FLandingAds%2FFleksibel.png?alt=media&token=f09d4444-58a8-4275-905a-51e7d0f36427" maxW="50vw" />
 
                         <Heading
                           p='1vw'
                             fontFamily="Aileron"
                             fontSize={{ base: "xl", md: "2xl", lg: "lg" }}
-                        > Meningkatkan peluang sponsor </Heading>    
+                        > Fleksibel, dapat dihadiri secara offline maupun online </Heading>    
                         </VStack>   
                     </Center>
                 </Card>
@@ -181,7 +182,7 @@ export default function Keuntungan() {
                     >
                     <Center h='30vh'>
                         <VStack>
-                        <Image alt="easeyourneeds" src="/img/ads2/professional.png" maxW="50vw" />
+                        <Image alt="easeyourneeds" src="https://firebasestorage.googleapis.com/v0/b/website-ease.appspot.com/o/img%2FLandingAds%2FProfesional.png?alt=media&token=9316a765-052b-4ee8-8845-b23c79474931" maxW="50vw" />
 
                         <Heading
                             p='1vw'
@@ -204,7 +205,7 @@ export default function Keuntungan() {
                     >
                     <Center h='30vh'>
                         <VStack>
-                        <Image alt="easeyourneeds" src="/img/ads2/sponsor.png" maxW="50vw" />
+                        <Image alt="easeyourneeds" src="https://firebasestorage.googleapis.com/v0/b/website-ease.appspot.com/o/img%2FLandingAds%2FSponsor.png?alt=media&token=24e2af6d-27cd-449e-b81f-732f4de02334" maxW="50vw" />
 
                         <Heading
                           p='1vw'

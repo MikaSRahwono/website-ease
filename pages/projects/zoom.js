@@ -150,7 +150,7 @@ function App() {
   const [items, setItems] = useState([]);
 
   useEffect(() => {
-    database.getCreativeProjects().then(list => {
+    database.getZoomProjects().then(list => {
       setItems(list);
     });
   }, [database]);

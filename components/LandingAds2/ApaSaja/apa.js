@@ -26,7 +26,7 @@ export default function ApaSaja() {
                             >
                             <Center h='20vh'>
                                 <VStack>
-                                <Image alt="easeyourneeds" src="/img/ads2/icons/seminar.png" maxW="5vw" />
+                                <Image alt="easeyourneeds" src="https://firebasestorage.googleapis.com/v0/b/website-ease.appspot.com/o/img%2FLandingAds%2Facara%2FSeminar.png?alt=media&token=9ab19b3d-4bac-4c1b-8317-cdb058844fa1" maxW="5vw" />
 
                                 <Heading
                                     p='0.5vw'
@@ -48,7 +48,7 @@ export default function ApaSaja() {
                             >
                             <Center h='20vh'>
                                 <VStack>
-                                <Image alt="easeyourneeds" src="/img/ads2/icons/pernikahan.png" maxW="5vw" />
+                                <Image alt="easeyourneeds" src="https://firebasestorage.googleapis.com/v0/b/website-ease.appspot.com/o/img%2FLandingAds%2Facara%2FWedding-2.png?alt=media&token=458d6a4a-4d99-4297-a39c-0cd006f6e3ad" maxW="5vw" />
 
                                 <Heading
                                     p='0.5vw'
@@ -70,7 +70,7 @@ export default function ApaSaja() {
                             >
                             <Center h='20vh'>
                                 <VStack>
-                                <Image alt="easeyourneeds" src="/img/ads2/icons/lamaran.png" maxW="5vw" />
+                                <Image alt="easeyourneeds" src="https://firebasestorage.googleapis.com/v0/b/website-ease.appspot.com/o/img%2FLandingAds%2Facara%2FLamaran-2.png?alt=media&token=c2f43f9e-8aeb-4bb1-99b8-c0e5a3553da5" maxW="5vw" />
 
                                 <Heading
                                     p='0.5vw'
@@ -94,7 +94,7 @@ export default function ApaSaja() {
                             >
                             <Center h='20vh'>
                                 <VStack>
-                                <Image alt="easeyourneeds" src="/img/ads2/icons/wisuda.png" maxW="5vw" />
+                                <Image alt="easeyourneeds" src="https://firebasestorage.googleapis.com/v0/b/website-ease.appspot.com/o/img%2FLandingAds%2Facara%2FGraduation-hat.png?alt=media&token=baaa77f5-0071-43bc-b15e-1169c30b7428" maxW="5vw" />
 
                                 <Heading
                                     p='0.5vw'
@@ -116,7 +116,7 @@ export default function ApaSaja() {
                             >
                             <Center h='20vh'>
                                 <VStack>
-                                <Image alt="easeyourneeds" src="/img/ads2/icons/upacara.png" maxW="5vw" />
+                                <Image alt="easeyourneeds" src="https://firebasestorage.googleapis.com/v0/b/website-ease.appspot.com/o/img%2FLandingAds%2Facara%2FUpacara-2.png?alt=media&token=cbb7f417-ec58-491e-a8b1-ea052a6d147b" maxW="5vw" />
 
                                 <Heading
                                     p='0.5vw'
@@ -138,7 +138,7 @@ export default function ApaSaja() {
                             >
                             <Center h='20vh'>
                                 <VStack>
-                                <Image alt="easeyourneeds" src="/img/ads2/icons/konser.png" maxW="5vw" />
+                                <Image alt="easeyourneeds" src="https://firebasestorage.googleapis.com/v0/b/website-ease.appspot.com/o/img%2FLandingAds%2Facara%2FKonser.png?alt=media&token=0b00b123-c22c-44c6-8b96-f547c2633286" maxW="5vw" />
 
                                 <Heading
                                     p='0.5vw'
@@ -162,7 +162,7 @@ export default function ApaSaja() {
                             >
                             <Center h='20vh'>
                                 <VStack>
-                                <Image alt="easeyourneeds" src="/img/ads2/icons/agama.png" maxW="5vw" />
+                                <Image alt="easeyourneeds" src="https://firebasestorage.googleapis.com/v0/b/website-ease.appspot.com/o/img%2FLandingAds%2Facara%2FReligion-2.png?alt=media&token=0d7f5f89-7886-440e-a895-95b2bb1063b3" maxW="5vw" />
 
                                 <Heading
                                     p='0.5vw'
@@ -185,7 +185,7 @@ export default function ApaSaja() {
                             >
                             <Center h='20vh'>
                                 <VStack>
-                                <Image alt="easeyourneeds" src="/img/ads2/icons/sekolah.png" maxW="5vw" />
+                                <Image alt="easeyourneeds" src="https://firebasestorage.googleapis.com/v0/b/website-ease.appspot.com/o/img%2FLandingAds%2Facara%2FSekolah.png?alt=media&token=afee619e-a55e-417a-a173-ddef805d9662" maxW="5vw" />
 
                                 <Heading
                                 textAlign='center'
@@ -209,7 +209,7 @@ export default function ApaSaja() {
                             >
                             <Center h='20vh'>
                                 <VStack>
-                                <Image alt="easeyourneeds" src="/img/ads2/icons/lainnya.png" maxW="5vw" />
+                                <Image alt="easeyourneeds" src="https://firebasestorage.googleapis.com/v0/b/website-ease.appspot.com/o/img%2FLandingAds%2Facara%2FOthers.png?alt=media&token=864ef43d-01c8-4abb-b479-0ab1df6ba5b2" maxW="5vw" />
 
                                 <Heading
                                     p='0.5vw'
@@ -237,7 +237,7 @@ export default function ApaSaja() {
                         >
                         <Center h='20vh'>
                             <VStack>
-                            <Image alt="easeyourneeds" src="/img/ads2/icons/seminar.png" maxW="30vw" />
+                            <Image alt="easeyourneeds" src="https://firebasestorage.googleapis.com/v0/b/website-ease.appspot.com/o/img%2FLandingAds%2Facara%2FSeminar.png?alt=media&token=9ab19b3d-4bac-4c1b-8317-cdb058844fa1" maxW="30vw" />
 
                             <Heading
                                 p='0.5vw'
@@ -259,7 +259,7 @@ export default function ApaSaja() {
                         >
                         <Center h='20vh'>
                             <VStack>
-                            <Image alt="easeyourneeds" src="/img/ads2/icons/pernikahan.png" maxW="30vw" />
+                            <Image alt="easeyourneeds" src="https://firebasestorage.googleapis.com/v0/b/website-ease.appspot.com/o/img%2FLandingAds%2Facara%2FWedding-2.png?alt=media&token=458d6a4a-4d99-4297-a39c-0cd006f6e3ad" maxW="30vw" />
 
                             <Heading
                                 p='0.5vw'
@@ -283,7 +283,7 @@ export default function ApaSaja() {
                         >
                         <Center h='20vh'>
                             <VStack>
-                            <Image alt="easeyourneeds" src="/img/ads2/icons/lamaran.png" maxW="30vw" />
+                            <Image alt="easeyourneeds" src="https://firebasestorage.googleapis.com/v0/b/website-ease.appspot.com/o/img%2FLandingAds%2Facara%2FLamaran-2.png?alt=media&token=c2f43f9e-8aeb-4bb1-99b8-c0e5a3553da5" maxW="30vw" />
 
                             <Heading
                                 p='0.5vw'
@@ -305,7 +305,7 @@ export default function ApaSaja() {
                         >
                         <Center h='20vh'>
                             <VStack>
-                            <Image alt="easeyourneeds" src="/img/ads2/icons/wisuda.png" maxW="30vw" />
+                            <Image alt="easeyourneeds" src="https://firebasestorage.googleapis.com/v0/b/website-ease.appspot.com/o/img%2FLandingAds%2Facara%2FGraduation-hat.png?alt=media&token=baaa77f5-0071-43bc-b15e-1169c30b7428" maxW="30vw" />
 
                             <Heading
                                 p='0.5vw'
@@ -329,7 +329,7 @@ export default function ApaSaja() {
                         >
                         <Center h='20vh'>
                             <VStack>
-                            <Image alt="easeyourneeds" src="/img/ads2/icons/upacara.png" maxW="30vw" />
+                            <Image alt="easeyourneeds" src="https://firebasestorage.googleapis.com/v0/b/website-ease.appspot.com/o/img%2FLandingAds%2Facara%2FUpacara-2.png?alt=media&token=cbb7f417-ec58-491e-a8b1-ea052a6d147b" maxW="30vw" />
 
                             <Heading
                                 p='0.5vw'
@@ -351,7 +351,7 @@ export default function ApaSaja() {
                         >
                         <Center h='20vh'>
                             <VStack>
-                            <Image alt="easeyourneeds" src="/img/ads2/icons/konser.png" maxW="30vw" />
+                            <Image alt="easeyourneeds" src="https://firebasestorage.googleapis.com/v0/b/website-ease.appspot.com/o/img%2FLandingAds%2Facara%2FKonser.png?alt=media&token=0b00b123-c22c-44c6-8b96-f547c2633286" maxW="30vw" />
 
                             <Heading
                                 p='0.5vw'
@@ -375,7 +375,7 @@ export default function ApaSaja() {
                         >
                         <Center h='20vh'>
                             <VStack>
-                            <Image alt="easeyourneeds" src="/img/ads2/icons/agama.png" maxW="30vw" />
+                            <Image alt="easeyourneeds" src="https://firebasestorage.googleapis.com/v0/b/website-ease.appspot.com/o/img%2FLandingAds%2Facara%2FReligion-2.png?alt=media&token=0d7f5f89-7886-440e-a895-95b2bb1063b3" maxW="30vw" />
 
                             <Heading
                                 p='0.5vw'
@@ -398,7 +398,7 @@ export default function ApaSaja() {
                         >
                         <Center h='20vh'>
                             <VStack>
-                            <Image alt="easeyourneeds" src="/img/ads2/icons/sekolah.png" maxW="30vw" />
+                            <Image alt="easeyourneeds" src="https://firebasestorage.googleapis.com/v0/b/website-ease.appspot.com/o/img%2FLandingAds%2Facara%2FSekolah.png?alt=media&token=afee619e-a55e-417a-a173-ddef805d9662" maxW="30vw" />
 
                             <Heading
                                 textAlign='center'
@@ -423,7 +423,7 @@ export default function ApaSaja() {
                     >
                     <Center h='20vh'>
                         <VStack>
-                        <Image alt="easeyourneeds" src="/img/ads2/icons/lainnya.png" maxW="30vw" />
+                        <Image alt="easeyourneeds" src="https://firebasestorage.googleapis.com/v0/b/website-ease.appspot.com/o/img%2FLandingAds%2Facara%2FOthers.png?alt=media&token=864ef43d-01c8-4abb-b479-0ab1df6ba5b2" maxW="30vw" />
 
                         <Heading
                             p='0.5vw'
