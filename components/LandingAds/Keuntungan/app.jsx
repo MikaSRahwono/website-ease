@@ -5,7 +5,8 @@ export default function Keuntungan() {
   const [isLargerThan400] = useMediaQuery('(min-width: 480px)')
 
   return (
-    <Box >
+    <Box 
+      >
         <Center >
         <Box
           >
@@ -20,7 +21,7 @@ export default function Keuntungan() {
               <Heading
                 fontFamily="Aileron"
                 fontWeight={"bold"}
-                fontSize={{ base: "2xl", md: "2xl", lg: "3xl" }}
+                fontSize={{ base: "2xl", md: "3xl", lg: "3xl" }}
                 pb={{base: '1rem', md: '2rem'}}
               >
                 Keuntungan apa aja sih kalo foto produk kamu meyakinkan?
@@ -39,12 +40,12 @@ export default function Keuntungan() {
                     >
                     <Center h='30vh'>
                         <VStack>
-                        <Image alt="easeyourneeds" src="https://firebasestorage.googleapis.com/v0/b/website-ease.appspot.com/o/img%2Fads1%2Ftrust-2.png?alt=media&token=356443cf-f1ce-460a-bcfe-2463f33223ba" maxW="5vw" />
+                        <Image alt="easeyourneeds" src="img/ads/keuntungan/Brand Trust.png" maxW="5vw" />
 
                         <Heading
                           p='1vw'
                             fontFamily="Aileron"
-                            fontSize={{ base: "2xl", md: "xl", lg: "2xl" }}
+                            fontSize={{ base: "2xl", md: "xl", lg: "xl" }}
                         > Meningkatkan kepercayaan customer (brand trust)</Heading>    
                         </VStack>   
                     </Center>
@@ -62,12 +63,12 @@ export default function Keuntungan() {
                     >
                     <Center h={{md: "20vh",lg: '30vh'}}>
                         <VStack>
-                        <Image alt="easeyourneeds" src="https://firebasestorage.googleapis.com/v0/b/website-ease.appspot.com/o/img%2Fads1%2Fvalue%20(1).png?alt=media&token=1a84775f-e5b6-4c78-a815-0f2de2a05fb9" maxW="5vw" />
+                        <Image alt="easeyourneeds" src="img/ads/keuntungan/Product Value.png" maxW="5vw" />
 
                         <Heading
                           p='1vw'
                             fontFamily="Aileron"
-                            fontSize={{ base: "2xl", md: "xl", lg: "2xl" }}
+                            fontSize={{ base: "2xl", md: "xl", lg: "xl" }}
                         > Meningkatkan nilai jual produk (product value) </Heading>    
                         </VStack>   
                     </Center>
@@ -85,12 +86,12 @@ export default function Keuntungan() {
                     >
                     <Center h={{md: "20vh",lg: '30vh'}}>
                         <VStack>
-                        <Image alt="easeyourneeds" src="https://firebasestorage.googleapis.com/v0/b/website-ease.appspot.com/o/img%2Fads1%2Fbrand-2.png?alt=media&token=fdf10c34-a8eb-4cb0-afe2-143cd46a1fd5" maxW="5vw" />
+                        <Image alt="easeyourneeds" src="img/ads/keuntungan/Brand Identity.png" maxW="5vw" />
 
                         <Heading
                             p='1vw'
                             fontFamily="Aileron"
-                            fontSize={{ base: "2xl", md: "xl", lg: "2xl" }}
+                            fontSize={{ base: "2xl", md: "xl", lg: "xl" }}
                         > Menjadi identitas dari brand (brand identity)</Heading>    
                         </VStack>   
                     </Center>
@@ -108,12 +109,12 @@ export default function Keuntungan() {
                     >
                     <Center h={{md: "20vh",lg: '30vh'}}>
                         <VStack>
-                        <Image alt="easeyourneeds" src="https://firebasestorage.googleapis.com/v0/b/website-ease.appspot.com/o/img%2Fads1%2Frevenue-2.png?alt=media&token=08594ff3-caca-4daf-99df-9002d7683891" maxW="5vw" />
+                        <Image alt="easeyourneeds" src="img/ads/keuntungan/Increase Revenue.png" maxW="5vw" />
 
                         <Heading
                           p='1vw'
                             fontFamily="Aileron"
-                            fontSize={{ base: "2xl", md: "md", lg: "2xl" }}
+                            fontSize={{ base: "2xl", md: "md", lg: "xl" }}
                         > Meningkatkan omset penjualan dalam jangka panjang (increase revenue) </Heading>    
                         </VStack>   
                     </Center>
@@ -135,7 +136,7 @@ export default function Keuntungan() {
                     >
                     <Center h='30vh'>
                         <VStack>
-                        <Image alt="easeyourneeds" boxSize='90px' src="https://firebasestorage.googleapis.com/v0/b/website-ease.appspot.com/o/img%2Fads1%2Ftrust-2.png?alt=media&token=356443cf-f1ce-460a-bcfe-2463f33223ba" maxW="50vw" />
+                        <Image alt="easeyourneeds" boxSize='90px' src="img/ads/keuntungan/Brand Trust.png" maxW="50vw" />
 
                         <Heading
                             p='1vw'
@@ -158,7 +159,7 @@ export default function Keuntungan() {
                     >
                     <Center h='30vh'>
                         <VStack>
-                        <Image alt="easeyourneeds" boxSize='90px' src="https://firebasestorage.googleapis.com/v0/b/website-ease.appspot.com/o/img%2Fads1%2Fvalue%20(1).png?alt=media&token=1a84775f-e5b6-4c78-a815-0f2de2a05fb9" maxW="50vw" />
+                        <Image alt="easeyourneeds" boxSize='90px' src="img/ads/keuntungan/Product Value.png" maxW="50vw" />
 
                         <Heading
                           p='1vw'
@@ -182,7 +183,7 @@ export default function Keuntungan() {
                     >
                     <Center h='30vh'>
                         <VStack>
-                        <Image alt="easeyourneeds" boxSize='90px' src="https://firebasestorage.googleapis.com/v0/b/website-ease.appspot.com/o/img%2Fads1%2Fbrand-2.png?alt=media&token=fdf10c34-a8eb-4cb0-afe2-143cd46a1fd5" maxW="50vw" />
+                        <Image alt="easeyourneeds" boxSize='90px' src="img/ads/keuntungan/Brand Identity.png" maxW="50vw" />
 
                         <Heading
                             p='1vw'
@@ -205,7 +206,7 @@ export default function Keuntungan() {
                     >
                     <Center h='30vh'>
                         <VStack>
-                        <Image alt="easeyourneeds" boxSize='90px' src="https://firebasestorage.googleapis.com/v0/b/website-ease.appspot.com/o/img%2Fads1%2Frevenue-2.png?alt=media&token=08594ff3-caca-4daf-99df-9002d7683891" maxW="50vw" />
+                        <Image alt="easeyourneeds" boxSize='90px' src="img/ads/keuntungan/Increase Revenue.png" maxW="50vw" />
 
                         <Heading
                           p='1vw'
