@@ -7,27 +7,27 @@ export const zoom = [
       price: 5000,
       features: [
         {
-          icon: '',
+          icon: '/img/pricelist/zoom/recording.png',
           name: 'Recording'
         },
         {
-          icon: '',
+          icon: '/img/pricelist/zoom/polling.png',
           name: 'Polling'
         },
         {
-          icon: '',
+          icon: '/img/pricelist/zoom/breakout.png',
           name: 'Breakout Room'
         },
         {
-          icon: '',
+          icon: '/img/pricelist/zoom/live.png',
           name: 'Live Youtube'
         },
         {
-          icon: '',
+          icon: '/img/pricelist/zoom/cohost.png',
           name: 'Unlimited Co-Host'
         },
         {
-          icon: '',
+          icon: '/img/pricelist/zoom/trial.png',
           name: 'Free Trial'
         }
       ]
@@ -38,35 +38,35 @@ export const zoom = [
       price: 249000,
       features: [
         {
-          icon: '',
+          icon: '/img/pricelist/zoom/practice.png',
           name: 'Practice Season'
         },
         {
-          icon: '',
+          icon: '/img/pricelist/zoom/invite.png',
           name: 'Automatically invite audiences'
         },
         {
-          icon: '',
+          icon: '/img/pricelist/zoom/cohost.png',
           name: 'Unlimited Panelist & Co-Host'
         },
         {
-          icon: '',
+          icon: '/img/pricelist/zoom/qna.png',
           name: 'Q&A'
         },
         {
-          icon: '',
+          icon: '/img/pricelist/zoom/recording.png',
           name: 'Recording'
         },
         {
-          icon: '',
+          icon: '/img/pricelist/zoom/polling.png',
           name: 'Polling'
         },
         {
-          icon: '',
+          icon: '/img/pricelist/zoom/live.png',
           name: 'Live Youtube'
         },
         {
-          icon: '',
+          icon: '/img/pricelist/zoom/trial.png',
           name: 'Free Trial'
         }
       ]
@@ -77,19 +77,19 @@ export const zoom = [
       price: 20000,
       features: [
         {
-          icon: '',
+          icon: '/img/pricelist/zoom/sharescreen.png',
           name: 'Do share screen'
         },
         {
-          icon: '',
+          icon: '/img/pricelist/zoom/audiens.png',
           name: 'Accept audience'
         },
         {
-          icon: '',
+          icon: '/img/pricelist/zoom/recording.png',
           name: 'Do recording'
         },
         {
-          icon: '',
+          icon: '/img/pricelist/zoom/others.png',
           name: 'And others'
         },
       ]
@@ -210,7 +210,7 @@ export const creative = [
         price: 0,
         features: [
           {
-            icon: '',
+            icon: '/img/pricelist/creative/custom.jpg',
             name: 'Customize according to your needs'
           }
         ]
@@ -226,23 +226,23 @@ export const studio = [
       price: 70000,
       features: [
         {
-          icon: '',
+          icon: '/img/pricelist/studio/idea.png',
           name: 'Ideation & Concept '
         },
         {
-          icon: '',
+          icon: '/img/pricelist/studio/preproduction.png',
           name: 'Pre-production'
         },
         {
-          icon: '',
+          icon: '/img/pricelist/studio/equipment.png',
           name: 'Equipments & Properties'
         },
         {
-          icon: '',
+          icon: '/img/pricelist/studio/shooting.png',
           name: 'Shooting'
         },
         {
-          icon: '',
+          icon: '/img/pricelist/studio/editing.png',
           name: 'Editing'
         },
       ]
@@ -253,23 +253,23 @@ export const studio = [
       price: 600000,
       features: [
         {
-          icon: '',
+          icon: '/img/pricelist/studio/idea.png',
           name: 'Ideation & Concept '
         },
         {
-          icon: '',
+          icon: '/img/pricelist/studio/preproduction.png',
           name: 'Pre-production'
         },
         {
-          icon: '',
+          icon: '/img/pricelist/studio/equipment.png',
           name: 'Equipments & Properties'
         },
         {
-          icon: '',
+          icon: '/img/pricelist/studio/shooting.png',
           name: 'Shooting'
         },
         {
-          icon: '',
+          icon: '/img/pricelist/studio/editing.png',
           name: 'Editing'
         },
       ]
@@ -280,23 +280,23 @@ export const studio = [
         price: 0,
         features: [
           {
-            icon: '',
+            icon: '/img/pricelist/studio/idea.png',
             name: 'Ideation & Concept '
           },
           {
-            icon: '',
+            icon: '/img/pricelist/studio/preproduction.png',
             name: 'Pre-production'
           },
           {
-            icon: '',
+            icon: '/img/pricelist/studio/equipment.png',
             name: 'Equipments & Properties'
           },
           {
-            icon: '',
+            icon: '/img/pricelist/studio/shooting.png',
             name: 'Shooting'
           },
           {
-            icon: '',
+            icon: '/img/pricelist/studio/editing.png',
             name: 'Editing'
           },
         ]
