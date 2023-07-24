@@ -15,7 +15,7 @@ export default function SimakVideo() {
                       controls
                       src='https://firebasestorage.googleapis.com/v0/b/website-ease.appspot.com/o/img%2FLandingAds%2Fvideo%2FBTS%20-%20Ibu%20Punya%20Mimpi%20(1).mov?alt=media&token=de56ba72-aa59-4ec2-bcd1-27eee2764241'
                       poster='https://firebasestorage.googleapis.com/v0/b/website-ease.appspot.com/o/img%2FLandingAds%2Fvideo%2FScreen%20Shot%202023-07-13%20at%208.21.50%20PM.png?alt=media&token=82dca042-d92b-4202-8ace-eb24312427e6'
-                      alt='Big Buck Bunny'
+                      alt='Video Live Streaming'
                       objectFit='contain'
                       sx={{
                       aspectRatio: '9/16'
