@@ -7,7 +7,7 @@ import { Link as NextLink}  from 'next/link';
 function App() {
 
   return (
-    <Box  bgColor="#f2f2f2" color='black'>
+    <Box  bgColor="#f2f2f2" color='black' pb='10vh'>
     <Container pt={{base: '5vh', md: '10vh'}}  minW='80vw'>
       <Center py='20vh'>
         <Box>
@@ -15,7 +15,7 @@ function App() {
           Our Portfolio
         </Heading>
         <Center>
-        <Text textAlign='center' w={{base: '90vw', md: '50vw'}} py={{base: '5vh', md: '10vh'}} fontSize='lg' lineHeight='4vh' letterSpacing='0.3rem'>
+        <Text textAlign='center' w={{base: '90vw', md: '50vw'}} py={{base: '5vh', md: '10vh'}} fontSize='lg' lineHeight='4vh' >
         This is a glimpse of our works. As we strive for excellence in every project, the works we’ve done are achieved through a deep and thorough process according to our client’s liking. We also convey our client’s brand’s messages meticulously with our own distinctive ways of execution.
         </Text>
         </Center>

@@ -24,7 +24,7 @@ export const App = ({datas}) => {
   }
 
   return (
-    <Center h={{base: 'auto', md: datas.length > 4 ? '85vh' : '70vh'}} py={{base: '5vh', md: '0'}} bg='white' w='full' borderRadius={30} color='#2f2f2f'>
+    <Center h={{base: 'auto', md:"50vh", lg: datas.length > 4 ? '85vh' : '70vh'}} py={{base: '5vh', md: '0'}} bg='white' w='full' borderRadius={30} color='#2f2f2f'>
       {isLargerThan400 ? <VStack spacing={15}>
         <Heading mb='5vh'>Alur Pemesanan</Heading>
         {datas.length > 4 ? 

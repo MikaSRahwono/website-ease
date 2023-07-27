@@ -34,10 +34,10 @@ export const App = ({service}) => {
                 <Box
                     pos="absolute"
                     alignItems={'center'}
-                    top='10vh'
-                    left={{base:"10vw" ,lg:'40vw', sm:'10vw'}}
+                    top={{base: '5vh',md: '6vh',lg: '10vh'}}
+                    left={{base:"10vw" ,lg:'40vw', md:'10vw'}}
                     w={{base:"70vw", lg:"40vw", sm:"80vw"}}
-                    h={{lg:"40vh", sm:"45vh"}}
+                    h={{lg:"40vh", md: '25vh', base:"45vh"}}
                     bgColor="white"
                     zIndex="1"
                     rounded={5}
@@ -46,7 +46,7 @@ export const App = ({service}) => {
                     p='5vw'
                     justifyContent={'center'}
                 > 
-                    <Text fontSize='2xl' fontWeight='bold'>
+                    <Text fontSize={{base: 'xl',md: '2xl'}} fontWeight='bold'>
                         {data.title}
                     </Text>
                     <Button bg='#7FCAD7' _hover={{background:"#96DDE9"}} h='5vh' mt='5vh'>

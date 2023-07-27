@@ -34,9 +34,11 @@ export default function WhatIs() {
             </HStack>
           : <VStack>
               <VStack w='80vw' align='center' spacing='3vh'>
-                  <Heading fontSize={{base: "3xl",md: '2.2vw'}}> 
-                  Apa itu live streaming? 
-                  </Heading>
+                  <Center w='50vw' p='5vw'>
+                    <Heading fontSize={{base: "3xl",md: '2.2vw'}}> 
+                    Apa itu live streaming? 
+                    </Heading>
+                  </Center>
                   <Text textAlign='center'>
                   Live Streaming adalah media streaming yang direkam dan disiarkan secara real-time melalui internet melalui perantara platform seperti Zoom, Youtube, Facebook, Instagram, atau platform lainnya. 
 

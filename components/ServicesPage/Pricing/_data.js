@@ -54,7 +54,7 @@ export const zoom = [
           name: 'Q&A'
         },
         {
-          icon: '/img/pricelist/zoom/recording.png',
+          icon: '/img/pricelist/zoom/record.png',
           name: 'Recording'
         },
         {
@@ -85,7 +85,7 @@ export const zoom = [
           name: 'Accept audience'
         },
         {
-          icon: '/img/pricelist/zoom/recording.png',
+          icon: '/img/pricelist/zoom/record.png',
           name: 'Do recording'
         },
         {

@@ -89,8 +89,8 @@ const Navbar = () => {
               </div>
             </li>
             <li>
-              <Link href="/project">
-                <span onClick={() => closeMenu("/project")}>Project</span>
+              <Link href="/portfolio">
+                <span onClick={() => closeMenu("/portfolio")}>Portfolio</span>
               </Link>
             </li>
             <li>

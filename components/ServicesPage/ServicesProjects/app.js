@@ -101,7 +101,7 @@ export const App = (props) => {
           <Text fontSize='4xl' fontWeight='extrabold'>Projects</Text>
           <Box h={10}></Box>
           <Text fontSize={{base: 'sm', md: 'md'}}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque viverra diam quis dolor tincidunt, congue tempor urna fringilla. Maecenas tincidunt fringilla dictum. Donec commodo sed ipsum sit amet hendrerit. Phasellus mi ante, pulvinar in vestibulum nec, congue at neque.
+          These are a glimpse of our recent projects, where creativity and innovation have come together to deliver extraordinary results. From the moment we embark on a new venture, our passion for excellence drives us to create experiences that captivate, inspire, and leave a lasting impression.
           </Text>
           <Button mt='3vh' variant='solid' bg='#DAC17F' _hover={{bg: '#CBAD5C'}}>Lihat Project Kami!</Button>
         </Box>
@@ -127,7 +127,7 @@ export const App = (props) => {
           <Text fontSize='4xl' fontWeight='extrabold' noOfLines={2} textAlign='center'>Recent Projects</Text>
           <Box h={10}></Box>
           <Text>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque viverra diam quis dolor tincidunt, congue tempor urna fringilla. Maecenas tincidunt fringilla dictum. Donec commodo sed ipsum sit amet hendrerit. Phasellus mi ante, pulvinar in vestibulum nec, congue at neque.
+          These are a glimpse of our recent projects, where creativity and innovation have come together to deliver extraordinary results. From the moment we embark on a new venture, our passion for excellence drives us to create experiences that captivate, inspire, and leave a lasting impression.
           </Text>
           <Center>
             <Button mt='3vh' variant='solid' bg='#DAC17F' _hover={{bg: '#CBAD5C'}}>Lihat Project Kami!</Button>

@@ -3,8 +3,8 @@ import { berbedas } from "./_data";
 
 export default function Keuntungan() {
   return (
-    <Box py={{base: '5vh', md: '10vh'}} bgPos='bottom' bgSize='cover' bgImage='https://firebasestorage.googleapis.com/v0/b/website-ease.appspot.com/o/img%2Fads1%2FBackground%20kombi%202_rev%201.png?alt=media&token=0e72a0e4-23b2-49f6-837b-610fc8b60c97' >
-      <Center>
+    <Box py={{base: '5vh', md: '10vh'}}  bgPos='bottom' bgSize='cover' bgImage='https://firebasestorage.googleapis.com/v0/b/website-ease.appspot.com/o/img%2FLandingAds%2Fbg%2Fkombiee.png?alt=media&token=f68bae92-65a9-4f35-a03c-3ffaa9ecf2d7' >
+      <Center backdropBlur='8px' backdropFilter='auto'>
         <VStack
           spacing={4}
           align="left"
