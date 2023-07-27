@@ -9,16 +9,15 @@ export const Member = (props) => {
   return (
     <Box>
     {isLargerThan400 ? 
-      <Box w='12vw' m='3vw'>
+      <Box w={{md: '15vw', lg: "12vw"}} m={{md: '1vw', lg: '3vw'}}>
         <Box pos="relative" >
           <Img
             pos="relative"
             alt={name}
-            w="12vw"
-            h="12vw"
+            w={{md: '15vw', lg: "12vw"}}
+            h={{md: '15vw', lg: "12vw"}}
             objectFit="cover"
             src={image}
-            zIndex="1"
           />
         </Box>
         <Text textAlign='center' fontWeight="bold" mt="4" >
@@ -34,11 +33,10 @@ export const Member = (props) => {
           <Img
             pos="relative"
             alt={name}
-            w="20vw"
-            h="20vw"
+            w="40vw"
+            h="40vw"
             objectFit="cover"
             src={image}
-            zIndex="1"
           />
         </Center>
         <Text textAlign='center' fontWeight="bold" mt="4" >

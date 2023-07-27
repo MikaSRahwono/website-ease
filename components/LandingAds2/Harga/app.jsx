@@ -8,8 +8,8 @@ export default function Harga() {
           <VStack
             spacing={4}
             align="left"
-            w={{ base: '90vw', lg: '60vw'}}
-            p="2rem"
+            w={{ base: '91vw', lg: '60vw'}}
+            p="1.4rem"
             textAlign="left"
           >
 

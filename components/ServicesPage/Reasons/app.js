@@ -16,13 +16,13 @@ function Selector(service, isLargerThan400, heading, lists) {
       return (
       <HStack align='top' alignItems='center' spacing='3vw'>
         <VStack align={{base: 'left', md: 'left'}} spacing={10} ml='7vw' w='30vw' p='4vw'>
-            <Text fontSize={{base: '10vw', md: '3vw', lg: '3.2vw'}} fontWeight="bold">
+            <Text fontSize={{base: '10vw', md: '4vw', lg: '3.2vw'}} fontWeight="bold">
               {heading}
             </Text>
         </VStack>
         <VStack>
           <Box px='8vw' pt='5vw' pb='5vw' bgImage='/img/reasons-bg/circle.png' bgPos='center' bgSize='50vw' bgRepeat='no-repeat'>
-          <UnorderedList mt='4'fontSize={{base: '3vw', md: '4vw', lg: '1.7vw'}} fontWeight='normal'>
+          <UnorderedList mt='4'fontSize={{base: '3vw', md: '3.5vw', lg: '1.7vw'}} fontWeight='normal'>
             {lists.map(item => (
                 <ListItem key={`item-${item}`} borderRadius='10' p='0.5vw' bg='#E3D6AC' mt={5}>
                 {item}
@@ -54,16 +54,16 @@ function Selector(service, isLargerThan400, heading, lists) {
           <VStack align={{base: 'left', md: 'left'}} w='45vw' mr='5vw'>
             <Box h='80vh' pl='5vw' pr='10vw' alignItems='center' bgImage='/img/reasons-bg/circle.png' bgPos='right' bgSize='60vw' bgRepeat='no-repeat'>
               <Center h='full'>
-                <Text fontSize={{base: '10vw', md: '3vw', lg: '3.2vw'}} fontWeight="bold">
+                <Text fontSize={{base: '10vw', md: '4vw', lg: '3.2vw'}} fontWeight="bold">
                   {heading}
                 </Text>
               </Center>
             </Box>
           </VStack>
           <VStack>
-            <Box h='80vh' pl='3vw' pr='14vw' alignItems='center' bgImage='/img/reasons-bg/pen_landscape.png' bgPos='center' bgSize='50vw' bgRepeat='no-repeat'>
-            <Center h='50vh'>
-              <UnorderedList mt='4'fontSize={{base: '3vw', md: '4vw', lg: '1.5vw'}} font fontWeight='normal'>
+            <Box h={{md: '80vh', lg: '80vh'}} pl='3vw' pr='14vw' alignItems='center' bgImage='/img/reasons-bg/pen_landscape.png' bgPos='center' bgSize={{md: '80vw',lg: '50vw'}} bgRepeat='no-repeat'>
+            <Center h={{md: '80vh', lg: '50vh'}}>
+              <UnorderedList mt='4'fontSize={{base: '3vw', md: '3vw', lg: '1.5vw'}} font fontWeight='normal'>
                 {lists.map(item => (
                     <ListItem key={`item-${item}`} mt={5}>{item}</ListItem>
                 ))}
@@ -92,7 +92,7 @@ function Selector(service, isLargerThan400, heading, lists) {
       return (
         <VStack w='full' align='start' pt='5vh'>
           <Box align={{base: 'left', md: 'left'}} w='85vw'>
-            <Text p='1vw' pl='4vw' fontSize={{base: '5vw', md: '3vw', lg: '2.5vw'}}  borderRightRadius={20} bg='white' fontWeight="bold">
+            <Text p='1vw' pl='4vw' fontSize={{base: '5vw', md: '4vw', lg: '2.5vw'}}  borderRightRadius={20} bg='white' fontWeight="bold">
               {heading}
             </Text>
           </Box>

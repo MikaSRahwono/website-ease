@@ -1,22 +1,22 @@
 export const berbedas = [
     {
-        icon: 'https://firebasestorage.googleapis.com/v0/b/website-ease.appspot.com/o/img%2FLandingAds%2FTim%20Profesional.png?alt=media&token=241e37d8-e370-4ee1-a7d0-f6ea36fd7f96',
+        icon: 'https://firebasestorage.googleapis.com/v0/b/website-ease.appspot.com/o/img%2FLandingAds%2Fapa_yang_berbeda%2Fprofesional.png?alt=media&token=d9ed528b-d2f4-470c-ad28-4fb6537cccdf',
         name: 'Tim Yang Professional dan Berpengalaman'
     },
     {
-        icon: 'https://firebasestorage.googleapis.com/v0/b/website-ease.appspot.com/o/img%2FLandingAds%2FKualitas%20Video.png?alt=media&token=d97d1d64-10ed-4e05-ab1d-ac58fa84f3e0',
+        icon: 'https://firebasestorage.googleapis.com/v0/b/website-ease.appspot.com/o/img%2FLandingAds%2Fapa_yang_berbeda%2Fkualitas-2.png?alt=media&token=57a52a71-4222-4189-aa28-4236e121cfe1',
         name: 'Kualitas video streaming Full HD 1080p'
     },
     {
-        icon: 'https://firebasestorage.googleapis.com/v0/b/website-ease.appspot.com/o/img%2FLandingAds%2FFile%20Rekaman.png?alt=media&token=110c374d-538c-4b8d-85c2-9164f52c774d',
+        icon: 'https://firebasestorage.googleapis.com/v0/b/website-ease.appspot.com/o/img%2FLandingAds%2Fapa_yang_berbeda%2Ffile%20rekaman.png?alt=media&token=d609bec1-fccb-4f8f-8b91-4a0f5371b9a7',
         name: 'File rekaman acara dapat diakses dengan mudah'
     },
     {
-        icon: 'https://firebasestorage.googleapis.com/v0/b/website-ease.appspot.com/o/img%2FLandingAds%2FPelayanan%20Terbaik.png?alt=media&token=6dc5a398-1cea-4eaf-82e8-cb2fd5a4930a',
+        icon: 'https://firebasestorage.googleapis.com/v0/b/website-ease.appspot.com/o/img%2FLandingAds%2Fapa_yang_berbeda%2Fservice-2.png?alt=media&token=a40c7fd3-1251-4014-ad72-27a0370e462f',
         name: 'Pelayanan terbaik tanpa kendala'
     },
     {
-        icon: 'https://firebasestorage.googleapis.com/v0/b/website-ease.appspot.com/o/img%2FLandingAds%2FDadakan.png?alt=media&token=dbbe6a96-bfc6-4a70-90f2-1399d71cf657',
+        icon: 'https://firebasestorage.googleapis.com/v0/b/website-ease.appspot.com/o/img%2FLandingAds%2Fapa_yang_berbeda%2Fdadakan.png?alt=media&token=c7b72940-7577-4b46-9671-7d4489539f08',
         name: 'Terima Request Live Streaming Dadakan (H-3)'
     },
   ]

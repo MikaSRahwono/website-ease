@@ -29,7 +29,7 @@ export const OurValuesCards = (props) => {
         <Image pt='10' src={img} alt={name} w="30%" h="30%" objectFit="cover" />
       </Center> */}
         <Center>
-        <Flex direction="column" justify="center" mt={4} textAlign="center">
+        <Flex h={{md: '25vh',lg: '30vh'}} direction="column" justify="center" mt={4} textAlign="center">
           <Center pb='2vh'>
             <Image boxSize='10vh' src={img}></Image>
           </Center>

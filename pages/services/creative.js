@@ -67,13 +67,13 @@ export default function Home() {
 
           {/* Terms of Service */}
           <div id="alur"></div>
-          <Box mt='15vh'>
+          <Box mt={{md: '5vh',lg: '15vh'}}>
             <AlurBooking datas={creative_book}></AlurBooking>
           </Box>
 
           {/* Frequently Asked Questions */}
           <div id="faq"></div>
-          <Box mt='20vh'>
+          <Box mt={{base: '10vh',md: '5vh',lg: '20vh'}}>
             <FAQ data='creative'></FAQ>
           </Box>
 
