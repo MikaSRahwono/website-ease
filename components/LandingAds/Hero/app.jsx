@@ -35,19 +35,24 @@ export default function Hero() {
             zIndex="1"
             textAlign="center"
           >
-            <Heading
-              fontFamily="Aileron"
-              fontSize={{ base: "xl", md: "3xl", lg: "3xl" }}
-            >
-              JASA FOTO & VIDEO PRODUK
-            </Heading>
+            <Box bg="black" color="white" p="1rem" borderRadius="8px"> {/* Background warna biru dan padding */}
+              <Heading
+                className="custom-heading"
+                fontFamily="Aileron"
+                fontSize={{ base: "xl", md: "3xl", lg: "3xl" }}
+              >
+                JASA FOTO & VIDEO PRODUK
+              </Heading>
+            </Box>
 
-            <Heading
-              fontFamily="Aileron"
-              fontSize={{ base: "xl", md: "3xl", lg: "5xl" }}
-            >
-              HASILKAN OMSET BISNIS MU DARI FOTO PRODUK YANG PROFESSIONAL!
-            </Heading>
+            <Box p="1rem" borderRadius="8px"> {/* Background warna biru dan padding */}
+              <Heading
+                fontFamily="Aileron"
+                fontSize={{ base: "xl", md: "3xl", lg: "5xl" }}
+              >
+                HASILKAN OMSET BISNIS MU DARI FOTO PRODUK YANG PROFESSIONAL!
+              </Heading>
+            </Box>
 
             <Text
               fontFamily="Aileron"
