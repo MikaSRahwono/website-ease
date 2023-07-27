@@ -2,6 +2,7 @@ import { Box, Text, Heading, Center, VStack, Button, Image } from "@chakra-ui/re
 import Slider from "react-slick";
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import { slides } from "./_data";
 
 const Portofolio = (props) => {
   const settings = {
@@ -11,24 +12,9 @@ const Portofolio = (props) => {
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 5000,
-    dots: true,
+    dots: false,
     arrows: false,
   };
-
-  const slides = [
-    {
-      key: 1,
-      image: 'https://firebasestorage.googleapis.com/v0/b/website-ease.appspot.com/o/img%2Fads1%2Fportofolio%2FOMG-all-produk-v2-revisi-2.jpg?alt=media&token=f750abe1-6fa6-4732-8fb0-ff407b787a27',
-    },
-    {
-      key: 2,
-      image: 'https://firebasestorage.googleapis.com/v0/b/website-ease.appspot.com/o/img%2Fads1%2Fportofolio%2FDSC04839.jpg?alt=media&token=fc2c7cbb-6142-44fe-8ed5-00f8938f99a8',
-    },
-    {
-      key: 3,
-      image: 'https://firebasestorage.googleapis.com/v0/b/website-ease.appspot.com/o/img%2Fads1%2Fportofolio%2FDSC08354.jpg?alt=media&token=7ea8b175-6c99-43eb-a084-76874fbce0e7',
-    },
-  ];
 
   return (
     <Box pt={{ base: "5vh", lg: "10vh" }}>
@@ -64,7 +50,7 @@ const Portofolio = (props) => {
           color="#000"
           bgColor={"black"}
           rounded={'full'}
-          onClick={() => window.open(slide.link)}
+          onClick={() => window.open('projects/studio')}
           _hover={{ bgColor: '#DAC17E' }}
           boxShadow="0px 2px 4px rgba(0, 0, 0, 0.2)">
               <Text fontSize={{ base: "sm", md: "xl" }} color="white" textAlign="center">

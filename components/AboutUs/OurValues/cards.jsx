@@ -31,7 +31,7 @@ export const OurValuesCards = (props) => {
         <Center>
         <Flex direction="column" justify="center" mt={4} textAlign="center">
           <Center pb='2vh'>
-            <Image boxSize='10vh' src={img}></Image>
+            <Image alt='easeyourneeds' boxSize='10vh' src={img}></Image>
           </Center>
           <Text color={'#000'} fontFamily='Aileron' fontSize="2xl" fontWeight="bold">
             {title}
