@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Spacer, Box, Image, Flex, Heading, Center, Text, Container, SimpleGrid, HStack, LinkBox, LinkOverlay } from "@chakra-ui/react";
-import { foto_studio } from './_data';
+import { foto_studio } from '@/components/_dataproject';
 
 import Masonry, {ResponsiveMasonry} from "react-responsive-masonry"
 
