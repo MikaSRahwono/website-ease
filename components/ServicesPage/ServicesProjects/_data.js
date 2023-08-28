@@ -57,13 +57,6 @@ export const creative_pro = [
         location: "Indonesia Stock Exchange Office, SCBD",
         date: "Oktober 2022"
     },
-    {
-        img: "/img/recentprojects/creative/8.png",
-        label: "Project IDX",
-        desc: "We provide live streaming services for Project IDX by supporting zoom webinar and providing the operators to handle the streaming.",
-        location: "Indonesia Stock Exchange Office, SCBD",
-        date: "Oktober 2022"
-    },
 ];
 export const studio_pro = [
     {

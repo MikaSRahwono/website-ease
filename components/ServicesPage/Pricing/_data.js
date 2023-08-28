@@ -7,7 +7,7 @@ export const zoom = [
       price: 5000,
       features: [
         {
-          icon: '/img/pricelist/zoom/recording.png',
+          icon: '/img/pricelist/zoom/record.png',
           name: 'Recording'
         },
         {

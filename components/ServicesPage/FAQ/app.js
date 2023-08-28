@@ -1,19 +1,30 @@
-import { Accordion, AccordionItem, AccordionButton, AccordionPanel, AccordionIcon, Box, Center, Heading, Text } from '@chakra-ui/react'
+import { Accordion, AccordionItem, AccordionButton, AccordionPanel, AccordionIcon, Box, Center, Heading, Text, SlideFade } from '@chakra-ui/react'
 import { studio, creative, zoom } from './_data'
+import { useInView } from 'react-intersection-observer'
 
-export const app = ({data}) => {
+export const App = ({data}) => {
+    const [ref2, inViewport2] = useInView({rootMargin: '-200px'});
+    const [ref, inViewport] = useInView({rootMargin: '-200px'});
+
     var faqs
     if (data == "studio") {faqs = studio}
     else if (data == "creative") {faqs = creative}
     else if (data == "zoom") (faqs = zoom)
+
+    
+
     return (
         <Box color='#2f2f2f'>
-            <Center>
-                <Heading textAlign='center' fontSize={{base: '3xl', md: '4xl'}}>
-                    Frequently Asked Questions
-                </Heading>
-            </Center>
+            <SlideFade in={inViewport}>
+                <Center ref={ref}>
+                    <Heading textAlign='center' fontSize={{base: '3xl', md: '4xl'}}>
+                        Frequently Asked Questions
+                    </Heading>
+                </Center>
+            </SlideFade>
+            <SlideFade in={inViewport2}>
             <Box
+                ref={ref2}
                 borderRadius="lg"
                 boxShadow="md"
                 mx="auto"
@@ -45,6 +56,7 @@ export const app = ({data}) => {
                 ))}
                 </Accordion>
             </Box>
+            </SlideFade>
       </Box>
     )
   }

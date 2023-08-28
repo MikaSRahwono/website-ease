@@ -1,4 +1,4 @@
-import { Box, Center, Heading, SimpleGrid } from '@chakra-ui/react'
+import { Box, Center, Heading, SimpleGrid, SlideFade } from '@chakra-ui/react'
 import React from 'react'
 import { useState } from 'react'
 import Slider from 'react-slick'
@@ -7,6 +7,7 @@ import 'slick-carousel/slick/slick-theme.css'
 import { zoom } from './_data'
 import { ChevronRightIcon, ChevronLeftIcon } from '@chakra-ui/icons'
 import { Testimonial } from './testimonial'
+import { useInView } from 'react-intersection-observer'
 
 export const App = () => {
 
@@ -86,22 +87,28 @@ export const App = () => {
       },
     ],
   };
+  const [ref2, inViewport2] = useInView({rootMargin: '-50%'});
+  const [ref, inViewport] = useInView({rootMargin: '-50px'});
 
 
   return (
     <Box w='full' mt='10vh'>
-      <Center mb='6vh'>
-          <Heading color='black'>
-              Apa Kata Mereka?
-          </Heading>
-      </Center>
-        <Box w='full'>
+      <SlideFade in={inViewport}>
+        <Center ref={ref} mb='6vh'>
+            <Heading color='black'>
+                Apa Kata Mereka?
+            </Heading>
+        </Center>
+      </SlideFade>
+      <SlideFade in={inViewport2}>
+        <Box ref={ref2} w='full'>
           <Slider {...settings} ref={setSlider}>
           {zoom.map((data, index) => (
               <Testimonial key={index} {...data} />
             ))}
           </Slider>
         </Box>
+      </SlideFade>
     </Box>
   );
 };

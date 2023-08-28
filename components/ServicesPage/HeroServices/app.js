@@ -6,11 +6,13 @@ import {
   Button,
   VStack,
   Stack,
-  Heading
+  Heading,
+  SlideFade
 } from "@chakra-ui/react";
-import { useState } from "react";
+import { use, useRef, useState } from "react";
 import { slides } from "./_data";
 import Slider from "react-slick";
+import { useInView } from "react-intersection-observer";
 
 export const App = ({hero}) => {
   var slide = {}
@@ -30,75 +32,79 @@ export const App = ({hero}) => {
     autoplaySpeed: 5000,
     dots:true, 
   };
+  const [ref, inViewport] = useInView({rootMargin: '-150px'});
+
 
   return (
     <Slider {...settings}>
       <Flex
         w="full"
-        h={{ base: "85vh", sm: "90vh", md:'70vh', lg: "75vh" }}
+        h={{ base: "85vh", sm: "90vh", md:'60vh', lg: "70vh" }}
         alignItems="center"
         justifyContent="center"
         fontFamily="Aileron"
         color={slide.clor}
         bgImage = {slide.bground}
       >
-        <Box fontFamily="Aileron" ml={{ lg:'100px' }} padding={{ base: "50px", md: '80px', lg: "120px" }} pt={{base:'15vh', md: '10vh', lg: '15vh'}}>
-          <Stack
-            spacing={{ base: 1, sm: "0" }}
-            direction={{ base: "column", md: "row" }}
-          >
-            <VStack
-              align={{ base: "left", md: "left" }}
-              spacing={10}
-              w={{ base: "full", md: "50%" }}
+        <SlideFade in={useInView}>
+          <Box ref={ref} fontFamily="Aileron" pl={{ base: "50px", md: '10vw', lg: "9vw" }} pr={{ base: "50px", md: '0', lg: "5vw" }} pt={{base:'15vh', md: '12vh', lg: '14vh'}}>
+            <Stack
+              spacing={{ base: 1, sm: "0" }}
+              direction={{ base: "column", md: "row" }}
             >
-              <VStack align={{ base: "left", md: "left" }} spacing={0}>
-              <Heading 
-                    fontFamily="Aileron"
-                    fontSize={{ base: "8vw", sm: "4vh", md: '3vh', lg: "3vw" }}
-                    minH={{ base: "20vh", sm: "20vh", lg: "30vh" }}
+              <VStack
+                align={{ base: "left", md: "center" }}
+                spacing={10}
+                w={{ base: "full", md: "50%" }}
+              >
+                <VStack align={{ base: "left", md: "left" }} mt={{md: '3.5vh', lg: '5vh'}} spacing={0}>
+                    <Heading 
+                      
+                      fontFamily="Aileron"
+                      fontSize={{ base: "6vw", sm: "4vh", md: '3vw', lg: "3vw" }}
+                      minH={{ base: "18vh", sm: "15vh", md: '13vh',lg: "18vh" }}
+                    >
+                      {slide.heading}
+                    </Heading >  
+                  <Text 
+                    fontSize={{ base: "3.5vw", sm: "3vw", md: '1.7vw', lg: "1.5vw" }}
+                    minH={{ sm: "12vh", lg: "10vh" }}>
+                    {slide.subheading1}
+                  </Text>
+                  <VStack
+                    mt={{ base: "4px", md: "0px" }}
+                    align="left"
+                    spacing={0}
                   >
-                    {slide.heading}
-                  </Heading >
-                <Text 
-                  fontSize={{ base: "3vw", sm: "3vw", md: '1.5vh', lg: "1.2vw" }}
-                  minH={{ sm: "12vh", lg: "10vh" }}>
-                  {slide.subheading1}
-                </Text>
-                <VStack
-                  mt={{ base: "4px", md: "0px" }}
-                  align="left"
-                  spacing={0}
-                >
-                  <Button
-                    size={{ base: "sm", md: "md", lg: "lg" }}
-                    height={{ base: "3vh", md: "5vh", lg: "7vh" }}
-                    width={{md: '20vw',lg:"9vw", sm:"30vw"}}
-                    fontSize="2vw"
-                    color="#000"
-                    bgColor={"white"}
-                    rounded={{lg: '5', md: '20'}}
-                    onClick={() => window.open()}
-                    mt="2vh"
-                  >
-                    {slide.button}
-                  </Button>
+                    <Button
+                      size={{ base: "sm", md: "md", lg: "lg" }}
+                      height={{ base: "3vh", md: "5vh", lg: "7vh" }}
+                      width={{md: '20vw',lg:"9vw", sm:"30vw"}}
+                      fontSize="2vw"
+                      color="#000"
+                      bgColor={"white"}
+                      rounded={{base: '12',lg: '5', md: '20'}}
+                      onClick={() => window.open()}
+                      mt="2vh"
+                    >
+                      {slide.button}
+                    </Button>
+                  </VStack>
                 </VStack>
               </VStack>
-            </VStack>
-            <Box w={{ base: "full", md: "50%" }}>
-            <Image
-                boxSize={{ base: "full", sm: "auto" }}
-                width={{ base: "100%", sm: "auto", md:'100%', lg: "100%" }}
-                height={{ base: "auto", sm: "auto", md:'100%', lg: "100%" }}
-                objectFit="contain"
-                objectPosition="center"
-                src={slide.img}
-                alt="easeyourneeds"
-              />
-            </Box>
-          </Stack>
-        </Box>
+              <Box w={{ base: "full", md: '55vw', lg: "55vw" }}>
+              <Image
+                  boxSize={{ base: "full", sm: "auto" }}
+                  width={{ base: "100%", sm: "auto", md:'55vw', lg: "55vw" }}
+                  objectFit="contain"
+                  objectPosition="center"
+                  src={slide.img}
+                  alt="easeyourneeds"
+                />
+              </Box>
+            </Stack>
+          </Box>
+        </SlideFade>
       </Flex>
     </Slider>
   );
