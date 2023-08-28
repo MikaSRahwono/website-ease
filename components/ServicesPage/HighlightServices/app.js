@@ -34,10 +34,10 @@ export const App = ({service}) => {
                 <Box
                     pos="absolute"
                     alignItems={'center'}
-                    top={{base: '5vh',md: '6vh',lg: '10vh'}}
+                    top={{base: '15vh',md: '6vh',lg: '10vh'}}
                     left={{base:"10vw" ,lg:'40vw', md:'10vw'}}
                     w={{base:"70vw", lg:"40vw", sm:"80vw"}}
-                    h={{lg:"40vh", md: '25vh', base:"45vh"}}
+                    h={{lg:"35vh", md: '25vh', base:"30vh"}}
                     bgColor="white"
                     zIndex="1"
                     rounded={5}
@@ -57,7 +57,7 @@ export const App = ({service}) => {
             <Stack
                 direction={{ base: 'column', md: 'row' }}
                 w="full"
-                h="full"
+                h={{lg:"50vh", md:"45vh"}}
                 spacing={0}
                 bgImage={{
                     base: 'url(img/highlight/sosmed-left.jpg)',
@@ -75,7 +75,7 @@ export const App = ({service}) => {
                         alt='sosmed easeyourneeds'
                         src={data.photo1}
                         w="full"
-                        h="full"
+                        h={{lg:"50vh", md:"45vh"}}
                         objectFit="cover"/>
                 </Box>
 

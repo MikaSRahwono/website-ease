@@ -30,7 +30,7 @@ export const App = (props) => {
         <Flex
           key={`slide-${index}`}
           w="full"
-          h={{ base: "85vh", sm: "90vh", lg: "90vh" }}
+          h={{ base: "85vh", sm: "90vh", lg: "90vh", md:"100vh" }}
           alignItems="center"
           justifyContent="center"
           fontFamily="Aileron"
@@ -44,12 +44,12 @@ export const App = (props) => {
           >
             <Stack
               spacing={{ base: 1, sm: "0" }}
-              direction={{ base: "column", md: "row" }}
+              direction={{ base: "column", md: "column", lg:"row" }}
             >
               <VStack
                 align="left"
                 spacing={10}
-                w={{ base: "full", md: "50%" }}
+                w={{ base: "full"}}
               >
                 
                 <VStack align="left" spacing={0}>
@@ -57,12 +57,12 @@ export const App = (props) => {
                     fontFamily="Aileron"
                     fontSize={{ base: slide.fontbase, sm: slide.fontsm, lg: slide.fontlg }}
                     fontWeight="extrabold"
-                    minH={{ base: "20vh", sm: "20vh", lg: "30vh" }}
+                    minH={{ base: "15vh", sm: "10vh", lg: "30vh", md:"10vh" }}
                   >
                     {slide.heading}
                   </Heading >
                   <Text
-                    fontSize={{ base: "4vw", sm: "3vw", md:'', lg: "1.2vw" }}
+                    fontSize={{ base: "4vw", sm: "3vw", md:'', lg: "1.5vw" }}
                     minH={{ base: "15vh", sm: "12vh", lg: "10vh" }}
                   >
                     {slide.subheading1}
@@ -75,7 +75,7 @@ export const App = (props) => {
                     <Button
                       size={{ base: "sm", md: "md", lg: "lg" }}
                       height={{ base: "3vh", md: "5vh", lg: "7vh" }}
-                      width={{ base: "25vw", sm: "30vw", md: "9vw" }}
+                      width={{ base: "45vw", sm: "30vw", md: "25vw" }}
                       fontSize={{ base: "1px", sm: "20px", lg: "1px" }}
                       color="#000"
                       bgColor={"white"}
@@ -90,10 +90,10 @@ export const App = (props) => {
                   </VStack>
                 </VStack>
               </VStack>
-              <Box w={{ base: "full", md: "50%" }}>
+              <Box w={{ base: "full", md: "full" }}>
                 <Image
                   boxSize={{ base: "full", sm: "auto" }}
-                  width={{ base: "100%", sm:"auto", lg: "100%" }}
+                  width={{ base: "100%", sm:"auto", lg: "100%", md:"100%" }}
                   height={{ base: "auto", sm: "auto", lg: "100%" }}
                   objectFit="contain"
                   objectPosition="center"

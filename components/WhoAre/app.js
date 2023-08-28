@@ -28,15 +28,15 @@ export const App = (params) => {
     } else {
     return(
         
-        <Box pt='10' backgroundSize={"cover"} bgColor='white'>
-          <Container padding={{base: '10px', md:'90px'}} maxW='70vw' color='black'>
+        <Box pt='8vh' pb='5vh' backgroundSize={"cover"} bgColor='white'>
+          <Container padding={{base: '10px', md:'90px'}} maxW={{base:'90vw', sm:"80vw", lg:"100vw", md:"100vw"}} color='black'>
             <Stack
-              direction={{ base: 'column-reverse', md: 'row' }}
-              spacing={{ base: '10px', md: '10' }}
-              alignItems={{ base: 'center', md: 'flex-start' }}
+              direction={{ base: 'column-reverse', md: 'column-reverse', lg:'row' }}
+              spacing={{ base: '10px', md: '5vh' }}
+              alignItems={{ base: 'center', md: 'center' }}
             >
               <Box
-                fontSize={{ base: '10pxpx', md: '20px', sm: '14px' }}
+                fontSize={{ base: '15px', md: '24px', sm: '20px' }}
                 fontFamily="Aileron"
                 textAlign={{ base: 'justify', md: 'justify' }}
               >

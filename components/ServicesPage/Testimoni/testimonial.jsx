@@ -28,7 +28,7 @@ export const Testimonial = (props) => {
         align="center"
         pt="10"
         pb="6"
-        px="10"
+        px={{lg:"5", md:"4", base:"6"}}
       >
         <Flex
         direction="column"
@@ -58,7 +58,7 @@ export const Testimonial = (props) => {
           </Center>
         </Box>
       </Flex>
-      <Box as="blockquote" maxW="340px" mx="auto" my="4">
+      <Box as="blockquote" maxW="360px" mx="auto" my="4">
           <Box
             position="absolute"
             top="6"
@@ -69,7 +69,7 @@ export const Testimonial = (props) => {
           >
             <ImQuotesLeft />
           </Box>
-          <Text fontSize="md">{testimony}</Text>
+          <Text fontSize={{lg:"md", md:"md"}}>{testimony}</Text>
           <Box
             position="absolute"
             bottom="-2"
