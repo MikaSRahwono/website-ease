@@ -1,13 +1,19 @@
 import React, { useState, useRef } from "react";
-import { Box, VStack, HStack, Image, Heading, Text, Button, Container, Center, Flex } from "@chakra-ui/react";
+import { Box, VStack, HStack, Image, Heading, Text, Button, Container, Center, Flex, SlideFade } from "@chakra-ui/react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { ChevronLeftIcon, ChevronRightIcon } from '@chakra-ui/icons'
+import { useInView } from "react-intersection-observer";
 
 export const App = () => {
   const [sliderIndex, setSliderIndex] = useState(0);
   const sliderRef = useRef(null);
+
+  const [ref, inViewport1] = useInView({rootMargin: '-10%'});
+  const [ref2, inViewport2] = useInView({rootMargin: '-10%'});
+  const [ref3, inViewport3] = useInView({rootMargin: '-20%'});
+
 
   const CustomArrow = ({ direction, onClick }) => {
     return (
@@ -105,6 +111,7 @@ export const App = () => {
   return (
     <Box fontFamily={'Aileron'} alignContent={'center'} alignItems={'center'} color="#000" bgColor="white">
       <Center>
+        <SlideFade in={inViewport1}>
           <Heading
             pb={{base:"10", sm:"10"}}
             textAlign={"center"}
@@ -112,19 +119,24 @@ export const App = () => {
             fontWeight="extrabold"
             mt={{ base: 5, sm: 10, lg: 16 }} 
             mb={5}
+            ref={ref}
           >
             OUR SERVICES
           </Heading>
+          </SlideFade>
         </Center>
       <Center>
-        <HStack mb={{ base: '20px', sm: '30px' }} spacing={{ base: 6, sm: 10 }} mt={2}>
+      <SlideFade in={inViewport2}>
+        <HStack mb={{ base: '20px', sm: '30px' }} spacing={{ base: 6, sm: 10 }} mt={2} ref={ref2}>
           <Button boxShadow={sliderIndex === 0 ? 'md' : 'xs'} fontSize={{ base: 'sm', sm: 'md' }} bgColor={sliderIndex === 0 ? '#DAC17E' : '#f2f2f2'} borderRadius={50} onClick={() => handleClick(0)}>Zoom</Button>
           <Button boxShadow={sliderIndex === 1 ? 'md' : 'xs'} fontSize={{ base: 'sm', sm: 'md' }} bgColor={sliderIndex === 1 ? '#DAC17E' : '#f2f2f2'} borderRadius={50} onClick={() => handleClick(1)}>Studio</Button>
           <Button boxShadow={sliderIndex === 2 ? 'md' : 'xs'} fontSize={{ base: 'sm', sm: 'md' }} bgColor={sliderIndex === 2 ? '#DAC17E' : '#f2f2f2'} borderRadius={50} onClick={() => handleClick(2)}>Creative</Button>
         </HStack>
+        </SlideFade>
       </Center>
       <Center>
-        <Container maxW={{ base:"sm", lg: '60vw', sm: '100vw' }}>
+      <SlideFade in={inViewport3}> 
+        <Container maxW={{ base:"sm", lg: '60vw', sm: '100vw' }} ref={ref3}>
           <Box rounded={50}
             boxShadow='lg'
             backgroundImage="url(https://firebasestorage.googleapis.com/v0/b/website-ease.appspot.com/o/img%2FBackground%201.png?alt=media&token=7b347cc5-f193-468f-81d1-f92e77e07d70)"
@@ -170,6 +182,7 @@ export const App = () => {
             </Slider>
           </Box>
         </Container>
+        </SlideFade>
       </Center>
     </Box>
   );

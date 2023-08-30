@@ -5,7 +5,7 @@ import { App as ThanksFor } from "@/components/ThanksFor/app"
 import { App as Highlight } from "@/components/ServicesPage/HighlightServices/app"
 import { App as OurServices } from "@/components/OurServices/app"
 import { App as MeetOurClient } from "@/components/MeetOurClient/app"
-import { App as ApaKataMereka } from "@/components/ApaKataMereka/app"
+import { App as Testimoni } from "@/components/ServicesPage/Testimoni/app"
 
 export default function Home() {
 
@@ -22,7 +22,7 @@ export default function Home() {
       <Highlight > </Highlight>
       <MeetOurClient></MeetOurClient>
       <Box pt={'8vh'} bgColor="#f2f2f2">
-        <ApaKataMereka></ApaKataMereka>
+        <Testimoni></Testimoni>
       </Box>
     </Box>
   )

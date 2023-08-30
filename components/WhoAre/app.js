@@ -1,8 +1,11 @@
-import { Box, Text, Container, Stack, Image } from "@chakra-ui/react"
+import { Box, Text, Container, Stack, Image, SlideFade } from "@chakra-ui/react"
 import { HeadingAbout } from "./heading"
+import { useInView } from 'react-intersection-observer'
 
 export const App = (params) => {
     const type = params.type
+
+    const [ref, inViewport] = useInView({rootMargin: '-10%'});
     
     if(type == 'about'){
         return (
@@ -28,7 +31,8 @@ export const App = (params) => {
     } else {
     return(
         
-        <Box pt='8vh' pb='5vh' backgroundSize={"cover"} bgColor='white'>
+      <SlideFade in={inViewport}>
+        <Box pt='8vh' pb='5vh' backgroundSize={"cover"} bgColor='white' >
           <Container padding={{base: '10px', md:'90px'}} maxW={{base:'90vw', sm:"80vw", lg:"100vw", md:"100vw"}} color='black'>
             <Stack
               direction={{ base: 'column-reverse', md: 'column-reverse', lg:'row' }}
@@ -40,7 +44,7 @@ export const App = (params) => {
                 fontFamily="Aileron"
                 textAlign={{ base: 'justify', md: 'justify' }}
               >
-                <Text as="span" fontWeight="bold">
+                <Text as="span" fontWeight="bold" ref={ref}>
                   EASE YOUR NEEDS
                 </Text>{' '}
                 is a creative agency based in Jakarta, Indonesia. Started in September 2020
@@ -62,6 +66,7 @@ export const App = (params) => {
             </Stack>
           </Container>
         </Box>
+        </SlideFade>
 
         )
     }

@@ -1,7 +1,12 @@
-import { Box, Container, Text, HStack, Divider, Heading, Grid, GridItem, Icon } from "@chakra-ui/react";
+import { Box, Container, Text, HStack, Divider, Heading, Grid, GridItem, Icon, SlideFade } from "@chakra-ui/react";
 import { FaInstagram, FaWhatsapp } from 'react-icons/fa';
+import { useInView } from "react-intersection-observer";
 
 export default function ContactUs() {
+
+  const [ref, inViewport1] = useInView({rootMargin: '-20%'});
+  const [ref2, inViewport2] = useInView({rootMargin: '-10%'});
+
   return (
     <Box>
       <Box>
@@ -22,7 +27,8 @@ export default function ContactUs() {
 
           <Heading
             fontFamily="Aileron"
-            fontSize={{ base: "3xl", md: "5xl", lg: "7xl" }}
+            textAlign={'center'}
+            fontSize={{ base: "5xl", md: "5xl", lg: "7xl" }}
             w={{ base: 'auto', lg: 'auto'}}
             h={{ base: '20vh'}}
             p="2rem"
@@ -31,23 +37,11 @@ export default function ContactUs() {
             left="50%"
             transform="translate(-50%, -50%)"
             zIndex="1"
+            color='white'
+
           >
             Contact Us
           </Heading>
-
-          <Text
-            fontFamily="Aileron"
-            p="2rem"
-            position="absolute"
-            top="60%"
-            left="50%"
-            alignContent={'center'}
-            textAlign={'center'}
-            transform="translate(-50%, -50%)"
-            zIndex="1"
-          >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-          </Text>
         </Box>
       </Box>
 
@@ -58,13 +52,16 @@ export default function ContactUs() {
           justifyContent={{ base: 'center', md: 'space-between' }}
           spacing={{ base: '2rem', md: '0' }}
         >
-          <Box pr={{ base: '0', md: '10vw' }} w={{ base: '100%', md: '50vw' }} h={{ base: '30vh', md: 'auto' }}>
+          <SlideFade in={inViewport1}>
+          <Box pr={{ base: '0', md: '10vw' }} w={{ base: '100%', md: '50vw' }} h={{ base: '30vh', md: 'auto' }} ref={ref}>
             <Divider mb="2vh" w="40%" alignItems="center" size="1vh" borderColor="black" variant="solid" orientation="horizontal" />
-            <Heading fontSize="4xl">Don&apos;t hesitate to contact us If you need more help</Heading>
+            <Heading fontSize={{ base:"4xl", lg:"4xl", md:"2xl" }}>Don&apos;t hesitate to contact us If you need more help</Heading>
           </Box>
+          </SlideFade>
 
           <Box w={{ base: '100%', md: '50vw' }} fontSize="md" textAlign="justify">
-            <Grid templateColumns={{ base: '1fr', md: 'repeat(2, 1fr)' }} gap={10}>
+          <SlideFade in={inViewport2}> 
+            <Grid templateColumns={{ base: '1fr', md: 'repeat(2, 1fr)' }} gap={10} ref={ref2}>
               <GridItem w="100%" h="20">
                 <Text fontWeight="bold" fontSize="25">
                   Open Hour
@@ -86,6 +83,7 @@ export default function ContactUs() {
                 </HStack>
               </GridItem>
             </Grid>
+            </SlideFade>
           </Box>
         </HStack>
       </Container>

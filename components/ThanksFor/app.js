@@ -7,24 +7,34 @@ import {
   Container,
   VStack,
   Center,
+  SlideFade
 } from "@chakra-ui/react";
+import { useInView } from 'react-intersection-observer'
 
 export const App = (params) => {
+
+  const [ref, inViewport1] = useInView({rootMargin: '-20%'});
+  const [ref2, inViewport2] = useInView({rootMargin: '-20%'});
+
   return (
     <Box w="full" p={10} pb='5vh' color="#000">
       <Box alignItems={"center"} bg="white" p={5}>
         <Center>
+        <SlideFade in={inViewport1}>
           <Heading
             pb={{base:"10", sm:"10"}}
             textAlign={"center"}
             fontSize={{ base: "3vh" ,lg: "2vw", sm: "3vh" }}
             fontWeight="extrabold"
             mb={5}
+            ref={ref}
           >
             THANK YOU FOR TRUSTING US
           </Heading>
+          </SlideFade>
         </Center>
-        <Container maxW={{ base: "100vw", lg: "60vw", sm: "100vw" }}>
+        <SlideFade in={inViewport2}>
+        <Container maxW={{ base: "100vw", lg: "60vw", sm: "100vw" }} ref={ref2}>
           <Grid
             templateColumns={{ base: "repeat(2, 1fr)", md: "repeat(3, 1fr)" }}
             templateAreas={{
@@ -86,6 +96,7 @@ export const App = (params) => {
             </Box>
           </Grid>
         </Container>
+        </SlideFade>
       </Box>
     </Box>
   );

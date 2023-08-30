@@ -1,7 +1,9 @@
-import { Box, Image, Flex, useBreakpointValue } from "@chakra-ui/react"
+import { Box, Image, Flex, useBreakpointValue, SlideFade } from "@chakra-ui/react"
+import { useInView } from "react-intersection-observer";
 
 export function App () {
   const isMobileView = useBreakpointValue({ base: true, sm: true, lg: false });
+  const [ref, inViewport1] = useInView({rootMargin: '-100px'});
 
   return (
     <Flex
@@ -17,6 +19,7 @@ export function App () {
         h="full"
         position="relative"
       >
+        <SlideFade in={inViewport1}>
         <Image
           src={isMobileView ? "img/meetourclient/MeetOurClientPortrait.png" : "img/meetourclient/MeetOurClientLandscape.png"}
           objectFit="contain"
@@ -28,7 +31,9 @@ export function App () {
           w="full"
           h="full"
           alt={"easeyourneeds"}
+          ref={ref}
         />
+        </SlideFade>
       </Box>
     </Flex>
   )
