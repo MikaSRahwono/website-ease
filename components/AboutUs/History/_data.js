@@ -50,7 +50,7 @@ export const historyCardsData = [
     {
       img: 'https://firebasestorage.googleapis.com/v0/b/website-ease.appspot.com/o/img%2Fhistory%2Fpicture7.png?alt=media&token=47dc7d64-f521-4a46-8e39-6c20edab0ef5',
       title: 'Second Anniversary',
-      tangggal: 'September 2022',
+      tanggal: 'September 2022',
       desc: 'We celebrated our second remarkable day together in Cisarua, Puncak.',
       
     },

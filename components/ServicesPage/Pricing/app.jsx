@@ -1,14 +1,18 @@
-import { Box, Center, Container, Heading, SimpleGrid, Text, useColorModeValue as mode, useMediaQuery } from '@chakra-ui/react'
+import { Box, Center, Container, Heading, SimpleGrid, Slide, SlideFade, Text, useColorModeValue as mode, useMediaQuery } from '@chakra-ui/react'
 import * as React from 'react'
 import { DurationSwitcher } from './durationSwitcher'
 import { PricingCard } from './pricingCard'
 import Slider from 'react-slick'
 import { ChevronRightIcon, ChevronLeftIcon } from '@chakra-ui/icons'
+import { useInView } from 'react-intersection-observer'
 
 
 export const App = ({description, datas, column}) => {
-  const [isLargerThan400] = useMediaQuery('(min-width: 480px)')
+  const [isLargerThan400] = useMediaQuery('(min-width: 770px)')
   const [slider, setSlider] = React.useState(null)
+
+  const [ref, inViewport] = useInView({rootMargin: '-100px'});
+  const [ref2, inViewport2] = useInView({rootMargin: '-300px'});
 
   const CustomArrow = ({ direction, onClick }) => {
     return (
@@ -99,46 +103,55 @@ export const App = ({description, datas, column}) => {
           md: '8',
         }}
       >
-        <Heading
-          as="h1"
-          size="2xl"
-          fontWeight="extrabold"
-          textAlign="center"
-          color='#2f2f2f'
-        >
-          Harga dan Paket
-        </Heading>
-        <Box h={{base: '12vh', md: '8vh',}} pl={5} pr={5} bg='white' mt='4vh' boxShadow='md' borderRadius={15}>
-          <Center h={{base: '12vh', md: '8vh',}}>
-            <Text fontSize={{base: 'sm'}} textAlign='center' color='black'>{description}</Text>
+        <SlideFade in={inViewport}>
+          <Heading
+            ref={ref}
+            as="h1"
+            size="2xl"
+            fontWeight="extrabold"
+            textAlign="center"
+            color='#2f2f2f'
+          >
+            Harga dan Paket
+          </Heading>
+        <Box h={{base: '14vh', md: '9vh',}} pl={5} pr={5} bg='white' mt='4vh' boxShadow='md' borderRadius={15}>
+          <Center h={{base: '14vh', md: '9vh',}}>
+            <Text fontSize={{base: 'lg'}} textAlign='center' color='black'>{description}</Text>
           </Center>
         </Box>
-        {isLargerThan400 ? <SimpleGrid
-          alignItems="flex-start"
-          mt={{
-            base: '5',
-            lg: '3vh',
-          }}
-          columns={{
-            base: 1,
-            md: column,
-          }}
-          spacing={{
-            base: '12',
-            md: '1vw',
-          }}
-        >
-          {datas.map((data, index) => (
-        <PricingCard
-          key={index}
-          name={data.name}
-          description={data.desc}
-          price={data.price}
-          features={data.features}
-        />
-      ))}
-          
-        </SimpleGrid> : <Box w='full' h='full' mt='5vh'>
+        </SlideFade>
+
+        {isLargerThan400 ? 
+        <SlideFade in={inViewport2}>
+          <SimpleGrid
+            ref={ref2}
+            alignItems="flex-start"
+            mt={{
+              base: '5',
+              lg: '3vh',
+            }}
+            columns={{
+              base: 1,
+              md: column,
+            }}
+            spacing={{
+              base: '12',
+              md: '1vw',
+            }}
+          >
+            {datas.map((data, index) => (
+                <PricingCard
+                  
+                  key={index}
+                  name={data.name}
+                  description={data.desc}
+                  price={data.price}
+                  features={data.features}
+                />
+        ))} 
+          </SimpleGrid> 
+        </SlideFade>
+        : <Center><Box w={{base:'full', sm: '55vw'}} h='full' mt='5vh'>
           <Slider {...settings} ref={setSlider}>
           {datas.map((data, index) => (
           <PricingCard
@@ -151,7 +164,7 @@ export const App = ({description, datas, column}) => {
         ))}
           
           </Slider>
-        </Box>}
+        </Box></Center>}
       </Box>
     </Box>
   )

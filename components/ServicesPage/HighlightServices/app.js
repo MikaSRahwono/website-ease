@@ -6,11 +6,13 @@ import {
     Button,
     VStack,
     HStack,
-    useMediaQuery
+    useMediaQuery,
+    SlideFade
  } from "@chakra-ui/react";
 import { FaWhatsapp } from "react-icons/fa";
 import { creative, zoom, studio } from "./_data";
 import Link from "next/link";
+import { useInView } from "react-intersection-observer";
 
 export const App = ({service}) => {
     var data = {}
@@ -22,6 +24,8 @@ export const App = ({service}) => {
         data = zoom
     }
     const [isLargerThan400] = useMediaQuery('(min-width: 400px)')
+    const [ref2, inViewport2] = useInView({rootMargin: '-10%'});
+    const [ref, inViewport] = useInView({rootMargin: '-10%'});
 
     return (
         <Box 
@@ -34,10 +38,10 @@ export const App = ({service}) => {
                 <Box
                     pos="absolute"
                     alignItems={'center'}
-                    top={{base: '15vh',md: '6vh',lg: '10vh'}}
-                    left={{base:"10vw" ,lg:'40vw', md:'10vw'}}
-                    w={{base:"70vw", lg:"40vw", sm:"80vw"}}
-                    h={{lg:"35vh", md: '25vh', base:"30vh"}}
+                    top={{base: '5vh',md: '6vh',lg: '10vh', sm:'20vh'}}
+                    left={{base:"10vw" ,lg:'40vw', md:'10vw', sm:'10vw'}}
+                    w={{base:"70vw", lg:"40vw", sm:"60vw", md: "60vw"}}
+                    h={{lg:"40vh", md: '35vh', sm:'33vh', base:"35vh"}}
                     bgColor="white"
                     zIndex="1"
                     rounded={5}
@@ -46,13 +50,18 @@ export const App = ({service}) => {
                     p='5vw'
                     justifyContent={'center'}
                 > 
-                    <Text fontSize={{base: 'xl',md: '2xl'}} fontWeight='bold'>
-                        {data.title}
-                    </Text>
-                    <Button bg='#7FCAD7' _hover={{background:"#96DDE9"}} h='5vh' mt='5vh'>
-                        <FaWhatsapp/>
-                        <Link href={data.whatsapp} pl='1vw'>Hubungi Kami!</Link>
-                    </Button>
+                    <SlideFade in={inViewport2}>
+                        <Text ref={ref2} fontSize={{base: 'xl',md: '2xl'}} fontWeight='bold'>
+                            {data.title}
+                        </Text>
+                    </SlideFade>
+                    <SlideFade in={inViewport}>
+                        <Button ref={ref} bg='#7FCAD7' _hover={{background:"#96DDE9"}} h='5vh' mt='5vh'>
+                            <FaWhatsapp/>
+                            <Link href={data.whatsapp} pl='1vw'>Hubungi Kami!</Link>
+                        </Button>
+                    </SlideFade>
+
                 </Box>
             <Stack
                 direction={{ base: 'column', md: 'row' }}

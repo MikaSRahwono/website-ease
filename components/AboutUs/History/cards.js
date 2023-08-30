@@ -40,7 +40,7 @@ export const HistoryCards = ({data, onClick}) => {
         <Center>
           <Image onClick={() => onClick(data)} src={data.img} alt={data.title} w="100%" h="35vh" objectFit="cover" />
         </Center>
-        <Text fontSize='sm' mt='0.5vh'>{data.tanggal}</Text>
+        <Text fontSize='sm' mt='0.5vh' fontWeight="bold">{data.tanggal}</Text>
 
         <Flex direction="column" justify="left" mt={4} textAlign="justify">
           <Text  color={'#000'} fontFamily='Montserrat' fontSize="xl" fontWeight="bold">

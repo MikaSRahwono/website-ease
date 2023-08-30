@@ -6,31 +6,40 @@ import {
     UnorderedList,
     ListItem,
     useMediaQuery,
-    Center
+    Center,
+    SlideFade,
+    OrderedList
  } from "@chakra-ui/react";
-import { List } from "antd";
+import { useInView } from "react-intersection-observer";
 
 function Selector(service, isLargerThan400, heading, lists) {
+
+  const [ref2, inViewport2] = useInView({rootMargin: '-200px'});
+
   if(service == "creative") {
     if(isLargerThan400) {
       return (
       <HStack align='top' alignItems='center' spacing='3vw'>
-        <VStack align={{base: 'left', md: 'left'}} spacing={10} ml='7vw' w='30vw' p='4vw'>
-            <Text fontSize={{base: '10vw', md: '4vw', lg: '3.2vw'}} fontWeight="bold">
-              {heading}
-            </Text>
-        </VStack>
-        <VStack>
-          <Box px='8vw' pt='5vw' pb='5vw' bgImage='/img/reasons-bg/circle.png' bgPos='center' bgSize='50vw' bgRepeat='no-repeat'>
-          <UnorderedList mt='4'fontSize={{base: '3vw', md: '3.5vw', lg: '1.7vw'}} fontWeight='normal'>
-            {lists.map(item => (
-                <ListItem key={`item-${item}`} borderRadius='10' p='0.5vw' bg='#E3D6AC' mt={5}>
-                {item}
-              </ListItem>
-            ))}
-          </UnorderedList>
-          </Box>          
-        </VStack>
+        <SlideFade in={inViewport2}>
+          <VStack align={{base: 'left', md: 'left'}} spacing={10} ml='7vw' w='30vw' p='4vw'>
+              <Text fontSize={{base: '10vw', sm: '4.2vw', md: '4vw', lg: '3.2vw'}} fontWeight="bold">
+                {heading}
+              </Text>
+          </VStack>
+        </SlideFade>
+        <SlideFade in={inViewport2}>
+          <VStack >
+            <Box ref={ref2} px='8vw' pt='5vw' pb='5vw' bgImage='/img/reasons-bg/circle.png' bgPos='center' bgSize='50vw' bgRepeat='no-repeat'>
+            <UnorderedList mt='4'fontSize={{base: '2.2vw', md: '2vw', lg: '1.7vw'}} fontWeight='normal'>
+              {lists.map(item => (
+                  <ListItem key={`item-${item}`} borderRadius='10' p='0.5vw' bg='#E3D6AC' mt={5}>
+                  {item}
+                </ListItem>
+              ))}
+            </UnorderedList>
+            </Box>          
+          </VStack>
+        </SlideFade>
       </HStack>);
     } else {
       return (
@@ -38,8 +47,8 @@ function Selector(service, isLargerThan400, heading, lists) {
         <Text mt='5vh' mb='1vw' textAlign='center' fontSize={{base: '7.5vw', md: '3vw', lg: '5xl'}} fontWeight="bold">
           {heading}
         </Text>
-        <Box px='8vw' pt='25vw' pb='25vw' bgImage='/img/reasons-bg/circle.png' bgPos='center' bgSize='135vw' bgRepeat='no-repeat'>
-        <UnorderedList fontSize={{base: '6vw', md: '1.5vw', lg: '1.5vw'}} fontWeight='normal'>
+        <Box px='8vw' pt='25vw' pb='25vw' bgImage='/img/reasons-bg/circle.png' bgPos='center' bgSize='125vw' bgRepeat='no-repeat'>
+        <UnorderedList fontSize={{base: '5vw', md: '1.5vw', lg: '1.5vw'}} fontWeight='normal'>
           {lists.map(item => (
             <ListItem key={`item-${item}`} borderRadius='10' p='0.3vw' bg='#E3D6AC' mt={5}>{item}</ListItem>
           ))}
@@ -52,22 +61,22 @@ function Selector(service, isLargerThan400, heading, lists) {
       return (
         <HStack w='full' align='start' h='80vh'>
           <VStack align={{base: 'left', md: 'left'}} w='45vw' mr='5vw'>
-            <Box h='80vh' pl='5vw' pr='10vw' alignItems='center' bgImage='/img/reasons-bg/circle.png' bgPos='right' bgSize='60vw' bgRepeat='no-repeat'>
+            <Box h='80vh' pl={{sm:'2vw', md: '5vw'}} pr={{md: '10vw'}} alignItems='center' bgImage='/img/reasons-bg/circle.png' bgPos='right' bgSize={{sm: '85vw',md: '60vw'}} bgRepeat='no-repeat'>
               <Center h='full'>
-                <Text fontSize={{base: '10vw', md: '4vw', lg: '3.2vw'}} fontWeight="bold">
+                <Text fontSize={{base: '10vw',sm: '4.8vw', md: '4vw', lg: '3.2vw'}} fontWeight="bold">
                   {heading}
                 </Text>
               </Center>
             </Box>
           </VStack>
           <VStack>
-            <Box h={{md: '80vh', lg: '80vh'}} pl='3vw' pr='14vw' alignItems='center' bgImage='/img/reasons-bg/pen_landscape.png' bgPos='center' bgSize={{md: '80vw',lg: '50vw'}} bgRepeat='no-repeat'>
-            <Center h={{md: '80vh', lg: '50vh'}}>
-              <UnorderedList mt='4'fontSize={{base: '3vw', md: '3vw', lg: '1.5vw'}} font fontWeight='normal'>
+            <Box h={{sm: '70vh', md: '90vh', lg: '70vh'}} pl='3vw' pr='14vw' alignItems='center' bgImage='/img/reasons-bg/pen_landscape.png' bgPos='center' bgSize={{sm: '90vw',md: '80vw',lg: '50vw'}} bgRepeat='no-repeat'>
+            <Center h={{sm: '60vh',md: '80vh', lg: '50vh'}}>
+              <OrderedList mt='4'fontSize={{base: '3vw', md: '2.5vw', lg: '1.5vw'}} font fontWeight='normal'>
                 {lists.map(item => (
                     <ListItem key={`item-${item}`} mt={5}>{item}</ListItem>
                 ))}
-              </UnorderedList>
+              </OrderedList>
             </Center>
             </Box>          
           </VStack>
@@ -78,12 +87,12 @@ function Selector(service, isLargerThan400, heading, lists) {
           <Text mb='6vh' pt='3.5vh' pb='13vh' textAlign='center' bgImage='/img/reasons-bg/circle.png' bgPos='bottom' bgSize='110vw' bgRepeat='no-repeat' fontSize={{base: '7.5vw', md: '3vw', lg: '5xl'}} fontWeight="bold">
             {heading}
           </Text>
-          <Box px='8vw' pt='10vw' pb='25vw' bgImage='/img/reasons-bg/pen_portrait.png' bgPos='left' bgSize='120vw' bgRepeat='no-repeat'>
-          <UnorderedList w='80%' fontSize={{base: '5vw', md: '1.5vw', lg: '1.5vw'}} fontWeight='normal'>
+          <Box px='8vw' pt='12vw' pb='25vw' bgImage='/img/reasons-bg/pen_portrait.png' bgPos='left' bgSize='120vw' bgRepeat='no-repeat'>
+          <OrderedList w='80%' fontSize={{base: '5vw', md: '1.5vw', lg: '1.5vw'}} fontWeight='normal'>
             {lists.map(item => (
               <ListItem key={`item-${item}`} mt={1}>{item}</ListItem>
             ))}
-          </UnorderedList>
+          </OrderedList>
           </Box>
         </VStack>);
     }

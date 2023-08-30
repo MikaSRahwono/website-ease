@@ -1,10 +1,10 @@
-import { Container, Box, Heading, useMediaQuery, HStack, Show, Text, Center, Divider } from "@chakra-ui/react"
+import { Container, Box, Heading, useMediaQuery, HStack, Show, Text, Center, Divider, Button } from "@chakra-ui/react"
 import { App as Projects } from "@/components/ServicesPage/ServicesProjects/app"
 import { slides } from "@/components/Hero/slides/_dataCreative"
 import { slides_pro } from "@/components/ServicesPage/ServicesProjects/_data"
 import { App as Pricing } from "@/components/ServicesPage/Pricing/app"
 import { App as Terms } from "@/components/Terms/app"
-import { app as FAQ } from "@/components/ServicesPage/FAQ/app"
+import { App as FAQ } from "@/components/ServicesPage/FAQ/app"
 import { App as Reasons } from "@/components/ServicesPage/Reasons/app"
 import { App as Highlight } from "@/components/ServicesPage/HighlightServices/app"
 import { App as Hero } from "@/components/ServicesPage/HeroServices/app"
@@ -16,7 +16,7 @@ import { zoom_pro } from "@/components/ServicesPage/ServicesProjects/_data"
 import Link from "next/link"
 
 export default function Home() {
-  const [isLargerThan400] = useMediaQuery('(min-width: 480px)')
+  const [isLargerThan400] = useMediaQuery('(min-width: 860px)')
 
   const reason_list = [
     'Links are already prepared, hassle free',
@@ -32,13 +32,25 @@ export default function Home() {
       <Hero hero={1}></Hero>
         {isLargerThan400 ? <Box h='10vh' bg='#FFFFFF' w='100vw' mt={0} color='black'>
         <Center h='10vh'>
-          <HStack spacing='5vw'>
-            <Link href='#reasons'>Why Us?</Link>
-            <Link href='#projects'>Recent Projects</Link>
-            <Link href='#pricing'>Pricing dan Paket</Link>
-            <Link href='#alur'>Alur Booking</Link>
-            <Link href='#faq'>FAQ</Link>
-            <Link href='#testimoni'>Testimoni</Link>
+          <HStack spacing='3vw'>
+            <Button backgroundColor='#88c4b4' _hover={{backgroundColor: '#EDCA7D'}}>
+              <Link href='#reasons'>Why Us?</Link>
+            </Button>
+            <Button backgroundColor='#88c4b4' _hover={{backgroundColor: '#EDCA7D'}}>
+              <Link href='#projects'>Recent Projects</Link>
+            </Button>
+            <Button backgroundColor='#88c4b4' _hover={{backgroundColor: '#EDCA7D'}}>
+              <Link href='#pricing'>Pricing dan Paket</Link>
+            </Button>
+            <Button backgroundColor='#88c4b4' _hover={{backgroundColor: '#EDCA7D'}}>
+              <Link href='#alur'>Alur Booking</Link>
+            </Button>
+            <Button backgroundColor='#88c4b4' _hover={{backgroundColor: '#EDCA7D'}}>
+              <Link href='#faq'>FAQ</Link>
+            </Button>
+            <Button backgroundColor='#88c4b4' _hover={{backgroundColor: '#EDCA7D'}}>
+              <Link href='#testimoni'>Testimoni</Link>
+            </Button>
           </HStack>
         </Center>
       </Box> : <Box h='10vh' bg='#FFFFFF' w='100vw' mt={0} color='black'></Box>}
@@ -67,7 +79,7 @@ export default function Home() {
 
           {/* Terms of Service */}
           <div id="alur"></div>
-          <Box mt={{md: '5vh',lg: '15vh'}}>
+          <Box mt={{md: '5vh',lg: '10vh'}}>
             <AlurBooking datas={zoom_book}></AlurBooking>
           </Box>
 

@@ -6,13 +6,16 @@ import {
   Center,
   Button,
   VStack,
-  useMediaQuery
+  useMediaQuery,
+  SlideFade,
+  ScaleFade
 } from '@chakra-ui/react'
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import Slider from "react-slick"
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { ChevronRightIcon, ChevronLeftIcon } from '@chakra-ui/icons'
+import { useInView } from 'react-intersection-observer';
 
 
 export const App = (props) => {
@@ -20,6 +23,14 @@ export const App = (props) => {
   const [isLargerThan400] = useMediaQuery('(min-width: 480px)')
 
   const [slider, setSlider] = useState(null)
+
+  const [ref, inViewport] = useInView({rootMargin: '-150px'});
+  const [ref2, inViewport2] = useInView({rootMargin: '-150px'});
+  const [ref3, inViewport3] = useInView({rootMargin: '-150px'});
+
+
+
+  console.log(inViewport)
 
   const CustomArrow = ({ direction, onClick }) => {
     return (
@@ -94,16 +105,24 @@ export const App = (props) => {
 
 
   return (
-    <Center color='#000' w='90vw'>
+    <Center color='#000' w='90vw' >
       {isLargerThan400 ? <HStack>
         <Box  maxW="30vw">
-          <Text fontSize='4xl' fontWeight='extrabold' noOfLines={2}>Recent</Text>
-          <Text fontSize='4xl' fontWeight='extrabold'>Projects</Text>
+          <SlideFade in={inViewport}>
+            <Box ref={ref}>
+              <Text fontSize='4xl' fontWeight='extrabold' noOfLines={2}>Recent</Text>
+              <Text fontSize='4xl' fontWeight='extrabold'>Projects</Text>
+            </Box>
+          </SlideFade>
           <Box h={10}></Box>
-          <Text fontSize={{base: 'sm', md: 'md'}}>
-          These are a glimpse of our recent projects, where creativity and innovation have come together to deliver extraordinary results. From the moment we embark on a new venture, our passion for excellence drives us to create experiences that captivate, inspire, and leave a lasting impression.
-          </Text>
-          <Button mt='3vh' variant='solid' bg='#DAC17F' _hover={{bg: '#CBAD5C'}}>Lihat Project Kami!</Button>
+          <SlideFade in={inViewport2}>
+            <Text ref={ref2} fontSize={{base: 'sm', md: 'md'}}>
+            These are a glimpse of our recent projects, where creativity and innovation have come together to deliver extraordinary results. From the moment we embark on a new venture, our passion for excellence drives us to create experiences that captivate, inspire, and leave a lasting impression.
+            </Text>
+          </SlideFade>
+          <SlideFade in={inViewport3}>
+            <Button  ref={ref3} mt='3vh' variant='solid' bg='#DAC17F' _hover={{bg: '#CBAD5C'}}>Lihat Project Kami!</Button>
+          </SlideFade>
         </Box>
         <Box w='5vw'></Box>
         <Box w="50vw">
