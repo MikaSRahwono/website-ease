@@ -1,4 +1,4 @@
-import { Box, Center, Container, Divider, HStack, Heading, SimpleGrid, useMediaQuery } from '@chakra-ui/react'
+import { Box, Center, Container, Divider, HStack, Heading, SimpleGrid, SlideFade, useMediaQuery } from '@chakra-ui/react'
 import React from 'react'
 import { useState } from 'react'
 import Slider from 'react-slick'
@@ -8,6 +8,7 @@ import { DetailModal, HistoryCards } from './cards'
 import { historyCardsData } from './_data'
 import { ChevronRightIcon, ChevronLeftIcon } from '@chakra-ui/icons'
 import { PrevArrow, NextArrow } from 'react-slick'
+import { useInView } from 'react-intersection-observer'
 
 export const App = () => {
 
@@ -99,36 +100,43 @@ export const App = () => {
   };
 
   const [isLargerThan400] = useMediaQuery('(min-width: 480px)')
+  const [ref, inViewport] = useInView({rootMargin: '-150px'});
+  const [ref2, inViewport2] = useInView({rootMargin: '-150px'});
 
 
   return (
     <Container pb='9vh' minW='80vw' pt={isLargerThan400 ? "25vh" : "10vh"}>
       {isLargerThan400 ? 
       <Box pb='5vh'>
-        <Heading  textAlign={['left']} fontSize='6xl' pb='1vh' variant='page-title' position="relative">
-          Our History
-        </Heading>
+        <SlideFade in={inViewport}>
+          <Heading ref={ref} textAlign={['left']} fontSize='6xl' pb='1vh' variant='page-title' position="relative">
+            Our History
+          </Heading>
+        </SlideFade>
         <Divider borderColor='grey' w='100%'></Divider>
       </Box> : 
       <Box>
         <Center>
-          <Heading  textAlign={['left']} fontSize='6xl' pb='1vh' variant='page-title' position="relative">
-            Our History
-          </Heading>
+          <SlideFade in={inViewport}>
+            <Heading  textAlign={['left']} fontSize='6xl' pb='1vh' variant='page-title' position="relative">
+              Our History
+            </Heading>
+          </SlideFade>
         </Center>
       </Box>
     }
-      
-        <Box>
-          <Slider {...settings} ref={setSlider}>
-            {historyCardsData.map((data, index) => (
-                <HistoryCards key={index} data={data} onClick={handleItemClick} />
-              ))}
-          </Slider>
-          {selectedItem && (
-              <DetailModal item={selectedItem} onClose={handleCloseModal}></DetailModal>
-            )}
-        </Box>
+        <SlideFade in={inViewport2}>
+          <Box ref={ref2}>
+            <Slider {...settings} ref={setSlider}>
+              {historyCardsData.map((data, index) => (
+                  <HistoryCards key={index} data={data} onClick={handleItemClick} />
+                ))}
+            </Slider>
+            {selectedItem && (
+                <DetailModal item={selectedItem} onClose={handleCloseModal}></DetailModal>
+              )}
+          </Box>
+        </SlideFade>
     </Container>
   );
 };

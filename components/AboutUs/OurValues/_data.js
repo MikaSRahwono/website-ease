@@ -8,7 +8,7 @@ export const ourValuesCardsData = [
     {
       img: 'https://firebasestorage.googleapis.com/v0/b/website-ease.appspot.com/o/img%2FABOUTUS%2FEmpower-3.png?alt=media&token=45ec9920-935f-41b3-a8ca-ab37fbd90f51',
       title: 'EMPOWER',
-      desc: 'We, as an agency, are empowering brands to maximize their full potentials by visualizing their products through our product photography & videography services.',
+      desc: 'We help brands reach their full potential by showcasing their products using our photography and videography services.',
       
     },
     {
@@ -29,7 +29,7 @@ export const ourValuesCardsDatamd1 = [
   {
     img: 'https://firebasestorage.googleapis.com/v0/b/website-ease.appspot.com/o/img%2FABOUTUS%2FEmpower-3.png?alt=media&token=45ec9920-935f-41b3-a8ca-ab37fbd90f51',
     title: 'EMPOWER',
-    desc: 'We, as an agency, are empowering brands to maximize their full potentials by visualizing their products through our product photography & videography services.',
+    desc: 'We help brands reach their full potential by showcasing their products using our photography and videography services.',
     
   },
 ]

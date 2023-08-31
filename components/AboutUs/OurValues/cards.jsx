@@ -6,9 +6,7 @@ const OurValuesWrapper = (props) => {
   return (
     <Box 
       w="full"
-      minW='300'
-      minH='30vh'
-      mx="auto"
+      h={{base: '40vh', md: '38vh',lg: '38vh'}}      mx="auto"
       bg={'white'}
       pb="8"
       rounded="lg"
@@ -22,14 +20,14 @@ const OurValuesWrapper = (props) => {
 export const OurValuesCards = (props) => {
   const { img, desc, title,  ...rest } = props
   return (
-    <Box w="100%" maxW="xl">
+    <Box w={{sm: '100%', md: "100%"}} maxW="xl">
       <OurValuesWrapper backgroundColor={'white'}>
 
       {/* <Center>
         <Image pt='10' src={img} alt={name} w="30%" h="30%" objectFit="cover" />
       </Center> */}
         <Center>
-        <Flex h={{md: '25vh',lg: '30vh'}} direction="column" justify="center" mt={4} textAlign="center">
+        <Box mx='1vw' h={{base: '40vh', md: '38vh',lg: '38vh'}} direction="column" justify="center" mt={4} textAlign="center">
           <Center pb='2vh'>
             <Image boxSize='10vh' src={img}></Image>
           </Center>
@@ -39,7 +37,7 @@ export const OurValuesCards = (props) => {
           <Text fontFamily='Aileron' mt={2} color={'#000'} maxW="20rem" mx={['2', '2', 'auto']}>
             {desc}
           </Text>
-        </Flex>
+        </Box>
         </Center>
 
       </OurValuesWrapper>

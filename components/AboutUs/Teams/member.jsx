@@ -9,13 +9,13 @@ export const Member = (props) => {
   return (
     <Box>
     {isLargerThan400 ? 
-      <Box w={{md: '15vw', lg: "12vw"}} m={{md: '1vw', lg: '3vw'}}>
+      <Box m={{md: '1vw', lg: '1vw'}}>
         <Box pos="relative" >
           <Img
             pos="relative"
             alt={name}
-            w={{md: '15vw', lg: "12vw"}}
-            h={{md: '15vw', lg: "12vw"}}
+            w={{sm: '28vw', md: '20vw', lg: "22vw"}}
+            h={{sm: '28vw', md: '20vw', lg: "22vw"}}
             objectFit="cover"
             src={image}
           />
