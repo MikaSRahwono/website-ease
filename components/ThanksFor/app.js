@@ -1,54 +1,63 @@
-import {
-  Heading,
-  Box,
-  Text,
-  Image,
-  Grid,
-  Container,
-  VStack,
-  Center,
-  SlideFade
-} from "@chakra-ui/react";
+import React from "react";
+import { motion } from "framer-motion";
+import { Heading, Box, Text, Image, Grid, Container, VStack, Center } from "@chakra-ui/react";
 import { useInView } from 'react-intersection-observer'
 
 export const App = (params) => {
+  const [ref, inViewport1] = useInView({ rootMargin: '-20%' });
+  const [ref2, inViewport2] = useInView({ rootMargin: '-20%' });
 
-  const [ref, inViewport1] = useInView({rootMargin: '-20%'});
-  const [ref2, inViewport2] = useInView({rootMargin: '-20%'});
+  const animationVariants = {
+    hidden: { opacity: 0, y: -100 },
+    visible: { opacity: 1, y: 0 },
+  };
 
   return (
     <Box w="full" p={10} pb='5vh' color="#000">
       <Box alignItems={"center"} bg="white" p={5}>
         <Center>
-        <SlideFade in={inViewport1}>
-          <Heading
-            pb={{base:"10", sm:"10"}}
-            textAlign={"center"}
-            fontSize={{ base: "3vh" ,lg: "2vw", sm: "3vh" }}
-            fontWeight="extrabold"
-            mb={5}
-            ref={ref}
+          <motion.div
+            initial="hidden"
+            animate={inViewport1 ? "visible" : "hidden"}
+            variants={animationVariants}
+            transition={{ duration: 1.5, ease: "easeOut" }}
           >
-            THANK YOU FOR TRUSTING US
-          </Heading>
-          </SlideFade>
+            <Heading
+              pb={{ base: "10", sm: "10" }}
+              textAlign={"center"}
+              fontSize={{ base: "3vh", lg: "2vw", sm: "3vh" }}
+              fontWeight="extrabold"
+              mb={5}
+              ref={ref}
+            >
+              THANK YOU FOR TRUSTING US
+            </Heading>
+          </motion.div>
         </Center>
-        <SlideFade in={inViewport2}>
-        <Container maxW={{ base: "100vw", lg: "60vw", sm: "100vw" }} ref={ref2}>
-          <Grid
-            templateColumns={{ base: "repeat(2, 1fr)", md: "repeat(3, 1fr)" }}
-            templateAreas={{
-              base: `
+        <motion.div
+          initial="hidden"
+          animate={inViewport2 ? "visible" : "hidden"}
+          variants={animationVariants}
+          transition={{ duration: 1.5, ease: "easeOut" }}
+        >
+          <Container maxW={{ base: "100vw", lg: "60vw", sm: "100vw" }} ref={ref2}>
+            <Grid
+              templateColumns={{ base: "repeat(2, 1fr)", md: "repeat(3, 1fr)" }}
+              templateAreas={{
+                base: `
                       "first second"
                       "third third"
                     `,
-              md: `
+                md: `
                       "first second third"
                     `,
-            }}
-            gap={10}
-            justifyItems="center"
-          >
+              }}
+              gap={10}
+              justifyItems="center"
+            >
+
+
+
             <Box gridArea="first">
               <VStack>
                 <Image
@@ -94,11 +103,10 @@ export const App = (params) => {
                 </Text>
               </VStack>
             </Box>
-          </Grid>
-        </Container>
-        </SlideFade>
+              </Grid>
+          </Container>
+        </motion.div>
       </Box>
     </Box>
   );
-
 };
