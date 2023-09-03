@@ -1,12 +1,16 @@
 import React from 'react';
-import { SimpleGrid, Box, Heading, Text, useColorModeValue as mode, useMediaQuery, Center, Container } from '@chakra-ui/react';
+import { SimpleGrid, Box, Heading, Text, useColorModeValue as mode, useMediaQuery, Center, Container, SlideFade } from '@chakra-ui/react';
 import { OurValuesCards } from './cards';
 import 'react-multi-carousel/lib/styles.css';
 import { ourValuesCardsData, ourValuesCardsDatamd1, ourValuesCardsDatamd2 } from './_data';
+import { useInView } from 'react-intersection-observer';
 
 export const App = () => {
-  const [isLargerThan400] = useMediaQuery('(min-width: 480px)')
+  const [isLargerThan400] = useMediaQuery('(min-width: 540px)')
   const [isLargerThan992] = useMediaQuery('(min-width: 990px)')
+
+  const [ref, inViewport] = useInView({rootMargin: '-25%'});
+  const [ref2, inViewport2] = useInView({rootMargin: '-25%'});
 
   return (
     <Box     
@@ -26,7 +30,9 @@ export const App = () => {
         }}
       >
         {isLargerThan400 ?
+        <SlideFade in={inViewport}>
          <Heading
+         ref={ref}
          as='h1'
          size='2xl'
          fontFamily={'Aileron'}
@@ -39,7 +45,11 @@ export const App = () => {
        >
          Our Values
        </Heading>
-        : <Heading
+       </SlideFade>
+        : 
+        <SlideFade in={inViewport}>
+        <Heading
+        ref={ref}
         as='h1'
         size='2xl'
         fontFamily={'Aileron'}
@@ -51,10 +61,12 @@ export const App = () => {
         pt='9vh'
       >
         Our Values
-      </Heading>}
+      </Heading>
+      </SlideFade>
+      }
        
-
-        <Box position="relative">
+        <SlideFade in={inViewport2}>
+        <Box position="relative" ref={ref2}>
           {isLargerThan400 ? 
           isLargerThan992 ?
           <SimpleGrid
@@ -88,7 +100,7 @@ export const App = () => {
                 base: 2,
               }}
               spacing={{
-                base: '8',
+                base: '10',
                 md: '10',
                 lg: '8',
               }}
@@ -130,8 +142,8 @@ export const App = () => {
           <OurValuesCards key={index} {...data} />
         ))}
       </SimpleGrid>}
-          
-        </Box>
+      </Box>
+      </SlideFade>
       </Box>
     </Box>
   );
