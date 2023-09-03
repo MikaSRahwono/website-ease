@@ -13,7 +13,7 @@ const LogoBox = styled.span`
 export function Logo() {
   return (
       <LogoBox>
-        <Image src={"/img/easelogo/whitetrans.png"} width={200} height={10} alt="logo" />
+        <Image src={"/img/easelogo/whitetrans.png"} width={200} height={200} alt="logo" />
       </LogoBox>
   );
 }

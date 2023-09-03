@@ -13,10 +13,9 @@ import { Logo } from './Logo'
 import { SocialLink } from './SocialLink'
 import { links, socialLinks } from './_data'
 import { LinkGroup } from './LinkGroup'
-import { SubscribeForm } from './SubscribeForm'
 
 export const App = () => (
-  <Box as="footer" bg={mode('gray.50', 'gray.900')}>
+  <Box as="footer" bg={'gray.900'} color={'white'}>
     <Box
       maxW={{
         base: 'xl',
@@ -87,21 +86,6 @@ export const App = () => (
             lg: 0,
           }}
         >
-          <Text
-            casing="uppercase"
-            mb={{
-              base: 6,
-              lg: 10,
-            }}
-            fontWeight="bold"
-            letterSpacing="wide"
-          >
-            Daftarkan Email Newsletter Anda!
-          </Text>
-          <Text lineHeight="tall">
-            Ayo daftarkan email anda untuk mendapatkan informasi mengenai promo, diskon, dan produk terbaru dari kami!
-          </Text>
-          <SubscribeForm />
         </Box>
       </Flex>
 
@@ -177,7 +161,7 @@ const Heart = () => (
   <Box
     display="inline-block"
     mx="1"
-    color={mode('blue.500', 'blue.300')}
+    color={'blue.300'}
     fontSize="xs"
     role="img"
     aria-label="Love"

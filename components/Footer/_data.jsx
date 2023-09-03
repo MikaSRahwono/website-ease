@@ -1,4 +1,3 @@
-import { Badge } from '@chakra-ui/react'
 import * as React from 'react'
 import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter, FaWhatsapp } from 'react-icons/fa'
 
@@ -8,19 +7,19 @@ export const links = [
     links: [
       {
         label: 'Company Profile',
-        href: '#',
+        href: '/about',
       },
       {
         label: 'History',
-        href: '#',
+        href: '/about',
       },
       {
         label: 'Vision and Mission',
-        href: '#',
+        href: '/about',
       },
       {
         label: 'Our Team',
-        href: '#',
+        href: '/about',
       },
     ],
   },
@@ -29,15 +28,15 @@ export const links = [
     links: [
       {
         label: 'Creative Service',
-        href: '#',
+        href: '/services/creative',
       },
       {
         label: 'Studio Service',
-        href: '#',
+        href: '/services/studio',
       },
       {
         label: 'Zoom Service',
-        href: '#',
+        href: '/services/zoom',
       },
     ],
   },
@@ -46,19 +45,19 @@ export const links = [
     links: [
       {
         label: 'Our Recent Projects',
-        href: '#',
+        href: '/portfolio',
       },
       {
         label: 'Creative Projects',
-        href: '#',
+        href: '/projects/live',
       },
       {
         label: 'Studio Projects',
-        href: '#',
+        href: '/projects/studio',
       },
       {
         label: 'Zoom Projects',
-        href: '#',
+        href: '/projects/zoom',
       },
     ],
   },
@@ -76,21 +75,11 @@ export const socialLinks = [
   {
     label: 'Whatsapp',
     icon: <FaWhatsapp />,
-    href: '#',
+    href: 'https://wa.me/message/U7HG5VRQIVVDJ1',
   },
   {
     label: 'Instagram',
     icon: <FaInstagram />,
-    href: '#',
-  },
-  {
-    label: 'LinkedIn',
-    icon: <FaLinkedin />,
-    href: '#',
-  },
-  {
-    label: 'Twitter',
-    icon: <FaTwitter />,
     href: '#',
   },
 ]

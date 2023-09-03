@@ -4,23 +4,21 @@ import { Heading, Box, Text, Image, Grid, Container, VStack, Center } from "@cha
 import { useInView } from 'react-intersection-observer'
 
 export const App = (params) => {
-  const [ref, inViewport1] = useInView({ rootMargin: '-20%' });
-  const [ref2, inViewport2] = useInView({ rootMargin: '-20%' });
-
-  const animationVariants = {
-    hidden: { opacity: 0, y: -100 },
-    visible: { opacity: 1, y: 0 },
-  };
+  
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
 
   return (
-    <Box w="full" p={10} pb='5vh' color="#000">
+    <Box w="full" p={10} pb='9vh' color="#000">
       <Box alignItems={"center"} bg="white" p={5}>
         <Center>
           <motion.div
-            initial="hidden"
-            animate={inViewport1 ? "visible" : "hidden"}
-            variants={animationVariants}
-            transition={{ duration: 1.5, ease: "easeOut" }}
+            initial={{ opacity: 0, y: -100 }}
+            animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: -100 }}
+            exit={{ opacity: 0, y: -100 }}
+            transition={{ duration: 1, ease: "easeOut" }}
           >
             <Heading
               pb={{ base: "10", sm: "10" }}
@@ -35,12 +33,12 @@ export const App = (params) => {
           </motion.div>
         </Center>
         <motion.div
-          initial="hidden"
-          animate={inViewport2 ? "visible" : "hidden"}
-          variants={animationVariants}
-          transition={{ duration: 1.5, ease: "easeOut" }}
+          initial={{ opacity: 0, y: -100 }}
+          animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: -100 }}
+          exit={{ opacity: 0, y: -100 }}
+          transition={{ duration: 1, ease: "easeOut" }}
         >
-          <Container maxW={{ base: "100vw", lg: "60vw", sm: "100vw" }} ref={ref2}>
+          <Container maxW={{ base: "100vw", lg: "60vw", sm: "100vw" }} ref={ref}>
             <Grid
               templateColumns={{ base: "repeat(2, 1fr)", md: "repeat(3, 1fr)" }}
               templateAreas={{

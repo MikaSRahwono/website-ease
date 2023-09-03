@@ -22,9 +22,18 @@ export const App = () => {
   const [sliderIndex, setSliderIndex] = useState(0);
   const sliderRef = useRef(null);
 
-  const [ref, inViewport1] = useInView({ rootMargin: "-10%" });
-  const [ref2, inViewport2] = useInView({ rootMargin: "-10%" });
-  const [ref3, inViewport3] = useInView({ rootMargin: "-20%" });
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+    threshold: 0.2,
+  });
+  const [ref2, inView2] = useInView({
+    triggerOnce: true,
+    threshold: 0.2,
+  });
+  const [ref3, inView3] = useInView({
+    triggerOnce: true,
+    threshold: 0.2,
+  });
 
   const CustomArrow = ({ direction, onClick }) => {
     return (
@@ -124,8 +133,9 @@ export const App = () => {
       <Center>
         <motion.div
           initial={{ opacity: 0, y: -100 }}
-          animate={inViewport1 ? { opacity: 1, y: 0 } : { opacity: 0, y: -100 }}
-          transition={{ duration: 1.5, ease: "easeOut" }}
+          animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: -100 }}
+          exit={{ opacity: 0, y: -100 }}
+          transition={{ duration: 1, ease: "easeOut" }}
         >
           <Heading
             pb={{ base: "10", sm: "10" }}
@@ -143,8 +153,9 @@ export const App = () => {
       <Center>
         <motion.div
           initial={{ opacity: 0, y: -100 }}
-          animate={inViewport2 ? { opacity: 1, y: 0 } : { opacity: 0, y: -100 }}
-          transition={{ duration: 1.5, ease: "easeOut" }}
+          animate={inView2 ? { opacity: 1, y: 0 } : { opacity: 0, y: -100 }}
+          exit={{ opacity: 0, y: -100 }}
+          transition={{ duration: 1, ease: "easeOut" }}
         >
           <HStack mb={{ base: "20px", sm: "30px" }} spacing={{ base: 6, sm: 10 }} mt={2} ref={ref2}>
             <Button
@@ -180,8 +191,9 @@ export const App = () => {
       <Center>
         <motion.div
           initial={{ opacity: 0, y: -100 }}
-          animate={inViewport3 ? { opacity: 1, y: 0 } : { opacity: 0, y: -100 }}
-          transition={{ duration: 1.5, ease: "easeOut" }}
+          animate={inView3 ? { opacity: 1, y: 0 } : { opacity: 0, y: -100 }}
+          exit={{ opacity: 0, y: -100 }}
+          transition={{ duration: 1, ease: "easeOut" }}
         >
           <Container maxW={{ base: "sm", lg: "60vw", sm: "100vw" }} ref={ref3}>
             <Box

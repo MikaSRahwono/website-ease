@@ -4,7 +4,7 @@ import { Container, Stack, Image, Box, Text } from "@chakra-ui/react";
 import { useInView } from 'react-intersection-observer';
 
 export const App = (params) => {
-  const type = params.type;
+  
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.2,
@@ -16,7 +16,7 @@ export const App = (params) => {
       animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: -100 }}
       exit={{ opacity: 0, y: -100 }}
       
-      transition={{ duration: 2, ease: "easeOut" }} // Menyesuaikan durasi dan easing
+      transition={{ duration: 2, ease: "easeOut" }}
     >
       <Container padding={{ base: '10px', md: '90px' }} maxW={{ base: '90vw', sm: "80vw", lg: "100vw", md: "100vw" }} color='black'>
         <Stack
