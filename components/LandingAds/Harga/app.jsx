@@ -19,6 +19,11 @@ export default function Harga() {
     threshold: 0.2,
   });
 
+  const [ref4, inView4] = useInView({
+    triggerOnce: false,
+    threshold: 0.2,
+  });
+
   return (
     <Box bgImage={"/img/ads/bgprice.png"} bgSize={"cover"} py='10vh' >
 
@@ -85,7 +90,13 @@ export default function Harga() {
 
             </motion.div>
 
-            <Box pt="2rem">
+            <motion.div
+              initial={{ opacity: 0, y: -100 }}
+              animate={inView4 ? { opacity: 1, y: 0 } : { opacity: 0, y: -100 }}
+              exit={{ opacity: 0, y: -100 }}
+              transition={{ duration: 1, ease: "easeOut" }}
+            >
+            <Box ref={ref4} pt="2rem">
             <Button
                 colorScheme="white"
                 color="black"
@@ -99,6 +110,7 @@ export default function Harga() {
             Pesan Sekarang!
             </Button>
             </Box>
+            </motion.div>
 
 
 
