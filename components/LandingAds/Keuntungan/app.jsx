@@ -1,8 +1,19 @@
 import { Box, Container, Text, Heading, Center, Stack, Card, HStack, Image, VStack, useMediaQuery } from "@chakra-ui/react";
-
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 export default function Keuntungan() {
   const [isLargerThan400] = useMediaQuery('(min-width: 480px)')
+
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+
+  const [ref2, inView2] = useInView({
+    triggerOnce: false,
+    threshold: 0.1,
+  });
 
   return (
     <Box 
@@ -11,23 +22,37 @@ export default function Keuntungan() {
         <Box
           >
             <VStack
-
               spacing={4}
               align="center"
               w={{ base: '95vw', lg: '60vw'}}
               p={{base: '1.5rem',md: "2rem"}}
               textAlign={'center'}
             >
+              <motion.div
+              initial={{ opacity: 0, y: -100 }}
+              animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: -100 }}
+              exit={{ opacity: 0, y: -100 }}
+              transition={{ duration: 1, ease: "easeOut" }}
+            >
               <Heading
                 fontFamily="Aileron"
                 fontWeight={"bold"}
                 fontSize={{ base: "2xl", md: "3xl", lg: "3xl" }}
                 pb={{base: '1rem', md: '2rem'}}
+                ref={ref}
               >
                 Keuntungan apa aja sih kalo foto produk kamu meyakinkan?
               </Heading>
+              </motion.div>
               {isLargerThan400 ? 
-              <HStack spacing="24px">
+              <motion.div
+              initial={{ opacity: 0, y: -100 }}
+              animate={inView2 ? { opacity: 1, y: 0 } : { opacity: 0, y: -100 }}
+              exit={{ opacity: 0, y: -100 }}
+              transition={{ duration: 1.5, ease: "easeOut" }}
+            >
+              <HStack spacing="24px" ref={ref2}>
+                
                 <Card
                     color='black'
                     bgColor='white'
@@ -120,6 +145,7 @@ export default function Keuntungan() {
                     </Center>
                 </Card>
               </HStack>
+              </motion.div>
               : 
               
               <HStack>

@@ -6,7 +6,7 @@ import { useInView } from 'react-intersection-observer'
 export const App = (params) => {
   
   const [ref, inView] = useInView({
-    triggerOnce: true,
+    triggerOnce: false,
     threshold: 0.1,
   });
 
@@ -18,7 +18,7 @@ export const App = (params) => {
             initial={{ opacity: 0, y: -100 }}
             animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: -100 }}
             exit={{ opacity: 0, y: -100 }}
-            transition={{ duration: 1, ease: "easeOut" }}
+            transition={{ duration: 1.5, ease: "easeOut" }}
           >
             <Heading
               pb={{ base: "10", sm: "10" }}

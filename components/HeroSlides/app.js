@@ -40,6 +40,7 @@ export const App = (props) => {
           justifyContent="center"
           fontFamily="Aileron"
           bgImage={slide.bground}
+          color="black"
         >
           <Box
             pt={{ base: "10vh !important", sm: "20vh !important" }}

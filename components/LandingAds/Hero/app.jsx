@@ -1,8 +1,16 @@
 import { Box, Container, Text, Heading, Center, Stack } from "@chakra-ui/react";
-import { FaInstagram, FaWhatsapp } from 'react-icons/fa';
+import { motion } from "framer-motion";
 
 export default function Hero() {
+
+  const animationVariants = {
+    hidden: { opacity: 0, y: -100 },
+    visible: { opacity: 1, y: 0 },
+  };
+
+
   return (
+    
     <Box
       bgImage="url(https://firebasestorage.googleapis.com/v0/b/website-ease.appspot.com/o/img%2FLandingAds%2Fcoverrr.png?alt=media&token=6d66efdc-cd0f-4ce5-bfaa-0e651aa2f4ee)"
       bgSize={"cover"}
@@ -35,6 +43,12 @@ export default function Hero() {
             zIndex="1"
             textAlign="center"
           >
+            <motion.div
+              initial="hidden"
+              animate="visible"
+              variants={animationVariants}
+              transition={{ duration: 1.5, ease: "easeOut" }}
+            >
             <Box bg="black" color="white" p="1rem" borderRadius="8px"> {/* Background warna biru dan padding */}
               <Heading
                 className="custom-heading"
@@ -44,7 +58,14 @@ export default function Hero() {
                 JASA FOTO & VIDEO PRODUK
               </Heading>
             </Box>
+            </motion.div>
 
+            <motion.div
+              initial="hidden"
+              animate="visible"
+              variants={animationVariants}
+              transition={{ duration: 2, ease: "easeOut" }}
+            >
             <Box p="1rem" borderRadius="8px"> {/* Background warna biru dan padding */}
               <Heading
                 fontFamily="Aileron"
@@ -53,7 +74,14 @@ export default function Hero() {
                 HASILKAN OMSET BISNIS MU DARI FOTO PRODUK YANG PROFESSIONAL!
               </Heading>
             </Box>
+            </motion.div>
 
+            <motion.div
+              initial="hidden"
+              animate="visible"
+              variants={animationVariants}
+              transition={{ duration: 2, ease: "easeOut" }}
+            >
             <Text
               fontFamily="Aileron"
               fontSize={{ base: "l", md: "2xl", lg: "xl" }}
@@ -61,6 +89,7 @@ export default function Hero() {
             >
               Foto produk yang estetik dan professional dapat meningkatkan brand trust, brand loyalty, dan product value
             </Text>
+            </motion.div>
           </Stack>
         </Box>
       </Center>

@@ -23,15 +23,15 @@ export const App = () => {
   const sliderRef = useRef(null);
 
   const [ref, inView] = useInView({
-    triggerOnce: true,
+    triggerOnce: false,
     threshold: 0.2,
   });
   const [ref2, inView2] = useInView({
-    triggerOnce: true,
+    triggerOnce: false,
     threshold: 0.2,
   });
   const [ref3, inView3] = useInView({
-    triggerOnce: true,
+    triggerOnce: false,
     threshold: 0.2,
   });
 
