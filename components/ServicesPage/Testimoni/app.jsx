@@ -8,6 +8,8 @@ import { zoom } from './_data'
 import { ChevronRightIcon, ChevronLeftIcon } from '@chakra-ui/icons'
 import { Testimonial } from './testimonial'
 import { useInView } from 'react-intersection-observer'
+import { motion } from "framer-motion";
+
 
 export const App = () => {
 
@@ -87,20 +89,36 @@ export const App = () => {
       },
     ],
   };
-  const [ref2, inViewport2] = useInView({rootMargin: '-50%'});
-  const [ref, inViewport] = useInView({rootMargin: '-50px'});
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+    threshold: 0.8,
+  });
+  const [ref2, inView2] = useInView({
+    triggerOnce: true,
+    threshold: 0.3,
+  });
 
 
   return (
     <Box w='full' mt='10vh'>
-      <SlideFade in={inViewport}>
+      <motion.div
+          initial={{ opacity: 0, y: -100 }}
+          animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: -100 }}
+          exit={{ opacity: 0, y: -100 }}
+          transition={{ duration: 1, ease: "easeOut" }}
+        >   
         <Center ref={ref} mb='6vh'>
             <Heading color='black'>
                 Apa Kata Mereka?
             </Heading>
         </Center>
-      </SlideFade>
-      <SlideFade in={inViewport2}>
+      </motion.div>
+      <motion.div
+        initial={{ opacity: 0, y: -100 }}
+        animate={inView2 ? { opacity: 1, y: 0 } : { opacity: 0, y: -100 }}
+        exit={{ opacity: 0, y: -100 }}
+        transition={{ duration: 1, ease: "easeOut" }}
+      >   
         <Box ref={ref2} w='full'>
           <Slider {...settings} ref={setSlider}>
           {zoom.map((data, index) => (
@@ -108,7 +126,7 @@ export const App = () => {
             ))}
           </Slider>
         </Box>
-      </SlideFade>
+      </motion.div>
     </Box>
   );
 };

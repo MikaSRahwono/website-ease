@@ -3,12 +3,20 @@ import * as React from 'react'
 import { Member } from './member'
 import { members } from './_data'
 import { useInView } from 'react-intersection-observer'
+import { motion } from "framer-motion";
+
 
 export const App = () => {
   const [isLargerThan400] = useMediaQuery('(min-width: 900px)')
 
-  const [ref, inViewport] = useInView({rootMargin: '-35%'});
-  const [ref2, inViewport2] = useInView({rootMargin: '-40%'});
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+    threshold: 0.8,
+  });
+  const [ref2, inView2] = useInView({
+    triggerOnce: true,
+    threshold: 0.2,
+  });
 
   return (
     <Box as="section" pt='10vh' px='5vw' pb={{base: "10vh"}}>
@@ -61,7 +69,14 @@ export const App = () => {
           </HStack>
       :  */}
       <VStack>
-        <Box
+          <motion.div
+            initial={{ opacity: 0, y: -100 }}
+            animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: -100 }}
+            exit={{ opacity: 0, y: -100 }}
+            transition={{ duration: 1, ease: "easeOut" }}
+          >   
+          <Box
+          ref={ref}
               w='100%'
               px={{
                 base: '6',
@@ -83,7 +98,14 @@ export const App = () => {
                 Meet our team
               </Heading>
             </Box>
-            <Box>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: -100 }}
+            animate={inView2 ? { opacity: 1, y: 0 } : { opacity: 0, y: -100 }}
+            exit={{ opacity: 0, y: -100 }}
+            transition={{ duration: 1, ease: "easeOut" }}
+          >   
+            <Box ref={ref2}>
               <SimpleGrid
                 columns={{
                   base: 2,
@@ -101,6 +123,7 @@ export const App = () => {
                   ))}
               </SimpleGrid>
             </Box>
+          </motion.div>
         </VStack>
     </Box>
   )

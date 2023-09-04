@@ -1,4 +1,4 @@
-import { Box, Flex, Center, Text, Image, Icon } from '@chakra-ui/react'
+import { Box, Flex, Center, Text, Image, Icon, VStack } from '@chakra-ui/react'
 
 const OurValuesWrapper = (props) => {
   const { ...rest } = props
@@ -28,15 +28,19 @@ export const OurValuesCards = (props) => {
       </Center> */}
         <Center>
         <Box mx='1vw' h={{base: '40vh', md: '38vh',lg: '38vh'}} direction="column" justify="center" mt={4} textAlign="center">
-          <Center pb='2vh'>
-            <Image alt='easeyourneeds' boxSize='10vh' src={img}></Image>
+          <Center h={{base: '35vh', md: '30vh',lg: '30vh'}}>
+            <VStack>
+              <Center pb='2vh'>
+                <Image alt='easeyourneeds' boxSize='10vh' src={img}></Image>
+              </Center>
+              <Text color={'#000'} fontFamily='Aileron' fontSize="2xl" fontWeight="bold">
+                {title}
+              </Text>
+              <Text fontFamily='Aileron' mt={2} color={'#000'} maxW="20rem" mx={['2', '2', 'auto']}>
+                {desc}
+              </Text>
+            </VStack>
           </Center>
-          <Text color={'#000'} fontFamily='Aileron' fontSize="2xl" fontWeight="bold">
-            {title}
-          </Text>
-          <Text fontFamily='Aileron' mt={2} color={'#000'} maxW="20rem" mx={['2', '2', 'auto']}>
-            {desc}
-          </Text>
         </Box>
         </Center>
 

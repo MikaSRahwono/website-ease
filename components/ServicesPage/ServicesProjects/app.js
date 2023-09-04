@@ -16,6 +16,7 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { ChevronRightIcon, ChevronLeftIcon } from '@chakra-ui/icons'
 import { useInView } from 'react-intersection-observer';
+import { motion } from "framer-motion";
 
 
 export const App = (props) => {
@@ -24,13 +25,18 @@ export const App = (props) => {
 
   const [slider, setSlider] = useState(null)
 
-  const [ref, inViewport] = useInView({rootMargin: '-150px'});
-  const [ref2, inViewport2] = useInView({rootMargin: '-150px'});
-  const [ref3, inViewport3] = useInView({rootMargin: '-150px'});
-
-
-
-  console.log(inViewport)
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+    threshold: 0.7,
+  });
+  const [ref2, inView2] = useInView({
+    triggerOnce: true,
+    threshold: 0.8,
+  });
+  const [ref3, inView3] = useInView({
+    triggerOnce: true,
+    threshold: 0.9,
+  });
 
   const CustomArrow = ({ direction, onClick }) => {
     return (
@@ -108,21 +114,36 @@ export const App = (props) => {
     <Center color='#000' w='90vw' >
       {isLargerThan400 ? <HStack>
         <Box  maxW="30vw">
-          <SlideFade in={inViewport}>
+          <motion.div
+            initial={{ opacity: 0, y: -100 }}
+            animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: -100 }}
+            exit={{ opacity: 0, y: -100 }}
+            transition={{ duration: 1, ease: "easeOut" }}
+          >     
             <Box ref={ref}>
               <Text fontSize='4xl' fontWeight='extrabold' noOfLines={2}>Recent</Text>
               <Text fontSize='4xl' fontWeight='extrabold'>Projects</Text>
             </Box>
-          </SlideFade>
+          </motion.div>
           <Box h={10}></Box>
-          <SlideFade in={inViewport2}>
+          <motion.div
+            initial={{ opacity: 0, y: -100 }}
+            animate={inView2 ? { opacity: 1, y: 0 } : { opacity: 0, y: -100 }}
+            exit={{ opacity: 0, y: -100 }}
+            transition={{ duration: 1, ease: "easeOut" }}
+          >     
             <Text ref={ref2} fontSize={{base: 'sm', md: 'md'}}>
             These are a glimpse of our recent projects, where creativity and innovation have come together to deliver extraordinary results. From the moment we embark on a new venture, our passion for excellence drives us to create experiences that captivate, inspire, and leave a lasting impression.
             </Text>
-          </SlideFade>
-          <SlideFade in={inViewport3}>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: -100 }}
+            animate={inView3 ? { opacity: 1, y: 0 } : { opacity: 0, y: -100 }}
+            exit={{ opacity: 0, y: -100 }}
+            transition={{ duration: 1, ease: "easeOut" }}
+          >     
             <Button  ref={ref3} mt='3vh' variant='solid' bg='#DAC17F' _hover={{bg: '#CBAD5C'}}>Lihat Project Kami!</Button>
-          </SlideFade>
+          </motion.div>
         </Box>
         <Box w='5vw'></Box>
         <Box w="50vw">

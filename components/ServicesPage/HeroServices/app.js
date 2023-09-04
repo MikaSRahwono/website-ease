@@ -13,6 +13,8 @@ import { use, useRef, useState } from "react";
 import { slides } from "./_data";
 import Slider from "react-slick";
 import { useInView } from "react-intersection-observer";
+import { motion } from "framer-motion";
+
 
 export const App = ({hero}) => {
   var slide = {}
@@ -32,7 +34,10 @@ export const App = ({hero}) => {
     autoplaySpeed: 5000,
     dots:true, 
   };
-  const [ref, inViewport] = useInView({rootMargin: '-150px'});
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+    threshold: 0.5,
+  });
 
 
   return (
@@ -46,7 +51,12 @@ export const App = ({hero}) => {
         color={slide.clor}
         bgImage = {slide.bground}
       >
-        <SlideFade in={useInView}>
+        <motion.div
+          initial={{ opacity: 0, y: -100 }}
+          animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: -100 }}
+          exit={{ opacity: 0, y: -100 }}
+          transition={{ duration: 1, ease: "easeOut" }}
+        >      
           <Box ref={ref} fontFamily="Aileron" pl={{ base: "50px", md: '10vw', lg: "9vw" }} pr={{ base: "50px", md: '0', lg: "5vw" }} pt={{base:'15vh', md: '12vh', lg: '14vh'}}>
             <Stack
               spacing={{ base: 1, sm: "0" }}
@@ -104,7 +114,7 @@ export const App = ({hero}) => {
               </Box>
             </Stack>
           </Box>
-        </SlideFade>
+          </motion.div>
       </Flex>
     </Slider>
   );
