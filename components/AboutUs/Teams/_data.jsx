@@ -1,5 +1,21 @@
 export const members = [
   {
+    role: 'CEO',
+    image: '/img/aboutus/team/nanda.jpg',
+    name: 'Nanda Najmi',
+    twitter: '#',
+    linkedin: '#',
+    description: ' Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor',
+  },
+  {
+    role: 'PA to CEO',
+    image: '/img/aboutus/team/ulfa.jpg',
+    name: 'Siti Maria',
+    twitter: '#',
+    linkedin: '#',
+    description: ' Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor',
+  },
+  {
     role: 'Operational Admin',
     image: '/img/aboutus/team/amalia.jpg',
     name: 'Amalia Utami',

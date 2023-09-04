@@ -9,6 +9,8 @@ import { historyCardsData } from './_data'
 import { ChevronRightIcon, ChevronLeftIcon } from '@chakra-ui/icons'
 import { PrevArrow, NextArrow } from 'react-slick'
 import { useInView } from 'react-intersection-observer'
+import { motion } from "framer-motion";
+
 
 export const App = () => {
 
@@ -100,32 +102,53 @@ export const App = () => {
   };
 
   const [isLargerThan400] = useMediaQuery('(min-width: 480px)')
-  const [ref, inViewport] = useInView({rootMargin: '-150px'});
-  const [ref2, inViewport2] = useInView({rootMargin: '-150px'});
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+    threshold: 0.8,
+  });
+  const [ref2, inView2] = useInView({
+    triggerOnce: true,
+    threshold: 0.4,
+  });
 
 
   return (
     <Container pb='9vh' minW='80vw' pt={isLargerThan400 ? "25vh" : "10vh"}>
       {isLargerThan400 ? 
       <Box pb='5vh'>
-        <SlideFade in={inViewport}>
+        <motion.div
+            initial={{ opacity: 0, y: -100 }}
+            animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: -100 }}
+            exit={{ opacity: 0, y: -100 }}
+            transition={{ duration: 1, ease: "easeOut" }}
+          >   
           <Heading ref={ref} textAlign={['left']} fontSize='6xl' pb='1vh' variant='page-title' position="relative">
             Our History
           </Heading>
-        </SlideFade>
+        </motion.div>
         <Divider borderColor='grey' w='100%'></Divider>
       </Box> : 
       <Box>
         <Center>
-          <SlideFade in={inViewport}>
-            <Heading  textAlign={['left']} fontSize='6xl' pb='1vh' variant='page-title' position="relative">
+        <motion.div
+            initial={{ opacity: 0, y: -100 }}
+            animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: -100 }}
+            exit={{ opacity: 0, y: -100 }}
+            transition={{ duration: 1, ease: "easeOut" }}
+          >   
+            <Heading ref={ref} textAlign={['left']} fontSize='6xl' pb='1vh' variant='page-title' position="relative">
               Our History
             </Heading>
-          </SlideFade>
+          </motion.div>
         </Center>
       </Box>
     }
-        <SlideFade in={inViewport2}>
+        <motion.div
+            initial={{ opacity: 0, y: -100 }}
+            animate={inView2 ? { opacity: 1, y: 0 } : { opacity: 0, y: -100 }}
+            exit={{ opacity: 0, y: -100 }}
+            transition={{ duration: 1, ease: "easeOut" }}
+          >   
           <Box ref={ref2}>
             <Slider {...settings} ref={setSlider}>
               {historyCardsData.map((data, index) => (
@@ -136,7 +159,7 @@ export const App = () => {
                 <DetailModal item={selectedItem} onClose={handleCloseModal}></DetailModal>
               )}
           </Box>
-        </SlideFade>
+        </motion.div>
     </Container>
   );
 };

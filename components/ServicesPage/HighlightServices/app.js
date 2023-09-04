@@ -13,6 +13,7 @@ import { FaWhatsapp } from "react-icons/fa";
 import { creative, zoom, studio } from "./_data";
 import Link from "next/link";
 import { useInView } from "react-intersection-observer";
+import { motion } from "framer-motion";
 
 export const App = ({service}) => {
     var data = {}
@@ -24,8 +25,14 @@ export const App = ({service}) => {
         data = zoom
     }
     const [isLargerThan400] = useMediaQuery('(min-width: 400px)')
-    const [ref2, inViewport2] = useInView({rootMargin: '-10%'});
-    const [ref, inViewport] = useInView({rootMargin: '-10%'});
+    const [ref, inView] = useInView({
+        triggerOnce: true,
+        threshold: 0.9,
+      });
+      const [ref2, inView2] = useInView({
+        triggerOnce: true,
+        threshold: 0.9,
+      });
 
     return (
         <Box 
@@ -50,17 +57,27 @@ export const App = ({service}) => {
                     p='5vw'
                     justifyContent={'center'}
                 > 
-                    <SlideFade in={inViewport2}>
-                        <Text ref={ref2} fontSize={{base: 'xl',md: '2xl'}} fontWeight='bold'>
+                    <motion.div
+                        initial={{ opacity: 0, y: -100 }}
+                        animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: -100 }}
+                        exit={{ opacity: 0, y: -100 }}
+                        transition={{ duration: 1, ease: "easeOut" }}
+                        >        
+                        <Text ref={ref} fontSize={{base: 'xl',md: '2xl'}} fontWeight='bold'>
                             {data.title}
                         </Text>
-                    </SlideFade>
-                    <SlideFade in={inViewport}>
-                        <Button ref={ref} bg='#7FCAD7' _hover={{background:"#96DDE9"}} h='5vh' mt='5vh'>
+                    </motion.div>
+                    <motion.div
+                        initial={{ opacity: 0, y: -100 }}
+                        animate={inView2 ? { opacity: 1, y: 0 } : { opacity: 0, y: -100 }}
+                        exit={{ opacity: 0, y: -100 }}
+                        transition={{ duration: 1, ease: "easeOut" }}
+                        >   
+                        <Button ref={ref2} bg='#7FCAD7' _hover={{background:"#96DDE9"}} h='5vh' mt='5vh'>
                             <FaWhatsapp/>
                             <Link href={data.whatsapp} pl='1vw'>Hubungi Kami!</Link>
                         </Button>
-                    </SlideFade>
+                    </motion.div>
 
                 </Box>
             <Stack

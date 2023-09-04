@@ -1,10 +1,18 @@
 import { Accordion, AccordionItem, AccordionButton, AccordionPanel, AccordionIcon, Box, Center, Heading, Text, SlideFade } from '@chakra-ui/react'
 import { studio, creative, zoom } from './_data'
 import { useInView } from 'react-intersection-observer'
+import { motion } from "framer-motion";
+
 
 export const App = ({data}) => {
-    const [ref2, inViewport2] = useInView({rootMargin: '-200px'});
-    const [ref, inViewport] = useInView({rootMargin: '-200px'});
+    const [ref, inView] = useInView({
+        triggerOnce: true,
+        threshold: 0.9,
+      });
+      const [ref2, inView2] = useInView({
+        triggerOnce: true,
+        threshold: 0.6,
+      });
 
     var faqs
     if (data == "studio") {faqs = studio}
@@ -15,14 +23,24 @@ export const App = ({data}) => {
 
     return (
         <Box color='#2f2f2f'>
-            <SlideFade in={inViewport}>
+            <motion.div
+                initial={{ opacity: 0, y: -100 }}
+                animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: -100 }}
+                exit={{ opacity: 0, y: -100 }}
+                transition={{ duration: 1, ease: "easeOut" }}
+            >   
                 <Center ref={ref}>
                     <Heading textAlign='center' fontSize={{base: '3xl', md: '4xl'}}>
                         Frequently Asked Questions
                     </Heading>
                 </Center>
-            </SlideFade>
-            <SlideFade in={inViewport2}>
+            </motion.div>
+            <motion.div
+                initial={{ opacity: 0, y: -100 }}
+                animate={inView2 ? { opacity: 1, y: 0 } : { opacity: 0, y: -100 }}
+                exit={{ opacity: 0, y: -100 }}
+                transition={{ duration: 1, ease: "easeOut" }}
+            >   
             <Box
                 ref={ref2}
                 borderRadius="lg"
@@ -56,7 +74,7 @@ export const App = ({data}) => {
                 ))}
                 </Accordion>
             </Box>
-            </SlideFade>
+            </motion.div>
       </Box>
     )
   }

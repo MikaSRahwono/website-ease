@@ -5,14 +5,21 @@ import { PricingCard } from './pricingCard'
 import Slider from 'react-slick'
 import { ChevronRightIcon, ChevronLeftIcon } from '@chakra-ui/icons'
 import { useInView } from 'react-intersection-observer'
+import { motion } from "framer-motion";
 
 
 export const App = ({description, datas, column}) => {
   const [isLargerThan400] = useMediaQuery('(min-width: 770px)')
   const [slider, setSlider] = React.useState(null)
 
-  const [ref, inViewport] = useInView({rootMargin: '-100px'});
-  const [ref2, inViewport2] = useInView({rootMargin: '-300px'});
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+    threshold: 0.8,
+  });
+  const [ref2, inView2] = useInView({
+    triggerOnce: true,
+    threshold: 0.3,
+  });
 
   const CustomArrow = ({ direction, onClick }) => {
     return (
@@ -103,7 +110,12 @@ export const App = ({description, datas, column}) => {
           md: '8',
         }}
       >
-        <SlideFade in={inViewport}>
+        <motion.div
+          initial={{ opacity: 0, y: -100 }}
+          animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: -100 }}
+          exit={{ opacity: 0, y: -100 }}
+          transition={{ duration: 1, ease: "easeOut" }}
+        >     
           <Heading
             ref={ref}
             as="h1"
@@ -119,10 +131,15 @@ export const App = ({description, datas, column}) => {
             <Text fontSize={{base: 'lg'}} textAlign='center' color='black'>{description}</Text>
           </Center>
         </Box>
-        </SlideFade>
+        </motion.div>
 
         {isLargerThan400 ? 
-        <SlideFade in={inViewport2}>
+          <motion.div
+            initial={{ opacity: 0, y: -100 }}
+            animate={inView2 ? { opacity: 1, y: 0 } : { opacity: 0, y: -100 }}
+            exit={{ opacity: 0, y: -100 }}
+            transition={{ duration: 1, ease: "easeOut" }}
+          >     
           <SimpleGrid
             ref={ref2}
             alignItems="flex-start"
@@ -150,7 +167,7 @@ export const App = ({description, datas, column}) => {
                 />
         ))} 
           </SimpleGrid> 
-        </SlideFade>
+        </motion.div>
         : <Center><Box w={{base:'full', sm: '55vw'}} h='full' mt='5vh'>
           <Slider {...settings} ref={setSlider}>
           {datas.map((data, index) => (

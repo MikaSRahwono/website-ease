@@ -13,6 +13,7 @@ import {
     SlideFade
  } from "@chakra-ui/react";
 import { useInView } from "react-intersection-observer";
+import { motion } from "framer-motion";
 
 export const App = ({datas}) => {
   const [isLargerThan400] = useMediaQuery('(min-width: 480px)')
@@ -24,19 +25,34 @@ export const App = ({datas}) => {
     data1 = datas.slice(0,3)
     data2 = datas.slice(3,6)
   }
-  const [ref, inViewport] = useInView({rootMargin: '-200px'});
-  const [ref2, inViewport2] = useInView({rootMargin: '-200px'});
-
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+    threshold: 0.8,
+  });
+  const [ref2, inView2] = useInView({
+    triggerOnce: true,
+    threshold: 0.6,
+  });
 
   return (
     <Center h={{base: 'auto', md: datas.length > 4 ? '70vh' : '50vh', lg: datas.length > 4 ? '85vh' : '70vh'}} py={{base: '5vh', md: '0'}} bg='white' w='full' borderRadius={30} color='#2f2f2f'>
       {isLargerThan400 ? <VStack spacing={15}>
-        <SlideFade in={inViewport}>
+        <motion.div
+            initial={{ opacity: 0, y: -100 }}
+            animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: -100 }}
+            exit={{ opacity: 0, y: -100 }}
+            transition={{ duration: 1, ease: "easeOut" }}
+          >     
           <Heading mt={{md: '1vh', lg:'0'}} ref={ref} mb='5vh'>Alur Pemesanan</Heading>
-        </SlideFade>
+        </motion.div>
 
         {datas.length > 4 ? 
-        <SlideFade in={inViewport2}>
+          <motion.div
+            initial={{ opacity: 0, y: -100 }}
+            animate={inView2 ? { opacity: 1, y: 0 } : { opacity: 0, y: -100 }}
+            exit={{ opacity: 0, y: -100 }}
+            transition={{ duration: 1, ease: "easeOut" }}
+          >   
           <VStack ref={ref2} spacing='2vh'>
             <HStack spacing='sp'>
               {data1.map((data, index) => (
@@ -55,8 +71,15 @@ export const App = ({datas}) => {
             ))}
             </HStack>
           </VStack>
-        </SlideFade>
-         :<HStack spacing={7} p='2vw'>
+        </motion.div>
+         :
+         <motion.div
+            initial={{ opacity: 0, y: -100 }}
+            animate={inView2 ? { opacity: 1, y: 0 } : { opacity: 0, y: -100 }}
+            exit={{ opacity: 0, y: -100 }}
+            transition={{ duration: 1, ease: "easeOut" }}
+          >   
+         <HStack ref={ref2} spacing={7} p='2vw'>
             {datas.map((data, index) => (
               <VStack key={index} w='20vw'>
                 <Image w='10vw' src={data.icon} alt="easeyourneeds" mb='3vh'></Image>
@@ -64,18 +87,33 @@ export const App = ({datas}) => {
               </VStack>
             ))}
         </HStack>
+        </motion.div>
         }
         
       </VStack> : <VStack>
-      <Heading  mb='1vh'>Alur Pemesanan</Heading>
-        <VStack spacing={7} p='2vw'>
-            {datas.map((data, index) => (
-              <VStack key={index}>
-                <Image w='28vw' src={data.icon} alt="easeyourneeds" mb='1vh'></Image>
-                <Text w='60vw' textAlign='center' fontSize={{base: 'md', md: 'md', lg: 'lg'}} fontWeight='bold' >{data.title}</Text>
-              </VStack>
-            ))}
-        </VStack>
+      <motion.div
+        initial={{ opacity: 0, y: -100 }}
+        animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: -100 }}
+        exit={{ opacity: 0, y: -100 }}
+        transition={{ duration: 1, ease: "easeOut" }}
+      >   
+      <Heading ref={ref} mb='1vh'>Alur Pemesanan</Heading>
+      </motion.div>
+      <motion.div
+          initial={{ opacity: 0, y: -100 }}
+          animate={inView2 ? { opacity: 1, y: 0 } : { opacity: 0, y: -100 }}
+          exit={{ opacity: 0, y: -100 }}
+          transition={{ duration: 1, ease: "easeOut" }}
+        >   
+      <VStack ref={ref2} spacing={7} p='2vw'>
+          {datas.map((data, index) => (
+            <VStack key={index}>
+              <Image w='28vw' src={data.icon} alt="easeyourneeds" mb='1vh'></Image>
+              <Text w='60vw' textAlign='center' fontSize={{base: 'md', md: 'md', lg: 'lg'}} fontWeight='bold' >{data.title}</Text>
+            </VStack>
+          ))}
+      </VStack>
+      </motion.div>
       </VStack>}
       
     </Center>
