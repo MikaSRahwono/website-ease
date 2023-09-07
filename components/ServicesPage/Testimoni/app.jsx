@@ -28,13 +28,13 @@ export const App = () => {
         border="none"
         outline="none"
         cursor="pointer"
-        left={direction === "left" ? "1px" : ""}
-        right={direction === "right" ? "1px" : ""}
+        left={direction === "left" ? { base: "2vw", md: "2vw", sm: "" } : ""}
+        right={direction === "right" ? { base: "2vw", md: "2vw", sm: "" } : ""}
       >
         {direction === "left" ? (
-          <ChevronLeftIcon w={6} h={6} color="black" />
+          <ChevronLeftIcon w={7} h={7} color="white" bgColor={"#000"} borderRadius={"full"} />
         ) : (
-          <ChevronRightIcon w={6} h={6} color="black" />
+          <ChevronRightIcon w={7} h={7} color="white" bgColor={"#000"} borderRadius={"full"} />
         )}
       </Box>
     );
@@ -66,7 +66,7 @@ export const App = () => {
       {
         breakpoint: 1148,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 3,
           slidesToScroll: 1,
           dots: false,
         },

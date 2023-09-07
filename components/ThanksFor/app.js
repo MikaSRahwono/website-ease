@@ -11,7 +11,7 @@ export const App = (params) => {
   });
 
   return (
-    <Box w="full" p={10} pb='9vh' color="#000">
+    <Box w="full" p={10} pb='11vh' color="#000">
       <Box alignItems={"center"} bg="white" p={5}>
         <Center>
           <motion.div
@@ -59,14 +59,14 @@ export const App = (params) => {
             <Box gridArea="first">
               <VStack>
                 <Image
-                  boxSize={{ base: "100px", sm: "80px", md: "100px" }}
+                  boxSize={{ base: "100px", sm: "80px", md: "130px" }}
                   alt="customer easeyourneeds"
                   src="img/thanksfor/customer.png"
                 />
                 <Text fontWeight={"bold"} fontSize={{ base: "4vw", md: "2vw", sm: "4vw" }}>
                   40.000+
                 </Text>
-                <Text align="center" color="#828d8b" fontSize={{ base: "1.5vh", lg: "1vw", sm: "2vh" }}>
+                <Text align="center" color="#828d8b" fontSize={{ base: "1.5vh", lg: "1.4vw", sm: "2vh" }}>
                   Loyal Customers
                 </Text>
               </VStack>
@@ -74,14 +74,14 @@ export const App = (params) => {
             <Box gridArea="second">
               <VStack>
                 <Image
-                  boxSize={{ base: "100px", sm: "80px", md: "100px" }}
+                  boxSize={{ base: "100px", sm: "80px", md: "130px" }}
                   alt="reputable easeyourneeds"
                   src="img/thanksfor/reputable.png"
                 />
                 <Text fontWeight={"bold"} fontSize={{ base: "4vw", md: "2vw", sm: "4vw" }}>
                   1.000+
                 </Text>
-                <Text align="center" color="#828d8b" fontSize={{ base: "1.5vh", lg: "1vw", sm: "2vh" }}>
+                <Text align="center" color="#828d8b" fontSize={{ base: "1.5vh", lg: "1.4vw", sm: "2vh" }}>
                   Reputable Brands
                 </Text>
               </VStack>
@@ -89,14 +89,14 @@ export const App = (params) => {
             <Box gridArea="third">
               <VStack>
                 <Image
-                  boxSize={{ base: "100px", sm: "80px", md: "100px" }}
+                  boxSize={{ base: "100px", sm: "80px", md: "130px" }}
                   alt="schedule easeyourneeds"
                   src="img/thanksfor/schedule.png"
                 />
                 <Text fontWeight={"bold"} fontSize={{ base: "4vw", md: "2vw", sm: "4vw" }}>
                   100.000+
                 </Text>
-                <Text align="center" color="#828d8b" fontSize={{ base: "1.5vh", lg: "1vw", sm: "2vh" }}>
+                <Text align="center" color="#828d8b" fontSize={{ base: "1.5vh", lg: "1.4vw", sm: "2vh" }}>
                   Booked Meeting Schedule
                 </Text>
               </VStack>

@@ -13,7 +13,8 @@ const LogoBox = styled.span`
 export function Logo() {
   return (
       <LogoBox>
-        <Image src={"/img/easelogo/whitetrans.png"} width={200} height={200} alt="logo" />
+        <Image src={"https://firebasestorage.googleapis.com/v0/b/website-ease.appspot.com/o/img%2Feaselogo%2Fwhitetrans3.png?alt=media&token=c725e8f9-2a03-43d3-b746-fe2ea9fc2495"}
+         width={170.83} height={77.5} alt="logo"/>
       </LogoBox>
   );
 }

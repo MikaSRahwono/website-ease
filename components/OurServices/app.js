@@ -48,8 +48,9 @@ export const App = () => {
         border="none"
         outline="none"
         cursor="pointer"
-        left={direction === "left" ? { base: "-70px", md: "-20px", sm: "-12px" } : ""}
-        right={direction === "right" ? { base: "-70px", md: "-20px", sm: "-12px" } : ""}
+        left={direction === "left" ? { base: "-12vw", md: "-20px", sm: "-12px" } : ""}
+        right={direction === "right" ? { base: "-12vw", md: "-20px", sm: "-12px" } : ""}
+      
       >
         {direction === "left" ? (
           <ChevronLeftIcon boxSize={6} color={"white"} bgColor={"#000"} borderRadius={"full"} />
@@ -195,7 +196,7 @@ export const App = () => {
           exit={{ opacity: 0, y: -100 }}
           transition={{ duration: 1, ease: "easeOut" }}
         >
-          <Container maxW={{ base: "sm", lg: "60vw", sm: "100vw" }} ref={ref3}>
+          <Container maxW={{ base: "90vw", lg: "60vw", sm: "100vw" }} ref={ref3}>
             <Box
               rounded={50}
               boxShadow="lg"

@@ -20,12 +20,13 @@ export const App = (params) => {
     >
       <Container padding={{ base: '10px', md: '90px' }} maxW={{ base: '90vw', sm: "80vw", lg: "100vw", md: "100vw" }} color='black'>
         <Stack
+          pt={{ base:"6vh", md:"0" }}
           direction={{ base: 'column-reverse', md: 'column-reverse', lg: 'row' }}
           spacing={{ base: '10px', md: '5vh' }}
           alignItems={{ base: 'center', md: 'center' }}
         >
            <Box
-                fontSize={{ base: '15px', md: '24px', sm: '20px' }}
+                fontSize={{ base: '15px', md: '23px', sm: '20px' }}
                 fontFamily="Aileron"
                 textAlign={{ base: 'justify', md: 'justify' }}
                 ref={ref}

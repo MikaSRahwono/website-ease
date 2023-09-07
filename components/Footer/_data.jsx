@@ -80,6 +80,11 @@ export const socialLinks = [
   {
     label: 'Instagram',
     icon: <FaInstagram />,
-    href: '#',
+    href: 'https://www.instagram.com/easeyourneeds.creative/',
+  },
+  {
+    label: 'Instagram',
+    icon: <FaLinkedin />,
+    href: 'https://www.linkedin.com/company/easeyourneeds/mycompany/?viewAsMember=true',
   },
 ]
