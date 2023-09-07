@@ -108,7 +108,9 @@ export const App = (props) => {
                 </VStack>
                 <Box w={{ base: "full", md: "full" }}
                 display="flex"
-                maxHeight={{ base: "100%", lg: "100vh" }} // Tambahkan ini
+                alignItems="center" // Tambahkan ini
+                justifyContent="center" // Tambahkan ini
+                maxHeight={{ base: "120%", lg: "110vh" }} // Tambahkan ini
                 overflow="hidden" // Tambahkan ini
                 >
                   <motion.div
@@ -119,7 +121,7 @@ export const App = (props) => {
                   >
                     <Image
                       boxSize={{ base: "full", sm: "auto" }}
-                      width={{ base: "100%", sm: "100%", lg: "100%", md: "100%" }}
+                      width={{ base: "100%", sm: "80%", lg: "100%", md: "80%" }}
                       height={{ base: "auto", sm: "auto", lg: "100%" }}
                       objectFit="contain"
                       objectPosition="center"
