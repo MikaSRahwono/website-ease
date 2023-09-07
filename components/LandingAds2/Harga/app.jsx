@@ -1,6 +1,29 @@
 import { Box, Center, Heading, Image, ListItem, List, Text, VStack, Button, Container } from "@chakra-ui/react";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 export default function Harga() {
+
+  const [ref, inView] = useInView({
+    triggerOnce: false,
+    threshold: 0.2,
+  });
+
+  const [ref2, inView2] = useInView({
+    triggerOnce: false,
+    threshold: 0.2,
+  });
+
+  const [ref3, inView3] = useInView({
+    triggerOnce: false,
+    threshold: 0.2,
+  });
+
+  const [ref4, inView4] = useInView({
+    triggerOnce: false,
+    threshold: 0.2,
+  });
+
   return (
     <Box bgImage={"/img/ads/bgprice.png"} bgSize={"cover"} py='10vh' >
 
@@ -12,12 +35,25 @@ export default function Harga() {
             p="1.4rem"
             textAlign="left"
           >
+            <motion.div
+              initial={{ opacity: 0, y: -100 }}
+              animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: -100 }}
+              exit={{ opacity: 0, y: -100 }}
+              transition={{ duration: 1, ease: "easeOut" }}
+            >
 
-            <Heading as="h1" size="xl" fontWeight="bold" color="white" textAlign="left">
+            <Heading ref={ref} as="h1" size="xl" fontWeight="bold" color="white" textAlign="left">
             Pesan Jasa Live Streaming Sekarang
               </Heading>
+            </motion.div>
 
-            <Heading pt="3rem" as="h2" fontSize={{base: '2xl',lg: '2vw'}} fontWeight="bold" color="white" textAlign="left">
+            <motion.div
+            initial={{ opacity: 0, x: -100 }}
+            animate={inView2 ? { opacity: 1, x: 0 } : { opacity: 0, x: -100 }}
+            exit={{ opacity: 0, x: -100 }}
+            transition={{ duration: 1, ease: "easeOut" }}
+            >
+            <Heading ref={ref2} pt="3rem" as="h2" fontSize={{base: '2xl',lg: '2vw'}} fontWeight="bold" color="white" textAlign="left">
                 Harga Normal: 
             </Heading>
 
@@ -28,8 +64,15 @@ export default function Harga() {
             <Heading as="h2" size={'3xl'} fontWeight="bold" color="#FFD600" textAlign="left">
             Rp2.999.000
             </Heading>
+            </motion.div>
 
-            <Heading pt="3rem"  fontSize='3xl' fontWeight="semibold" fontStyle={"italic"} color="white" textAlign="left">
+            <motion.div
+            initial={{ opacity: 0, x: 100 }}
+            animate={inView3 ? { opacity: 1, x: 0 } : { opacity: 0, x: 100 }}
+            exit={{ opacity: 0, x: 100 }}
+            transition={{ duration: 1, ease: "easeOut" }}
+            >
+            <Heading ref={ref3} pt="3rem"  fontSize='3xl' fontWeight="semibold" fontStyle={"italic"} color="white" textAlign="left">
             Harga Sudah Termasuk
             </Heading>
 
@@ -44,8 +87,15 @@ export default function Harga() {
                     <Text fontSize={'xl'} color="white">File dikirimkan dalam bentuk softcopy di google drive</Text>
                 </ListItem>
             </List>
+            </motion.div>
 
-            <Box pt="2rem">
+            <motion.div
+              initial={{ opacity: 0, y: -100 }}
+              animate={inView4 ? { opacity: 1, y: 0 } : { opacity: 0, y: -100 }}
+              exit={{ opacity: 0, y: -100 }}
+              transition={{ duration: 1, ease: "easeOut" }}
+            >
+            <Box ref={ref4} pt="2rem">
             <Button
                 colorScheme="white"
                 color="black"
@@ -59,6 +109,7 @@ export default function Harga() {
             Pesan Sekarang!
             </Button>
             </Box>
+            </motion.div>
 
 
 

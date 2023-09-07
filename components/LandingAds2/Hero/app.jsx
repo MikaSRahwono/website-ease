@@ -1,7 +1,13 @@
 import { Box, Container, Text, Heading, Center, Stack } from "@chakra-ui/react";
-import { FaInstagram, FaWhatsapp } from 'react-icons/fa';
+import { motion } from "framer-motion";
 
 export default function Hero() {
+
+  const animationVariants = {
+    hidden: { opacity: 0, y: -100 },
+    visible: { opacity: 1, y: 0 },
+  };
+
   return (
     <Box
       bgImage="url(https://firebasestorage.googleapis.com/v0/b/website-ease.appspot.com/o/img%2FLandingAds%2Fcover2.PNG?alt=media&token=9bbae241-ad01-4e8b-b7d3-421f50d10dde)"
@@ -36,13 +42,26 @@ export default function Hero() {
               zIndex="1"
               textAlign={'center'}
             >
+              <motion.div
+              initial="hidden"
+              animate="visible"
+              variants={animationVariants}
+              transition={{ duration: 1.5, ease: "easeOut" }}
+            >
               <Heading
                 fontFamily="Aileron"
                 fontSize={{ base: "xl", md: "3xl", lg: "3xl" }}
               >
                 JASA LIVE STREAMING EVENTS
               </Heading>
+              </motion.div>
 
+              <motion.div
+              initial="hidden"
+              animate="visible"
+              variants={animationVariants}
+              transition={{ duration: 2, ease: "easeOut" }}
+            >
               <Heading
                 fontFamily="Aileron"
                 fontSize={{ base: "3xl", md: "5xl", lg: "5xl" }}
@@ -55,6 +74,7 @@ export default function Hero() {
                 align="center"
               >
               </Text>
+              </motion.div>
             </Stack>
           </Box>
         </Center>

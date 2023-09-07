@@ -1,8 +1,18 @@
 import { Box, Container, Text, Heading, Center, Stack, Card, HStack, Image, VStack, useMediaQuery } from "@chakra-ui/react";
-
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 export default function Keuntungan() {
   const [isLargerThan400] = useMediaQuery('(min-width: 480px)')
+  const [ref, inView] = useInView({
+    triggerOnce: false,
+    threshold: 0.2,
+  });
+
+  const [ref2, inView2] = useInView({
+    triggerOnce: false,
+    threshold: 0.2,
+  });
 
   return (
     <Box
@@ -17,7 +27,13 @@ export default function Keuntungan() {
               p={{base: '1.5rem',md: "2rem"}}
               textAlign={'center'}
             >
-              <Heading
+              <motion.div
+              initial={{ opacity: 0, y: -100 }}
+              animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: -100 }}
+              exit={{ opacity: 0, y: -100 }}
+              transition={{ duration: 1, ease: "easeOut" }}
+            >
+              <Heading ref={ref}
                 fontFamily="Aileron"
                 fontSize={{ base: "3xl", md: "4xl", lg: "3xl" }}
               >
@@ -26,8 +42,15 @@ export default function Keuntungan() {
               <Text paddingBottom='2rem'>
               Saat ini kegiatan live streaming sudah banyak digunakan karena memiliki beberapa keuntungan untuk acara itu sendiri, diantaranya:
               </Text>
+              </motion.div>
               {isLargerThan400 ? 
-              <HStack spacing="24px">
+              <motion.div
+              initial={{ opacity: 0, y: 100 }}
+              animate={inView2 ? { opacity: 1, y: 0 } : { opacity: 0, y: 100 }}
+              exit={{ opacity: 0, y: 100 }}
+              transition={{ duration: 1, ease: "easeOut" }}
+            >
+              <HStack ref={ref2} spacing="24px">
                 <Card
                     color='black'
                     bgColor='white'
@@ -120,8 +143,15 @@ export default function Keuntungan() {
                     </Center>
                 </Card>
               </HStack>
+              </motion.div>
               : 
-              <HStack>
+              <motion.div
+              initial={{ opacity: 0, y: 100 }}
+              animate={inView2 ? { opacity: 1, y: 0 } : { opacity: 0, y: 100 }}
+              exit={{ opacity: 0, y: 100 }}
+              transition={{ duration: 1, ease: "easeOut" }}
+            >
+              <HStack ref={ref2}>
                 <VStack spacing="24px">
                 <Card
                     color='black'
@@ -217,6 +247,7 @@ export default function Keuntungan() {
                 </Card>
               </VStack> 
               </HStack>
+              </motion.div>
               }
             </VStack>
             </Box>

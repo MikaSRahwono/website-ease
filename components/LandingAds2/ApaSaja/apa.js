@@ -1,18 +1,44 @@
 import { Box, Container, Text, Heading, Center, Stack, Card, HStack, Image, VStack, useMediaQuery } from "@chakra-ui/react";
-
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 export default function ApaSaja() {
     const [isLargerThan400] = useMediaQuery('(min-width: 480px)')
+    
+    const [ref, inView] = useInView({
+        triggerOnce: false,
+        threshold: 0.2,
+      });
+    
+    const [ref2, inView2] = useInView({
+    triggerOnce: false,
+    threshold: 0.2,
+    });
+
 
   return (
     <Box pt={{base: "10vh", md: '10vh', lg: '30vh'}} pb={{base: '10vh',md: '10vh', lg: '20vh'}} >
         <Center>
             <VStack spacing='5vh'>
-                <Heading fontFamily="Aileron" fontSize='3xl' textAlign='center' p={{md: '0', base: '5vw'}}>
+            <motion.div
+              initial={{ opacity: 0, y: -100 }}
+              animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: -100 }}
+              exit={{ opacity: 0, y: -100 }}
+              transition={{ duration: 1, ease: "easeOut" }}
+            >
+                <Heading ref={ref} fontFamily="Aileron" fontSize='3xl' textAlign='center' p={{md: '0', base: '5vw'}}>
                 Acara apa aja sih yang bisa di live streaming?
                 </Heading>
+                </motion.div>
+                
                 {isLargerThan400 ?
-                <VStack>
+                <motion.div
+                initial={{ opacity: 0, x: -100 }}
+                animate={inView2 ? { opacity: 1, x: 0 } : { opacity: 0, x: -100 }}
+                exit={{ opacity: 0, x: -100 }}
+                transition={{ duration: 1, ease: "easeOut" }}
+              >
+                <VStack ref={ref2}>
                     <HStack>
                         <Card
                             color='black'
@@ -222,8 +248,15 @@ export default function ApaSaja() {
                         </Card>
                     </HStack>
                 </VStack>
+                </motion.div>
                 : 
-                <VStack>
+                <motion.div
+                initial={{ opacity: 0, x: -100 }}
+                animate={inView2 ? { opacity: 1, x: 0 } : { opacity: 0, x: -100 }}
+                exit={{ opacity: 0, x: -100 }}
+                transition={{ duration: 1, ease: "easeOut" }}
+              >
+                <VStack ref={ref2}>
                 <HStack>
                     <Card
                         color='black'
@@ -434,6 +467,7 @@ export default function ApaSaja() {
                     </Center>
                 </Card>
             </VStack>
+            </motion.div>
                 }
             </VStack>
         </Center>
