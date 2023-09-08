@@ -207,7 +207,7 @@ export const creative = [
     {
         name: 'Custom Package',
         desc: 'Live streaming services customize with your needs',
-        price: 0,
+        price: 1,
         features: [
           {
             icon: '/img/pricelist/creative/custom.jpg',

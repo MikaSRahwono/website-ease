@@ -44,7 +44,7 @@ export const App = ({hero}) => {
     <Slider {...settings}>
       <Flex
         w="full"
-        h={{ base: "85vh", sm: "90vh", md:'60vh', lg: "70vh" }}
+        h={{ base: "95vh", sm: "110vh", md:'60vh', lg: "70vh" }}
         alignItems="center"
         justifyContent="center"
         fontFamily="Aileron"

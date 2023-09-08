@@ -47,10 +47,10 @@ function Selector(service, isLargerThan400, heading, lists) {
           transition={{ duration: 1, ease: "easeOut" }}
         >      
           <VStack >
-            <Box ref={ref2} px='8vw' pt='5vw' pb='5vw' bgImage='/img/reasons-bg/circle.png' bgPos='center' bgSize='50vw' bgRepeat='no-repeat'>
-            <UnorderedList mt='4'fontSize={{base: '2.2vw', md: '2vw', lg: '1.7vw'}} fontWeight='normal'>
+            <Box ref={ref2} px='10vw' pt='5vw' pb='5vw' bgImage='/img/reasons-bg/circle.png' bgPos='center' bgSize={{base: '60vw', md: '50vw'}} bgRepeat='no-repeat'>
+            <UnorderedList mt='4'fontSize={{base: '2vw', md: '1.55vw', lg: '1.35vw'}} fontWeight='normal'>
               {lists.map(item => (
-                  <ListItem key={`item-${item}`} borderRadius='10' p='0.5vw' bg='#E3D6AC' mt={5}>
+                  <ListItem key={`item-${item}`} borderRadius='10' py='0.7vw' px='0.9vw' bg='#E3D6AC' mt={5}>
                   {item}
                 </ListItem>
               ))}
@@ -78,9 +78,9 @@ function Selector(service, isLargerThan400, heading, lists) {
           transition={{ duration: 1, ease: "easeOut" }}
         >  
         <Box ref={ref2} px='8vw' pt='25vw' pb='25vw' bgImage='/img/reasons-bg/circle.png' bgPos='center' bgSize='125vw' bgRepeat='no-repeat'>
-        <UnorderedList fontSize={{base: '5vw', md: '1.5vw', lg: '1.5vw'}} fontWeight='normal'>
+        <UnorderedList fontSize={{base: '4.5vw', md: '1.5vw', lg: '1.3vw'}} fontWeight='normal'>
           {lists.map(item => (
-            <ListItem key={`item-${item}`} borderRadius='10' p='0.3vw' bg='#E3D6AC' mt={5}>{item}</ListItem>
+            <ListItem key={`item-${item}`} borderRadius='10' px='4vw' py='2vw' bg='#E3D6AC' mt={5}>{item}</ListItem>
           ))}
         </UnorderedList>
         </Box>
