@@ -131,7 +131,10 @@ export const PricingCard = (props) => {
         <Center mt='2' mb='2'>
           <Divider w='70%' alignItems='center' size='10' borderColor='gray' variant='solid' orientation='horizontal'></Divider>
         </Center>
-        <PriceDisplay currency="Rp" price={price} />
+        {!(price == 2999000 || price == 3999000 || price == 4999000 || price == 1) ? 
+            <PriceDisplay currency="Rp" price={price} /> : <Box></Box>
+        }
+        
       </Flex>
 
       <List flex='1' stylePosition="outside" mt="2" spacing={4}>
