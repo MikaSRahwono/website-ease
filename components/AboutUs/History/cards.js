@@ -34,7 +34,7 @@ export const HistoryCards = ({data, onClick}) => {
   
   return (
     <Center>
-    <Box w="70%" maxW="xl" m='2.5vw'>
+    <Box w="70%" maxW="xl" m='2.5vw' _hover={{ transform: "scale(1.05)" }} transition="transform 0.2s">
       <HistoryWrapper>
 
         <Center>
@@ -46,8 +46,14 @@ export const HistoryCards = ({data, onClick}) => {
           <Text  color={'#000'} fontFamily='Montserrat' fontSize="xl" fontWeight="bold">
             {data.title}
           </Text>
-          <Text noOfLines={2} fontSize='sm' mt={2} color={'#000'} maxW="20rem" mx={['2', '2', 'auto']}>
+          <Text 
+          noOfLines={2}
+          overflow='hidden'
+          fontSize='sm' mt={2} color={'#000'} maxW="20rem" mx={['2', '2', 'auto']}>
             {data.desc}
+            <Button>
+              Button More
+            </Button>
           </Text>
         </Flex>
 

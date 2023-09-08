@@ -45,16 +45,15 @@ export const App = ({service}) => {
                 <Box
                     pos="absolute"
                     alignItems={'center'}
-                    top={{base: '5vh',md: '6vh',lg: '10vh', sm:'20vh'}}
-                    left={{base:"10vw" ,lg:'40vw', md:'10vw', sm:'10vw'}}
+                    top={{base: '20vh',md: '6vh',lg: '10vh', sm:'45vh'}}
+                    left={{base:"10vw" ,lg:'40vw', md:'15vw', sm:'10vw'}}
                     w={{base:"70vw", lg:"40vw", sm:"60vw", md: "60vw"}}
-                    h={{lg:"40vh", md: '35vh', sm:'33vh', base:"35vh"}}
                     bgColor="white"
                     zIndex="1"
                     rounded={5}
                     opacity='95%'
                     shadow={'2xl'}
-                    p='5vw'
+                    p='4vw'
                     justifyContent={'center'}
                 > 
                     <motion.div
@@ -63,7 +62,7 @@ export const App = ({service}) => {
                         exit={{ opacity: 0, y: -100 }}
                         transition={{ duration: 1, ease: "easeOut" }}
                         >        
-                        <Text ref={ref} fontSize={{base: 'xl',md: '2xl'}} fontWeight='bold'>
+                        <Text ref={ref} fontSize={{base: 'lg',md: '2xl'}} fontWeight='bold'>
                             {data.title}
                         </Text>
                     </motion.div>

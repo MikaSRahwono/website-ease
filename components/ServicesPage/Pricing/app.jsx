@@ -100,10 +100,6 @@ export const App = ({description, datas, column}) => {
   return (
     <Box as="section" py="20">
       <Box
-        maxH={{
-          base: '200vh',
-          md: '120vh'
-        }}
         mx="auto"
         px={{
           base: '6',
@@ -126,9 +122,9 @@ export const App = ({description, datas, column}) => {
           >
             Harga dan Paket
           </Heading>
-        <Box h={{base: '14vh', md: '9vh',}} pl={5} pr={5} bg='white' mt='4vh' boxShadow='md' borderRadius={15}>
-          <Center h={{base: '14vh', md: '9vh',}}>
-            <Text fontSize={{base: 'lg'}} textAlign='center' color='black'>{description}</Text>
+        <Box h={{base: '14vh', md: '11vh', lg:'9vh'}} pl={5} pr={5} bg='white' mt='4vh' boxShadow='md' borderRadius={15}>
+          <Center h={{base: '14vh', md: '11vh',lg:'9vh'}}>
+            <Text fontSize={{base: 'sm', sm:'md', md: 'lg'}} textAlign='center' color='black'>{description}</Text>
           </Center>
         </Box>
         </motion.div>

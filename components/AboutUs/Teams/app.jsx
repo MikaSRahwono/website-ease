@@ -95,7 +95,7 @@ export const App = () => {
                 color='#DAC17E'
                 textAlign='center'
                 >
-                Meet our team
+                Meet Our Team
               </Heading>
             </Box>
           </motion.div>

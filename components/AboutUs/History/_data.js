@@ -15,12 +15,6 @@ export const historyCardsData = [
     },
     {
       img: 'https://firebasestorage.googleapis.com/v0/b/website-ease.appspot.com/o/img%2Fhistory%2Fpicture3.png?alt=media&token=b60212ac-453f-4e5c-bcee-3feb807e9015',
-      title: 'Beginning of Digitalization in Our System',
-      tanggal: 'March 2021',
-      desc: 'As we grew bigger, we changed our recap system from paper based to digital by using google calendar to track the orders more efficiently.'      
-    },
-    {
-      img: 'https://firebasestorage.googleapis.com/v0/b/website-ease.appspot.com/o/img%2Fhistory%2Fpicture3.png?alt=media&token=b60212ac-453f-4e5c-bcee-3feb807e9015',
       title: 'Scale Up',
       tanggal: 'June 2021',
       desc: 'We scaled up our team member from 3 to 5 to meet our growing business needs. Now we have operations, marketing, and content team. ',
