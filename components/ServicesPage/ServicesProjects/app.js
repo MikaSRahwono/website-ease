@@ -17,6 +17,7 @@ import 'slick-carousel/slick/slick-theme.css';
 import { ChevronRightIcon, ChevronLeftIcon } from '@chakra-ui/icons'
 import { useInView } from 'react-intersection-observer';
 import { motion } from "framer-motion";
+import Link from 'next/link';
 
 
 export const App = (props) => {
@@ -142,7 +143,9 @@ export const App = (props) => {
             exit={{ opacity: 0, y: -100 }}
             transition={{ duration: 1, ease: "easeOut" }}
           >     
-            <Button  ref={ref3} mt='3vh' variant='solid' bg='#DAC17F' _hover={{bg: '#CBAD5C'}}>Lihat Project Kami!</Button>
+            <Link href="/portfolio">
+              <Button ref={ref3} mt='3vh' variant='solid' bg='#DAC17F' _hover={{bg: '#CBAD5C'}}>Lihat Project Kami!</Button>
+            </Link>
           </motion.div>
         </Box>
         <Box w='5vw'></Box>

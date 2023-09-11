@@ -3,7 +3,7 @@ export const zoom_desc = 'Zoom Pro and Zoom Webinar Rental by hourly, daily, and
 export const zoom = [
     {
       name: 'Zoom Pro Rental',
-      desc: 'Renting Zoom Pro by hourly, daily, and monthly. With zoom pro, you can interact with your audience with two way direction',
+      desc: 'Rent hourly, daily, and monthly. Zoom pro let you interact with your audience',
       price: 5000,
       features: [
         {
@@ -34,7 +34,7 @@ export const zoom = [
     },
     {
       name: 'Zoom Webinar Rental',
-      desc: 'Renting Zoom Webinar by daily. With zoom webinar, your event can be more professional and one direction with your audience.',
+      desc: 'Rent daily. Zoom webinar makes your event more professional with one directional communication.',
       price: 249000,
       features: [
         {
@@ -73,7 +73,7 @@ export const zoom = [
     },
     {
       name: 'Zoom Operator',
-      desc: 'Our operator can assist you in meeting such as accepting audience, share screen, and others.',
+      desc: 'Our operator can assist you such as accepting audience, share screen, and others.',
       price: 20000,
       features: [
         {
@@ -136,7 +136,7 @@ export const creative = [
     },
     {
       name: 'Standard Package',
-      desc: 'Live streaming services with one camera',
+      desc: 'Live streaming services with two camera',
       price: 3999000,
       features: [
         {
@@ -171,7 +171,7 @@ export const creative = [
     },
     {
       name: 'Pro Package',
-      desc: 'Live streaming services with one camera',
+      desc: 'Live streaming services with three camera',
       price: 4999000,
       features: [
         {
@@ -221,7 +221,7 @@ export const studio_desc = 'Product Photography & Videography, Creative Campaign
 
 export const studio = [
     {
-      name: 'Product Photography Service',
+      name: 'Photography Service',
       desc: 'Help you to capture your product in the best way possible',
       price: 70000,
       features: [
@@ -248,7 +248,7 @@ export const studio = [
       ]
     },
     {
-      name: 'Product Videography Service',
+      name: 'Videography Service',
       desc: ' Help you to represent your product in videography',
       price: 600000,
       features: [
@@ -276,7 +276,7 @@ export const studio = [
     },
     {
         name: 'Creative Campaign',
-        desc: 'Help you to create any creative campaigns for your brand. You can custom depends on what you need',
+        desc: 'Help you to create any custom creative campaigns for your brand.',
         price: 0,
         features: [
           {

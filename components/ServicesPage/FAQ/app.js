@@ -68,7 +68,9 @@ export const App = ({data}) => {
                         <AccordionIcon />
                         </AccordionButton>
                     <AccordionPanel pb={4} fontSize={{base: 'sm', md: 'md'}} >
-                        {faq.answer}
+                        <Text whiteSpace='pre-line'>
+                            {faq.answer}
+                        </Text>
                     </AccordionPanel>
                     </AccordionItem>
                 ))}
