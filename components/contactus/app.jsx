@@ -1,14 +1,15 @@
-import { Box, Container, Text, HStack, Divider, Heading, Grid, GridItem, Icon, Center } from "@chakra-ui/react";
+import { Stack, Box, Container, Text, HStack, Divider, Heading, Grid, GridItem, Icon, Center } from "@chakra-ui/react";
 import { FaInstagram, FaWhatsapp } from 'react-icons/fa';
 import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
 
 export default function ContactUs() {
 
-  const [ref, inView] = useInView({
-    triggerOnce: true,
-    threshold: 0.2,
-  });
+  const animationVariants = {
+    hidden: { opacity: 0, y: -100 },
+    visible: { opacity: 1, y: 0 },
+  };
+
   const [ref2, inView2] = useInView({
     triggerOnce: true,
     threshold: 0.2,
@@ -16,10 +17,13 @@ export default function ContactUs() {
 
   return (
     <Box>
-      <Box>
+      <Box
+      bgImage="url(https://firebasestorage.googleapis.com/v0/b/website-ease.appspot.com/o/img%2Fcontact%2Ffingers-note-report-journalist-filling-min%201.png?alt=media&token=16271895-4b6d-4b77-81c4-c17003e70b4d)"
+      bgSize={"cover"}
+    >
+      <Center>
         <Box
-          h="60vh"
-          bgImage="url(https://firebasestorage.googleapis.com/v0/b/website-ease.appspot.com/o/img%2Fcontact%2Ffingers-note-report-journalist-filling-min.jpg?alt=media&token=a5b97d02-99d1-4d5b-aeb8-58548b5843a7)"
+          h={{ base: '70vh', sm: '100vh', md: '55vh', lg: '55vh' }}
           bgSize="cover"
           position="relative"
         >
@@ -29,30 +33,61 @@ export default function ContactUs() {
             left="0"
             right="0"
             bottom="0"
-            bgGradient="linear(to top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.8) 100%)"
           />
 
-          <Heading
-            fontFamily="Aileron"
-            textAlign={'center'}
-            fontSize={{ base: "5xl", md: "5xl", lg: "7xl" }}
-            w={{ base: 'auto', lg: 'auto'}}
-            h={{ base: '20vh'}}
+          <Stack
+            spacing={4}
+            align="center"
+            justify="center"
+            w={{ base: '100vw', sm: '80vw', md: '90vw', lg: '60vw' }}
+            h={{ base: '40vh', sm: '50vh', md: '30vh', lg: '60vh' }}
             p="2rem"
-            top="50%"
-            left="50%"
             position="absolute"
+            top={{base: "55%", md: "50%", lg:"50%"}}
+            left="50%"
             transform="translate(-50%, -50%)"
             zIndex="1"
-            color='white'
+            textAlign="center"
           >
-            Contact Us
-          </Heading>
 
+            <motion.div
+              initial="hidden"
+              animate="visible"
+              variants={animationVariants}
+              transition={{ duration: 2, ease: "easeOut" }}
+            >
+            <Box p="1rem" borderRadius="8px"> {/* Background warna biru dan padding */}
+              <Heading
+                fontFamily="Aileron"
+                color="white"
+                fontSize={{ base: "4xl", md: "4xl", lg: "7xl" }}
+              >
+                Contact Us
+              </Heading>
+            </Box>
+            </motion.div>
+
+            <motion.div
+              initial="hidden"
+              animate="visible"
+              variants={animationVariants}
+              transition={{ duration: 2, ease: "easeOut" }}
+            >
+            <Text
+              fontFamily="Aileron"
+              color="white"
+              fontSize={{ base: "xl", md: "2xl", lg: "xl" }}
+              align="center"
+            >
+              Lets explore your idea with us
+            </Text>
+            </motion.div>
+          </Stack>
         </Box>
-      </Box>
+      </Center>
+    </Box>
 
-      <Container maxW="80vw" minW="80vw" pt={{ base: '15vh', md: '10vh' }} ref={ref}>
+      <Container maxW="80vw" minW="80vw" pt={{ base: '15vh', md: '10vh' }}>
         <HStack
           alignItems="initial"
           flexWrap={{ base: 'wrap', md: 'nowrap' }}
@@ -62,7 +97,9 @@ export default function ContactUs() {
          
           <Box pr={{ base: '0', md: '10vw' }} w={{ base: '100%', md: '50vw' }} h={{ base: '30vh', md: 'auto' }} >
             <Divider mb="2vh" w="40%" alignItems="center" size="1vh" borderColor="black" variant="solid" orientation="horizontal" />
-            <Heading fontSize={{ base:"4xl", lg:"4xl", md:"2xl" }}>Don&apos;t hesitate to contact us If you need more help</Heading>
+            <Heading fontSize={{ base:"4xl", lg:"4xl", md:"2xl" }}>
+            Get in touch with us for further Information!
+            </Heading>
           </Box>
           
 
