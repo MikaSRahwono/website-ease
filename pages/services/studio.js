@@ -24,6 +24,20 @@ export default function Home() {
     'Ready to compete with other similar brands',
     'Increase sales and branding',
   ]
+  const scroll2El = elID => {
+    window.scrollTo({
+      top: document.getElementById(elID).offsetTop - 60,
+      behavior: 'smooth',
+    });
+  };
+
+  const onBtnClick = (e) => {
+    e.preventDefault();
+    const goto = e.target.getAttribute("goto");
+    setTimeout(() => {
+      scroll2El(goto);
+    }, 100);
+  }
 
   return (
     <Box style={{ backgroundColor:'#ECECEC'}}
@@ -32,23 +46,23 @@ export default function Home() {
         {isLargerThan400 ? <Box h='10vh' bg='#FFFFFF' w='100vw' mt={0} color='black'>
         <Center h='10vh'>
           <HStack spacing='3vw'>
-            <Button backgroundColor='#88c4b4' _hover={{backgroundColor: '#EDCA7D'}}>
-              <Link href='#reasons'>Why Us?</Link>
+            <Button backgroundColor='#F5DDAA' goto="reasons" onClick={onBtnClick} _hover={{backgroundColor: '#EDCA7D'}}>
+              Why Us?
             </Button>
-            <Button backgroundColor='#88c4b4' _hover={{backgroundColor: '#EDCA7D'}}>
-              <Link href='#projects'>Recent Projects</Link>
+            <Button backgroundColor='#F5DDAA' goto="projects" onClick={onBtnClick} _hover={{backgroundColor: '#EDCA7D'}}>
+              Recent Projects
             </Button>
-            <Button backgroundColor='#88c4b4' _hover={{backgroundColor: '#EDCA7D'}}>
-              <Link href='#pricing'>Pricing dan Paket</Link>
+            <Button backgroundColor='#F5DDAA' goto="pricing" onClick={onBtnClick} _hover={{backgroundColor: '#EDCA7D'}}>
+              Pricing dan Paket
             </Button>
-            <Button backgroundColor='#88c4b4' _hover={{backgroundColor: '#EDCA7D'}}>
-              <Link href='#alur'>Alur Booking</Link>
+            <Button backgroundColor='#F5DDAA' goto="alur" onClick={onBtnClick} _hover={{backgroundColor: '#EDCA7D'}}>
+              Alur Booking
             </Button>
-            <Button backgroundColor='#88c4b4' _hover={{backgroundColor: '#EDCA7D'}}>
-              <Link href='#faq'>FAQ</Link>
+            <Button backgroundColor='#F5DDAA' goto="faq" onClick={onBtnClick} _hover={{backgroundColor: '#EDCA7D'}}>
+              FAQ
             </Button>
-            <Button backgroundColor='#88c4b4' _hover={{backgroundColor: '#EDCA7D'}}>
-              <Link href='#testimoni'>Testimoni</Link>
+            <Button backgroundColor='#F5DDAA' goto="testimoni" onClick={onBtnClick} _hover={{backgroundColor: '#EDCA7D'}}>
+              Testimoni
             </Button>
           </HStack>
         </Center>
@@ -87,15 +101,14 @@ export default function Home() {
           <Box mt={{base: '10vh',md: '5vh',lg: '20vh'}}>
             <FAQ data='studio'></FAQ>
           </Box>
-
-          <div id="testimoni"></div>
-          <Box mt='15vh'>
-            <Testimoni></Testimoni>
-          </Box>
-
-          <Box height='50vh'></Box>
         </Box>
       </Center>
+      <div id="testimoni"></div>
+      <Box mt='15vh'>
+        <Testimoni></Testimoni>
+      </Box>
+      <Box height='20vh'></Box>
+
     </Box>
   )
 }

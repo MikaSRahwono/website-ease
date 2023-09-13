@@ -116,7 +116,6 @@ export const App = (props) => {
                 transition={{ duration: 1, ease: "easeOut" }}
             >    
             <Box ref={ref}>
-                <Divider mb='2vh' w='40%' alignItems='center' size='1vh' borderColor='black' variant='solid' orientation='horizontal'></Divider>
                 <Center>
                     <Heading fontSize='6xl'>Our Story</Heading>
                 </Center>
