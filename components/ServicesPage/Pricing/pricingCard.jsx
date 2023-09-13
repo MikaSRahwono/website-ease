@@ -122,12 +122,14 @@ export const PricingCard = (props) => {
       {popular && <PopularBadge>Most Popular</PopularBadge>}
 
       <Flex direction="column" justify="center">
-        <Text align="center" fontSize={{base: "lg", md: 'xl', lg: "2xl"}} px={{base: '0', md:'1.5vw', lg: '0'}} fontWeight="bold">
-          {name}
-        </Text>
-        <Text fontSize={{base: "sm", lg: "lg"}}  align="center" mt="2" mb='0.5vh' color='black' maxW="16rem" mx="auto">
-          {description}
-        </Text>
+        <Box height={{lg: "18vh"}} minH={{lg: '100'}}>
+          <Text align="center" fontSize={{base: "xl", md: 'xl', lg: "2xl"}} px={{base: '0', md:'1.6vw', lg: '0'}} fontWeight="bold">
+            {name}
+          </Text>
+          <Text fontSize={{base: "md", md: 'sm', lg: "md"}} noOfLines={{md: '3',lg: '3'}} align="center" mt="2" mb='0.5vh' color='black' maxW="16rem" mx="auto">
+            {description}
+          </Text>
+        </Box>
         <Center mt='2' mb='2'>
           <Divider w='70%' alignItems='center' size='10' borderColor='gray' variant='solid' orientation='horizontal'></Divider>
         </Center>

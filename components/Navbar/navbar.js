@@ -62,7 +62,7 @@ const Navbar = () => {
             </li>
             <li>
               <Link href="/about">
-              <span onClick={() => closeMenu("/about")}>About</span>
+              <span onClick={() => closeMenu("/about")}>About Us</span>
               </Link>
             </li>
               <li className={`${styles.dropdown} ${isDropdownOpen ? styles.show : ""}`}

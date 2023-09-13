@@ -12,12 +12,12 @@ export const Testimonial = (props) => {
       bg='white'
       color='#2f2f2f'
       shadow="lg"
-      minH={{base:"100vh", md:"85vh", lg:'100vh'}}
+      minH={{base:"100vh", md:"85vh", lg:'90vh'}}
       w={{lg:"25vw", md:"40vw", base:'87vw'}}
       px="4"
       py="10"
-      ml={{lg:'6', sm:'2'}}
-      mr={{lg:'6', sm:'2'}}
+      ml={{lg:'5vw', sm:'5vw'}}
+      mr={{lg:'5vw', sm:'5vw'}}
     >
       <Flex
         direction="column"
