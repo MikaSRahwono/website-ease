@@ -18,13 +18,14 @@ export default function ContactUs() {
   return (
     <Box>
       <Box
-      bgImage="url(https://firebasestorage.googleapis.com/v0/b/website-ease.appspot.com/o/img%2Fcontact%2Ffingers-note-report-journalist-filling-min%201.png?alt=media&token=16271895-4b6d-4b77-81c4-c17003e70b4d)"
-      bgSize={"cover"}
+      bgImage="url(https://firebasestorage.googleapis.com/v0/b/website-ease.appspot.com/o/img%2Fcontact%2Ffingers-note-report-journalist-filling-min%201.png?alt=media&token=75462d33-92c2-4b81-985c-b78d0a6375b0)"
+      bgSize="cover"
+      bgPosition="center center"
     >
       <Center>
         <Box
           h={{ base: '70vh', sm: '100vh', md: '55vh', lg: '55vh' }}
-          bgSize="cover"
+          bgSize="contain"
           position="relative"
         >
           <Box
@@ -59,7 +60,7 @@ export default function ContactUs() {
             <Box p="1rem" borderRadius="8px"> {/* Background warna biru dan padding */}
               <Heading
                 fontFamily="Aileron"
-                color="white"
+                color="black"
                 fontSize={{ base: "4xl", md: "4xl", lg: "7xl" }}
               >
                 Contact Us
@@ -75,7 +76,7 @@ export default function ContactUs() {
             >
             <Text
               fontFamily="Aileron"
-              color="white"
+              color="black"
               fontSize={{ base: "xl", md: "2xl", lg: "xl" }}
               align="center"
             >

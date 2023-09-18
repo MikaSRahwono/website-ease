@@ -32,7 +32,7 @@ function App() {
         </Heading>
         <Center>
         <Text textAlign='center' w={{base: '90vw', md: '50vw'}} py={{base: '5vh', md: '10vh'}} fontSize='lg' lineHeight='4vh' >
-        “ We don`&apos;`t just create for the sake of it; we believe in making a positive impact on society. Discover our project and initiatives that contribute to the greater good, Through vivid imagery and interactive elements, showcasing the process of ideation - from raw concepts to refined gems. Witness the evolution of ideas, the spark of inspiration, and the thrill of breaking new ground. “
+        We don&apos;t just create for the sake of it, we believe in making a positive impact on society. Discover our project and initiatives that contribute to the greater good, Through vivid imagery and interactive elements, showcasing the process of ideation - from raw concepts to refined gems. Witness the evolution of ideas, the spark of inspiration, and the thrill of breaking new ground.
         </Text>
         </Center>
         </Box>

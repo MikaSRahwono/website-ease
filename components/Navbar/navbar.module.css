@@ -223,9 +223,6 @@
     bottom: -10px;
     left: 50%;
     transform: translateX(-50%);
-    width: calc(100% + 50px);
-    height: 40px;
-    background-color: #DAC17E;
     color: #000;
     border-radius: 50px;
     transition: transform 0.3s;
