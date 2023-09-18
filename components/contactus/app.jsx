@@ -95,13 +95,19 @@ export default function ContactUs() {
           justifyContent={{ base: 'center', md: 'space-between' }}
           spacing={{ base: '2rem', md: '0' }}
         >
-         
+          <motion.div
+              initial="hidden"
+              animate="visible"
+              variants={animationVariants}
+              transition={{ duration: 2, ease: "easeOut" }}
+            >
           <Box pr={{ base: '0', md: '10vw' }} w={{ base: '100%', md: '50vw' }} h={{ base: '30vh', md: 'auto' }} >
             <Divider mb="2vh" w="40%" alignItems="center" size="1vh" borderColor="black" variant="solid" orientation="horizontal" />
             <Heading fontSize={{ base:"4xl", lg:"4xl", md:"2xl" }}>
             Get in touch with us for further Information!
             </Heading>
           </Box>
+          </motion.div>
           
 
           <Box w={{ base: '100%', md: '50vw' }} fontSize="md" textAlign="justify">
