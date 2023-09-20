@@ -61,7 +61,7 @@ export const studio = [
   },
   {
     question: "Proses shooting berapa lama?",
-    answer: "tergantung pada jumlah konten yang dibuat, tetapi umumnya berkisar 1-2 Hari"
+    answer: "Tergantung pada jumlah konten yang dibuat, tetapi umumnya berkisar 1-2 Hari"
   },
   {
     question: "Proses editing berapa lama?",

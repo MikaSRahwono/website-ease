@@ -4,7 +4,7 @@ export const berbedas = [
         name: 'Tim Yang Professional dan Berpengalaman'
     },
     {
-        icon: 'https://firebasestorage.googleapis.com/v0/b/website-ease.appspot.com/o/img%2FLandingAds%2Fapa_yang_berbeda%2Fkualitas-2.png?alt=media&token=57a52a71-4222-4189-aa28-4236e121cfe1',
+        icon: 'https://firebasestorage.googleapis.com/v0/b/website-ease.appspot.com/o/img%2FLandingAds%2Fapa_yang_berbeda%2Fkualitas.png?alt=media&token=d0fb9a6c-9a1d-4d0c-933d-cc7bb9866fff',
         name: 'Kualitas video streaming Full HD 1080p'
     },
     {
@@ -12,7 +12,7 @@ export const berbedas = [
         name: 'File rekaman acara dapat diakses dengan mudah'
     },
     {
-        icon: 'https://firebasestorage.googleapis.com/v0/b/website-ease.appspot.com/o/img%2FLandingAds%2Fapa_yang_berbeda%2Fservice-2.png?alt=media&token=a40c7fd3-1251-4014-ad72-27a0370e462f',
+        icon: 'https://firebasestorage.googleapis.com/v0/b/website-ease.appspot.com/o/img%2FLandingAds%2Fapa_yang_berbeda%2Fservice.png?alt=media&token=3f6b94f5-fb6d-4791-acae-6b951ffbe7d7',
         name: 'Pelayanan terbaik tanpa kendala'
     },
     {
