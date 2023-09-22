@@ -47,14 +47,11 @@ export const HistoryCards = ({data, onClick}) => {
             {data.title}
           </Text>
           <Text 
-          noOfLines={2}
           overflow='hidden'
           fontSize='sm' mt={2} color={'#000'} maxW="20rem" mx={['2', '2', 'auto']}>
-            {data.desc}
-            <Button>
-              Button More
-            </Button>
+            {data.singkat}
           </Text>
+          <Text color={'#3366CC'} fontSize='smaller'>Read More</Text>
         </Flex>
 
       </HistoryWrapper>

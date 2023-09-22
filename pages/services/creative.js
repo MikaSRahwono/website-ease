@@ -30,6 +30,12 @@ export default function Home() {
       top: document.getElementById(elID).offsetTop - 60,
       behavior: 'smooth',
     });
+    // var int = setInterval(function() {
+    //   window.scrollTo(0, i);
+    //   i += 10;
+    //   if (i >= document.getElementById(elID).offsetTop - 60) clearInterval(int);
+    // }, 20);
+    // $('html,body').animate({scrollTop: elID},2500);
   };
 
   const onBtnClick = (e) => {

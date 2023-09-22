@@ -84,9 +84,6 @@ export default function DetailPage({ id }) {
               Lokasi: <b>{data.place}</b>
             </Text>
             <Text fontSize="xl">
-              Kategori: <b>{data.category}</b>
-            </Text>
-            <Text fontSize="xl">
               Tanggal: <b>{console.log(data.date)}</b>
             </Text>
             <Text fontSize={'lg'}>{data.description}</Text>
