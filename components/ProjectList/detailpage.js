@@ -12,24 +12,31 @@ import {
   StackDivider,
   useColorModeValue,
   Center,
+  HStack
 } from '@chakra-ui/react';
 import { useEffect, useState } from 'react';
 import Slider from 'react-slick';
+import { parseISO, format } from 'date-fns';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
 export default function DetailPage({ id }) {
   const database = useDB();
   const [data, setData] = useState({});
+  const [date, setDate] = useState('');
   const [photosUrl, setPhotosUrl] = useState([]);
 
   useEffect(() => {
     if (id != null) {
       database.getProject(id).then(res => {
         setData(res);
-        console.log("DATAAA = " + res.listPhotos);
+        setDate(Intl.DateTimeFormat('id-ID', {year: 'numeric', month: 'long',day: '2-digit'}).format(res.date.toDate()))
+      
         const photos = res.listPhotos;
         if (photos != null) {
           setPhotosUrl([]);
           photos.map(photo => {
+            console.log(photosUrl)
             database.getPhoto(photo).then(res => {
               setPhotosUrl(prevPhotosUrl => [...prevPhotosUrl, res]);
             });
@@ -40,37 +47,59 @@ export default function DetailPage({ id }) {
   }, [id, database]); // Added 'database' to the dependency array
 
   const settings = {
-    infinite: true,
+    infinite: false,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 5000,
-    dots: true,
+    dots: false,
+    arrows: true,
+    height: 'auto'
   };
 
   return (
-    <Container maxW={'7xl'}>
-      <SimpleGrid
-        columns={{ base: 1, lg: 2 }}
-        spacing={{ base: 8, md: 10 }}
-        py={{ base: 18, md: 24 }}>
-        <Center>
-          <Slider {...settings}>
-            {photosUrl.map(photo => (
-              <Image
+    <Container maxW='7xl' h='100vh'>
+    {/* <Image
+        alt="easeyourneeds"
+        src={photosUrl[0]}
+        w='500vw'
+        rounded="md"
+        boxShadow="lg"
+        // objectFit="contain"
+      /> */}
+      <Center h='100vh'>
+      <HStack>
+        <Box w='40vw' h='80vh' my='10vw' mx='5vw'>
+          <Slider rounded="md" {...settings}>
+            {photosUrl.map((photo) => (
+              <Center
                 key={photo}
-                rounded={'md'}
-                alt={'product image'}
-                src={photo}
-                fit={'cover'}
-                align={'center'}
-                w={'100%'}
-                h={{ base: '100%', sm: '400px', lg: '500px' }}
-              />
-            ))}
-          </Slider>
-        </Center>
+                w='40vw'
+                  h='80vh'
+                >
+                <Image
+                  w='40vw'
+                  h='80vh'
+                  alt="easeyourneeds"
+                  src={photo}
+                  rounded="md"
+                  boxShadow="lg"
+                  objectFit='contain'
+                />
+              </Center>
+              ))}
+              
+            </Slider>
+            {/* <Image
+                key={photosUrl[0]}
+                alt="easeyourneeds"
+                src={photosUrl[0]}
+                rounded="md"
+                boxShadow="lg"
+                objectFit='contain'
+              /> */}
+          </Box >
         <Box>
           <Heading
             pb="5vh"
@@ -84,13 +113,16 @@ export default function DetailPage({ id }) {
               Lokasi: <b>{data.place}</b>
             </Text>
             <Text fontSize="xl">
-              Tanggal: <b>{console.log(data.date)}</b>
+            
+              {/* Tanggal: <b>{(format(parseISO(Date(JSON.stringify(data.date) * 1000)), 'd LLLL yyyy'))}</b> */}
+              Tanggal: <b>{date}</b>
             </Text>
             <Text fontSize={'lg'}>{data.description}</Text>
             <Text></Text>
           </VStack>
         </Box>
-      </SimpleGrid>
+      </HStack>
+      </Center>
     </Container>
   );
 }
