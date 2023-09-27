@@ -56,6 +56,7 @@ export default function Keuntungan() {
               Apakah kamu bingung konsep untuk foto produk harus kaya gimana?
             </Text>
             <Text
+              pt="1rem"
               fontFamily="Aileron"
               fontSize={{ base: "md", md: "xl", lg: "xl" }} // Adjust font size for different screens
               align={{ base: "left", md: "left" }}
@@ -63,6 +64,7 @@ export default function Keuntungan() {
               Apakah kamu gak punya waktu untuk foto produk?
             </Text>
             <Text
+              pt="1rem"
               fontFamily="Aileron"
               fontSize={{ base: "md", md: "xl", lg: "xl" }} // Adjust font size for different screens
               align={{ base: "left", md: "left" }}

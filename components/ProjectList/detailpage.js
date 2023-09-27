@@ -16,7 +16,7 @@ import {
 } from '@chakra-ui/react';
 import { useEffect, useState } from 'react';
 import Slider from 'react-slick';
-import { parseISO, format } from 'date-fns';
+import { ChevronRightIcon, ChevronLeftIcon } from '@chakra-ui/icons'
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
@@ -25,6 +25,32 @@ export default function DetailPage({ id }) {
   const [data, setData] = useState({});
   const [date, setDate] = useState('');
   const [photosUrl, setPhotosUrl] = useState([]);
+
+  const CustomArrow = ({ direction, onClick }) => {
+    return (
+      <Box
+        as="button"
+        onClick={onClick}
+        position="absolute"
+        top="50%"
+        transform="translateY(-50%)"
+        zIndex="1"
+        bg='blackAlpha.300'
+        border="none"
+        outline="none"
+        cursor="pointer"
+        left={direction === "left" ? "-10px" : ""}
+        right={direction === "right" ? "-10px" : ""}
+        borderRadius='full'
+      >
+        {direction === "left" ? (
+          <ChevronLeftIcon w={6} h={6}  color="black" />
+        ) : (
+          <ChevronRightIcon w={6} h={6} color="black" />
+        )}
+      </Box>
+    );
+  };
 
   useEffect(() => {
     if (id != null) {
@@ -47,7 +73,7 @@ export default function DetailPage({ id }) {
   }, [id, database]); // Added 'database' to the dependency array
 
   const settings = {
-    infinite: false,
+    infinite: true,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -55,7 +81,9 @@ export default function DetailPage({ id }) {
     autoplaySpeed: 5000,
     dots: false,
     arrows: true,
-    height: 'auto'
+    height: 'auto',
+    prevArrow: <CustomArrow direction="left" />,
+    nextArrow: <CustomArrow direction="right" />,
   };
 
   return (
