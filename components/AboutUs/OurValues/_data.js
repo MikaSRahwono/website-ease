@@ -13,8 +13,8 @@ export const ourValuesCardsData = [
     },
     {
       img: 'https://firebasestorage.googleapis.com/v0/b/website-ease.appspot.com/o/img%2FABOUTUS%2Fdrive_1.png?alt=media&token=a109db46-d878-4c1d-8556-3faae4e3adb7',
-      title: 'PROBLEM-SOLVER',
-      desc: 'We are here to give the best recommendations and solutions to brands and partners',
+      title: 'DRIVE',
+      desc: 'We drive to give the best recommendations and solutions yo brands and partners',
       
     },
 ]
@@ -37,8 +37,8 @@ export const ourValuesCardsDatamd1 = [
 export const ourValuesCardsDatamd2 = [
   {
     img: 'https://firebasestorage.googleapis.com/v0/b/website-ease.appspot.com/o/img%2FABOUTUS%2Fdrive_1.png?alt=media&token=a109db46-d878-4c1d-8556-3faae4e3adb7',
-    title: 'PROBLEM-SOLVER',
-    desc: 'We are here to give the best recommendations and solutions to brands and partners',
+    title: 'DRIVE',
+    desc: 'We drive to give the best recommendations and solutions yo brands and partners',
     
   },
 ]

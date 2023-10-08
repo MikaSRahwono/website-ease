@@ -10,7 +10,7 @@ export const members = [
   {
     role: 'PA to CEO',
     image: '/img/aboutus/team/ulfa.jpg',
-    name: 'Siti Maria',
+    name: 'Ulfa Khabibah',
     twitter: '#',
     linkedin: '#',
     description: ' Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor',

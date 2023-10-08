@@ -39,8 +39,8 @@ export default function DetailPage({ id }) {
         border="none"
         outline="none"
         cursor="pointer"
-        left={direction === "left" ? "-10px" : ""}
-        right={direction === "right" ? "-10px" : ""}
+        left={direction === "left" ? "-30px" : ""}
+        right={direction === "right" ? "-30px" : ""}
         borderRadius='full'
       >
         {direction === "left" ? (
