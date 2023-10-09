@@ -33,7 +33,7 @@ const HistoryWrapper = (props) => {
 export const HistoryCards = ({data, onClick}) => {
   
   return (
-    <Center>
+    <Center onClick={() => onClick(data)}>
     <Box w="70%" maxW="xl" m='2.5vw' _hover={{ transform: "scale(1.05)" }} transition="transform 0.2s">
       <HistoryWrapper>
 
@@ -51,7 +51,7 @@ export const HistoryCards = ({data, onClick}) => {
           fontSize='sm' mt={2} color={'#000'} maxW="20rem" mx={['2', '2', 'auto']}>
             {data.singkat}
           </Text>
-          <Text color={'#3366CC'} fontSize='smaller'>Read More</Text>
+          <Text cursor='pointer' onClick={() => onClick(data)} color={'#3366CC'} fontSize='smaller'>Read More</Text>
         </Flex>
 
       </HistoryWrapper>
