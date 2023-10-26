@@ -25,7 +25,7 @@ export const historyCardsData = [
     },
     {
       img: 'https://firebasestorage.googleapis.com/v0/b/website-ease.appspot.com/o/img%2Fhistory%2Fpicture4.png?alt=media&token=4df65c23-c5db-4d02-9e51-20df0213db99',
-      title: 'Team Expansion & Going Bigger',
+      title: 'Team Expansion',
       tanggal: 'September 2021',
       desc: 'Never expected, in September 2021 our team expanded to 13 people with the same vision & ambition to build Ease Your Needs. We have gone through the same journey together develop our services and make it more dependable/reliable for customers.',
       singkat: 'Never expected, in September 2021 our team expanded to 13 people with the same vision ...',
