@@ -81,7 +81,7 @@ export const DetailModal = ({ item, onClose }) => {
             <Box>
               <Text fontWeight="bold" fontSize='4xl' mb='3vh'>{item.title}</Text>
               <Text fontWeight='bold' mb='1vh' fontSize='xl'> | {item.tanggal}</Text>
-              <Text mb="2" fontSize='lg'>{item.desc}</Text>
+              <Text mb="2" fontSize={{sm: 'sm', base:'sm', lg:'lg'}}>{item.desc}</Text>
             </Box>
           </HStack>
         </ModalBody>

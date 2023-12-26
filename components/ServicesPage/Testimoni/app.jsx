@@ -109,7 +109,7 @@ export const App = () => {
         >   
         <Center ref={ref} mb='6vh'>
             <Heading color='black'>
-                Apa Kata Mereka?
+             WHAT THEY SAID?
             </Heading>
         </Center>
       </motion.div>

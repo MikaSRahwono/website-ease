@@ -127,7 +127,7 @@ export const App = () => {
               <Stack>
                 <Radio value='creative'>Creative</Radio>
                 <Radio value='studio'>Studio</Radio>
-                <Radio value='zoom'>Zoom</Radio>
+                <Radio value='zoom'>Zoom Rental</Radio>
               </Stack>
             </RadioGroup>
           </FormControl>

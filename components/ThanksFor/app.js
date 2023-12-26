@@ -64,10 +64,10 @@ export const App = (params) => {
                   src="img/thanksfor/customer.png"
                 />
                 <Text fontWeight={"bold"} fontSize={{ base: "4vw", md: "2vw", sm: "4vw" }}>
-                  40.000+
+                  40.000+++
                 </Text>
                 <Text align="center" color="#828d8b" fontSize={{ base: "1.5vh", lg: "1.4vw", sm: "2vh" }}>
-                  Loyal Customers
+                  Customers
                 </Text>
               </VStack>
             </Box>
@@ -79,7 +79,7 @@ export const App = (params) => {
                   src="img/thanksfor/reputable.png"
                 />
                 <Text fontWeight={"bold"} fontSize={{ base: "4vw", md: "2vw", sm: "4vw" }}>
-                  1.000+
+                  1.000+++
                 </Text>
                 <Text align="center" color="#828d8b" fontSize={{ base: "1.5vh", lg: "1.4vw", sm: "2vh" }}>
                   Reputable Brands
@@ -94,10 +94,10 @@ export const App = (params) => {
                   src="img/thanksfor/schedule.png"
                 />
                 <Text fontWeight={"bold"} fontSize={{ base: "4vw", md: "2vw", sm: "4vw" }}>
-                  100.000+
+                  100.000+++
                 </Text>
                 <Text align="center" color="#828d8b" fontSize={{ base: "1.5vh", lg: "1.4vw", sm: "2vh" }}>
-                  Booked Meeting Schedule
+                  Events Supported
                 </Text>
               </VStack>
             </Box>

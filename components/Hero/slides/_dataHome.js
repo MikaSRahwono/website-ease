@@ -15,7 +15,7 @@ export const slides = [
 },
 {
     img: "img/zoom.png",
-    label: "Zoom",
+    label: "Zoom Rental",
     subheading1: "Renting Zoom Pro and Zoom Webinar for everyone.",
     subheading2: "Now, scheduling your zoom meeting is easier with us.",
     Onlink:'/services/zoom'

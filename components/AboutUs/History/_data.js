@@ -56,10 +56,25 @@ export const historyCardsData = [
     },
     {
       img: 'https://firebasestorage.googleapis.com/v0/b/website-ease.appspot.com/o/img%2Fhistory%2Fpicture8.png?alt=media&token=3bea280c-7f4e-4481-bd79-aac885c1c620',
-      title: 'Our Newest Team & Latest Services',
+      title: 'Launching New Services and Team',
       tanggal: 'November 2022',
       desc: 'As the demands grow, we expand our new service and create the newest member, production team. As the demands grow, We are expanding our new service and create the newest member, production team.',
       singkat: 'As the demands grow, we expand our new service and create the newest member ...',
 
     },
+    {
+      img: 'https://firebasestorage.googleapis.com/v0/b/website-ease.appspot.com/o/img%2Fhistory%2FDSC08128.jpg?alt=media&token=bc7b75c9-80d0-4f8a-94f0-9c0714709de6',
+      title: 'Launching New Services and Team',
+      tanggal: 'April 2023',
+      desc: 'After 3 years of growing, we are know a team consist of 16, and we will keep getting bigger',
+      singkat: 'After 3 years of growing, we are know ...',
+    },
+    {
+      img: 'https://firebasestorage.googleapis.com/v0/b/website-ease.appspot.com/o/img%2Fhistory%2FPicture10.jpg?alt=media&token=3794e33c-8f47-42e3-897f-c80d8306b8eb',
+      title: 'Another Team Bonding',
+      tanggal: 'September 2023',
+      desc: 'Just having casual dinner together with Ease Team',
+      singkat: 'Just having casual dinner together ...',
+    },
+    
   ];

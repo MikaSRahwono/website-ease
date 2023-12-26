@@ -102,7 +102,7 @@ export const App = () => {
     {
       image:
         "https://firebasestorage.googleapis.com/v0/b/website-ease.appspot.com/o/img%2Ficonservice%2Fzoomlogo1.png?alt=media&token=5b74959e-949a-49c7-b748-deec8f0f2a9c",
-      title: "Zoom",
+      title: "Zoom Rental",
       description: "Renting Zoom Pro and Zoom Webinar for everyone. Now, scheduling your zoom meeting is easier with us.",
       link: "/services/zoom",
     },
@@ -166,7 +166,7 @@ export const App = () => {
               borderRadius={50}
               onClick={() => handleClick(0)}
             >
-              Zoom
+              Zoom Rental
             </Button>
             <Button
               boxShadow={sliderIndex === 1 ? "md" : "xs"}

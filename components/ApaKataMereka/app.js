@@ -90,7 +90,7 @@ export const App = () => {
   return (
     <Box mx={['10px', '10px', '90px']} pb='20vh'>
       <Heading color='#000' textAlign={['left']} pl='15' as='h1' size='2xl' pb='5vh' variant='page-title' position="relative">
-        Apa Kata Mereka?
+      WHAT THEY SAID?
       </Heading>
         <Box>
           <Slider {...settings} ref={setSlider}>

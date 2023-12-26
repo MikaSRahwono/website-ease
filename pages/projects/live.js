@@ -27,7 +27,7 @@ const Navbar = () => {
         }}
       >
         <Text fontWeight='bold'>
-          Zoom
+          Zoom Rental
         </Text>
       </Link>
       <Link

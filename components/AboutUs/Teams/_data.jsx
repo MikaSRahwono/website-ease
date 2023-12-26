@@ -1,6 +1,6 @@
 export const members = [
   {
-    role: 'CEO',
+    role: 'Founder & CEO',
     image: '/img/aboutus/team/nanda.jpg',
     name: 'Nanda Najmi',
     twitter: '#',

@@ -84,7 +84,7 @@ const Navbar = () => {
                   <span onClick={() => closeMenu("/services/studio")}>Studio</span>
                 </Link>
                 <Link href="/services/zoom">
-                  <span onClick={() => closeMenu("/services/zoom")}>Zoom</span>
+                  <span onClick={() => closeMenu("/services/zoom")}>Zoom Rental</span>
                 </Link>
               </div>
             </li>

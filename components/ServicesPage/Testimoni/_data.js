@@ -4,14 +4,14 @@ export const zoom = [
         author: "Ibu Punya Mimpi",
         role: "",
         image: "/img/testimoni/ibu-punya-mimpi.jpg",
-        testimony: "Sudah beberapa bulan ini, komunitas kami selalu menggunakan jasa zoom premium dari @easeyourneeds! Sangat memuaskan, respon dari penjual g ramah dan helpful, ditambah lagi dengan kualitas layanan yg aman, tidak ada gangguan, dan pastinya harga g terjangkau. Thank you ceaseyourneeds!"
+        testimony: "Makaciiiihhhh bestiiee dah dukung acara buibu untuk live streaming-nya! Kompak bener dan sat set deh koordinasi juga cakepp.. Suksess yaah!"
     },
     {
         logo: "/img/testimoni/IWL.png",
         author: "Stephanie Fenuela",
         role: "Head of Community Development Team at Indonesian Women League",
         image: "/img/testimoni/Stephanie_IWL.png",
-        testimony: "Makaciiiihhhh bestiiee dah dukung acara buibu untuk live streaming-nya! Kompak bener dan sat set deh koordinasi juga cakepp.. Suksess yaah!"
+        testimony: "Sudah beberapa bulan ini, komunitas kami selalu menggunakan jasa zoom premium dari @easeyourneeds! Sangat memuaskan, respon dari penjual g ramah dan helpful, ditambah lagi dengan kualitas layanan yg aman, tidak ada gangguan, dan pastinya harga g terjangkau. Thank you ceaseyourneeds!"
     },
     {
         logo: "/img/testimoni/SatuPersen.png",

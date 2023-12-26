@@ -123,7 +123,7 @@ export const App = () => {
             transition={{ duration: 1, ease: "easeOut" }}
           >   
           <Heading ref={ref} textAlign={['left']} fontSize='6xl' pb='1vh' variant='page-title' position="relative">
-            Our History
+            Our Journey
           </Heading>
         </motion.div>
         <Divider borderColor='grey' w='100%'></Divider>
@@ -137,7 +137,7 @@ export const App = () => {
             transition={{ duration: 1, ease: "easeOut" }}
           >   
             <Heading ref={ref} textAlign={['left']} fontSize='6xl' pb='1vh' variant='page-title' position="relative">
-              Our History
+              Our Journey
             </Heading>
           </motion.div>
         </Center>

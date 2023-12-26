@@ -79,7 +79,7 @@ function App() {
           <Center h='50vh' color='white' backdropFilter='auto' backdropBlur='3px'>
             <VStack>
             <Heading textShadow= '0 3px 5px black' fontSize='5xl'>
-              Zoom
+              Zoom Rental
             </Heading>
             <Link as={NextLink} href='/projects/zoom' textShadow= '0 3px 5px black'>
               View Project
